@@ -261,9 +261,7 @@ with tab2:
                             # Tree Search for this doc
                             search_res = asyncio.run(tree_search(query, index_data['structure'], model_name))
                             if search_res.get('thinking'):
-                                total_thinking += f"**[{doc_display_name}]**: {search_res['thinking']}
-
-"
+                                total_thinking += f"**[{doc_display_name}]**: {search_res['thinking']}"
                             
                             node_map = get_node_mapping(index_data['structure'])
                             
@@ -283,17 +281,11 @@ with tab2:
                                     all_reference_nodes.append(f"[{doc_display_name}] {title} (P{start_p})")
                                     
                                     if node.get('text'):
-                                        all_relevant_text += f"--- Document: {doc_display_name}, Section: {title} ---
-{node['text']}
-
-"
+                                        all_relevant_text += f"--- Document: {doc_display_name}, Section: {title} ---{node['text']}"
                                     elif os.path.exists(pdf_path) and pdf_path.lower().endswith(".pdf"):
                                         try:
                                             page_text = get_text_of_pages(pdf_path, node['start_index'], node['end_index'], tag=False)
-                                            all_relevant_text += f"--- Document: {doc_display_name}, Section: {title} ---
-{page_text}
-
-"
+                                            all_relevant_text += f"--- Document: {doc_display_name}, Section: {title} ---{page_text}"
                                         except Exception as e:
                                             pass
                         
