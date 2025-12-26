@@ -18,17 +18,24 @@ from pathlib import Path
 from types import SimpleNamespace as config
 
 CHATGPT_API_KEY = os.getenv("CHATGPT_API_KEY")
+CHATGPT_API_BASE = os.getenv("CHATGPT_API_BASE", "https://api.openai.com/v1")
 
 def count_tokens(text, model=None):
     if not text:
         return 0
-    enc = tiktoken.encoding_for_model(model)
+    try:
+        enc = tiktoken.encoding_for_model(model)
+    except KeyError:
+        # 对于不支持的模型（如gemini），使用cl100k_base编码（GPT-4使用的编码）
+        enc = tiktoken.get_encoding("cl100k_base")
     tokens = enc.encode(text)
     return len(tokens)
 
-def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
+def ChatGPT_API_with_finish_reason(model, prompt, api_key=None, api_base=None, chat_history=None):
+    if api_key is None: api_key = os.getenv("CHATGPT_API_KEY")
+    if api_base is None: api_base = os.getenv("CHATGPT_API_BASE", "https://api.openai.com/v1")
     max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
+    client = openai.OpenAI(api_key=api_key, base_url=api_base)
     for i in range(max_retries):
         try:
             if chat_history:
@@ -58,9 +65,11 @@ def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_
 
 
 
-def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
+def ChatGPT_API(model, prompt, api_key=None, api_base=None, chat_history=None):
+    if api_key is None: api_key = os.getenv("CHATGPT_API_KEY")
+    if api_base is None: api_base = os.getenv("CHATGPT_API_BASE", "https://api.openai.com/v1")
     max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
+    client = openai.OpenAI(api_key=api_key, base_url=api_base)
     for i in range(max_retries):
         try:
             if chat_history:
@@ -86,12 +95,14 @@ def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
                 return "Error"
             
 
-async def ChatGPT_API_async(model, prompt, api_key=CHATGPT_API_KEY):
+async def ChatGPT_API_async(model, prompt, api_key=None, api_base=None):
+    if api_key is None: api_key = os.getenv("CHATGPT_API_KEY")
+    if api_base is None: api_base = os.getenv("CHATGPT_API_BASE", "https://api.openai.com/v1")
     max_retries = 10
     messages = [{"role": "user", "content": prompt}]
     for i in range(max_retries):
         try:
-            async with openai.AsyncOpenAI(api_key=api_key) as client:
+            async with openai.AsyncOpenAI(api_key=api_key, base_url=api_base) as client:
                 response = await client.chat.completions.create(
                     model=model,
                     messages=messages,
@@ -411,7 +422,11 @@ def add_preface_if_needed(data):
 
 
 def get_page_tokens(pdf_path, model="gpt-4o-2024-11-20", pdf_parser="PyPDF2"):
-    enc = tiktoken.encoding_for_model(model)
+    try:
+        enc = tiktoken.encoding_for_model(model)
+    except KeyError:
+        # 对于不支持的模型（如gemini），使用cl100k_base编码
+        enc = tiktoken.get_encoding("cl100k_base")
     if pdf_parser == "PyPDF2":
         pdf_reader = PyPDF2.PdfReader(pdf_path)
         page_list = []

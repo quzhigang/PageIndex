@@ -1,0 +1,70 @@
+{
+  "doc_name": "流域概况.pdf",
+  "structure": [
+    {
+      "title": "流域概况",
+      "start_index": 1,
+      "end_index": 1,
+      "node_id": "0000",
+      "summary": "该文档片段主要介绍了卫河与共产主义渠的流域概况及防洪体系，涵盖了以下核心要点：一是卫河的地理起源、流经区域、流域规模及其作为国家粮食核心区和基础设施聚集地的战略地位；二是共产主义渠的历史沿革、功能演变（由引黄灌溉转为排洪除涝）及其具体的流经路线；三是卫河与共产主义渠共同构成的防洪除涝体系，包括主要支流分布、水利工程设施（水库、水闸及堤防）以及9个蓄滞洪区的空间配置。"
+    },
+    {
+      "title": "水文气象",
+      "start_index": 2,
+      "end_index": 2,
+      "node_id": "0001",
+      "summary": "该文档片段主要介绍了卫河流域的水文气象特征与自然地理概况。在水文气象方面，详细记录了流域内的气温、风速、降雨量及其季节性分布（集中在7、8月份），分析了暴雨的成因、洪水来源及因地形导致的洪涝灾害特点（山丘区汇流快、平原区排水难）。在自然地理方面，概述了流域的地势起伏，给出了从山地、丘陵到平原的不同海拔高度及地面坡降等地理参数。"
+    },
+    {
+      "title": "自然地理",
+      "start_index": 2,
+      "end_index": 3,
+      "node_id": "0002",
+      "summary": "该文档片段详细介绍了卫河流域的综合概况，主要涵盖以下四个方面的内容：\n\n1. **水文气象特征**：分析了流域内的气温、风速、无霜期及降雨量分布。重点指出降雨集中在7、8月份，受太行山地形影响易发暴雨，并详细描述了山丘区与平原区洪水汇集与排泄的差异，强调了共产主义渠对防汛的重要性。\n2. **自然地理概况**：介绍了流域的地形地貌，包括海拔高度变化、坡降及山丘区与平原区的比例。详细对比了卫河左、右两岸支流的不同水文特性，并提供了共产主义渠的长度、引水能力、灌溉面积及其重要水文站（合河站）的历史演变。\n3. **社会经济状况**：列举了流域内安阳、鹤壁、新乡等5个核心防洪城市，并给出了截至2020年的常住人口、地区生产总值（GDP）及耕地面积等数据。\n4. **洪涝灾害历史**：简述了卫河流域洪涝灾害的频发性，指出自1607年以来大洪水发生的平均频率约3至4年一次。"
+    },
+    {
+      "title": "社会经济",
+      "start_index": 3,
+      "end_index": 3,
+      "node_id": "0003",
+      "summary": "这份文档主要介绍了卫河流域的自然地理特征、关键水利工程设施、社会经济概况以及历史洪涝灾害情况。主要内容包括：卫河冲积平原的地形坡降与流域面积构成；因地形差异导致的左右两岸支流不同的汇流特性；共产主义渠的建设背景、引水能力及合河水文站的监测职能；流域内主要城市（如新乡、安阳等）的防洪地位及2020年的常住人口、地区生产总值等经济数据；以及卫河流域历史上高频率发生的洪涝灾害记录。"
+    },
+    {
+      "title": "洪涝灾害",
+      "start_index": 3,
+      "end_index": 4,
+      "node_id": "0004",
+      "summary": "该文档片段主要介绍了卫河流域的自然地理特征、社会经济概况、洪涝灾害历史及流域工程特性。具体要点包括：1. **地理与水文特征**：描述了流域的地形分布（山地占85%）、左右两岸支流的差异，以及重要支流共产主义渠的规模与功能；2. **社会经济状况**：列举了流域内5座重要防洪城市及2020年的人口、生产总值和耕地面积数据；3. **洪涝灾害历史**：记录了卫河频繁的洪水灾害，重点详述了2021年特大暴雨洪水造成的巨大经济损失和人员受灾情况；4. **流域工程特性**：统计并列举了流域内大小水库的分布及关键技术参数（如调洪库容、最大泄洪量），并提及了近年河道治理的防洪标准。"
+    },
+    {
+      "title": "流域特性",
+      "start_index": 4,
+      "end_index": 4,
+      "nodes": [
+        {
+          "title": "水库",
+          "start_index": 4,
+          "end_index": 4,
+          "node_id": "0006",
+          "summary": "The document outlines the history of major floods in the Wei River basin, detailing the significant socio-economic impacts and infrastructure damage caused by the extreme flood event in July 2021. It also provides a technical overview of the basin's hydraulic characteristics, including a comprehensive inventory of reservoirs with their flood control capacities and discharge rates, as well as an assessment of river channel governance and flood control standards."
+        },
+        {
+          "title": "河道",
+          "start_index": 4,
+          "end_index": 5,
+          "node_id": "0007",
+          "summary": "This partial document provides a technical summary of historical flood events and the flood control infrastructure within the Weihe River Basin. It outlines major flood years, specifically detailing the severe socio-economic impact and damage caused by the July 2021 extraordinary rainstorm flood. The document further categorizes the basin's flood management characteristics into three main sections: a list of reservoirs (large, medium, and small) with their specific flood control and discharge capacities; an assessment of river channel flood standards and flow capacities for various sections of the Weihe, Communist Canal, and other tributaries; and a detailed inventory of nine designated detention basins, including their storage volumes and flood entry mechanisms."
+        },
+        {
+          "title": "蓄滞洪区",
+          "start_index": 5,
+          "end_index": 6,
+          "node_id": "0008",
+          "summary": "This partial document outlines the flood control standards and infrastructure specifications for several major rivers and detention basins. Its main points include:\n\n1. **River Flood Control Standards**: It details the design flood return periods (ranging from 20 to 100 years) and maximum discharge capacities for specific segments of the Wei River, Communism Canal, Dasha River, Anyang River, and Qi River.\n2. **Flood Detention Areas**: It identifies nine designated flood detention zones (such as Liangxiangpo and Baishipo), providing technical data for each, including design storage water levels, total storage capacities, and the specific methods or structures used for flood diversion (e.g., sluices, weirs, or natural overflow)."
+        }
+      ],
+      "node_id": "0005",
+      "summary": "This document outlines the historical flood events in the Wei River basin, focusing on the significant socio-economic impacts and damage caused by the extreme floods of July 2021. It also details the basin's water conservancy infrastructure, providing a comprehensive list and technical specifications—such as flood control capacity and maximum discharge—for various large and medium-sized reservoirs, while noting the current flood protection standards of the region's main river channels."
+    }
+  ]
+}
