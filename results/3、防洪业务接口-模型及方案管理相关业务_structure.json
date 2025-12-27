@@ -1,0 +1,234 @@
+{
+  "doc_name": "3、防洪业务接口-模型及方案管理相关业务",
+  "structure": [
+    {
+      "title": "防洪业务接口-模型及方案管理相关业务",
+      "node_id": "0001",
+      "text": "# 防洪业务接口-模型及方案管理相关业务",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "一、模拟方案管理接口（13个）",
+          "node_id": "0002",
+          "text": "## 一、模拟方案管理接口（13个）",
+          "line_num": 3,
+          "nodes": [
+            {
+              "title": "1. modelPlan_add",
+              "node_id": "0003",
+              "text": "### 1. modelPlan_add\n\n**用途**: 新增模拟方案\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - planName: 方案名称 (String, 必填)\n  - planDesc: 方案描述 (String, 可选)\n  - businessCode: 业务模型编码 (String, 必填)\n  - businessName: 业务模型名称 (String, 可选)\n  - startTime: 开始时间 (String, 格式: \"yyyy-MM-dd HH:mm:ss\")\n  - endTime: 结束时间 (String, 格式: \"yyyy-MM-dd HH:mm:ss\")\n  - stepSaveMinutes: 模型结果保存时间步长(分钟) (Integer, 可选)\n  - inheritPlanCode: 继承方案的编码 (String, 可选)\n  - viewPoint: 相机位置 (String, 可选)\n  - modelObject: 模型参数JSON字符串 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 5,
+              "summary": "The document describes the technical specifications for the `modelPlan_add` API interface, which is designed to add a new simulation plan. It outlines the POST request method, the specific endpoint URL, and the detailed structure of the required JSON input parameters, including fields for plan identification, business model coding, time parameters, and optional configuration settings. It also provides the expected JSON response format indicating a successful operation."
+            },
+            {
+              "title": "2. modelPlan_edit",
+              "node_id": "0004",
+              "text": "### 2. modelPlan_edit\n\n**用途**: 编辑模拟方案\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/edit`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象: 同新增接口参数\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 35,
+              "summary": "### 2. modelPlan_edit\n\n**用途**: 编辑模拟方案\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/edit`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象: 同新增接口参数\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "3. modelPlan_delete",
+              "node_id": "0005",
+              "text": "### 3. modelPlan_delete\n\n**用途**: 删除模拟方案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/delete`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 55,
+              "summary": "### 3. modelPlan_delete\n\n**用途**: 删除模拟方案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/delete`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "4. modelPlan_detail",
+              "node_id": "0006",
+              "text": "### 4. modelPlan_detail\n\n**用途**: 查看模拟方案详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/detail`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"planCode\": \"plan_20231201\",\n        \"planName\": \"测试方案\",\n        \"planDesc\": \"方案描述\",\n        \"businessCode\": \"business001\",\n        \"businessName\": \"业务模型名称\",\n        \"startTime\": \"2023-12-01 00:00:00\",\n        \"endTime\": \"2023-12-02 00:00:00\",\n        \"state\": \"待计算\",\n        \"stepSaveMinutes\": 60,\n        \"expectSeconds\": 300,\n        \"progressInfo\": \"进度信息\",\n        \"viewPoint\": \"相机位置JSON\",\n        \"modelObject\": \"模型参数JSON\"\n    }\n}\n```",
+              "line_num": 74,
+              "summary": "This document provides the technical specifications for the `modelPlan_detail` API endpoint, which is used to retrieve comprehensive information about a specific simulation plan. It details the GET request method, the required input parameter (`planCode`), and the structured JSON output, which includes plan metadata (name, description), associated business model info, execution timing, current state, and configuration parameters like camera viewpoints and model objects."
+            },
+            {
+              "title": "5. modelPlan_state",
+              "node_id": "0007",
+              "text": "### 5. modelPlan_state\n\n**用途**: 查看模拟方案计算状态\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/state`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": \"计算完成\"\n}\n```",
+              "line_num": 107,
+              "summary": "### 5. modelPlan_state\n\n**用途**: 查看模拟方案计算状态\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/state`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": \"计算完成\"\n}\n```"
+            },
+            {
+              "title": "6. modelPlan_listAll",
+              "node_id": "0008",
+              "text": "### 6. modelPlan_listAll\n\n**用途**: 查询全部模拟方案列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/listAll`\n**输入参数**:\n\n- planCode: 方案编码 (String, 可选)\n- planName: 方案名称 (String, 可选)\n- businessCode: 业务模型编码 (String, 可选)\n- state: 计算状态 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"planCode\": \"plan_001\",\n            \"planName\": \"方案1\",\n            \"businessCode\": \"business001\",\n            \"state\": \"计算完成\"\n        }\n    ]\n}\n```",
+              "line_num": 126,
+              "summary": "This partial document provides the technical specifications for the `modelPlan_listAll` API, which is used to retrieve a comprehensive, non-paginated list of simulation plans. It outlines the API's purpose, the GET request method and URL, optional input parameters (planCode, planName, businessCode, and state), and the structure of the expected JSON response."
+            },
+            {
+              "title": "7. modelPlan_calc",
+              "node_id": "0009",
+              "text": "### 7. modelPlan_calc\n\n**用途**: 执行模拟方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/calc`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"expectSeconds\": 300\n    }\n}\n```",
+              "line_num": 155,
+              "summary": "### 7. modelPlan_calc\n\n**用途**: 执行模拟方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/calc`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"expectSeconds\": 300\n    }\n}\n```"
+            },
+            {
+              "title": "8. modelPlan_stop",
+              "node_id": "0010",
+              "text": "### 8. modelPlan_stop\n\n**用途**: 终止模拟方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/stop`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 176,
+              "summary": "### 8. modelPlan_stop\n\n**用途**: 终止模拟方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/stop`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "9. modelPlan_progress",
+              "node_id": "0011",
+              "text": "### 9. modelPlan_progress\n\n**用途**: 获取模拟方案计算进度\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/progress`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"progress\": 50,\n        \"info\": \"正在计算...\"\n    }\n}\n```",
+              "line_num": 195,
+              "summary": "### 9. modelPlan_progress\n\n**用途**: 获取模拟方案计算进度\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/progress`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"progress\": 50,\n        \"info\": \"正在计算...\"\n    }\n}\n```"
+            },
+            {
+              "title": "10. modelPlan_countState",
+              "node_id": "0012",
+              "text": "### 10. modelPlan_countState\n\n**用途**: 获取不同计算状态的方案数量统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/count/state`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"待计算\": 10,\n        \"计算中\": 2,\n        \"计算完成\": 50,\n        \"计算失败\": 3\n    }\n}\n```",
+              "line_num": 217,
+              "summary": "### 10. modelPlan_countState\n\n**用途**: 获取不同计算状态的方案数量统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/count/state`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"待计算\": 10,\n        \"计算中\": 2,\n        \"计算完成\": 50,\n        \"计算失败\": 3\n    }\n}\n```"
+            },
+            {
+              "title": "11. modelPlan_countPlan",
+              "node_id": "0013",
+              "text": "### 11. modelPlan_countPlan\n\n**用途**: 获取各业务模型的模拟方案数量\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/count/plan`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"business001\": 20,\n        \"business002\": 15\n    }\n}\n```",
+              "line_num": 239,
+              "summary": "### 11. modelPlan_countPlan\n\n**用途**: 获取各业务模型的模拟方案数量\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/count/plan`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"business001\": 20,\n        \"business002\": 15\n    }\n}\n```"
+            },
+            {
+              "title": "12. modelPlan_autoForecastManual",
+              "node_id": "0014",
+              "text": "### 12. modelPlan_autoForecastManual\n\n**用途**: 手动执行一次自动预报(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/autoForecast/manual`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 259,
+              "summary": "### 12. modelPlan_autoForecastManual\n\n**用途**: 手动执行一次自动预报(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelPlan/autoForecast/manual`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            }
+          ],
+          "prefix_summary": "## 一、模拟方案管理接口（13个）"
+        },
+        {
+          "title": "二、基础模型管理接口（3个）",
+          "node_id": "0015",
+          "text": "## 二、基础模型管理接口（3个）",
+          "line_num": 278,
+          "nodes": [
+            {
+              "title": "13. modelBasic_listAll",
+              "node_id": "0016",
+              "text": "### 13. modelBasic_listAll\n\n**用途**: 查询全部基础模型列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBasic/listAll`\n**输入参数**:\n\n- name: 模型名称 (String, 可选)\n- code: 模型编码 (String, 可选)\n- typeId: 模型类型ID (Long, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"新安江模型\",\n            \"code\": \"XAJ\",\n            \"typeId\": 1,\n            \"typeName\": \"产流模型\"\n        }\n    ]\n}\n```",
+              "line_num": 280,
+              "summary": "### 13. modelBasic_listAll\n\n**用途**: 查询全部基础模型列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBasic/listAll`\n**输入参数**:\n\n- name: 模型名称 (String, 可选)\n- code: 模型编码 (String, 可选)\n- typeId: 模型类型ID (Long, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"新安江模型\",\n            \"code\": \"XAJ\",\n            \"typeId\": 1,\n            \"typeName\": \"产流模型\"\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "14. modelBasic_detail",
+              "node_id": "0017",
+              "text": "### 14. modelBasic_detail\n\n**用途**: 查看基础模型详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBasic/detail`\n**输入参数**:\n\n- id: 模型ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"新安江模型\",\n        \"code\": \"XAJ\",\n        \"summary\": \"模型介绍\",\n        \"principle\": \"模型原理\",\n        \"resultDesc\": \"生成结果描述\",\n        \"typeId\": 1,\n        \"typeName\": \"产流模型\",\n        \"imgId\": 100,\n        \"paras\": []\n    }\n}\n```",
+              "line_num": 309,
+              "summary": "This partial document provides the technical specifications for the \"modelBasic_detail\" API endpoint. It outlines the purpose of retrieving detailed information for a specific model, defines the GET request method and path, specifies the required input parameter (model ID), and provides a sample JSON response containing model attributes such as name, code, principles, and type information."
+            },
+            {
+              "title": "15. modelBasic_count",
+              "node_id": "0018",
+              "text": "### 15. modelBasic_count\n\n**用途**: 获取基础模型、模型实例、业务模型、模拟方案的数量统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBasic/count`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"basicCount\": 10,\n        \"instanceCount\": 20,\n        \"businessCount\": 5,\n        \"planCount\": 100\n    }\n}\n```\n\n---",
+              "line_num": 339,
+              "summary": "### 15. modelBasic_count\n\n**用途**: 获取基础模型、模型实例、业务模型、模拟方案的数量统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBasic/count`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"basicCount\": 10,\n        \"instanceCount\": 20,\n        \"businessCount\": 5,\n        \"planCount\": 100\n    }\n}\n```\n\n---"
+            }
+          ],
+          "prefix_summary": "## 二、基础模型管理接口（3个）"
+        },
+        {
+          "title": "三、模型实例管理接口（2个）",
+          "node_id": "0019",
+          "text": "## 三、模型实例管理接口（2个）",
+          "line_num": 363,
+          "nodes": [
+            {
+              "title": "16. modelInstance_listAll",
+              "node_id": "0020",
+              "text": "### 16. modelInstance_listAll\n\n**用途**: 查询全部模型实例列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelInstance/listAll`\n**输入参数**:\n\n- name: 实例名称 (String, 可选)\n- code: 实例编码 (String, 可选)\n- basicCode: 基础模型编码 (String, 可选)\n- basinCode: 流域编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"卫河流域新安江模型\",\n            \"code\": \"WH_XAJ\",\n            \"basicCode\": \"XAJ\",\n            \"basinCode\": \"WH001\"\n        }\n    ]\n}\n```",
+              "line_num": 365,
+              "summary": "This partial document provides the technical specification for the `modelInstance_listAll` API endpoint, which is used to retrieve a complete list of all model instances without pagination. It details the GET request method, the service URL, and optional filtering parameters such as instance name, instance code, basic model code, and basin code. Additionally, it includes a sample JSON response structure illustrating how the success status, message, and model instance data (including ID, name, and codes) are returned."
+            },
+            {
+              "title": "17. modelInstance_detail",
+              "node_id": "0021",
+              "text": "### 17. modelInstance_detail\n\n**用途**: 查看模型实例详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelInstance/detail`\n**输入参数**:\n\n- id: 实例ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"卫河流域新安江模型\",\n        \"code\": \"WH_XAJ\",\n        \"summary\": \"实例介绍\",\n        \"resultDesc\": \"生成结果描述\",\n        \"typeId\": 1,\n        \"typeName\": \"产流模型\",\n        \"basicCode\": \"XAJ\",\n        \"basicName\": \"新安江模型\",\n        \"basinCode\": \"WH001\",\n        \"paras\": []\n    }\n}\n```\n\n---",
+              "line_num": 395,
+              "summary": "This document describes the API specification for the \"modelInstance_detail\" endpoint, which is used to retrieve detailed information about a specific model instance. It outlines the functional purpose, the GET request method and URL, the mandatory input parameter (instance ID), and the structure of the JSON response, which includes metadata such as the instance name, code, type, and associated parameters."
+            }
+          ],
+          "prefix_summary": "## 三、模型实例管理接口（2个）"
+        },
+        {
+          "title": "四、业务模型管理接口（4个）",
+          "node_id": "0022",
+          "text": "## 四、业务模型管理接口（4个）",
+          "line_num": 428,
+          "nodes": [
+            {
+              "title": "18. modelBusiness_listAll",
+              "node_id": "0023",
+              "text": "### 18. modelBusiness_listAll\n\n**用途**: 查询全部业务模型列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBusiness/listAll`\n**输入参数**:\n\n- name: 业务模型名称 (String, 可选)\n- code: 业务模型编码 (String, 可选)\n- typeId: 业务模型类型ID (Long, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"卫河流域洪水预报\",\n            \"code\": \"WH_FLOOD\",\n            \"typeId\": 1,\n            \"typeName\": \"洪水预报\"\n        }\n    ]\n}\n```",
+              "line_num": 430,
+              "summary": "This document provides the technical specification for the `modelBusiness_listAll` API interface, which is used to retrieve a complete, non-paginated list of business models. It details the GET request method and endpoint path, outlines optional search parameters including name, code, and type ID, and provides a sample JSON response illustrating the structure of the returned data, such as model IDs, names, and classifications."
+            },
+            {
+              "title": "19. modelBusiness_add",
+              "node_id": "0024",
+              "text": "### 19. modelBusiness_add\n\n**用途**: 新增业务模型\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBusiness/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - name: 业务模型名称 (String, 必填)\n  - code: 业务模型编码 (String, 必填, 唯一)\n  - typeId: 业务模型类型ID (Long, 可选)\n  - typeName: 业务模型类型名称 (String, 可选)\n  - instanceCodes: 模型实例编码(多个用逗号分隔) (String, 可选)\n  - viewPoint: 相机位置 (String, 可选)\n  - url: 模型地址 (String, 可选)\n  - remark: 备注 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 459,
+              "summary": "This document provides the technical specifications for the `modelBusiness_add` API interface, which is used to create new business models within a platform. It outlines the request method (POST), the specific endpoint URL, and the required input parameters, highlighting mandatory fields such as the business model name and unique code alongside optional attributes like type ID, instance codes, and camera viewpoint. Finally, it presents the expected JSON response structure for a successful request."
+            },
+            {
+              "title": "20. modelBusiness_detail",
+              "node_id": "0025",
+              "text": "### 20. modelBusiness_detail\n\n**用途**: 查看业务模型详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelBusiness/detail`\n**输入参数**:\n\n- code: 业务模型编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"卫河流域洪水预报\",\n        \"code\": \"WH_FLOOD\",\n        \"typeId\": 1,\n        \"typeName\": \"洪水预报\",\n        \"instanceCodes\": \"WH_XAJ,WH_MIKE11\",\n        \"viewPoint\": \"相机位置JSON\",\n        \"url\": \"模型地址\",\n        \"remark\": \"备注\"\n    }\n}\n```\n\n---",
+              "line_num": 487,
+              "summary": "This document provides the technical specifications for the \"modelBusiness_detail\" API, which is used to retrieve detailed information about a specific business model. It outlines the GET request method, the endpoint URL, the required input parameter (business model code), and a sample JSON response structure detailing model attributes such as name, type, associated instance codes, and metadata."
+            }
+          ],
+          "prefix_summary": "## 四、业务模型管理接口（4个）"
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0026",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---",
+          "line_num": 518,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---"
+        },
+        {
+          "title": "附录",
+          "node_id": "0027",
+          "text": "## 附录",
+          "line_num": 544,
+          "nodes": [
+            {
+              "title": "A. 日期格式说明",
+              "node_id": "0028",
+              "text": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`",
+              "line_num": 546,
+              "summary": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`"
+            },
+            {
+              "title": "B. 状态码说明",
+              "node_id": "0029",
+              "text": "### B. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问",
+              "line_num": 551,
+              "summary": "### B. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问"
+            },
+            {
+              "title": "C. 计算状态说明",
+              "node_id": "0030",
+              "text": "### C. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算完成\n- 计算失败",
+              "line_num": 558,
+              "summary": "### C. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算完成\n- 计算失败"
+            },
+            {
+              "title": "D. 无需登录的接口",
+              "node_id": "0031",
+              "text": "### D. 无需登录的接口\n\n以下接口无需登录(requiredLogin = false):\n\n- modelPlan_autoForecastManual",
+              "line_num": 567,
+              "summary": "### D. 无需登录的接口\n\n以下接口无需登录(requiredLogin = false):\n\n- modelPlan_autoForecastManual"
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 防洪业务接口-模型及方案管理相关业务"
+    }
+  ]
+}

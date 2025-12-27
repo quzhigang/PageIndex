@@ -1,0 +1,128 @@
+{
+  "doc_name": "4、水利专业模型-获取与专业模型相关的基础信息接口",
+  "structure": [
+    {
+      "title": "获取与专业模型相关的基础信息接口",
+      "node_id": "0001",
+      "text": "# 获取与专业模型相关的基础信息接口",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域获取与专业模型相关的基础信息的API接口，共13个接口。所有接口通过Model_Ser.ashx.cs处理，接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域获取与专业模型相关的基础信息的API接口，共13个接口。所有接口通过Model_Ser.ashx.cs处理，接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0003",
+          "text": "## 接口列表",
+          "line_num": 9,
+          "nodes": [
+            {
+              "title": "1. get_sampleline",
+              "node_id": "0004",
+              "text": "### 1. get_sampleline\n\n**用途**: 获取GIS样板线，为geojson格式的河道分段线要素，用于在地图区分色动态渲染过程结果，如流量、流速等\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_sampleline\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的GIS样板线，为geojson格式的河道分段线要素",
+              "line_num": 11,
+              "summary": "### 1. get_sampleline\n\n**用途**: 获取GIS样板线，为geojson格式的河道分段线要素，用于在地图区分色动态渲染过程结果，如流量、流速等\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_sampleline\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的GIS样板线，为geojson格式的河道分段线要素"
+            },
+            {
+              "title": "2. get_reachinfo",
+              "node_id": "0005",
+              "text": "### 2. get_reachinfo\n\n**用途**: 获取河道基本信息，包括河道名称，编码，起止桩号及长度等信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_reachinfo\"\n- request_pars: 模型实例名称字符串\n**输出结果**:\n- JSON格式的河道信息数组，数组里每个元素为一条河道，每条河道包括属性：\n  name(河道ID)、id(序号)、reach_cnname(中文名)、start_str(起始桩号)、end_str(终止桩号)、length(长度)",
+              "line_num": 22,
+              "summary": "### 2. get_reachinfo\n\n**用途**: 获取河道基本信息，包括河道名称，编码，起止桩号及长度等信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_reachinfo\"\n- request_pars: 模型实例名称字符串\n**输出结果**:\n- JSON格式的河道信息数组，数组里每个元素为一条河道，每条河道包括属性：\n  name(河道ID)、id(序号)、reach_cnname(中文名)、start_str(起始桩号)、end_str(终止桩号)、length(长度)"
+            },
+            {
+              "title": "3. get_gatestate",
+              "node_id": "0006",
+              "text": "### 3. get_gatestate\n\n**用途**: 获取全流域里各闸站建筑最新状态监测信息，包括闸门状态、开孔数、开度、更新时间\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_gatestate\"\n- request_pars: 业务编码字符串 (business_code)\n**输出结果**:\n- JSON格式的闸站状态信息，样例：\n    [\n        {\n            \"str_name\": \"JGLH_FHZ\",     //建筑物名称\n            \"nowState\": \"全开\",         //当前状态\n            \"tm\": \"2024/07/29 08:00:00\",    //更新时间\n            \"openN\": 3,               //闸门开孔数\n            \"openHQ\": 3.5             //各闸门平均高度(m)\n        },\n        ...\n    ]",
+              "line_num": 34,
+              "summary": "This partial document provides the technical specifications for the `get_gatestate` API interface, which is used to retrieve the latest real-time monitoring status of sluice gate buildings across a river basin. It details the GET request method, required input parameters (request_type and business_code), and the resulting JSON output structure, which includes information such as gate name, current status, update time, number of openings, and average opening height."
+            },
+            {
+              "title": "4. get_sectiondata",
+              "node_id": "0007",
+              "text": "### 4. get_sectiondata\n\n**用途**: 根据断面STCD和桩号，获取河道断面原始测量数据\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_sectiondata\"\n- request_pars: JSON数组格式，如[\"31004300\", \"\"]或[\"GQ\", 155000]，\n当断面为水文站点或闸站时，第1个参数为该站点STCD，第2个为空字符串；否则第1个参数为河道编码，第2个为桩号\n**输出结果**:\n- JSON格式的断面数据，样例：\n    [\n        [            //断面点1的的偏心距和高程数组\n            0.0,      //偏心距\n            49.374    //高程\n        ],\n        [            //断面点2的的偏心距和高程数组\n            6.389,\n            49.371\n        ],\n        ...\n    ]",
+              "line_num": 55,
+              "summary": "This document segment provides the technical specification for the `get_sectiondata` API endpoint, which is used to retrieve raw river cross-section survey data. It details the GET request method, specifies the required input parameters (including conditional logic for station codes versus river codes and chainage), and describes the resulting JSON output format consisting of coordinate pairs for distance and elevation."
+            },
+            {
+              "title": "5. get_sectiondata_frompoint",
+              "node_id": "0008",
+              "text": "### 5. get_sectiondata_frompoint\n\n**用途**: 根据坐标点，获取河道断面原始测量数据\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_sectiondata_frompoint\"\n- request_pars: JSON数组格式: [\"114.15169\", \"35.483368\"]\n  - 参数1: 经度 (longitude)\n  - 参数2: 纬度 (latitude)\n**输出结果**:\n- JSON格式的断面数据，样例：\n    [\n        [            //断面点1的的偏心距和高程数组\n            0.0,      //偏心距\n            49.374    //高程\n        ],\n        [            //断面点2的的偏心距和高程数组\n            6.389,\n            49.371\n        ],\n        ...\n    ]",
+              "line_num": 78,
+              "summary": "This partial document provides a technical specification for the `get_sectiondata_frompoint` API, which is used to retrieve original river cross-section measurement data based on geographic coordinates. It details the GET request method, the required input parameters (longitude and latitude), and the resulting JSON output format consisting of eccentricity and elevation data points."
+            },
+            {
+              "title": "6. get_reachsection_location",
+              "node_id": "0009",
+              "text": "### 6. get_reachsection_location\n\n**用途**: 根据河道断面桩号，获取该河道断面中心点的经纬度坐标位置信息\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"get_reachsection_location\"\n- request_pars: JSON数组格式: [plan_code, section_location]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 断面位置信息数组，如[[\"GQ\",53263],[\"GQ\",43263],[\"WH\",13263]]，包含河道编码和桩号\n**输出结果**:\n- JSON格式的断面中心点的经纬度坐标位置信息，样例：\n    [{\"X\":114.207305,\"Y\":35.51629},{\"X\":114.119473,\"Y\":35.467885},{\"X\":113.845714,\"Y\":35.316635}]",
+              "line_num": 102,
+              "summary": "The document describes the `get_reachsection_location` API function, which is used to retrieve the longitude and latitude coordinates of river section center points based on their station numbers. It outlines the POST request method, the required input parameters (plan ID and an array of section locations containing river codes and chainage), and the structure of the resulting JSON output."
+            },
+            {
+              "title": "7. get_station_info",
+              "node_id": "0010",
+              "text": "### 7. get_station_info\n\n**用途**: 获取河道上各大中型水库、河道水文站点、河道控制闸站的基本信息和监测水情信息，\n包括站点stcd、所在河道和桩号、控制流域面积、水位流量等监测水情信息等\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_station_info\"\n- request_pars: 空字符串\n**输出结果**:\n- JSON格式的各大中型水库、河道水文站点、河道控制闸站的基本信息和监测水情信息，样例：\n    [\n        {\n            \"Name\": \"修武\",            //水库、水文站点或闸站名称\n            \"Reach\": \"DSH\",            //河道编码\n            \"Reach_CnName\": \"大沙河\",   //河道名称\n            \"Chainage\": 64250.0,        //站点在河道上的桩号\n            \"Level\": 80.35,             //最新监测水位\n            \"Discharge\": 3.37,          //最新监测流量\n            \"Update_Date\": \"2025/12/11 08:00:00\",   //监测更新时间\n            \"Stcd\": \"31004900\",        //站点stcd编码\n            \"Datasource\": \"河道水文站\", //数据来源\n            \"Station_Type\": \"主要\",     //标记是否为重要断面\n            \"Level1\": \"81.85\",          //水位预警值1，如果为水文站点、闸站则为警戒水位，为水库则为汛限水位\n            \"Level2\": \"0\",              //水位预警值2，如果为水库则为防洪高水位，否则为0\n            \"Level3\": \"83.35\",          //水位预警值3，如果为水文站点、闸站则为保证水位，为水库则为设计水位\n            \"More_info\": \"\",            //更多信息\n            \"Control_Area\": 1287.0,     //控制面积，单位平方公里\n            \"Model_instance\": [         //关联的模型实例\n                \"wg_mike11\",\n                \"wg_mike_flood\"\n            ]\n        },\n        ...\n    ]",
+              "line_num": 116,
+              "summary": "This partial document provides the technical specifications for the `get_station_info` API interface. It outlines the interface's purpose, which is to retrieve basic information and real-time monitoring data (such as water levels, discharge, and warning thresholds) for major reservoirs, hydrological stations, and river control gates. The document details the GET request method, the required input parameters, and the structure of the JSON output, including a sample data object with fields for station metadata, monitoring timestamps, control areas, and associated model instances."
+            },
+            {
+              "title": "8. get_strddrule_info",
+              "node_id": "0011",
+              "text": "### 8. get_strddrule_info\n\n**用途**: 获取水库、河道闸站等所有洪水控制建筑的规则调度信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_strddrule_info\"\n- request_pars: 业务编码字符串 (business_code)\n**输出结果**:\n- JSON格式的调度规则信息，样例：\n    {\n        \"QYSK_XHD\": {                      //建筑物ID\n            \"str_name\": \"QYSK_XHD\",        //建筑物ID\n            \"cn_name\": \"群英水库泄洪洞\",   //建筑物中文名称\n            \"gate_type\": 2,               //闸门类型（1-平板闸，2-流量闸）\n            \"str_type\": \"泄洪洞\",          //建筑物类型\n            \"reach_name\": \"DSH\",            //所在河道ID\n            \"reach_cnname\": \"大沙河\",       //所在河道中文名称\n            \"chainage\": 2321.0,             //建筑物在河道上的桩号位置\n            \"design_q\": 18.68,              //设计泄洪流量（m3/s）\n            \"datumn\": 412.0,                //建筑物闸底高程\n            \"gate_n\": 1,                   //闸门数量\n            \"gate_b\": 1.0,                //闸门孔宽度（m）\n            \"gate_h\": 1.0,                  //闸门孔高度（m）\n            \"gate_height\": 425.0,           //闸顶高程（m）\n            \"ddrule_info\": \"库水位超过477.0m，泄洪洞全开泄洪\",      //调度规则描述\n            \"control_str\": \"\",              //是否为洪水调度节点控制建筑，如果否则为空字符串，否则为整数，其大小代表排序\n            \"model_instances\": [            //关联的模型实例\n                \"wg_mike11\",\n                \"wg_mike_flood\"\n            ],\n            \"struct_stcd\": \"31004600\"       //建筑物的STCD\n        },\n        ...\n    }",
+              "line_num": 152,
+              "summary": "This partial document provides the technical specifications for the \"get_strddrule_info\" API, which is used to retrieve flood control scheduling rules and detailed attribute information for hydraulic structures such as reservoirs and river gates. It outlines the GET request method, the required input parameters (business code), and a comprehensive JSON output format. The document details the specific data fields returned, including building identification, physical characteristics (gate dimensions, elevations, and types), geographic location (river names and chainage), design discharge capacity, associated model instances, and specific operational scheduling descriptions."
+            },
+            {
+              "title": "9. get_control_strs",
+              "node_id": "0012",
+              "text": "### 9. get_control_strs\n\n**用途**: 根据业务编码和站点STCD获取关联的洪水控制建筑物，如水库的各个溢流堰和泄洪洞，蓄滞洪区的各个进洪分洪闸堰\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_control_strs\"\n- request_pars: JSON数组格式: [business_code, obj_stcd]\n  - 参数1: 业务编码 (business_code)\n  - 参数2: 对象站点编码 (obj_stcd)\n**输出结果**:\n- JSON格式的控制建筑ID数组，样例：[\"WH_HHJZZ\",\"WH_XNHJZZ\"]",
+              "line_num": 188,
+              "summary": "### 9. get_control_strs\n\n**用途**: 根据业务编码和站点STCD获取关联的洪水控制建筑物，如水库的各个溢流堰和泄洪洞，蓄滞洪区的各个进洪分洪闸堰\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_control_strs\"\n- request_pars: JSON数组格式: [business_code, obj_stcd]\n  - 参数1: 业务编码 (business_code)\n  - 参数2: 对象站点编码 (obj_stcd)\n**输出结果**:\n- JSON格式的控制建筑ID数组，样例：[\"WH_HHJZZ\",\"WH_XNHJZZ\"]"
+            },
+            {
+              "title": "10. get_now_waterinfo",
+              "node_id": "0013",
+              "text": "### 10. get_now_waterinfo\n\n**用途**: 获取所有水库、河道闸站、水文站点当前最新水情信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_now_waterinfo\"\n- request_pars: 业务编码字符串 (business_code)，如果业务编码字符串为空字符串，则获取所有水库闸站和水文站点的当前水情，否则是业务模型相关的\n**输出结果**:\n- JSON格式的当前水情信息，样例：\n    {\n        \"success\": true,\n        \"code\": \"200\",\n        \"message\": \"请求成功\",\n        \"data\": [\n            {\n                \"tm\": \"2025/12/11 08:00:00\",  //更新时间\n                \"q\": 3.37,                    //流量\n                \"z\": 80.35,                   //水位\n                \"stcd\": \"31004900\",         //测站STCD编码\n                \"type\": \"1\",                //测站类型 0-水库水文站，1-河道水文站或闸站\n                \"stnm\": \"修武\"              //测站名称\n            },\n        ...\n        ]\n    }",
+              "line_num": 201,
+              "summary": "This partial document provides the technical specifications for the `get_now_waterinfo` API, which is used to retrieve real-time hydrological information for reservoirs, river sluice stations, and hydrological stations. It details the GET request method, the required input parameters including an optional business code for filtering, and the structure of the JSON output, which contains data fields such as update time, flow rate, water level, and station identification details."
+            },
+            {
+              "title": "11. get_design_flood",
+              "node_id": "0014",
+              "text": "### 11. get_design_flood\n\n**用途**: 获取和业务模型相关的各河道不同量级设计洪水过程，如50年一遇设计洪水过程\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_design_flood\"\n- request_pars: 业务编码字符串 (business_code)\n**输出结果**:\n- JSON格式的设计洪水信息，样例：\n    [\n        {\n            \"flood_Name\": \"大沙河入流洪水\",   //入流洪水名称\n            \"station\": \"修武\",              //断面测站名称\n            \"stcd\": \"31004900\",            //断面测站STCD代码\n            \"reach\": \"DSH\",                 //河道代码\n            \"reach_cn\": \"大沙河\",            //河道名称\n            \"chainage\": 64800.0,            //断面所在河道桩号\n            \"bnd_id\": \"dsh_rl\",            //对应在模型中的入流边界条件ID\n            \"design_floods\": [            //不同量级设计洪水过程\n                {\n                    \"Flood_Name\": \"5年一遇洪水\",        //设计洪水名称\n                    \"Flood_GC\": {                      //设计洪水过程\n                        \"2030/07/01 00:00:00\": 0.0,\n                        \"2030/07/01 01:00:00\": 51.0,\n                        ...\n                    }\n                },\n                ...\n            ]\n        }\n    ]",
+              "line_num": 228,
+              "summary": "This document describes the `get_design_flood` API interface, which is used to retrieve design flood process data of varying magnitudes (e.g., a 50-year return period) for river channels associated with specific business models. It specifies the GET request method, the required input parameters (request type and business code), and the JSON output format, which includes detailed station information (name, code, river reach, and chainage), model boundary condition IDs, and time-series flow data for different design flood scenarios."
+            },
+            {
+              "title": "12. get_nsbd_sectioninfo",
+              "node_id": "0015",
+              "text": "### 12. get_nsbd_sectioninfo\n\n**用途**: 获取流域范围内，各河道与南水北调交叉断面的基本信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_nsbd_sectioninfo\"\n- request_pars: 空字符串\n**输出结果**:\n- JSON格式的南水北调断面信息，样例：\n    {\n        \"大沙河交叉断面\":              //交叉断面名称\n        {\n            \"section_atreach\": {      //交叉断面位置，包括河道编码，ID和桩号\n                \"reachname\": \"DSH\",\n                \"reachid\": \"DSH_2030\",\n                \"chainage\": 34200.0\n            },\n            \"sj_5n_level\": 111.21,          //交叉断面5年一遇设计水位\n            \"sj_10n_level\": 111.565,        //交叉断面10年一遇设计水位\n            \"sj_20n_level\": 111.92,         //交叉断面20年一遇设计水位\n            \"sj_50n_level\": 112.13,         //交叉断面50年一遇设计水位\n            \"sj_100n_level\": 112.49,        //交叉断面100年一遇设计水位\n            \"sj_300n_level\": 112.81,        //交叉断面300年一遇设计水位\n            \"sj_q\": 2010.0,                 //交叉断面设计流量\n            \"jh_q\": 2430.0,                 //交叉断面校核流量\n            \"dd_level\": 113.99,             //交叉断面堤顶高程\n            \"dd_level_name\": \"渠堤\",          //交叉断面堤顶高程名称\n            \"hp_top_level\": 113.29,         //交叉断面浆砌石护坡顶高程\n            \"hp_bottom_level\": 111.92,      //交叉断面浆砌石护坡底高程\n            \"other_level\": 0.0,\n            \"other_level_name\": \"\",\n            \"jd\": 113.1678,                     //交叉断面河道中心点经度\n            \"wd\": 35.1764                       //交叉断面河道中心点纬度\n        },\n        ...\n    }",
+              "line_num": 261,
+              "summary": "This document describes the technical specifications for the `get_nsbd_sectioninfo` API interface, which is designed to retrieve basic information regarding intersection cross-sections between river channels and the South-to-North Water Diversion Project. It outlines the GET request method and parameters, while providing a detailed breakdown of the JSON output format. Key data points covered include cross-section locations (reach name, ID, and chainage), design water levels for various return periods (5 to 300 years), design and check flow rates, embankment and slope protection elevations, and geographical coordinates (longitude and latitude)."
+            },
+            {
+              "title": "13. get_business_view",
+              "node_id": "0016",
+              "text": "### 13. get_business_view\n\n**用途**: 获取业务模型的默认初始三维场景相机姿态信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_business_view\"\n- request_pars: 业务模型字符串\n**输出结果**:\n- JSON格式的三维场景相机姿态信息，样例：\n    {\n        \"camera\": {\n            \"position\": {\n                \"spatialReference\": {     //坐标系\n                    \"latestWkid\": 3857,\n                    \"wkid\": 102100\n                },\n                \"x\": 12687809,     //相机X坐标\n                \"y\": 4214159,       //相机Y坐标\n                \"z\": 63750          //相机高度\n            },\n            \"heading\": 0,           //相机朝向\n            \"tilt\": 0.5             //相机俯仰角\n        }\n    }\n\n---",
+              "line_num": 299,
+              "summary": "This document describes the \"get_business_view\" interface, which is used to retrieve the default initial 3D scene camera pose for a specific business model. It outlines the GET request method, specifies the required input parameters (request type and business model string), and provides a detailed example of the JSON output, including camera coordinates, spatial reference, heading, and tilt."
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "总结",
+          "node_id": "0017",
+          "text": "## 总结\n\n本文档共收录13个获取与专业模型相关的基础信息API接口，涵盖了GIS样板线、河道信息、闸站状态、断面数据、站点信息、调度规则、水情信息、设计洪水、南水北调断面信息以及三维场景相机姿态等基础信息的获取功能。",
+          "line_num": 327,
+          "summary": "## 总结\n\n本文档共收录13个获取与专业模型相关的基础信息API接口，涵盖了GIS样板线、河道信息、闸站状态、断面数据、站点信息、调度规则、水情信息、设计洪水、南水北调断面信息以及三维场景相机姿态等基础信息的获取功能。"
+        }
+      ],
+      "prefix_summary": "# 获取与专业模型相关的基础信息接口"
+    }
+  ]
+}

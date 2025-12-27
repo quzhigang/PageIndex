@@ -10,6 +10,32 @@ import pandas as pd
 
 st.set_page_config(page_title="PageIndex 网页界面", page_icon="🌲", layout="wide")
 
+# 减少页面顶部空白，并设置上传文件列表为滚动显示
+st.markdown("""
+<style>
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+    header {
+        visibility: hidden;
+    }
+    .stMainBlockContainer {
+        padding-top: 1rem;
+    }
+    /* 上传文件列表滚动显示 */
+    [data-testid="stFileUploaderDropzoneInput"] + div {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    /* 上传文件预览区域滚动 */
+    .stFileUploader > div > div:last-child {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Helper Functions
 def update_api_config(api_key, api_base):
     os.environ["CHATGPT_API_KEY"] = api_key
@@ -185,21 +211,33 @@ with tab1:
             else:
                 update_api_config(api_key, api_base)
                 total_files = len(uploaded_files)
+                # 显示总体进度信息
+                overall_status = st.empty()
+                # 单文档进度条
                 progress_bar = st.progress(0.0)
                 status_text = st.empty()
                 all_results_container = st.container()
                 
                 for i, uploaded_file in enumerate(uploaded_files):
                     file_extension = os.path.splitext(uploaded_file.name)[1].lower()
-                    status_text.text(f"正在处理 ({i+1}/{total_files}): {uploaded_file.name}...")
+                    overall_status.info(f"📁 总进度: {i+1}/{total_files} 个文件")
+                    status_text.text(f"正在处理: {uploaded_file.name}")
+                    # 重置进度条为0
+                    progress_bar.progress(0.0)
                     
                     try:
+                        # 阶段1: 保存文件 (10%)
+                        progress_bar.progress(0.1)
                         file_path = os.path.join(upload_dir, uploaded_file.name)
                         with open(file_path, "wb") as f:
                             f.write(uploaded_file.getvalue())
                         
+                        # 阶段2: 开始处理 (20%)
+                        progress_bar.progress(0.2)
                         result = None
                         if file_extension == ".pdf":
+                            # 阶段3: PDF解析中 (40%)
+                            progress_bar.progress(0.4)
                             opt = config(
                                 model=model_name,
                                 toc_check_page_num=toc_check_pages,
@@ -212,6 +250,8 @@ with tab1:
                             )
                             result = page_index_main(file_path, opt)
                         elif file_extension in [".md", ".markdown"]:
+                            # 阶段3: Markdown解析中 (40%)
+                            progress_bar.progress(0.4)
                             result = asyncio.run(md_to_tree(
                                 md_path=file_path,
                                 if_thinning=False,
@@ -221,22 +261,32 @@ with tab1:
                                 if_add_node_text=True,  # Markdown 文件强制保留完整文本以支持检索
                                 if_add_node_id=True
                             ))
+                        
+                        # 阶段4: 生成摘要中 (70%)
+                        progress_bar.progress(0.7)
 
                         if result:
+                            # 阶段5: 保存结果 (90%)
+                            progress_bar.progress(0.9)
                             file_base_name = os.path.splitext(uploaded_file.name)[0]
                             result_file_path = os.path.join(results_dir, f"{file_base_name}_structure.json")
                             with open(result_file_path, "w", encoding="utf-8") as f:
                                 json.dump(result, f, indent=2, ensure_ascii=False)
                             
+                            # 阶段6: 完成 (100%)
+                            progress_bar.progress(1.0)
                             with all_results_container:
                                 with st.expander(f"✅ {uploaded_file.name} 处理成功", expanded=False):
                                     st.info(f"JSON 已自动保存至: {result_file_path}")
                                     st.json(result)
                     except Exception as e:
+                        progress_bar.progress(1.0)
                         with all_results_container:
                             st.error(f"❌ {uploaded_file.name} 处理出错: {str(e)}")
-                    progress_bar.progress((i + 1) / total_files)
-                status_text.text("🎉 所有任务处理完成！")
+                
+                overall_status.success(f"🎉 所有任务处理完成！共处理 {total_files} 个文件")
+                status_text.empty()
+                progress_bar.empty()
                 st.balloons()
 
     # 文件详细清单
@@ -285,12 +335,15 @@ with tab1:
                 else:
                     st.warning("请先选择要删除的文件")
         
-        # 使用 data_editor 实现紧凑的可选择表格
+        # 使用 data_editor 实现紧凑的可选择表格，设置固定高度实现滚动
         df = pd.DataFrame(files_info)
         df.insert(0, '选择', False)
         
         # 将序号转为字符串以便居中显示
         df['序号'] = df['序号'].astype(str)
+        
+        # 计算表格高度：每行约35px，表头约35px，最大显示10行
+        table_height = min(len(files_info) * 35 + 35, 400)
         
         edited_df = st.data_editor(
             df,
@@ -309,6 +362,7 @@ with tab1:
             disabled=["序号", "文件名", "上传时间", "文件大小", "文件类型"],
             hide_index=True,
             use_container_width=True,
+            height=table_height,
             key="file_table"
         )
         
@@ -337,20 +391,27 @@ with tab2:
         if "messages" not in st.session_state:
             st.session_state.messages = []
 
-        # 显示聊天消息
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
-                if "thinking" in message and message["thinking"]:
-                    with st.expander("推理检索过程"):
-                        st.markdown(message["thinking"])
-                if "nodes" in message and message["nodes"]:
-                    with st.expander("参考来源"):
-                        for node_info in message["nodes"]:
-                            st.write(node_info)
+        # 创建聊天消息容器
+        chat_container = st.container()
+        
+        # 聊天输入放在容器外面（底部）
+        query = st.chat_input("向整个文档库提问...")
+        
+        # 在容器内显示聊天消息
+        with chat_container:
+            for message in st.session_state.messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
+                    if "thinking" in message and message["thinking"]:
+                        with st.expander("推理检索过程"):
+                            st.markdown(message["thinking"])
+                    if "nodes" in message and message["nodes"]:
+                        with st.expander("参考来源"):
+                            for node_info in message["nodes"]:
+                                st.write(node_info)
 
-        # 聊天输入
-        if query := st.chat_input("向整个文档库提问..."):
+        # 处理用户输入
+        if query:
             if not api_key:
                 st.error("请先在侧边栏配置 API 密钥")
             else:

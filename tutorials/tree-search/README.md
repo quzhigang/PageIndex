@@ -1,70 +1,70 @@
-## Tree Search Examples
-This tutorial provides a basic example of how to perform retrieval using the PageIndex tree.
+## 树搜索示例
+本教程提供了如何使用 PageIndex 树进行检索的基本示例。
 
-### Basic LLM Tree Search Example
-A simple strategy is to use an LLM agent to conduct tree search. Here is a basic tree search prompt.
+### 基本 LLM 树搜索示例
+一个简单的策略是使用 LLM 代理进行树搜索。以下是一个基本的树搜索提示。
 
 ```python
 prompt = f"""
-You are given a query and the tree structure of a document.
-You need to find all nodes that are likely to contain the answer.
+你将获得一个查询和一个文档的树结构。
+你需要找到所有可能包含答案的节点。
 
-Query: {query}
+查询: {query}
 
-Document tree structure: {PageIndex_Tree}
+文档树结构: {PageIndex_Tree}
 
-Reply in the following JSON format:
+以以下 JSON 格式回复:
 {{
-  "thinking": <your reasoning about which nodes are relevant>,
+  "thinking": <你关于哪些节点相关的推理>,
   "node_list": [node_id1, node_id2, ...]
 }}
 """
 ```
 <callout>
-In our dashboard and retrieval API, we use a combination of LLM tree search and value function-based Monte Carlo Tree Search ([MCTS](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)). More details will be released soon.
+在我们的仪表板和检索 API 中，我们使用 LLM 树搜索和基于价值函数的蒙特卡洛树搜索（[MCTS](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)）的组合。更多细节即将发布。
 </callout>
 
-### Integrating User Preference or Expert Knowledge
-Unlike vector-based RAG where integrating expert knowledge or user preference requires fine-tuning the embedding model, in PageIndex, you can incorporate user preferences or expert knowledge by simply adding knowledge to the LLM tree search prompt. Here is an example pipeline.
+### 集成用户偏好或专家知识
+与基于向量的 RAG 不同（集成专家知识或用户偏好需要微调嵌入模型），在 PageIndex 中，您可以通过简单地将知识添加到 LLM 树搜索提示中来整合用户偏好或专家知识。以下是一个示例流程。
 
 
-#### 1. Preference Retrieval
+#### 1. 偏好检索
 
-When a query is received, the system selects the most relevant user preference or expert knowledge snippets from a database or a set of domain-specific rules. This can be done using keyword matching, semantic similarity, or LLM-based relevance search.
+当收到查询时，系统从数据库或一组特定领域规则中选择最相关的用户偏好或专家知识片段。这可以通过关键词匹配、语义相似性或基于 LLM 的相关性搜索来完成。
 
-#### 2. Tree Search with Preference
-Integrating preference into the tree search prompt.
+#### 2. 带偏好的树搜索
+将偏好集成到树搜索提示中。
 
-**Enhanced Tree Search with Expert Preference Example**
+**带专家偏好的增强树搜索示例**
 
 ```python
 prompt = f"""
-You are given a question and a tree structure of a document.
-You need to find all nodes that are likely to contain the answer.
+你将获得一个问题和一个文档的树结构。
+你需要找到所有可能包含答案的节点。
 
-Query: {query}
+查询: {query}
 
-Document tree structure:  {PageIndex_Tree}
+文档树结构: {PageIndex_Tree}
 
-Expert Knowledge of relevant sections: {Preference}
+相关章节的专家知识: {Preference}
 
-Reply in the following JSON format:
+以以下 JSON 格式回复:
 {{
-  "thinking": <reasoning about which nodes are relevant>,
+  "thinking": <关于哪些节点相关的推理>,
   "node_list": [node_id1, node_id2, ...]
 }}
 """
 ```
 
-**Example Expert Preference**
-> If the query mentions EBITDA adjustments, prioritize Item 7 (MD&A) and footnotes in Item 8 (Financial Statements) in 10-K reports.
+**专家偏好示例**
+> 如果查询提到 EBITDA 调整，优先考虑 10-K 报告中的第 7 项（MD&A）和第 8 项（财务报表）中的脚注。
 
 
 
-By integrating user or expert preferences, node search becomes more targeted and effective, leveraging both the document structure and domain-specific insights.
+通过集成用户或专家偏好，节点搜索变得更有针对性和有效性，同时利用文档结构和特定领域的见解。
 
-## 💬 Help & Community
-Contact us if you need any advice on conducting document searches for your use case.
+## 💬 帮助与社区
+如果您需要针对您的用例进行文档搜索的任何建议，请联系我们。
 
-- 🤝 [Join our Discord](https://discord.gg/VuXuf29EUj)  
-- 📨 [Leave us a message](https://ii2abc2jejf.typeform.com/to/tK3AXl8T)
+- 🤝 [加入我们的 Discord](https://discord.gg/VuXuf29EUj)  
+- 📨 [给我们留言](https://ii2abc2jejf.typeform.com/to/tK3AXl8T)

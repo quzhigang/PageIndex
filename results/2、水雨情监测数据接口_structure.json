@@ -1,0 +1,300 @@
+{
+  "doc_name": "2、水雨情监测数据接口",
+  "structure": [
+    {
+      "title": "流域水雨情监测数据接口文档",
+      "node_id": "0001",
+      "text": "# 流域水雨情监测数据接口文档",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的水雨情监测相关API接口，用于查询**实时监测数据和历史过程数据**，包括雨量监测、水库水情、河道水情、智能监测设备数据、视频预览等。接口基础地址为：<http://10.20.2.153>",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的水雨情监测相关API接口，用于查询**实时监测数据和历史过程数据**，包括雨量监测、水库水情、河道水情、智能监测设备数据、视频预览等。接口基础地址为：<http://10.20.2.153>"
+        },
+        {
+          "title": "接口分类概览",
+          "node_id": "0003",
+          "text": "## 接口分类概览\n\n本文档共包含 **15个API接口**，按功能分类如下：",
+          "line_num": 7,
+          "nodes": [
+            {
+              "title": "一、雨情监测接口（3个）",
+              "node_id": "0004",
+              "text": "### 一、雨情监测接口（3个）\n\n1. 雨量过程数据查询接口\n2. 雨量统计数据查询接口\n3. 雨量累计查询接口",
+              "line_num": 11,
+              "summary": "### 一、雨情监测接口（3个）\n\n1. 雨量过程数据查询接口\n2. 雨量统计数据查询接口\n3. 雨量累计查询接口"
+            },
+            {
+              "title": "二、水库水情监测接口（2个）",
+              "node_id": "0005",
+              "text": "### 二、水库水情监测接口（2个）\n\n4. 水库最新水情查询接口\n5. 水库水情过程查询接口",
+              "line_num": 17,
+              "summary": "### 二、水库水情监测接口（2个）\n\n4. 水库最新水情查询接口\n5. 水库水情过程查询接口"
+            },
+            {
+              "title": "三、河道水情监测接口（2个）",
+              "node_id": "0006",
+              "text": "### 三、河道水情监测接口（2个）\n\n6. 河道最新水情查询接口\n7. 河道水情过程查询接口",
+              "line_num": 22,
+              "summary": "### 三、河道水情监测接口（2个）\n\n6. 河道最新水情查询接口\n7. 河道水情过程查询接口"
+            },
+            {
+              "title": "四、AI智能监测数据接口（4个）",
+              "node_id": "0007",
+              "text": "### 四、AI智能监测数据接口（4个）\n\n8. AI水情最新数据查询接口\n9. AI水情过程数据查询接口\n10. AI雨量最新数据查询接口\n11. AI雨量过程数据查询接口",
+              "line_num": 27,
+              "summary": "### 四、AI智能监测数据接口（4个）\n\n8. AI水情最新数据查询接口\n9. AI水情过程数据查询接口\n10. AI雨量最新数据查询接口\n11. AI雨量过程数据查询接口"
+            },
+            {
+              "title": "五、视频监控接口（1个）",
+              "node_id": "0008",
+              "text": "### 五、视频监控接口（1个）\n\n12. 视频监控预览接口",
+              "line_num": 34,
+              "summary": "### 五、视频监控接口（1个）\n\n12. 视频监控预览接口"
+            },
+            {
+              "title": "六、传感器监测接口（1个）",
+              "node_id": "0009",
+              "text": "### 六、传感器监测接口（1个）\n\n13. 传感器数据过程查询接口",
+              "line_num": 38,
+              "summary": "### 六、传感器监测接口（1个）\n\n13. 传感器数据过程查询接口"
+            },
+            {
+              "title": "七、无人机监测接口（1个）",
+              "node_id": "0010",
+              "text": "### 七、无人机监测接口（1个）\n\n14. 无人机设备状态查询接口",
+              "line_num": 42,
+              "summary": "### 七、无人机监测接口（1个）\n\n14. 无人机设备状态查询接口"
+            },
+            {
+              "title": "八、告警短信接口（1个）",
+              "node_id": "0011",
+              "text": "### 八、告警短信接口（1个）\n\n15. 短信发送接口\n\n---",
+              "line_num": 46,
+              "summary": "### 八、告警短信接口（1个）\n\n15. 短信发送接口\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口分类概览\n\n本文档共包含 **15个API接口**，按功能分类如下："
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0012",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---",
+          "line_num": 52,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0013",
+          "text": "## 接口列表",
+          "line_num": 78,
+          "nodes": [
+            {
+              "title": "一、雨量监测接口",
+              "node_id": "0014",
+              "text": "### 一、雨量监测接口",
+              "line_num": 80,
+              "summary": "### 一、雨量监测接口"
+            },
+            {
+              "title": "1. 雨量过程数据查询接口",
+              "node_id": "0015",
+              "text": "### 1. 雨量过程数据查询接口\n\n**用途**: 根据测站编码和时间范围查询雨量历史过程数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rain/processList`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STCD | String | 是 | 测站编码 |\n| searchBeginTime | String | 是 | 查询开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| searchEndTime | String | 是 | 查询结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"tm\": \"数据时间\",\n            \"drp\": \"时段降水量(mm)\",\n            \"intv\": \"时段长(min)\",\n            \"pdr\": \"日降水量(mm)\",\n            \"dyp\": \"日降水量(mm)\",\n            \"accp\": \"累计降水量(mm)\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 82,
+              "summary": "This partial document provides the technical specifications for a \"Rainfall Process Data Query Interface,\" which is used to retrieve historical rainfall data based on station codes and specific time ranges. It details the interface's purpose, the GET request method, the API endpoint URL, the required input parameters (STCD, searchBeginTime, and searchEndTime), and the structure of the JSON output, which includes fields for periodic, daily, and accumulated precipitation."
+            },
+            {
+              "title": "2. 雨量统计数据查询接口",
+              "node_id": "0016",
+              "text": "### 2. 雨量统计数据查询接口\n\n**用途**: 根据测站编码查询雨量统计数据，包含1小时、3小时、6小时、12小时、24小时等多时段的雨量统计信息\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rain/statistics`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STCD | String | 是 | 测站编码 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"1hour\": [\n            {\n                \"stcd\": \"测站编码\",\n                \"stnm\": \"测站名称\",\n                \"lgtd\": \"经度\",\n                \"lttd\": \"纬度\",\n                \"accp\": \"累计降水量(mm)\",\n                \"tm\": \"数据时间\",\n                \"drp\": \"时段降水量(mm)\",\n                \"sttp\": \"测站类型\"\n            }\n        ],\n        \"3hour\": [],\n        \"6hour\": [],\n        \"12hour\": [],\n        \"24hour\": []\n    }\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"1hour\": [\n            {\n                \"lgtd\": 114.037251,\n                \"lttd\": 35.407871,\n                \"stnm\": \"汲县\",\n                \"addvcd\": \"410781\",\n                \"sttp\": \"ZQ\",\n                \"accp\": null,\n                \"rvnm\": \"卫河\",\n                \"stcd\": \"31003600\",\n                \"tm\": null,\n                \"drp\": null\n            }\n        ]\n    }\n}\n```\n\n---",
+              "line_num": 121,
+              "summary": "This document provides a technical specification for the \"Rainfall Statistics Data Query Interface.\" It outlines the interface's purpose, which is to retrieve rainfall statistics for various time intervals (1, 3, 6, 12, and 24 hours) based on a specific station code (STCD). Key details include the GET request method, the API endpoint URL, the required input parameters, and a detailed breakdown of the JSON response structure, including fields for station identification, geographic coordinates, and precipitation measurements."
+            },
+            {
+              "title": "3. 雨量累计查询接口",
+              "node_id": "0017",
+              "text": "### 3. 雨量累计查询接口\n\n**用途**: 根据时间范围查询所有测站的雨量累计数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rain/sum`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| searchBeginTime | String | 是 | 查询开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| searchEndTime | String | 是 | 查询结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"accp\": \"累计降水量(mm)\",\n            \"sttp\": \"测站类型\",\n            \"rvnm\": \"河流名称\",\n            \"hnnm\": \"水系名称\",\n            \"bsnm\": \"流域名称\",\n            \"stlc\": \"测站位置\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"lgtd\": 113.427169,\n            \"lttd\": 35.91514,\n            \"stnm\": \"福头\",\n            \"addvcd\": \"140427\",\n            \"sttp\": \"PP\",\n            \"accp\": 0.0,\n            \"rvnm\": \"淅河\",\n            \"hnnm\": \"南运河\",\n            \"bsnm\": \"海河\",\n            \"stlc\": \"壶关县树掌镇福头村\",\n            \"stcd\": \"31023138\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 191,
+              "summary": "This partial document provides the technical specification for the \"Rainfall Accumulation Query Interface\" (雨量累计查询接口). It outlines the interface's purpose, which is to retrieve cumulative rainfall data for all monitoring stations within a specified time range. The document details the GET request method, the endpoint URL, and the mandatory input parameters (`searchBeginTime` and `searchEndTime`). It also defines the JSON output format, including fields for station metadata (such as station code, name, coordinates, and basin information) and the accumulated precipitation value, supported by a concrete output example."
+            },
+            {
+              "title": "二、水库水情监测接口",
+              "node_id": "0018",
+              "text": "### 二、水库水情监测接口",
+              "line_num": 257,
+              "summary": "### 二、水库水情监测接口"
+            },
+            {
+              "title": "4. 水库最新水情查询接口",
+              "node_id": "0019",
+              "text": "### 4. 水库最新水情查询接口\n\n**用途**: 获取所有水库的最新实时水情数据，包括水位、蓄水量、入库流量、出库流量等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rsvr/last`\n\n**输入参数**: \n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| stcd | String | 否 | 测站编码 |\n\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"rz\": \"库水位(m)\",\n            \"w\": \"蓄水量(万m³)\",\n            \"inq\": \"入库流量(m³/s)\",\n            \"otq\": \"出库流量(m³/s)\",\n            \"tm\": \"数据时间\",\n            \"rvnm\": \"河流名称\",\n            \"hnnm\": \"水系名称\",\n            \"bsnm\": \"流域名称\",\n            \"stlc\": \"测站位置\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"lgtd\": 113.1415,\n            \"lttd\": 35.363,\n            \"stnm\": \"群英\",\n            \"warn\": null,\n            \"addvcd\": \"410821\",\n            \"sttp\": \"RR\",\n            \"rvnm\": \"大沙河\",\n            \"hnnm\": \"漳卫南运河\",\n            \"bsnm\": \"海河\",\n            \"stlc\": \"焦作市修武县群英水库\",\n            \"rz\": 476.94,\n            \"stcd\": \"31004600\",\n            \"tm\": \"2025-12-11 08:00:00\",\n            \"w\": 9.61,\n            \"otq\": 1.03,\n            \"rwptn\": \"4\",\n            \"inq\": 1.0,\n            \"inqdr\": 24.0,\n            \"msqmt\": \"1\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 259,
+              "summary": "This document provides the technical specifications for an API interface titled \"Latest Reservoir Hydrological Information Query.\" It outlines the interface's purpose, which is to retrieve real-time data for reservoirs, including water levels, storage capacity, and inflow/outflow rates. The documentation details the GET request method, the specific endpoint URL, and the optional input parameter (station code). Additionally, it defines the JSON output format and provides a response example, specifying key data fields such as station names, coordinates, hydrological measurements, timestamps, and geographic classifications (river, water system, and basin names)."
+            },
+            {
+              "title": "5. 水库水情过程查询接口",
+              "node_id": "0020",
+              "text": "### 5. 水库水情过程查询接口\n\n**用途**: 根据测站编码和时间范围查询水库的历史水情过程数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rsvr/processList`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STCD | String | 是 | 测站编码 |\n| searchBeginTime | String | 是 | 查询开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| searchEndTime | String | 是 | 查询结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"tm\": \"数据时间\",\n            \"rz\": \"库水位(m)\",\n            \"w\": \"蓄水量(万m³)\",\n            \"inq\": \"入库流量(m³/s)\",\n            \"otq\": \"出库流量(m³/s)\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"rz\": 302.4,\n            \"stcd\": \"31005200\",\n            \"tm\": \"2025-12-11 08:00:00\",\n            \"w\": 22.644,\n            \"otq\": 2.7,\n            \"rwptn\": \"4\",\n            \"inq\": null\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 335,
+              "summary": "This document provides the technical specifications for the \"Reservoir Hydrological Process Query Interface.\" It outlines the API's purpose for retrieving historical reservoir hydrological data, specifies the GET request method and endpoint URL, and defines the mandatory input parameters (station code and time range). Additionally, it details the structure of the JSON response, including data fields such as water level (rz), storage capacity (w), inflow (inq), and outflow (otq), alongside a sample output."
+            },
+            {
+              "title": "三、河道水情监测接口",
+              "node_id": "0021",
+              "text": "### 三、河道水情监测接口",
+              "line_num": 394,
+              "summary": "### 三、河道水情监测接口"
+            },
+            {
+              "title": "6. 河道最新水情查询接口",
+              "node_id": "0022",
+              "text": "### 6. 河道最新水情查询接口\n\n**用途**: 获取所有河道测站的最新实时水情数据，包括水位、流量等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/river/last`\n\n**输入参数**: \n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| stcd | String | 否 | 测站编码 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"z\": \"水位(m)\",\n            \"q\": \"流量(m³/s)\",\n            \"tm\": \"数据时间\",\n            \"sttp\": \"测站类型\",\n            \"rvnm\": \"河流名称\",\n            \"hnnm\": \"水系名称\",\n            \"bsnm\": \"流域名称\",\n            \"stlc\": \"测站位置\",\n            \"wptn\": \"水势\",\n            \"warn\": \"告警级别\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"lgtd\": 114.037251,\n            \"lttd\": 35.407871,\n            \"stnm\": \"汲县\",\n            \"warn\": null,\n            \"addvcd\": \"410781\",\n            \"sttp\": \"ZQ\",\n            \"stazt\": \"55\",\n            \"rvnm\": \"卫河\",\n            \"hnnm\": \"南运河\",\n            \"bsnm\": \"海河\",\n            \"stlc\": \"豫-卫辉\",\n            \"q\": 2.49,\n            \"stcd\": \"31003600\",\n            \"z\": 64.42,\n            \"tm\": \"2025-12-12 08:00:00\",\n            \"wptn\": \"5\",\n            \"flwchrcd\": null\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 396,
+              "summary": "This document provides a technical specification for the \"River Latest Water Situation Query Interface\" (河道最新水情查询接口). It details an API used to retrieve real-time hydrological data—such as water levels and flow rates—from river monitoring stations. The documentation specifies the GET request method, the API endpoint URL, and an optional input parameter for station codes (stcd). Additionally, it defines the JSON output format and provides a data sample, illustrating fields for station identification, geographic coordinates, water levels, flow velocity, measurement timestamps, and river/basin names."
+            },
+            {
+              "title": "7. 河道水情过程查询接口",
+              "node_id": "0023",
+              "text": "### 7. 河道水情过程查询接口\n\n**用途**: 根据测站编码和时间范围查询河道水情历史过程数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/river/processList`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STCD | String | 是 | 测站编码 |\n| searchBeginTime | String | 是 | 查询开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| searchEndTime | String | 是 | 查询结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"tm\": \"数据时间\",\n            \"z\": \"水位(m)\",\n            \"q\": \"流量(m³/s)\",\n            \"wptn\": \"水势\",\n            \"flwchrcd\": \"流量特征码\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"q\": 2.53,\n            \"stcd\": \"31005700\",\n            \"z\": 97.71,\n            \"tm\": \"2025-12-10 08:00:00\",\n            \"wptn\": \"4\",\n            \"flwchrcd\": null\n        },\n        {\n            \"q\": 2.33,\n            \"stcd\": \"31005700\",\n            \"z\": 97.51,\n            \"tm\": \"2025-12-11 08:00:00\",\n            \"wptn\": \"4\",\n            \"flwchrcd\": null\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 470,
+              "summary": "This document provides the technical specifications for the \"River Water Regime Process Query Interface,\" an API used to retrieve historical river water data. It details the interface's purpose, the GET request method, the specific endpoint, and the required input parameters, which include the station code (STCD) and a defined time range. Additionally, it defines the JSON output format and provides a response sample, illustrating data fields such as water level (z), flow rate (q), time (tm), and water trend (wptn)."
+            },
+            {
+              "title": "四、AI智能监测数据接口",
+              "node_id": "0024",
+              "text": "### 四、AI智能监测数据接口",
+              "line_num": 536,
+              "summary": "### 四、AI智能监测数据接口"
+            },
+            {
+              "title": "8. AI水情最新数据查询接口",
+              "node_id": "0025",
+              "text": "### 8. AI水情最新数据查询接口\n\n**用途**: 获取AI智能监测设备的最新水情数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/water/last`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"z\": \"水位(m)\",\n            \"tm\": \"数据时间\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 538,
+              "summary": "### 8. AI水情最新数据查询接口\n\n**用途**: 获取AI智能监测设备的最新水情数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/water/last`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"z\": \"水位(m)\",\n            \"tm\": \"数据时间\"\n        }\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "9. AI水情过程数据查询接口",
+              "node_id": "0026",
+              "text": "### 9. AI水情过程数据查询接口\n\n**用途**: 根据测站编码和时间范围查询AI智能监测设备的水情历史过程数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/water/process`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| stcd | String | 是 | 测站编码 |\n| st | String | 是 | 开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| ed | String | 是 | 结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"tm\": \"数据时间\",\n            \"z\": \"水位(m)\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 568,
+              "summary": "This document provides a technical specification for the \"AI Water Condition Process Data Query Interface.\" It outlines the interface's purpose, which is to retrieve historical water level data from AI monitoring devices based on a specific station code and time range. The specification details the GET request method, the API endpoint, required input parameters (station code, start time, and end time), and the structured JSON output format containing timestamps and water level measurements."
+            },
+            {
+              "title": "10. AI雨量最新数据查询接口",
+              "node_id": "0027",
+              "text": "### 10. AI雨量最新数据查询接口\n\n**用途**: 获取AI智能监测设备的最新雨量数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/rain/last`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"drp\": \"时段降水量(mm)\",\n            \"tm\": \"数据时间\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 603,
+              "summary": "### 10. AI雨量最新数据查询接口\n\n**用途**: 获取AI智能监测设备的最新雨量数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/rain/last`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"drp\": \"时段降水量(mm)\",\n            \"tm\": \"数据时间\"\n        }\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "11. AI雨量过程数据查询接口",
+              "node_id": "0028",
+              "text": "### 11. AI雨量过程数据查询接口\n\n**用途**: 根据测站编码和时间范围查询AI智能监测设备的雨量历史过程数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/ai/rain/process`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| stcd | String | 是 | 测站编码 |\n| st | String | 是 | 开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| ed | String | 是 | 结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"tm\": \"数据时间\",\n            \"drp\": \"时段降水量(mm)\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 633,
+              "summary": "This partial document provides the technical specifications for the \"AI Rain Process Data Query Interface,\" which is designed to retrieve historical rainfall time-series data from AI-enabled monitoring devices. The main points covered include the interface's purpose, the GET request method and endpoint URL, the mandatory input parameters (station code, start time, and end time), and the structure of the JSON output, which includes fields for success status, messages, and specific rainfall data (station code, timestamp, and precipitation amount)."
+            },
+            {
+              "title": "五、视频监控接口",
+              "node_id": "0029",
+              "text": "### 五、视频监控接口",
+              "line_num": 668,
+              "summary": "### 五、视频监控接口"
+            },
+            {
+              "title": "12. 视频监控预览接口",
+              "node_id": "0030",
+              "text": "### 12. 视频监控预览接口\n\n**用途**: 根据摄像头编码获取实时视频预览地址\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/camera/preview`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| code | String | 是 | 摄像头编码 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"url\": \"视频预览流地址\"\n    }\n}\n```\n\n---",
+              "line_num": 670,
+              "summary": "### 12. 视频监控预览接口\n\n**用途**: 根据摄像头编码获取实时视频预览地址\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/camera/preview`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| code | String | 是 | 摄像头编码 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"url\": \"视频预览流地址\"\n    }\n}\n```\n\n---"
+            },
+            {
+              "title": "六、传感器监测接口",
+              "node_id": "0031",
+              "text": "### 六、传感器监测接口",
+              "line_num": 699,
+              "summary": "### 六、传感器监测接口"
+            },
+            {
+              "title": "13. 传感器数据过程查询接口",
+              "node_id": "0032",
+              "text": "### 13. 传感器数据过程查询接口\n\n**用途**: 根据传感器ID和时间范围查询传感器的历史监测数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/monitor/sensor/data/process`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| sensorId | String | 是 | 传感器ID |\n| st | String | 是 | 开始时间，格式：yyyy-MM-dd HH:mm:ss |\n| ed | String | 是 | 结束时间，格式：yyyy-MM-dd HH:mm:ss |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"sensorId\": \"传感器ID\",\n            \"tm\": \"数据时间\",\n            \"value\": \"监测值\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 701,
+              "summary": "This document describes an API interface for querying historical sensor monitoring data. It outlines the interface's purpose, the GET request method, the specific API endpoint URL, and the mandatory input parameters (sensor ID, start time, and end time). Additionally, it provides the JSON response format, which includes status information and a data array containing sensor identifiers, timestamps, and monitoring values."
+            },
+            {
+              "title": "七、无人机监测接口",
+              "node_id": "0033",
+              "text": "### 七、无人机监测接口",
+              "line_num": 736,
+              "summary": "### 七、无人机监测接口"
+            },
+            {
+              "title": "14. 无人机设备状态查询接口",
+              "node_id": "0034",
+              "text": "### 14. 无人机设备状态查询接口\n\n**用途**: 查询大疆无人机设备的实时状态\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/djiuav/openapi/v0.1/device/{deviceSn}/state`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| deviceSn | String | 是 | 无人机设备序列号（URL路径参数） |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"deviceSn\": \"设备序列号\",\n        \"status\": \"设备状态\",\n        \"battery\": \"电量(%)\",\n        \"location\": {\n            \"lng\": \"经度\",\n            \"lat\": \"纬度\",\n            \"alt\": \"高度(m)\"\n        }\n    }\n}\n```\n\n---",
+              "line_num": 738,
+              "summary": "This partial document provides the technical specifications for an API interface designed to query the real-time status of DJI drone devices. It outlines the GET request method, the specific endpoint URL using a device serial number (deviceSn) as a path parameter, and the structured JSON output which includes the device's status, battery percentage, and geographic coordinates (longitude, latitude, and altitude)."
+            },
+            {
+              "title": "八、告警短信接口",
+              "node_id": "0035",
+              "text": "### 八、告警短信接口",
+              "line_num": 774,
+              "summary": "### 八、告警短信接口"
+            },
+            {
+              "title": "15. 短信发送接口",
+              "node_id": "0036",
+              "text": "### 15. 短信发送接口\n\n**用途**: 发送告警短信通知\n\n**请求方式**: POST\n\n**请求地址**: `http://10.20.2.153/api/basin/modelPlatf/sms/sendMsg`\n\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| phone | String | 是 | 接收短信的手机号码 |\n| content | String | 是 | 短信内容 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 776,
+              "summary": "### 15. 短信发送接口\n\n**用途**: 发送告警短信通知\n\n**请求方式**: POST\n\n**请求地址**: `http://10.20.2.153/api/basin/modelPlatf/sms/sendMsg`\n\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| phone | String | 是 | 接收短信的手机号码 |\n| content | String | 是 | 短信内容 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "附录",
+          "node_id": "0037",
+          "text": "## 附录",
+          "line_num": 807,
+          "nodes": [
+            {
+              "title": "A. 日期格式说明",
+              "node_id": "0038",
+              "text": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2025-12-01 00:00:00`",
+              "line_num": 809,
+              "summary": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2025-12-01 00:00:00`"
+            },
+            {
+              "title": "B. 状态码说明",
+              "node_id": "0039",
+              "text": "### B. 状态码说明\n\n- 00000: 请求成功\n- 200: 请求成功（部分接口）\n- 其他: 错误码",
+              "line_num": 814,
+              "summary": "### B. 状态码说明\n\n- 00000: 请求成功\n- 200: 请求成功（部分接口）\n- 其他: 错误码"
+            },
+            {
+              "title": "C. 测站类型（sttp）说明",
+              "node_id": "0040",
+              "text": "### C. 测站类型（sttp）说明\n\n- ZQ: 水文站\n- ZZ: 水位站\n- RR: 水库站\n- PP: 雨量站\n- DD: 闸坝站\n- ZB: 水位遥测站\n- AI: AI智能监测站",
+              "line_num": 820,
+              "summary": "### C. 测站类型（sttp）说明\n\n- ZQ: 水文站\n- ZZ: 水位站\n- RR: 水库站\n- PP: 雨量站\n- DD: 闸坝站\n- ZB: 水位遥测站\n- AI: AI智能监测站"
+            },
+            {
+              "title": "D. 水势（wptn）说明",
+              "node_id": "0041",
+              "text": "### D. 水势（wptn）说明\n\n- 1: 涨\n- 2: 落\n- 3: 平\n- 4: 缓涨\n- 5: 缓落\n- 6: 平稳",
+              "line_num": 830,
+              "summary": "### D. 水势（wptn）说明\n\n- 1: 涨\n- 2: 落\n- 3: 平\n- 4: 缓涨\n- 5: 缓落\n- 6: 平稳"
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 流域水雨情监测数据接口文档"
+    }
+  ]
+}

@@ -1,42 +1,42 @@
 
-## Document Search by Description
+## 按描述搜索文档
 
-For documents that don't have metadata, you can use LLM-generated descriptions to help with document selection. This is a lightweight approach that works best with a small number of documents.
-
-
-### Example Pipeline
+对于没有元数据的文档，您可以使用 LLM 生成的描述来帮助文档选择。这是一种轻量级方法，最适合少量文档。
 
 
-#### PageIndex Tree Generation
-Upload all documents into PageIndex to get their `doc_id` and tree structure.
+### 示例流程
 
-#### Description Generation
 
-Generate a description for each document based on its PageIndex tree structure and node summaries.
+#### PageIndex 树生成
+将所有文档上传到 PageIndex 以获取其 `doc_id` 和树结构。
+
+#### 描述生成
+
+根据文档的 PageIndex 树结构和节点摘要为每个文档生成描述。
 ```python
 prompt = f"""
-You are given a table of contents structure of a document. 
-Your task is to generate a one-sentence description for the document that makes it easy to distinguish from other documents.
+你将获得一个文档的目录结构。
+你的任务是为该文档生成一句话描述，使其易于与其他文档区分。
     
-Document tree structure: {PageIndex_Tree}
+文档树结构: {PageIndex_Tree}
 
-Directly return the description, do not include any other text.
+直接返回描述，不要包含任何其他文本。
 """
 ```
 
-#### Search with LLM
+#### 使用 LLM 搜索
 
-Use an LLM to select relevant documents by comparing the user query against the generated descriptions.
+使用 LLM 通过将用户查询与生成的描述进行比较来选择相关文档。
 
-Below is a sample prompt for document selection based on their descriptions:
+以下是基于描述进行文档选择的示例提示：
 
 ```python
 prompt = f""" 
-You are given a list of documents with their IDs, file names, and descriptions. Your task is to select documents that may contain information relevant to answering the user query.
+你将获得一个包含文档 ID、文件名和描述的文档列表。你的任务是选择可能包含与回答用户查询相关信息的文档。
 
-Query: {query}
+查询: {query}
 
-Documents: [
+文档: [
     {
         "doc_id": "xxx",
         "doc_name": "xxx",
@@ -44,24 +44,24 @@ Documents: [
     }
 ]
 
-Response Format:
+响应格式:
 {{
-    "thinking": "<Your reasoning for document selection>",
-    "answer": <Python list of relevant doc_ids>, e.g. ['doc_id1', 'doc_id2']. Return [] if no documents are relevant.
+    "thinking": "<你选择文档的推理过程>",
+    "answer": <相关 doc_id 的 Python 列表>, 例如 ['doc_id1', 'doc_id2']。如果没有相关文档则返回 []。
 }}
 
-Return only the JSON structure, with no additional output.
+仅返回 JSON 结构，不要有额外输出。
 """
 ```
 
-#### Retrieve with PageIndex
+#### 使用 PageIndex 检索
 
-Use the PageIndex `doc_id` of the retrieved documents to perform further retrieval via the PageIndex retrieval API.
+使用检索到的文档的 PageIndex `doc_id`，通过 PageIndex 检索 API 进行进一步检索。
 
 
 
-## 💬 Help & Community
-Contact us if you need any advice on conducting document searches for your use case.
+## 💬 帮助与社区
+如果您需要针对您的用例进行文档搜索的任何建议，请联系我们。
 
-- 🤝 [Join our Discord](https://discord.gg/VuXuf29EUj)  
-- 📨 [Leave us a message](https://ii2abc2jejf.typeform.com/to/meB40zV0)
+- 🤝 [加入我们的 Discord](https://discord.gg/VuXuf29EUj)  
+- 📨 [给我们留言](https://ii2abc2jejf.typeform.com/to/meB40zV0)

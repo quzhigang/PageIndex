@@ -1,0 +1,125 @@
+{
+  "doc_name": "5、灾损评估接口",
+  "structure": [
+    {
+      "title": "灾损评估和避险转移接口文档",
+      "node_id": "0001",
+      "text": "# 灾损评估和避险转移接口文档",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的灾损评估和避险转移相关API接口，用于查询洪涝灾害损失评估数据、避险安置点信息、转移路线等。接口基础地址为：<http://10.20.2.153:8686>",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的灾损评估和避险转移相关API接口，用于查询洪涝灾害损失评估数据、避险安置点信息、转移路线等。接口基础地址为：<http://10.20.2.153:8686>"
+        },
+        {
+          "title": "接口分类概览",
+          "node_id": "0003",
+          "text": "## 接口分类概览\n\n本文档共包含 **3个API接口**，按功能分类如下：",
+          "line_num": 7,
+          "nodes": [
+            {
+              "title": "一、灾损评估接口（1个）",
+              "node_id": "0004",
+              "text": "### 一、灾损评估接口（1个）\n\n1. 洪涝灾害损失计算接口",
+              "line_num": 11,
+              "summary": "### 一、灾损评估接口（1个）\n\n1. 洪涝灾害损失计算接口"
+            },
+            {
+              "title": "二、避险转移接口（2个）",
+              "node_id": "0005",
+              "text": "### 二、避险转移接口（2个）\n\n2. 避险安置点列表查询接口\n3. 转移路线列表查询接口\n\n---",
+              "line_num": 15,
+              "summary": "### 二、避险转移接口（2个）\n\n2. 避险安置点列表查询接口\n3. 转移路线列表查询接口\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口分类概览\n\n本文档共包含 **3个API接口**，按功能分类如下："
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0006",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---",
+          "line_num": 22,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0007",
+          "text": "## 接口列表",
+          "line_num": 48,
+          "nodes": [
+            {
+              "title": "一、灾损评估接口",
+              "node_id": "0008",
+              "text": "### 一、灾损评估接口",
+              "line_num": 50,
+              "summary": "### 一、灾损评估接口"
+            },
+            {
+              "title": "1. 洪涝灾害损失计算接口",
+              "node_id": "0009",
+              "text": "### 1. 洪涝灾害损失计算接口\n\n**用途**: 根据模型编码和业务类型计算洪涝灾害造成的损失，包括受灾面积、受灾人口、受灾GDP、受灾企业数等，并返回受灾村庄和区县的GeoJSON数据\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153:8686/wgly-siyu/loss/calc`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| code | String | 是 | 模型编码，如 model_20240829111000 |\n| businessType | String | 是 | 业务类型（flood_dispatch_route_wg-分洪调度路线、flood_dispatch_wg-分洪调度） |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"code\": \"模型编码\",\n        \"name\": \"模型名称\",\n        \"damageArea\": \"受灾面积(km²)\",\n        \"damagePopulation\": \"受灾人口(万人)\",\n        \"damageEnterpriseNum\": \"受灾企业数量\",\n        \"damageGdp\": \"受灾GDP(亿元)\",\n        \"floodCunGeojson\": \"受灾村庄GeoJSON字符串\",\n        \"floodXianGeojson\": \"受灾区县GeoJSON字符串\"\n    }\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"code\": \"model_20240829111000\",\n        \"name\": null,\n        \"damageArea\": 667.21,\n        \"damagePopulation\": 25.07,\n        \"damageEnterpriseNum\": 5009,\n        \"damageGdp\": 73.13,\n        \"floodCunGeojson\": \"{\\\"type\\\":\\\"FeatureCollection\\\",\\\"features\\\":[{\\\"type\\\":\\\"Feature\\\",\\\"geometry\\\":{\\\"type\\\":\\\"MultiPoint\\\",\\\"coordinates\\\":[[113.486,35.3064,0.0]]},\\\"properties\\\":{\\\"pac\\\":\\\"410621001011\\\",\\\"name\\\":\\\"杨庄\\\",\\\"shi\\\":\\\"新乡市\\\",\\\"xian\\\":\\\"辉县市\\\",\\\"xiang\\\":\\\"吴村镇\\\",\\\"lossH\\\":0.15,\\\"damageGdp\\\":0.026,\\\"damagePopulation\\\":0.006,\\\"damageArea\\\":0.54,\\\"damagePloughArea\\\":2.72,\\\"damageBuildArea\\\":0.11,\\\"damageEnterpriseNum\\\":0}}]}\",\n        \"floodXianGeojson\": \"{\\\"type\\\":\\\"FeatureCollection\\\",\\\"features\\\":[{\\\"type\\\":\\\"Feature\\\",\\\"geometry\\\":{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[113.3438,35.2185]...]]]},\\\"properties\\\":{\\\"pac\\\":\\\"410782\\\",\\\"name\\\":\\\"辉县市\\\",\\\"shi\\\":\\\"新乡市\\\",\\\"lossH\\\":3.5,\\\"damageGdp\\\":2.08,\\\"damagePopulation\\\":0.52,\\\"damageArea\\\":43.51,\\\"damagePloughArea\\\":220.85,\\\"damageBuildArea\\\":9.30,\\\"damageEnterpriseNum\\\":117}}]}\"\n    }\n}\n```\n\n**GeoJSON数据字段说明**:\n\n| 字段名 | 说明 |\n|--------|------|\n| pac | 行政区划代码 |\n| name | 村庄/区县名称 |\n| shi | 所属市 |\n| xian | 所属县区 |\n| xiang | 所属乡镇（仅村级） |\n| lossH | 淹没水深(m) |\n| damageGdp | 受灾GDP(亿元) |\n| damagePopulation | 受灾人口(万人) |\n| damageArea | 受灾面积(km²) |\n| damagePloughArea | 受灾耕地面积(亩) |\n| damageBuildArea | 受灾建设用地面积(亩) |\n| damageForestArea | 受灾林地面积(亩) |\n| damageGrasslandArea | 受灾草地面积(亩) |\n| damageOther | 其他受灾面积(亩) |\n| damageEnterpriseNum | 受灾企业数量 |\n\n---",
+              "line_num": 52,
+              "summary": "This partial document provides the technical specifications for a \"Flood Disaster Loss Calculation Interface\" (API). It outlines the interface's purpose, which is to calculate flood-related damages—such as affected area, population, GDP, and enterprise counts—based on specific model codes and business types. The document details the GET request parameters, the JSON response structure, and provides a field data dictionary for the GeoJSON output, which includes spatial and statistical data at the village and county levels, covering metrics like flood depth and various types of land damage."
+            },
+            {
+              "title": "二、避险转移接口",
+              "node_id": "0010",
+              "text": "### 二、避险转移接口",
+              "line_num": 129,
+              "summary": "### 二、避险转移接口"
+            },
+            {
+              "title": "2. 避险安置点列表查询接口",
+              "node_id": "0011",
+              "text": "### 2. 避险安置点列表查询接口\n\n**用途**: 根据预案编码查询避险安置点列表，包括安置点名称、位置、联系人、容纳人数等信息\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153:8686/wgly-siyu/hedge/hedgePlacement/list`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| planCode | String | 是 | 预案编码，如 model_20250524100026 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": \"安置点ID\",\n            \"name\": \"安置点名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"loc\": \"位置描述\",\n            \"contact\": \"联系人\",\n            \"phone\": \"联系电话\",\n            \"galleryful\": \"容纳人数\",\n            \"approver\": \"审批人ID\",\n            \"approverName\": \"审批人姓名\",\n            \"status\": \"状态码\",\n            \"statusWrapper\": \"状态描述\",\n            \"createTime\": \"创建时间\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"createTime\": \"2025-11-12 18:01:07\",\n            \"createUser\": \"1339550467939639299\",\n            \"id\": \"1988547596355985409\",\n            \"name\": \"后夏庄村\",\n            \"lgtd\": 113.37848,\n            \"lttd\": 35.28565,\n            \"loc\": \"后夏庄村\",\n            \"contact\": \"陈玉伦\",\n            \"phone\": \"13549227838\",\n            \"galleryful\": null,\n            \"approver\": \"1854114117753765890\",\n            \"approverName\": \"刘冠华\",\n            \"status\": \"1\",\n            \"statusWrapper\": \"待审核\"\n        },\n        {\n            \"id\": \"1161\",\n            \"name\": \"军屯\",\n            \"lgtd\": 114.093494119012,\n            \"lttd\": 35.4661922505532,\n            \"loc\": \"军屯\",\n            \"contact\": null,\n            \"phone\": null,\n            \"approver\": \"1339550467939639299\",\n            \"approverName\": \"超级管理员\",\n            \"status\": \"2\",\n            \"statusWrapper\": \"通过\"\n        }\n    ]\n}\n```\n\n**状态说明**:\n\n| 状态码 | 状态描述 |\n|--------|----------|\n| 1 | 待审核 |\n| 2 | 通过 |\n| 3 | 驳回 |\n\n---",
+              "line_num": 131,
+              "summary": "This partial document provides the technical specifications for the \"Hedge Placement List Query Interface,\" an API designed to retrieve a list of emergency evacuation shelters associated with a specific plan code. It details the interface's purpose, the GET request method, the specific network endpoint, and the mandatory input parameter (`planCode`). Furthermore, it defines the JSON output format, which includes fields for shelter names, geographic coordinates, contact information, and capacity, and concludes with a status code reference table for tracking the approval status of each shelter entry."
+            },
+            {
+              "title": "3. 转移路线列表查询接口",
+              "node_id": "0012",
+              "text": "### 3. 转移路线列表查询接口\n\n**用途**: 根据预案编码查询转移路线列表，包括转移村庄、目标安置点、转移时间、联系人等信息\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153:8686/wgly-siyu/hedge/hedgeTransferRoute/list`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| planCode | String | 是 | 预案编码，如 model_20250524100026 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": \"转移路线ID\",\n            \"villageCode\": \"村庄行政区划代码\",\n            \"villageName\": \"村庄名称\",\n            \"villageLgtd\": \"村庄经度\",\n            \"villageLttd\": \"村庄纬度\",\n            \"placementId\": \"安置点ID\",\n            \"placementName\": \"目标安置点名称\",\n            \"placementLgtd\": \"安置点经度\",\n            \"placementLttd\": \"安置点纬度\",\n            \"time\": \"预估转移时间\",\n            \"contact\": \"联系人\",\n            \"phone\": \"联系电话\",\n            \"population\": \"转移人口数\",\n            \"xian\": \"所属县区\",\n            \"city\": \"所属市\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": \"8196\",\n            \"villageCode\": \"41050300920123\",\n            \"villageName\": \"清水河村\",\n            \"villageLgtd\": 114.1534721,\n            \"villageLttd\": 35.506913,\n            \"placementId\": \"8196\",\n            \"placementName\": \"吉营\",\n            \"placementLgtd\": 114.13448942441,\n            \"placementLttd\": 35.5053739849669,\n            \"time\": \"4分钟\",\n            \"contact\": null,\n            \"phone\": null,\n            \"population\": 1688,\n            \"xian\": \"卫辉市\",\n            \"city\": \"新乡\",\n            \"updateTime\": \"2024-10-31 17:41:01\"\n        },\n        {\n            \"id\": \"974\",\n            \"villageCode\": \"410781106208\",\n            \"villageName\": \"小岗\",\n            \"villageLgtd\": 114.208339,\n            \"villageLttd\": 35.532491,\n            \"placementId\": \"1915\",\n            \"placementName\": \"左庄\",\n            \"placementLgtd\": 114.164704828685,\n            \"placementLttd\": 35.4942313717336,\n            \"time\": \"14分钟\",\n            \"contact\": \"陈惠\",\n            \"phone\": \"15567800023\",\n            \"population\": 2341,\n            \"xian\": \"淇县\",\n            \"city\": \"鹤壁\",\n            \"updateTime\": \"2025-11-07 10:03:35\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 223,
+              "summary": "This document specifies the technical details for the \"Transfer Route List Query Interface,\" an API used to retrieve evacuation route information based on a specific plan code. Key points covered include the interface's purpose, which is to provide details such as originating villages, target relocation sites, estimated transfer times, population counts, and contact information. It defines the GET request method and endpoint URL, specifies \"planCode\" as the required input parameter, and outlines the structured JSON response format, including detailed data fields for geographic coordinates, administrative locations, and communication details."
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "附录",
+          "node_id": "0013",
+          "text": "## 附录",
+          "line_num": 316,
+          "nodes": [
+            {
+              "title": "A. 业务类型说明",
+              "node_id": "0014",
+              "text": "### A. 业务类型说明\n\n| 业务类型 | 说明 |\n|----------|------|\n| flood_dispatch_route_wg | 分洪调度路线 |\n| flood_dispatch_wg | 分洪调度 |",
+              "line_num": 318,
+              "summary": "### A. 业务类型说明\n\n| 业务类型 | 说明 |\n|----------|------|\n| flood_dispatch_route_wg | 分洪调度路线 |\n| flood_dispatch_wg | 分洪调度 |"
+            },
+            {
+              "title": "B. 状态码说明",
+              "node_id": "0015",
+              "text": "### B. 状态码说明\n\n- 00000: 请求成功\n- 其他: 错误码",
+              "line_num": 325,
+              "summary": "### B. 状态码说明\n\n- 00000: 请求成功\n- 其他: 错误码"
+            },
+            {
+              "title": "C. 注意事项",
+              "node_id": "0016",
+              "text": "### C. 注意事项\n\n1. 该服务接口的端口号为 **8686**，与其他接口（80端口）不同\n2. 灾损计算接口返回的GeoJSON数据为字符串格式，需要前端解析后展示\n3. 转移路线数据中的时间为预估转移所需时间",
+              "line_num": 330,
+              "summary": "### C. 注意事项\n\n1. 该服务接口的端口号为 **8686**，与其他接口（80端口）不同\n2. 灾损计算接口返回的GeoJSON数据为字符串格式，需要前端解析后展示\n3. 转移路线数据中的时间为预估转移所需时间"
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 灾损评估和避险转移接口文档"
+    }
+  ]
+}

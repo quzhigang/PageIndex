@@ -1,0 +1,419 @@
+{
+  "doc_name": "3、防洪业务接口-降雨相关业务",
+  "structure": [
+    {
+      "title": "卫共流域防洪相关Java接口详细文档",
+      "node_id": "0001",
+      "text": "# 卫共流域防洪相关Java接口详细文档",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的所有API接口，接口的输入输出参数均有完整描述。全部接口基于Spring Boot框架构建，使用玫瑰框架(Rose Kernel)作为基础框架。接口基础地址为：<http://10.20.2.153:8089>",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的所有API接口，接口的输入输出参数均有完整描述。全部接口基于Spring Boot框架构建，使用玫瑰框架(Rose Kernel)作为基础框架。接口基础地址为：<http://10.20.2.153:8089>"
+        },
+        {
+          "title": "接口分类概览",
+          "node_id": "0003",
+          "text": "## 接口分类概览\n\n本文档共包含 **33个API接口**，按功能均为降雨相关，分类如下：",
+          "line_num": 7,
+          "nodes": [
+            {
+              "title": "一、降雨预报接口（5个）",
+              "node_id": "0004",
+              "text": "### 一、降雨预报接口（5个）\n\n1. forecastRainEcmwf_avg - 获取流域平均的格网预报降雨过程\n2. forecastRainEcmwf_each - 获取各子流域的格网预报降雨过程\n3. forecastRainEcmwf_rect - 获取矩形区域内的格网预报降雨过程\n4. forecastRainEcmwf_stc - 获取指定时段的降雨分区统计信息\n5. forecastRainEcmwf_acc - 获取所有格网点指定时段的累计降雨",
+              "line_num": 11,
+              "summary": "### 一、降雨预报接口（5个）\n\n1. forecastRainEcmwf_avg - 获取流域平均的格网预报降雨过程\n2. forecastRainEcmwf_each - 获取各子流域的格网预报降雨过程\n3. forecastRainEcmwf_rect - 获取矩形区域内的格网预报降雨过程\n4. forecastRainEcmwf_stc - 获取指定时段的降雨分区统计信息\n5. forecastRainEcmwf_acc - 获取所有格网点指定时段的累计降雨"
+            },
+            {
+              "title": "二、降雨等值面接口（7个）",
+              "node_id": "0005",
+              "text": "### 二、降雨等值面接口（7个）\n\n6. contourRain_today - 获取8点以后降雨等值面\n7. contourRain_any - 生成/获取任意时段累计降雨等值面\n8. contourRain_plan - 生成/获取方案累计降雨等值面\n9. contourRain_proc - 获取逐小时降雨等值面过程\n10. contourRain_acc - 获取不同时段累计降雨等值面\n11. contourRain_futureimg - 获取未来降雨等值面图片\n12. contourRain_update - 更新等值面",
+              "line_num": 19,
+              "summary": "### 二、降雨等值面接口（7个）\n\n6. contourRain_today - 获取8点以后降雨等值面\n7. contourRain_any - 生成/获取任意时段累计降雨等值面\n8. contourRain_plan - 生成/获取方案累计降雨等值面\n9. contourRain_proc - 获取逐小时降雨等值面过程\n10. contourRain_acc - 获取不同时段累计降雨等值面\n11. contourRain_futureimg - 获取未来降雨等值面图片\n12. contourRain_update - 更新等值面"
+            },
+            {
+              "title": "三、降雨监测接口（2个）",
+              "node_id": "0006",
+              "text": "### 三、降雨监测接口（2个）\n\n13. monitorRainH_areaRainProcWhole - 获取指定时段流域整体面雨量过程\n14. monitorRainH_manual - 手动更新降水监测数据",
+              "line_num": 29,
+              "summary": "### 三、降雨监测接口（2个）\n\n13. monitorRainH_areaRainProcWhole - 获取指定时段流域整体面雨量过程\n14. monitorRainH_manual - 手动更新降水监测数据"
+            },
+            {
+              "title": "四、设计暴雨雨型管理接口（3个）",
+              "node_id": "0007",
+              "text": "### 四、设计暴雨雨型管理接口（3个）\n\n15. modelRainPattern_list - 查询设计雨型列表\n16. modelRainPattern_add - 新增设计雨型\n17. modelRainPattern_detail - 查看设计雨型详情",
+              "line_num": 34,
+              "summary": "### 四、设计暴雨雨型管理接口（3个）\n\n15. modelRainPattern_list - 查询设计雨型列表\n16. modelRainPattern_add - 新增设计雨型\n17. modelRainPattern_detail - 查看设计雨型详情"
+            },
+            {
+              "title": "五、典型暴雨雨型管理接口（4个）",
+              "node_id": "0008",
+              "text": "### 五、典型暴雨雨型管理接口（4个）\n\n18. modelTypicalRain_list - 查询典型暴雨列表\n19. modelTypicalRain_add - 新增典型暴雨\n20. modelTypicalRain_detail - 查看典型暴雨详情\n21. modelTypicalRain_addFromHistory - 从历史数据新增典型暴雨",
+              "line_num": 40,
+              "summary": "### 五、典型暴雨雨型管理接口（4个）\n\n18. modelTypicalRain_list - 查询典型暴雨列表\n19. modelTypicalRain_add - 新增典型暴雨\n20. modelTypicalRain_detail - 查看典型暴雨详情\n21. modelTypicalRain_addFromHistory - 从历史数据新增典型暴雨"
+            },
+            {
+              "title": "六、方案降雨查询接口（7个）",
+              "node_id": "0009",
+              "text": "### 六、方案降雨查询接口（7个）\n\n22. modelRainArea_getByPlan - 获取指定方案的各子流域降雨过程\n23. modelRainArea_getBasinAreaRainStc - 获取方案全流域平均面雨量过程及统计值\n24. modelRainArea_getBasinAreaRainAcc - 获取方案全流域平均面雨量过程及实时累计降雨\n25. modelRainArea_getBasinList - 获取方案有降雨预报的流域清单\n26. modelRainArea_detail - 获取指定方案、指定流域的降雨过程及统计\n27. modelRainArea_getByRsvr - 获取指定方案、指定水文站的上游流域降雨过程\n28. modelRainArea_forecastRainStc - 获取自动预报方案的降雨态势",
+              "line_num": 47,
+              "summary": "该部分文档详细列出了7个方案降雨查询接口，主要涵盖了基于特定方案的子流域及全流域平均面雨量（包括统计值与累计降雨）查询、有降雨预报的流域清单获取、指定流域或水文站上游的降雨过程分析，以及自动预报方案的降雨态势统计等功能。"
+            },
+            {
+              "title": "七、方案降雨设置接口（5个）",
+              "node_id": "0010",
+              "text": "### 七、方案降雨设置接口（5个）\n\n29. modelRainArea_addEcmwf - 根据格网预报设置方案降雨过程\n30. modelRainArea_addEcmwfTranslate - 根据格网预报设置方案降雨过程（可放大平移）\n31. modelRainArea_addManual - 手动设置方案降雨过程\n32. modelRainArea_addManualCenter - 手动设置方案降雨过程（可设降雨中心）\n33. modelRainArea_addBnd - 从数据库导入方案降雨过程\n\n---",
+              "line_num": 57,
+              "summary": "### 七、方案降雨设置接口（5个）\n\n29. modelRainArea_addEcmwf - 根据格网预报设置方案降雨过程\n30. modelRainArea_addEcmwfTranslate - 根据格网预报设置方案降雨过程（可放大平移）\n31. modelRainArea_addManual - 手动设置方案降雨过程\n32. modelRainArea_addManualCenter - 手动设置方案降雨过程（可设降雨中心）\n33. modelRainArea_addBnd - 从数据库导入方案降雨过程\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口分类概览\n\n本文档共包含 **33个API接口**，按功能均为降雨相关，分类如下："
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0011",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```",
+          "line_num": 67,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0012",
+          "text": "## 接口列表",
+          "line_num": 91,
+          "nodes": [
+            {
+              "title": "一、降雨预报接口",
+              "node_id": "0013",
+              "text": "### 一、降雨预报接口",
+              "line_num": 93,
+              "summary": "### 一、降雨预报接口"
+            },
+            {
+              "title": "1. forecastRainEcmwf_avg",
+              "node_id": "0014",
+              "text": "### 1. forecastRainEcmwf_avg\n\n**用途**: 获取流域平均的格网预报降雨过程(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/avg`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填, 格式: yyyy-MM-dd HH:mm:ss)\n- ed: 结束时间 (Date, 必填, 格式: yyyy-MM-dd HH:mm:ss)\n- businessCode: 业务模型编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"time\": \"2023-12-01 00:00:00\", \"value\": 4.5},\n        {\"time\": \"2023-12-01 01:00:00\", \"value\": 7.2}\n    ]\n}\n```",
+              "line_num": 95,
+              "summary": "This document provides a technical specification for the `forecastRainEcmwf_avg` API interface, which is used to retrieve basin-average grid forecasted rainfall data. It details the interface's purpose, the GET request method and endpoint, the required input parameters (start and end times), an optional business code parameter, and an example of the JSON response structure containing time-series rainfall values."
+            },
+            {
+              "title": "2. forecastRainEcmwf_each",
+              "node_id": "0015",
+              "text": "### 2. forecastRainEcmwf_each\n\n**用途**: 获取各子流域的格网预报降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/each`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n- businessCode: 业务模型编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"WH001\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 5.2},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 8.5}\n        ],\n        \"WH002\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 3.1},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 6.8}\n        ]\n    }\n}\n```",
+              "line_num": 119,
+              "summary": "This partial document provides the technical specifications for the `forecastRainEcmwf_each` API interface, which is used to retrieve grid-based rainfall forecast data for various sub-basins. It details the request method (GET), the service endpoint URL, the required and optional input parameters (start time, end time, and business model code), and provides a sample JSON output structure showing rainfall values mapped by time for specific sub-basin identifiers."
+            },
+            {
+              "title": "3. forecastRainEcmwf_rect",
+              "node_id": "0016",
+              "text": "### 3. forecastRainEcmwf_rect\n\n**用途**: 获取矩形区域内的格网预报降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/rect`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n- xmin: 矩形左边界经度 (Double, 必填)\n- xmax: 矩形右边界经度 (Double, 必填)\n- ymin: 矩形下边界纬度 (Double, 必填)\n- ymax: 矩形上边界纬度 (Double, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"avgRain\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 5.0}\n        ],\n        \"totalRain\": 50.5\n    }\n}\n```",
+              "line_num": 149,
+              "summary": "This partial document provides technical specifications for the `forecastRainEcmwf_rect` API, which is used to retrieve grid-based rainfall forecast data within a defined rectangular geographic area. It details the HTTP GET request method, the service endpoint, and the mandatory input parameters including time ranges and spatial coordinates (longitude and latitude boundaries). Additionally, it defines the structure of the JSON response, which includes success status, time-series data for average rainfall, and the total rainfall amount for the specified region."
+            },
+            {
+              "title": "4. forecastRainEcmwf_stc",
+              "node_id": "0017",
+              "text": "### 4. forecastRainEcmwf_stc\n\n**用途**: 获取指定时段的ECMWF降雨分区统计信息\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/stc`\n**输入参数**:\n\n- st: 开始时间 (Date, 可选, 默认当前时间)\n- ed: 结束时间 (Date, 可选, 默认开始时间后24小时)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"basinCode\": \"WH001\",\n            \"basinName\": \"卫河上游\",\n            \"totalRain\": 50.5,\n            \"avgRain\": 8.2,\n            \"maxRain\": 15.3\n        }\n    ]\n}\n```",
+              "line_num": 178,
+              "summary": "This partial document provides the technical specifications for an API interface named `forecastRainEcmwf_stc`. It outlines the endpoint's purpose, which is to retrieve ECMWF regional rainfall statistics for a specific time range. Key details included are the GET request method, the service URL, input parameters (start and end times), and a sample JSON response containing basin-specific data such as total, average, and maximum rainfall values."
+            },
+            {
+              "title": "5. forecastRainEcmwf_acc",
+              "node_id": "0018",
+              "text": "### 5. forecastRainEcmwf_acc\n\n**用途**: 获取所有格网点指定时段的ECMWF累计降雨\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/acc`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"lon\": 114.5, \"lat\": 35.2, \"value\": 25.5},\n        {\"lon\": 114.6, \"lat\": 35.3, \"value\": 30.2}\n    ]\n}\n```\n\n---",
+              "line_num": 206,
+              "summary": "### 5. forecastRainEcmwf_acc\n\n**用途**: 获取所有格网点指定时段的ECMWF累计降雨\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/acc`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"lon\": 114.5, \"lat\": 35.2, \"value\": 25.5},\n        {\"lon\": 114.6, \"lat\": 35.3, \"value\": 30.2}\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "二、降雨等值面接口",
+              "node_id": "0019",
+              "text": "### 二、降雨等值面接口",
+              "line_num": 231,
+              "summary": "### 二、降雨等值面接口"
+            },
+            {
+              "title": "6. contourRain_today",
+              "node_id": "0020",
+              "text": "### 6. contourRain_today\n\n**用途**: 获取8点以后降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/today`\n**输入参数**:\n\n- t: 时间 (Date, 可选, 默认当前时间, 格式: yyyy-MM-dd HH:mm:ss)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": [\n            {\n                \"type\": \"Feature\",\n                \"properties\": {\"value\": 10, \"color\": \"#00FF00\"},\n                \"geometry\": {\"type\": \"Polygon\", \"coordinates\": [[[114.5, 35.2]]]}\n            }\n        ]\n    }\n}\n```",
+              "line_num": 233,
+              "summary": "This document describes the `contourRain_today` API, which is used to retrieve rainfall contour surface data starting from 8:00 AM. It specifies the GET request method and path, includes an optional time parameter (`t`), and provides an example JSON response in GeoJSON format containing rainfall intensity values, color codes, and polygon coordinates."
+            },
+            {
+              "title": "7. contourRain_any",
+              "node_id": "0021",
+              "text": "### 7. contourRain_any\n\n**用途**: 生成/获取任意时段累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/any`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```",
+              "line_num": 261,
+              "summary": "### 7. contourRain_any\n\n**用途**: 生成/获取任意时段累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/any`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```"
+            },
+            {
+              "title": "8. contourRain_plan",
+              "node_id": "0022",
+              "text": "### 8. contourRain_plan\n\n**用途**: 生成/获取方案累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/plan`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```",
+              "line_num": 284,
+              "summary": "### 8. contourRain_plan\n\n**用途**: 生成/获取方案累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/plan`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```"
+            },
+            {
+              "title": "9. contourRain_proc",
+              "node_id": "0023",
+              "text": "### 9. contourRain_proc\n\n**用途**: 获取逐小时降雨等值面过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/proc`\n**输入参数**:\n\n- t: 时间 (Date, 可选, 默认当前时间, 格式: yyyy-MM-dd HH:mm:ss)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"2023-12-01 00:00:00\": {\"type\": \"FeatureCollection\", \"features\": []},\n        \"2023-12-01 01:00:00\": {\"type\": \"FeatureCollection\", \"features\": []}\n    }\n}\n```",
+              "line_num": 306,
+              "summary": "### 9. contourRain_proc\n\n**用途**: 获取逐小时降雨等值面过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/proc`\n**输入参数**:\n\n- t: 时间 (Date, 可选, 默认当前时间, 格式: yyyy-MM-dd HH:mm:ss)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"2023-12-01 00:00:00\": {\"type\": \"FeatureCollection\", \"features\": []},\n        \"2023-12-01 01:00:00\": {\"type\": \"FeatureCollection\", \"features\": []}\n    }\n}\n```"
+            },
+            {
+              "title": "10. contourRain_acc",
+              "node_id": "0024",
+              "text": "### 10. contourRain_acc\n\n**用途**: 获取不同时段累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/acc`\n**输入参数**:\n\n- t: 时间 (Date, 可选, 默认当前时间)\n- interval: 时段间隔 (Integer, 必填, 可选值: -1/-12/-24/-48/-72/1/12/24/48/72, 负数表示历史, 正数表示未来)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```",
+              "line_num": 328,
+              "summary": "### 10. contourRain_acc\n\n**用途**: 获取不同时段累计降雨等值面\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/acc`\n**输入参数**:\n\n- t: 时间 (Date, 可选, 默认当前时间)\n- interval: 时段间隔 (Integer, 必填, 可选值: -1/-12/-24/-48/-72/1/12/24/48/72, 负数表示历史, 正数表示未来)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": []\n    }\n}\n```"
+            },
+            {
+              "title": "11. contourRain_futureimg",
+              "node_id": "0025",
+              "text": "### 11. contourRain_futureimg\n\n**用途**: 获取未来24/48/72小时降雨等值面图片(Base64)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/futureimg`\n**输入参数**:\n\n- ind: 时段索引 (Integer, 必填, 0=24小时, 1=48小时, 2=72小时)\n- time: 时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...\"\n}\n```",
+              "line_num": 351,
+              "summary": "### 11. contourRain_futureimg\n\n**用途**: 获取未来24/48/72小时降雨等值面图片(Base64)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/futureimg`\n**输入参数**:\n\n- ind: 时段索引 (Integer, 必填, 0=24小时, 1=48小时, 2=72小时)\n- time: 时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...\"\n}\n```"
+            },
+            {
+              "title": "12. contourRain_update",
+              "node_id": "0026",
+              "text": "### 12. contourRain_update\n\n**用途**: 更新等值面(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/update`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 371,
+              "summary": "### 12. contourRain_update\n\n**用途**: 更新等值面(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/contour/rainProc/update`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            },
+            {
+              "title": "三、降雨监测接口",
+              "node_id": "0027",
+              "text": "### 三、降雨监测接口",
+              "line_num": 390,
+              "summary": "### 三、降雨监测接口"
+            },
+            {
+              "title": "13. monitorRainH_areaRainProcWhole",
+              "node_id": "0028",
+              "text": "### 13. monitorRainH_areaRainProcWhole\n\n**用途**: 获取指定时段的流域整体面雨量过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/monitorRainH/areaRainProcWhole`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"time\": \"2023-12-01 00:00:00\", \"val\": 5.25},\n        {\"time\": \"2023-12-01 01:00:00\", \"val\": 8.50}\n    ]\n}\n```",
+              "line_num": 392,
+              "summary": "### 13. monitorRainH_areaRainProcWhole\n\n**用途**: 获取指定时段的流域整体面雨量过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/monitorRainH/areaRainProcWhole`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"time\": \"2023-12-01 00:00:00\", \"val\": 5.25},\n        {\"time\": \"2023-12-01 01:00:00\", \"val\": 8.50}\n    ]\n}\n```"
+            },
+            {
+              "title": "14. monitorRainH_manual",
+              "node_id": "0029",
+              "text": "### 14. monitorRainH_manual\n\n**用途**: 手动更新降水监测数据(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/monitorRainH/manual`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 415,
+              "summary": "### 14. monitorRainH_manual\n\n**用途**: 手动更新降水监测数据(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/monitorRainH/manual`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            },
+            {
+              "title": "四、设计暴雨雨型管理接口",
+              "node_id": "0030",
+              "text": "### 四、设计暴雨雨型管理接口",
+              "line_num": 437,
+              "summary": "### 四、设计暴雨雨型管理接口"
+            },
+            {
+              "title": "15. modelRainPattern_list",
+              "node_id": "0031",
+              "text": "### 15. modelRainPattern_list\n\n**用途**: 查询雨型列表\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/list`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"标准雨型\",\n            \"type\": \"1\",\n            \"json\": \"[{\\\"hour\\\":1,\\\"ratio\\\":0.05},{\\\"hour\\\":2,\\\"ratio\\\":0.10}]\"\n        }\n    ]\n}\n```",
+              "line_num": 439,
+              "summary": "### 15. modelRainPattern_list\n\n**用途**: 查询雨型列表\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/list`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"标准雨型\",\n            \"type\": \"1\",\n            \"json\": \"[{\\\"hour\\\":1,\\\"ratio\\\":0.05},{\\\"hour\\\":2,\\\"ratio\\\":0.10}]\"\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "16. modelRainPattern_add",
+              "node_id": "0032",
+              "text": "### 16. modelRainPattern_add\n\n**用途**: 新增雨型\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - name: 雨型名称 (String, 必填)\n  - type: 雨型类型 (String, 可选, 0=自定义雨型, 1=设计雨型)\n  - json: 雨型过程JSON (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 463,
+              "summary": "### 16. modelRainPattern_add\n\n**用途**: 新增雨型\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - name: 雨型名称 (String, 必填)\n  - type: 雨型类型 (String, 可选, 0=自定义雨型, 1=设计雨型)\n  - json: 雨型过程JSON (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "17. modelRainPattern_detail",
+              "node_id": "0033",
+              "text": "### 17. modelRainPattern_detail\n\n**用途**: 查看雨型详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/detail`\n**输入参数**:\n\n- id: 雨型ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"标准雨型\",\n        \"type\": \"1\",\n        \"json\": \"[{\\\"hour\\\":1,\\\"ratio\\\":0.05}]\"\n    }\n}\n```\n\n---",
+              "line_num": 486,
+              "summary": "### 17. modelRainPattern_detail\n\n**用途**: 查看雨型详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainPattern/detail`\n**输入参数**:\n\n- id: 雨型ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"标准雨型\",\n        \"type\": \"1\",\n        \"json\": \"[{\\\"hour\\\":1,\\\"ratio\\\":0.05}]\"\n    }\n}\n```\n\n---"
+            },
+            {
+              "title": "五、典型暴雨雨型管理接口",
+              "node_id": "0034",
+              "text": "### 五、典型暴雨雨型管理接口",
+              "line_num": 512,
+              "summary": "### 五、典型暴雨雨型管理接口"
+            },
+            {
+              "title": "18. modelTypicalRain_list",
+              "node_id": "0035",
+              "text": "### 18. modelTypicalRain_list\n\n**用途**: 分页查询典型暴雨列表\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/list`\n**输入参数**:\n\n- id: 暴雨ID (Long, 可选)\n- name: 暴雨名称 (String, 可选)\n- page: 页码 (Integer, 默认1)\n- limit: 每页条数 (Integer, 默认10)\n**输出结果**:\n\n```json\n{\n    \"code\": 0,\n    \"msg\": \"\",\n    \"count\": 20,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"2021年7月暴雨\",\n            \"startTime\": \"2021-07-20 00:00:00\",\n            \"endTime\": \"2021-07-22 00:00:00\"\n        }\n    ]\n}\n```",
+              "line_num": 514,
+              "summary": "This document provides the technical specifications for the `modelTypicalRain_list` API interface, which is used to perform paginated queries for typical rainstorm records. It outlines the interface's purpose, the GET request method, the specific endpoint URL, the supported input parameters (such as rainstorm ID, name, and pagination controls), and the structure of the JSON response containing the query results."
+            },
+            {
+              "title": "19. modelTypicalRain_add",
+              "node_id": "0036",
+              "text": "### 19. modelTypicalRain_add\n\n**用途**: 新增典型暴雨\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - name: 暴雨名称 (String, 必填)\n  - process: 降雨过程数据 (Array, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 543,
+              "summary": "### 19. modelTypicalRain_add\n\n**用途**: 新增典型暴雨\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - name: 暴雨名称 (String, 必填)\n  - process: 降雨过程数据 (Array, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "20. modelTypicalRain_detail",
+              "node_id": "0037",
+              "text": "### 20. modelTypicalRain_detail\n\n**用途**: 查看典型暴雨详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/detail`\n**输入参数**:\n\n- id: 暴雨ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"2021年7月暴雨\",\n        \"process\": [\n            {\"time\": \"2021-07-20 00:00:00\", \"value\": 10.5},\n            {\"time\": \"2021-07-20 01:00:00\", \"value\": 25.3}\n        ]\n    }\n}\n```",
+              "line_num": 565,
+              "summary": "This partial document provides the technical specifications for the `modelTypicalRain_detail` API endpoint. It outlines the interface's purpose for retrieving detailed information about a typical rainstorm, specifies the GET request method and endpoint path, defines the required input parameter (rainstorm ID), and describes the JSON response structure, which includes the rainstorm's name and its time-series process data."
+            },
+            {
+              "title": "21. modelTypicalRain_addFromHistory",
+              "node_id": "0038",
+              "text": "### 21. modelTypicalRain_addFromHistory\n\n**用途**: 从历史数据新增典型暴雨\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/addFromHistory`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n- name: 暴雨名称 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 591,
+              "summary": "### 21. modelTypicalRain_addFromHistory\n\n**用途**: 从历史数据新增典型暴雨\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelTypicalRain/addFromHistory`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n- name: 暴雨名称 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            },
+            {
+              "title": "六、方案降雨查询接口",
+              "node_id": "0039",
+              "text": "### 六、方案降雨查询接口",
+              "line_num": 614,
+              "summary": "### 六、方案降雨查询接口"
+            },
+            {
+              "title": "22. modelRainArea_getByPlan",
+              "node_id": "0040",
+              "text": "### 22. modelRainArea_getByPlan\n\n**用途**: 获取指定方案的各子流域降雨过程(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getByPlan`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"WH001\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 5.2},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 8.5}\n        ],\n        \"WH002\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 3.1},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 6.8}\n        ]\n    }\n}\n```",
+              "line_num": 616,
+              "summary": "This document provides the technical specifications for the `modelRainArea_getByPlan` API endpoint, which is used to retrieve rainfall process data for sub-basins associated with a specific plan. It details the interface's purpose, the GET request method, the endpoint URL, the required `planCode` input parameter, and the JSON response format containing time-series rainfall values for various sub-basin identifiers."
+            },
+            {
+              "title": "23. modelRainArea_getBasinAreaRainStc",
+              "node_id": "0041",
+              "text": "### 23. modelRainArea_getBasinAreaRainStc\n\n**用途**: 获取指定方案的全流域平均面雨量过程及统计值(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getBasinAreaRainStc`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"process\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 4.5},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 7.2}\n        ],\n        \"totalRain\": 120.5,\n        \"maxRain\": 15.3,\n        \"maxRainTime\": \"2023-12-01 12:00:00\",\n        \"avgRain\": 5.0\n    }\n}\n```",
+              "line_num": 644,
+              "summary": "This document specifies the technical details for the `modelRainArea_getBasinAreaRainStc` API interface, which is used to retrieve the average basin-wide area rainfall process and related statistical values for a specific plan. It outlines the request method (GET), the service endpoint, the required input parameter (`planCode`), and the structure of the JSON response, which includes time-series rainfall data and summary statistics such as total, maximum, and average rainfall values."
+            },
+            {
+              "title": "24. modelRainArea_getBasinAreaRainAcc",
+              "node_id": "0042",
+              "text": "### 24. modelRainArea_getBasinAreaRainAcc\n\n**用途**: 获取指定方案的全流域平均面雨量过程及实时累计降雨\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getBasinAreaRainAcc`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"process\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 4.5, \"acc\": 4.5},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 7.2, \"acc\": 11.7}\n        ],\n        \"totalAcc\": 120.5\n    }\n}\n```",
+              "line_num": 672,
+              "summary": "This document provides the technical specifications for the `modelRainArea_getBasinAreaRainAcc` API endpoint. Its primary purpose is to retrieve the average basin-wide rainfall process and real-time cumulative rainfall for a specific plan. The documentation details the GET request method, the service URL, the required input parameter (`planCode`), and the structure of the JSON response, which includes time-series data (individual values and accumulations) and the total accumulated rainfall."
+            },
+            {
+              "title": "25. modelRainArea_getBasinList",
+              "node_id": "0043",
+              "text": "### 25. modelRainArea_getBasinList\n\n**用途**: 获取有降雨预报的流域清单\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getBasinList`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"bsnCode\": \"WH001\", \"bsnName\": \"卫河上游\"},\n        {\"bsnCode\": \"WH002\", \"bsnName\": \"卫河中游\"}\n    ]\n}\n```",
+              "line_num": 697,
+              "summary": "### 25. modelRainArea_getBasinList\n\n**用途**: 获取有降雨预报的流域清单\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getBasinList`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"bsnCode\": \"WH001\", \"bsnName\": \"卫河上游\"},\n        {\"bsnCode\": \"WH002\", \"bsnName\": \"卫河中游\"}\n    ]\n}\n```"
+            },
+            {
+              "title": "26. modelRainArea_detail",
+              "node_id": "0044",
+              "text": "### 26. modelRainArea_detail\n\n**用途**: 获取指定方案、指定流域的降雨过程及统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/detail`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n- bsnCode: 流域编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"planCode\": \"plan_001\",\n        \"bsnCode\": \"WH001\",\n        \"process\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 5.2}\n        ],\n        \"totalRain\": 50.5,\n        \"maxRain\": 10.2,\n        \"maxRainTime\": \"2023-12-01 08:00:00\"\n    }\n}\n```",
+              "line_num": 719,
+              "summary": "This partial document provides the technical specifications for the `modelRainArea_detail` API interface. It outlines the API's purpose for retrieving rainfall process data and statistics for specific plans and river basins, specifies the GET request method and required input parameters (planCode and bsnCode), and provides a sample JSON response containing time-series rainfall values, total rainfall, and peak rainfall details."
+            },
+            {
+              "title": "27. modelRainArea_getByRsvr",
+              "node_id": "0045",
+              "text": "### 27. modelRainArea_getByRsvr\n\n**用途**: 获取指定方案、指定水文站的上游流域降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getByRsvr`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n- stcd: 水文站编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"time\": \"2023-12-01 00:00:00\", \"value\": 5.2},\n        {\"time\": \"2023-12-01 01:00:00\", \"value\": 8.5}\n    ]\n}\n```",
+              "line_num": 748,
+              "summary": "This partial document provides the technical specification for the `modelRainArea_getByRsvr` API interface. It outlines the interface's purpose, which is to retrieve rainfall process data for the upstream basin of a specific hydrological station based on a given plan. The document details the GET request method, the specific endpoint URL, the required input parameters (`planCode` and `stcd`), and a sample JSON response containing time-series rainfall values."
+            },
+            {
+              "title": "28. modelRainArea_forecastRainStc",
+              "node_id": "0046",
+              "text": "### 28. modelRainArea_forecastRainStc\n\n**用途**: 获取自动预报方案的降雨态势\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/forecastRainStc`\n**输入参数**:\n\n- interval: 时段间隔(小时) (Integer, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"avgRain\": 25.5,\n        \"maxRain\": 50.2,\n        \"rainLevel\": \"暴雨\"\n    }\n}\n```\n\n---",
+              "line_num": 771,
+              "summary": "### 28. modelRainArea_forecastRainStc\n\n**用途**: 获取自动预报方案的降雨态势\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/forecastRainStc`\n**输入参数**:\n\n- interval: 时段间隔(小时) (Integer, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"avgRain\": 25.5,\n        \"maxRain\": 50.2,\n        \"rainLevel\": \"暴雨\"\n    }\n}\n```\n\n---"
+            },
+            {
+              "title": "七 、方案降雨设置接口",
+              "node_id": "0047",
+              "text": "### 七 、方案降雨设置接口",
+              "line_num": 796,
+              "summary": "### 七 、方案降雨设置接口"
+            },
+            {
+              "title": "29. modelRainArea_addEcmwf",
+              "node_id": "0048",
+              "text": "### 29. modelRainArea_addEcmwf\n\n**用途**: 根据格网预报设置方案降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/ecmwf`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 798,
+              "summary": "### 29. modelRainArea_addEcmwf\n\n**用途**: 根据格网预报设置方案降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/ecmwf`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "30. modelRainArea_addEcmwfTranslate",
+              "node_id": "0049",
+              "text": "### 30. modelRainArea_addEcmwfTranslate\n\n**用途**: 根据格网预报设置方案降雨过程(可放大平移)\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/ecmwf/translate`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - planCode: 方案编码 (String, 必填)\n  - factor: 放大倍数 (Double, 可选, 默认1.0)\n  - dlgtd: 经度偏移量 (Double, 可选, 默认0)\n  - dlttd: 纬度偏移量 (Double, 可选, 默认0)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 817,
+              "summary": "This partial document describes the `modelRainArea_addEcmwfTranslate` API endpoint, which is used to configure rainfall processes based on grid forecast schemes. The main points include its functionality for amplifying and translating rainfall data, the POST request specifications (URL and Content-Type), and the detailed input parameters such as the mandatory scheme code (`planCode`) and optional adjustment factors for magnification (`factor`) and spatial offsets (`dlgtd`, `dlttd`). Additionally, it provides the expected JSON response format for a successful request."
+            },
+            {
+              "title": "31. modelRainArea_addManual",
+              "node_id": "0050",
+              "text": "### 31. modelRainArea_addManual\n\n**用途**: 手动设置方案降雨过程\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/manual`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - planCode: 方案编码 (String, 必填)\n  - bsnCode: 子流域编码(avg表示全流域平均) (String, 可选)\n  - drpJson: 降水量JSON字符串 (String, 必填)，样例：\"{\\\"2025-12-16 08:00:00\\\":3.68,\\\"2025-12-16 09:00:00\\\":6.2,\\\"2025-12-16 10:00:00\\\":5.65}\"\n  - source: 数据来源 (String, 可选, 0=实测, 1=预报, 2=指定, 3=无降雨)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 841,
+              "summary": "This documentation describes the `modelRainArea_addManual` API endpoint, which is used to manually configure the rainfall process for a specific plan. It outlines the POST request details, including the target URL and the required input parameters such as the plan code and a JSON-formatted string of rainfall data (time-stamped precipitation values). Additionally, it covers optional parameters for sub-basin identification and data source types, and provides a sample successful JSON response structure."
+            },
+            {
+              "title": "32. modelRainArea_addManualCenter",
+              "node_id": "0051",
+              "text": "### 32. modelRainArea_addManualCenter\n\n**用途**: 手动设置方案降雨过程(可设降雨中心)\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/manual/center`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - planCode: 方案编码 (String, 必填)\n  - centers: 降雨中心列表 (Array, 必填)\n    - drpJson: 降雨过程JSON字符串 (String, 必填)\n    - polyWkt: 面要素WKT格式 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 865,
+              "summary": "The document outlines the technical specifications for the `modelRainArea_addManualCenter` API endpoint, which is used to manually configure rainfall processes for a specific plan by defining rainfall centers. It details the POST request method and path, the required input parameters—including the plan code and a list of rainfall centers containing rainfall data (JSON) and spatial geometry (WKT)—and the standard JSON response format indicating the success of the operation."
+            },
+            {
+              "title": "33. modelRainArea_addBnd",
+              "node_id": "0052",
+              "text": "### 33. modelRainArea_addBnd\n\n**用途**: 从数据库导入方案降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/bnd`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 889,
+              "summary": "### 33. modelRainArea_addBnd\n\n**用途**: 从数据库导入方案降雨过程\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/add/bnd`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "附录",
+          "node_id": "0053",
+          "text": "## 附录",
+          "line_num": 910,
+          "nodes": [
+            {
+              "title": "A. 通用分页参数说明",
+              "node_id": "0054",
+              "text": "### A. 通用分页参数说明\n\n所有分页查询接口支持以下参数:\n\n- page: 页码，从1开始，默认1\n- limit: 每页条数，默认10",
+              "line_num": 912,
+              "summary": "### A. 通用分页参数说明\n\n所有分页查询接口支持以下参数:\n\n- page: 页码，从1开始，默认1\n- limit: 每页条数，默认10"
+            },
+            {
+              "title": "B. 日期格式说明",
+              "node_id": "0055",
+              "text": "### B. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`",
+              "line_num": 919,
+              "summary": "### B. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`"
+            },
+            {
+              "title": "C. 状态码说明",
+              "node_id": "0056",
+              "text": "### C. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问",
+              "line_num": 924,
+              "summary": "### C. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问"
+            },
+            {
+              "title": "D. 计算状态说明",
+              "node_id": "0057",
+              "text": "### D. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算完成\n- 计算失败",
+              "line_num": 931,
+              "summary": "### D. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算完成\n- 计算失败"
+            },
+            {
+              "title": "E. 需要登录的接口说明",
+              "node_id": "0058",
+              "text": "### E. 需要登录的接口说明\n\n大部分接口需要登录后才能访问，以下接口无需登录(requiredLogin = false):\n\n- `http://10.20.2.153:8089/modelPlatf/model/modelPlan/autoForecast/manual`\n- `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainFyc/avg`\n- `http://10.20.2.153:8089/modelPlatf/forecast/forecastRainEcmwf/avg`\n- `http://10.20.2.153:8089/modelPlatf/contour/rainProc/update`\n- `http://10.20.2.153:8089/modelPlatf/contour/rainProc/manual`\n- `http://10.20.2.153:8089/modelPlatf/monitor/monitorRainH/manual`\n- `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/now`\n- `http://10.20.2.153:8089/modelPlatf/loss/auto`\n- `http://10.20.2.153:8089/modelPlatf/model/mike/init/gate`\n- `http://10.20.2.153:8089/modelPlatf/model/mike/runoff`\n- `http://10.20.2.153:8089/modelPlatf/model/mike/rsvrInfo`\n- `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getByPlan`\n- `http://10.20.2.153:8089/modelPlatf/model/modelRainArea/getBasinAreaRainStc`",
+              "line_num": 940,
+              "summary": "This document outlines the authentication requirements for various API interfaces, specifically listing the endpoints that do not require a login (where `requiredLogin` is set to false). The listed exceptions cover functions such as automated forecasting, rainfall data processing, reservoir monitoring, and specific model-related data queries."
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 卫共流域防洪相关Java接口详细文档"
+    }
+  ]
+}

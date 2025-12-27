@@ -1,0 +1,377 @@
+{
+  "doc_name": "3、防洪业务接口-子流域洪水、淹没分析、洪水态势分析及其他辅助业务",
+  "structure": [
+    {
+      "title": "防洪业务接口-子流域洪水、淹没分析、洪水态势分析及其他辅助业务",
+      "node_id": "0001",
+      "text": "# 防洪业务接口-子流域洪水、淹没分析、洪水态势分析及其他辅助业务",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档精选了卫共数字孪生流域防洪预报预演系统的部分API接口，包括子流域洪水结果、洪水淹没分析、防汛预案、水雨情态势研判、闸站工情、以及MIKE模型计算相关辅助接口。接口基础地址为：<http://10.20.2.153:8089>",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档精选了卫共数字孪生流域防洪预报预演系统的部分API接口，包括子流域洪水结果、洪水淹没分析、防汛预案、水雨情态势研判、闸站工情、以及MIKE模型计算相关辅助接口。接口基础地址为：<http://10.20.2.153:8089>"
+        },
+        {
+          "title": "接口分类概览",
+          "node_id": "0003",
+          "text": "## 接口分类概览\n\n本文档共包含 **29个API接口**，按功能分类如下：",
+          "line_num": 7,
+          "nodes": [
+            {
+              "title": "一、获取子流域洪水结果接口（4个）",
+              "node_id": "0004",
+              "text": "### 一、获取子流域洪水结果接口（4个）\n\n1. modelResultOutflow_delete - 删除方案的子流域洪水结果\n2. modelResultOutflow_getBasinList - 获取子流域基础信息清单\n3. modelResultOutflow_detail - 获取子流域产流洪水过程结果及统计结果\n4. modelResultOutflow_source - 获取方案洪水来源",
+              "line_num": 11,
+              "summary": "### 一、获取子流域洪水结果接口（4个）\n\n1. modelResultOutflow_delete - 删除方案的子流域洪水结果\n2. modelResultOutflow_getBasinList - 获取子流域基础信息清单\n3. modelResultOutflow_detail - 获取子流域产流洪水过程结果及统计结果\n4. modelResultOutflow_source - 获取方案洪水来源"
+            },
+            {
+              "title": "二、基于DEM的洪水淹没分析接口（7个）",
+              "node_id": "0005",
+              "text": "### 二、基于DEM的洪水淹没分析接口（7个）\n\n5. lossPlan_list - 分页查询淹没分析方案列表\n6. lossPlan_add - 新增淹没分析方案\n7. lossPlan_delete - 删除淹没分析方案\n8. lossPlan_calc - 执行淹没分析方案计算\n9. lossPlan_detail - 获取淹没分析方案及结果数据\n10. lossPlan_gis - 获取淹没分布GIS结果数据\n11. lossPlan_auto - 自动计算淹没分析",
+              "line_num": 18,
+              "summary": "### 二、基于DEM的洪水淹没分析接口（7个）\n\n5. lossPlan_list - 分页查询淹没分析方案列表\n6. lossPlan_add - 新增淹没分析方案\n7. lossPlan_delete - 删除淹没分析方案\n8. lossPlan_calc - 执行淹没分析方案计算\n9. lossPlan_detail - 获取淹没分析方案及结果数据\n10. lossPlan_gis - 获取淹没分布GIS结果数据\n11. lossPlan_auto - 自动计算淹没分析"
+            },
+            {
+              "title": "三、防汛预案接口（5个）",
+              "node_id": "0006",
+              "text": "### 三、防汛预案接口（5个）\n\n12. floodPlan_listAll - 查询全部防汛预案列表\n13. floodPlan_add - 新增防汛预案\n14. floodPlan_delete - 删除防汛预案\n15. floodPlan_detail - 查看防汛预案详情\n16. floodPlan_catalog - 获取防汛预案类型目录",
+              "line_num": 28,
+              "summary": "### 三、防汛预案接口（5个）\n\n12. floodPlan_listAll - 查询全部防汛预案列表\n13. floodPlan_add - 新增防汛预案\n14. floodPlan_delete - 删除防汛预案\n15. floodPlan_detail - 查看防汛预案详情\n16. floodPlan_catalog - 获取防汛预案类型目录"
+            },
+            {
+              "title": "四、水雨情态势研判接口（4个）",
+              "node_id": "0007",
+              "text": "### 四、水雨情态势研判接口（4个）\n\n17. monitorRsvr_now - 获取水库河道实时水情\n18. monitorRsvr_stc - 获取水库当前形势统计\n19. monitorRsvr_track - 水雨情态势过程回溯\n20. monitorRsvr_storage - 水库纳蓄能力分析",
+              "line_num": 36,
+              "summary": "### 四、水雨情态势研判接口（4个）\n\n17. monitorRsvr_now - 获取水库河道实时水情\n18. monitorRsvr_stc - 获取水库当前形势统计\n19. monitorRsvr_track - 水雨情态势过程回溯\n20. monitorRsvr_storage - 水库纳蓄能力分析"
+            },
+            {
+              "title": "五、闸站工情接口（1个）",
+              "node_id": "0008",
+              "text": "### 五、闸站工情接口（1个）\n\n21. mike_gateAll - 获取闸门工情",
+              "line_num": 43,
+              "summary": "### 五、闸站工情接口（1个）\n\n21. mike_gateAll - 获取闸门工情"
+            },
+            {
+              "title": "六、MIKE模型计算相关辅助接口（8个）",
+              "node_id": "0009",
+              "text": "### 六、MIKE模型计算相关辅助接口（8个）\n\n22. mike_runoff - 获取子流域NAM模型产流洪水结果\n23. mike_rsvrInfo - 获取水库基本信息\n24. mike_control - 获取水库的可控建筑物\n25. mike_hvrela - 获取蓄滞洪区的库容曲线\n26. mike_specTime - 获取指定时刻的水情\n27. mike_calPa - 计算各子流域的前期影响雨量\n28. mike_fsdaStruct - 获取蓄滞洪区的建筑物信息\n29. mike_fsdaSetBoundary - 设置蓄滞洪区进洪预演模型的边界条件\n\n---",
+              "line_num": 47,
+              "summary": "### 六、MIKE模型计算相关辅助接口（8个）\n\n22. mike_runoff - 获取子流域NAM模型产流洪水结果\n23. mike_rsvrInfo - 获取水库基本信息\n24. mike_control - 获取水库的可控建筑物\n25. mike_hvrela - 获取蓄滞洪区的库容曲线\n26. mike_specTime - 获取指定时刻的水情\n27. mike_calPa - 计算各子流域的前期影响雨量\n28. mike_fsdaStruct - 获取蓄滞洪区的建筑物信息\n29. mike_fsdaSetBoundary - 设置蓄滞洪区进洪预演模型的边界条件\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口分类概览\n\n本文档共包含 **29个API接口**，按功能分类如下："
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0010",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```",
+          "line_num": 60,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"500\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0011",
+          "text": "## 接口列表",
+          "line_num": 84,
+          "nodes": [
+            {
+              "title": "一、获取子流域洪水结果接口",
+              "node_id": "0012",
+              "text": "### 一、获取子流域洪水结果接口",
+              "line_num": 86,
+              "summary": "### 一、获取子流域洪水结果接口"
+            },
+            {
+              "title": "1. modelResultOutflow_delete",
+              "node_id": "0013",
+              "text": "### 1. modelResultOutflow_delete\n\n**用途**: 删除产流结果\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/delete`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n- bsnCode: 流域编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 88,
+              "summary": "### 1. modelResultOutflow_delete\n\n**用途**: 删除产流结果\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/delete`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n- bsnCode: 流域编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "2. modelResultOutflow_getBasinList",
+              "node_id": "0014",
+              "text": "### 2. modelResultOutflow_getBasinList\n\n**用途**: 获取子流域基础信息清单\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/getBasinList`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"bsnCode\": \"WH001\",\n            \"bsnName\": \"卫河上游\"\n            \"planCode\": \"方案编码\"\n        },\n        {\n            \"bsnCode\": \"WH002\",\n            \"bsnName\": \"卫河中游\"\n            \"planCode\": \"方案编码\"\n        }\n    ]\n}\n```",
+              "line_num": 108,
+              "summary": "The document describes an API endpoint named `modelResultOutflow_getBasinList`, which is used to retrieve a list of basic sub-basin information. It specifies the request method (GET), the service URL, the required input parameter (`planCode`), and the structure of the JSON response, which includes details such as basin codes and names associated with a specific plan."
+            },
+            {
+              "title": "3. modelResultOutflow_detail",
+              "node_id": "0015",
+              "text": "### 3. modelResultOutflow_detail\n\n**用途**: 获取指定方案、指定子流域的降雨及洪水过程结果及统计结果\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/detail`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n- bsnCode: 流域编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"rain\": {    //子流域降雨过程\n            \"t\":  //时间序列\n\t     [\n                \"2025-12-22 06:00:00\",\n                \"...\"\n            ],\n            \"v\":   //值序列\n\t    [\n                \"0.00\",\n                \"...\"\n            ]\n        },\n        \"maxTime\": \"2025-12-22 06:00:00\",  //降雨峰值出现时间\n        \"sum\": 0.0,                      //累计降雨\n        \"maxFlow\": 0.0,                  //洪峰流量\n        \"rate\": 0.0,                     //最大雨强\n        \"flow\": {                        //子流域洪水过程\n            \"t\": [\n                \"2025-12-22 06:00:00\",\n                \"...\"\n            ],\n            \"v\": [\n                \"0.00\",\n                \"...\"\n            ]\n        }\n    }\n}\n```",
+              "line_num": 138,
+              "summary": "This document describes the API specification for the `modelResultOutflow_detail` interface, which is used to retrieve detailed rainfall and flood process results, along with statistical data, for a specific plan and sub-basin. It outlines the GET request method, the required input parameters (`planCode` and `bsnCode`), and the structure of the JSON response, which includes time-series data for rainfall and flow, peak rainfall timing, cumulative rainfall, peak flow, and maximum rainfall intensity."
+            },
+            {
+              "title": "4. modelResultOutflow_source",
+              "node_id": "0016",
+              "text": "### 4. modelResultOutflow_source\n\n**用途**: 获取洪水来源(0降雨计算/1直接导入/2无洪水)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/source`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": 0\n}\n```\n\n---",
+              "line_num": 185,
+              "summary": "### 4. modelResultOutflow_source\n\n**用途**: 获取洪水来源(0降雨计算/1直接导入/2无洪水)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/modelResultOutflow/source`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": 0\n}\n```\n\n---"
+            },
+            {
+              "title": "二、基于DEM的洪水淹没分析接口",
+              "node_id": "0017",
+              "text": "### 二、基于DEM的洪水淹没分析接口",
+              "line_num": 206,
+              "summary": "### 二、基于DEM的洪水淹没分析接口"
+            },
+            {
+              "title": "5. lossPlan_list",
+              "node_id": "0018",
+              "text": "### 5. lossPlan_list\n\n**用途**: 分页查询淹没分析方案列表\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/list`\n**输入参数**:\n\n- code: 方案编码 (String, 可选)\n- name: 方案名称 (String, 可选)\n- status: 计算状态 (String, 可选, 可选值: 待计算/计算中/计算成功/计算失败)\n- fsdaCode: 蓄滞洪区编码 (String, 可选)\n- modelType: 类型 (String, 可选, 0=蓄滞洪区, 1=滩地)\n- page: 页码 (Integer, 默认1)\n- limit: 每页条数 (Integer, 默认10)\n**输出结果**:\n\n```json\n{\n    \"code\": 0,\n    \"msg\": \"\",\n    \"count\": 20,\n    \"data\": [\n        {\n            \"code\": \"loss_001\",\n            \"name\": \"淹没方案1\",\n            \"status\": \"计算成功\",\n            \"fsdaCode\": \"LXP\",\n            \"fsdaName\": \"良相坡\",\n            \"modelType\": \"0\"\n        }\n    ]\n}\n```",
+              "line_num": 208,
+              "summary": "This partial document provides technical specifications for the `lossPlan_list` API endpoint, which is used to perform paginated queries for flood submergence analysis schemes. It details the HTTP GET request method and URL, alongside a list of optional input parameters for filtering results by scheme code, name, calculation status, area code, and model type (flood storage area or beach land). The document also defines the pagination parameters and provides a sample JSON response structure, including fields for the status code, total record count, and a data list of individual analysis schemes."
+            },
+            {
+              "title": "6. lossPlan_add",
+              "node_id": "0019",
+              "text": "### 6. lossPlan_add\n\n**用途**: 新增淹没分析方案\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/add`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象:\n  - code: 方案编码 (String, 必填)\n  - name: 方案名称 (String, 必填)\n  - descrip: 方案描述 (String, 可选)\n  - paramJson: 参数JSON (String, 可选)\n  - fsdaCode: 蓄滞洪区编码(可多个) (String, 可选)\n  - fsdaName: 蓄滞洪区名称(可多个) (String, 可选)\n  - modelType: 类型 (String, 可选, 0=蓄滞洪区, 1=滩地)\n  - save: 是否保存方案 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 242,
+              "summary": "This partial document provides the technical specifications for the `lossPlan_add` API, which is used to create new flood submergence analysis plans. It details the POST request method and endpoint, lists mandatory parameters such as plan code and name, and describes optional fields for descriptions, model types (flood storage areas or floodplains), and configuration data. Additionally, it outlines the standard JSON response format used to indicate the success of the request."
+            },
+            {
+              "title": "7. lossPlan_delete",
+              "node_id": "0020",
+              "text": "### 7. lossPlan_delete\n\n**用途**: 删除淹没分析方案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/delete`\n**输入参数**:\n\n- code: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 270,
+              "summary": "### 7. lossPlan_delete\n\n**用途**: 删除淹没分析方案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/delete`\n**输入参数**:\n\n- code: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "8. lossPlan_calc",
+              "node_id": "0021",
+              "text": "### 8. lossPlan_calc\n\n**用途**: 执行淹没分析方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/calc`\n**输入参数**:\n\n- code: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"expectSeconds\": 120\n    }\n}\n```",
+              "line_num": 289,
+              "summary": "### 8. lossPlan_calc\n\n**用途**: 执行淹没分析方案计算\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/calc`\n**输入参数**:\n\n- code: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"expectSeconds\": 120\n    }\n}\n```"
+            },
+            {
+              "title": "9. lossPlan_detail",
+              "node_id": "0022",
+              "text": "### 9. lossPlan_detail\n\n**用途**: 获取淹没分析方案及结果数据\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/detail`\n**输入参数**:\n\n- code: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"code\": \"loss_001\",\n        \"name\": \"淹没方案1\",\n        \"descrip\": \"方案描述\",\n        \"paramJson\": \"{}\",\n        \"resultJson\": \"{}\",\n        \"status\": \"计算成功\",\n        \"expectSeconds\": 120,\n        \"fsdaCode\": \"LXP\",\n        \"fsdaName\": \"良相坡\",\n        \"modelType\": \"0\"\n    }\n}\n```",
+              "line_num": 310,
+              "summary": "This partial document provides technical specifications for an API interface titled \"lossPlan_detail,\" which is designed to retrieve detailed information and result data for a specific submergence analysis plan. It outlines the GET request method, the required \"code\" input parameter, and the structure of the JSON response, which includes details such as the plan's name, status, calculation parameters, and analysis results."
+            },
+            {
+              "title": "10. lossPlan_gis",
+              "node_id": "0023",
+              "text": "### 10. lossPlan_gis\n\n**用途**: 获取淹没分布GIS数据\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/gis`\n**输入参数**:\n\n- path: 结果文件路径 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": [\n            {\n                \"type\": \"Feature\",\n                \"properties\": {\"depth\": 2.5},\n                \"geometry\": {\"type\": \"Polygon\", \"coordinates\": []}\n            }\n        ]\n    }\n}\n```",
+              "line_num": 340,
+              "summary": "### 10. lossPlan_gis\n\n**用途**: 获取淹没分布GIS数据\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/gis`\n**输入参数**:\n\n- path: 结果文件路径 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"type\": \"FeatureCollection\",\n        \"features\": [\n            {\n                \"type\": \"Feature\",\n                \"properties\": {\"depth\": 2.5},\n                \"geometry\": {\"type\": \"Polygon\", \"coordinates\": []}\n            }\n        ]\n    }\n}\n```"
+            },
+            {
+              "title": "11. lossPlan_auto",
+              "node_id": "0024",
+              "text": "### 11. lossPlan_auto\n\n**用途**: 自动计算淹没分析(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/auto`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 368,
+              "summary": "### 11. lossPlan_auto\n\n**用途**: 自动计算淹没分析(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/loss/auto`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            },
+            {
+              "title": "三、防汛预案接口",
+              "node_id": "0025",
+              "text": "### 三、防汛预案接口",
+              "line_num": 387,
+              "summary": "### 三、防汛预案接口"
+            },
+            {
+              "title": "12. floodPlan_listAll",
+              "node_id": "0026",
+              "text": "### 12. floodPlan_listAll\n\n**用途**: 查询全部防汛预案列表(不分页)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/listAll`\n**输入参数**:\n\n- title: 预案名称 (String, 可选)\n- code: 预案文号 (String, 可选)\n- year: 年度 (String, 可选)\n- type1: 一级分类 (String, 可选)\n- type2: 二级分类 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"卫河流域防汛预案\",\n            \"code\": \"豫水防〔2023〕1号\",\n            \"year\": \"2023\",\n            \"type1\": \"流域防汛\"\n        }\n    ]\n}\n```",
+              "line_num": 389,
+              "summary": "This partial document provides the technical specifications for the `floodPlan_listAll` API endpoint, which is designed to retrieve a full list of flood prevention plans without pagination. It details the GET request method and URL, lists optional query parameters for filtering (including title, code, year, and categories), and provides a sample JSON output structure showing the response format and data fields."
+            },
+            {
+              "title": "13. floodPlan_add",
+              "node_id": "0027",
+              "text": "### 13. floodPlan_add\n\n**用途**: 新增防汛预案(支持文件上传)\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/add`\n**输入参数**:\n\n- Content-Type: multipart/form-data\n- file: 预案文件 (MultipartFile, 可选)\n- title: 预案名称 (String, 必填)\n- code: 预案文号 (String, 可选)\n- year: 年度 (String, 可选)\n- type1: 一级分类 (String, 可选)\n- type2: 二级分类 (String, 可选)\n- remark: 备注 (String, 可选)\n- rela: 关联信息 (String, 可选)\n- fileId: 已有文件ID (String, 可选, 如不上传新文件可直接指定)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 420,
+              "summary": "This partial document provides the technical specifications for the `floodPlan_add` API endpoint, which is used to add flood prevention plans to a system. It outlines the request method (POST), the URL path, and the required `multipart/form-data` input parameters, including fields for file uploads, plan titles, classification types, and associated metadata. It also includes an example of the successful JSON response format."
+            },
+            {
+              "title": "14. floodPlan_delete",
+              "node_id": "0028",
+              "text": "### 14. floodPlan_delete\n\n**用途**: 删除防汛预案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/delete`\n**输入参数**:\n\n- id: 预案ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```",
+              "line_num": 448,
+              "summary": "### 14. floodPlan_delete\n\n**用途**: 删除防汛预案\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/delete`\n**输入参数**:\n\n- id: 预案ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```"
+            },
+            {
+              "title": "15. floodPlan_detail",
+              "node_id": "0029",
+              "text": "### 15. floodPlan_detail\n\n**用途**: 查看防汛预案详情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/detail`\n**输入参数**:\n\n- id: 预案ID (Long, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"卫河流域防汛预案\",\n        \"code\": \"豫水防〔2023〕1号\",\n        \"year\": \"2023\",\n        \"type1\": \"流域防汛\",\n        \"type2\": \"预案\",\n        \"fileId\": \"100\",\n        \"fileName\": \"卫河流域防汛预案.pdf\",\n        \"remark\": \"备注\",\n        \"rela\": \"关联信息\",\n        \"createTime\": \"2023-01-01 00:00:00\",\n        \"updateTime\": \"2023-06-01 00:00:00\"\n    }\n}\n```",
+              "line_num": 467,
+              "summary": "This partial document provides the technical specifications for the `floodPlan_detail` API endpoint, which is used to retrieve the specific details of a flood prevention plan. It outlines the request method (GET), the access URL, the required input parameter (a unique plan ID), and the structure of the JSON output, which includes fields for the plan's title, code, year, classification, associated file information, and administrative timestamps."
+            },
+            {
+              "title": "16. floodPlan_catalog",
+              "node_id": "0030",
+              "text": "### 16. floodPlan_catalog\n\n**用途**: 获取防汛预案类型目录\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/catalog`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"type1\": \"流域防汛\",\n            \"children\": [\n                {\"type2\": \"预案\"},\n                {\"type2\": \"方案\"}\n            ]\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 499,
+              "summary": "### 16. floodPlan_catalog\n\n**用途**: 获取防汛预案类型目录\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/flood/floodPlan/catalog`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"type1\": \"流域防汛\",\n            \"children\": [\n                {\"type2\": \"预案\"},\n                {\"type2\": \"方案\"}\n            ]\n        }\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "四、水雨情态势研判接口",
+              "node_id": "0031",
+              "text": "### 四、水雨情态势研判接口",
+              "line_num": 526,
+              "summary": "### 四、水雨情态势研判接口"
+            },
+            {
+              "title": "17. monitorRsvr_now",
+              "node_id": "0032",
+              "text": "### 17. monitorRsvr_now\n\n**用途**: 获取水库河道实时水情(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/now`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"tm\": \"2024-01-01 08:00:00\",\n            \"rz\": 245.5,\n            \"w\": 12500000,\n            \"inq\": 50.5,\n            \"otq\": 30.2,\n            \"blrz\": 248.0,\n            \"fsltdz\": 250.0\n        }\n    ]\n}\n```",
+              "line_num": 528,
+              "summary": "This partial document provides the technical specifications for the `monitorRsvr_now` API endpoint, which is designed to retrieve real-time water condition data for reservoirs and rivers without requiring authentication. It details the GET request method, the service URL, and outlines the JSON response structure, including specific data fields such as station codes, water levels, storage capacity, and flow rates."
+            },
+            {
+              "title": "18. monitorRsvr_stc",
+              "node_id": "0033",
+              "text": "### 18. monitorRsvr_stc\n\n**用途**: 获取水库当前形势统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/stc`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"totalCount\": 10,\n        \"normalCount\": 8,\n        \"warningCount\": 2,\n        \"dangerCount\": 0\n    }\n}\n```",
+              "line_num": 557,
+              "summary": "### 18. monitorRsvr_stc\n\n**用途**: 获取水库当前形势统计\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/stc`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"totalCount\": 10,\n        \"normalCount\": 8,\n        \"warningCount\": 2,\n        \"dangerCount\": 0\n    }\n}\n```"
+            },
+            {
+              "title": "19. monitorRsvr_track",
+              "node_id": "0034",
+              "text": "### 19. monitorRsvr_track\n\n**用途**: 水雨情态势过程回溯\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/track`\n**输入参数**:\n\n- st: 开始时间 (Date, 必填)\n- ed: 结束时间 (Date, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"process\": [\n                {\"tm\": \"2024-01-01 00:00:00\", \"rz\": 245.0, \"inq\": 40.0, \"otq\": 30.0}\n            ]\n        }\n    ]\n}\n```",
+              "line_num": 579,
+              "summary": "This document provides technical specifications for the `monitorRsvr_track` API endpoint, which is designed for backtracking water and rain situation processes. It details the GET request method, the service URL, and the mandatory input parameters for start and end times. Additionally, it defines the JSON response structure, which includes reservoir station identification (station code and name) and a time-series process list containing water level, inflow, and outflow data."
+            },
+            {
+              "title": "20. monitorRsvr_storage",
+              "node_id": "0035",
+              "text": "### 20. monitorRsvr_storage\n\n**用途**: 水库纳蓄能力分析\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/storage`\n**输入参数**:\n\n- goal: 目标水位或库容指标 (Integer, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"totalCapacity\": 50000000,\n        \"currentStorage\": 30000000,\n        \"availableStorage\": 20000000,\n        \"storageRatio\": 0.6\n    }\n}\n```\n\n---",
+              "line_num": 607,
+              "summary": "### 20. monitorRsvr_storage\n\n**用途**: 水库纳蓄能力分析\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/monitor/rsvr/storage`\n**输入参数**:\n\n- goal: 目标水位或库容指标 (Integer, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"totalCapacity\": 50000000,\n        \"currentStorage\": 30000000,\n        \"availableStorage\": 20000000,\n        \"storageRatio\": 0.6\n    }\n}\n```\n\n---"
+            },
+            {
+              "title": "五、闸站工情接口",
+              "node_id": "0036",
+              "text": "### 五、闸站工情接口",
+              "line_num": 633,
+              "summary": "### 五、闸站工情接口"
+            },
+            {
+              "title": "21. mike_gateAll",
+              "node_id": "0037",
+              "text": "### 21. mike_gateAll\n\n**用途**: 获取闸门工情(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/init/gate`\n**输入参数**: 无\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"code\": \"HHZ001\",\n            \"nowState\": \"半开\",\n            \"tm\": \"2024-01-01 08:00:00\",\n            \"openH\": 1.5,\n            \"openN\": 3\n        },\n        {\n            \"code\": \"HHZ002\",\n            \"nowState\": \"全关\",\n            \"tm\": \"2024-01-01 08:00:00\"\n        },\n        {\n            \"code\": \"HHZ003\",\n            \"nowState\": \"全开\",\n            \"tm\": \"2024-01-01 08:00:00\"\n        }\n    ]\n}\n```\n\n**说明**: nowState可选值为\"全开\"、\"半开\"、\"全关\"；当nowState为\"半开\"时，返回openH(平均开度)和openN(开启孔数)\n\n---",
+              "line_num": 635,
+              "summary": "This document provides technical specifications for the `mike_gateAll` API interface, which is used to retrieve gate operational status information without requiring authentication. It outlines the GET request method, the specific access URL, and confirms that no input parameters are needed. The document details the JSON response structure, which includes gate identification codes, timestamps, and current status values such as \"Fully Open,\" \"Partially Open,\" or \"Fully Closed.\" Additionally, it specifies that for gates in a \"Partially Open\" state, the API provides additional data fields for average opening height and the number of open holes."
+            },
+            {
+              "title": "六、MIKE模型计算相关辅助接口",
+              "node_id": "0038",
+              "text": "### 六、MIKE模型计算相关辅助接口",
+              "line_num": 674,
+              "summary": "### 六、MIKE模型计算相关辅助接口"
+            },
+            {
+              "title": "22. mike_runoff",
+              "node_id": "0039",
+              "text": "### 22. mike_runoff\n\n**用途**: 获取子流域NAM模型产流结果(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/runoff`\n**输入参数**:\n\n- planCode: 方案编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"WH001\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 50.5},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 120.3}\n        ],\n        \"WH002\": [\n            {\"time\": \"2023-12-01 00:00:00\", \"value\": 30.2},\n            {\"time\": \"2023-12-01 01:00:00\", \"value\": 85.6}\n        ]\n    }\n}\n```",
+              "line_num": 676,
+              "summary": "This partial document provides the technical specifications for the `mike_runoff` API interface, which is used to retrieve sub-basin NAM model runoff results. It details the service's purpose, the GET request method and endpoint URL, the required `planCode` input parameter, and the structured JSON response format containing time-series runoff data for specific sub-basins."
+            },
+            {
+              "title": "23. mike_rsvrInfo",
+              "node_id": "0040",
+              "text": "### 23. mike_rsvrInfo\n\n**用途**: 获取水库基本信息(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/rsvrInfo`\n**输入参数**:\n\n- modelInstance: 模型实例编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"fsltdz\": 250.0,\n            \"normz\": 245.0,\n            \"ddz\": 230.0,\n            \"totcp\": 50000000\n        }\n    ]\n}\n```",
+              "line_num": 704,
+              "summary": "### 23. mike_rsvrInfo\n\n**用途**: 获取水库基本信息(无需登录)\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/rsvrInfo`\n**输入参数**:\n\n- modelInstance: 模型实例编码 (String, 可选)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"fsltdz\": 250.0,\n            \"normz\": 245.0,\n            \"ddz\": 230.0,\n            \"totcp\": 50000000\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "24. mike_control",
+              "node_id": "0041",
+              "text": "### 24. mike_control\n\n**用途**: 获取水库的可控建筑物\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/control`\n**输入参数**:\n\n- stcd: 水库编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"structId\": \"TX001\",\n            \"structName\": \"1#泄洪洞\",\n            \"structType\": \"泄洪洞\",\n            \"maxFlow\": 500.0\n        }\n    ]\n}\n```",
+              "line_num": 732,
+              "summary": "### 24. mike_control\n\n**用途**: 获取水库的可控建筑物\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/control`\n**输入参数**:\n\n- stcd: 水库编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"structId\": \"TX001\",\n            \"structName\": \"1#泄洪洞\",\n            \"structType\": \"泄洪洞\",\n            \"maxFlow\": 500.0\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "25. mike_hvrela",
+              "node_id": "0042",
+              "text": "### 25. mike_hvrela\n\n**用途**: 获取蓄滞洪区的库容曲线\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/hvrela`\n**输入参数**:\n\n- code: 蓄滞洪区编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"z\": 60.0, \"v\": 0},\n        {\"z\": 61.0, \"v\": 1000000},\n        {\"z\": 62.0, \"v\": 5000000}\n    ]\n}\n```",
+              "line_num": 758,
+              "summary": "### 25. mike_hvrela\n\n**用途**: 获取蓄滞洪区的库容曲线\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/hvrela`\n**输入参数**:\n\n- code: 蓄滞洪区编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\"z\": 60.0, \"v\": 0},\n        {\"z\": 61.0, \"v\": 1000000},\n        {\"z\": 62.0, \"v\": 5000000}\n    ]\n}\n```"
+            },
+            {
+              "title": "26. mike_specTime",
+              "node_id": "0043",
+              "text": "### 26. mike_specTime\n\n**用途**: 获取指定时刻的水情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/specTime`\n**输入参数**:\n\n- time: 指定时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"tm\": \"2024-01-01 08:00:00\",\n            \"rz\": 245.5,\n            \"inq\": 50.5,\n            \"otq\": 30.2\n        }\n    ]\n}\n```",
+              "line_num": 781,
+              "summary": "### 26. mike_specTime\n\n**用途**: 获取指定时刻的水情\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/specTime`\n**输入参数**:\n\n- time: 指定时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31005650\",\n            \"stnm\": \"盘石头水库\",\n            \"tm\": \"2024-01-01 08:00:00\",\n            \"rz\": 245.5,\n            \"inq\": 50.5,\n            \"otq\": 30.2\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "27. mike_calPa",
+              "node_id": "0044",
+              "text": "### 27. mike_calPa\n\n**用途**: 计算指定时间各子流域的前期影响雨量\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/calPa`\n**输入参数**:\n\n- time: 指定时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"WH001\": 25.5,\n        \"WH002\": 30.2,\n        \"WH003\": 18.8\n    }\n}\n```",
+              "line_num": 809,
+              "summary": "### 27. mike_calPa\n\n**用途**: 计算指定时间各子流域的前期影响雨量\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/calPa`\n**输入参数**:\n\n- time: 指定时间 (Date, 可选, 默认当前时间)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"WH001\": 25.5,\n        \"WH002\": 30.2,\n        \"WH003\": 18.8\n    }\n}\n```"
+            },
+            {
+              "title": "28. mike_fsdaStruct",
+              "node_id": "0045",
+              "text": "### 28. mike_fsdaStruct\n\n**用途**: 获取指定业务模型对应蓄滞洪区的建筑物信息\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/fsda/struct`\n**输入参数**:\n\n- businessCode: 业务模型编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"structId\": \"FH001\",\n            \"structName\": \"闫村分洪堰\",\n            \"fsdaCode\": \"LXP\",\n            \"fsdaName\": \"良相坡\"\n        }\n    ]\n}\n```",
+              "line_num": 832,
+              "summary": "### 28. mike_fsdaStruct\n\n**用途**: 获取指定业务模型对应蓄滞洪区的建筑物信息\n**请求方式**: GET\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/fsda/struct`\n**输入参数**:\n\n- businessCode: 业务模型编码 (String, 必填)\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"structId\": \"FH001\",\n            \"structName\": \"闫村分洪堰\",\n            \"fsdaCode\": \"LXP\",\n            \"fsdaName\": \"良相坡\"\n        }\n    ]\n}\n```"
+            },
+            {
+              "title": "29. mike_fsdaSetBoundary",
+              "node_id": "0046",
+              "text": "### 29. mike_fsdaSetBoundary\n\n**用途**: 设置蓄滞洪区进洪预演模型的边界条件\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/fsda/setBoundary`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象: 根据具体蓄滞洪区模型定义\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---",
+              "line_num": 858,
+              "summary": "### 29. mike_fsdaSetBoundary\n\n**用途**: 设置蓄滞洪区进洪预演模型的边界条件\n**请求方式**: POST\n**请求路径**: `http://10.20.2.153:8089/modelPlatf/model/mike/fsda/setBoundary`\n**输入参数**:\n\n- Content-Type: application/json\n- 请求体JSON对象: 根据具体蓄滞洪区模型定义\n**输出结果**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"200\",\n    \"message\": \"请求成功\",\n    \"data\": null\n}\n```\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "附录",
+          "node_id": "0047",
+          "text": "## 附录",
+          "line_num": 880,
+          "nodes": [
+            {
+              "title": "A. 通用分页参数说明",
+              "node_id": "0048",
+              "text": "### A. 通用分页参数说明\n\n所有分页查询接口支持以下参数:\n\n- page: 页码，从1开始，默认1\n- limit: 每页条数，默认10",
+              "line_num": 882,
+              "summary": "### A. 通用分页参数说明\n\n所有分页查询接口支持以下参数:\n\n- page: 页码，从1开始，默认1\n- limit: 每页条数，默认10"
+            },
+            {
+              "title": "B. 日期格式说明",
+              "node_id": "0049",
+              "text": "### B. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`",
+              "line_num": 889,
+              "summary": "### B. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2023-12-01 00:00:00`"
+            },
+            {
+              "title": "C. 状态码说明",
+              "node_id": "0050",
+              "text": "### C. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问",
+              "line_num": 894,
+              "summary": "### C. 状态码说明\n\n- 200: 请求成功\n- 500: 服务器内部错误\n- 401: 未授权(需要登录)\n- 403: 禁止访问"
+            },
+            {
+              "title": "D. 计算状态说明",
+              "node_id": "0051",
+              "text": "### D. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算成功\n- 计算失败",
+              "line_num": 901,
+              "summary": "### D. 计算状态说明\n\n模拟方案计算状态包括:\n\n- 待计算\n- 计算中\n- 计算成功\n- 计算失败"
+            },
+            {
+              "title": "E. 需要登录的接口说明",
+              "node_id": "0052",
+              "text": "### E. 需要登录的接口说明\n\n大部分接口需要登录后才能访问，以下接口无需登录(requiredLogin = false):\n\n- monitorRsvr_now - 获取水库河道实时水情\n- lossPlan_auto - 自动计算淹没分析\n- mike_gateAll - 获取闸门工情\n- mike_runoff - 获取子流域NAM模型产流洪水结果\n- mike_rsvrInfo - 获取水库基本信息",
+              "line_num": 910,
+              "summary": "### E. 需要登录的接口说明\n\n大部分接口需要登录后才能访问，以下接口无需登录(requiredLogin = false):\n\n- monitorRsvr_now - 获取水库河道实时水情\n- lossPlan_auto - 自动计算淹没分析\n- mike_gateAll - 获取闸门工情\n- mike_runoff - 获取子流域NAM模型产流洪水结果\n- mike_rsvrInfo - 获取水库基本信息"
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 防洪业务接口-子流域洪水、淹没分析、洪水态势分析及其他辅助业务"
+    }
+  ]
+}

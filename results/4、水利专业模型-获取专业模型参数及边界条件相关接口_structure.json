@@ -1,0 +1,93 @@
+{
+  "doc_name": "4、水利专业模型-获取专业模型参数及边界条件相关接口",
+  "structure": [
+    {
+      "title": "获取专业模型参数及边界条件相关接口",
+      "node_id": "0001",
+      "text": "# 获取专业模型参数及边界条件相关接口",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域获取专业模型参数及边界条件信息的API接口，共8个接口。接口的输入输出参数均有完整描述，输出一般都有返回的结果样例，全部接口均基于ASP.NET项目构建，所有接口通过Model_Ser.ashx.cs处理。每个接口都包含详细的输入参数说明和输出结果格式，其接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域获取专业模型参数及边界条件信息的API接口，共8个接口。接口的输入输出参数均有完整描述，输出一般都有返回的结果样例，全部接口均基于ASP.NET项目构建，所有接口通过Model_Ser.ashx.cs处理。每个接口都包含详细的输入参数说明和输出结果格式，其接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0003",
+          "text": "## 接口列表",
+          "line_num": 9,
+          "nodes": [
+            {
+              "title": "1. get_rfmodel",
+              "node_id": "0004",
+              "text": "### 1. get_rfmodel\n\n**用途**: 获取方案的产汇流模型类型\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_rfmodel\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的产汇流模型类型字典, 为Dictionary<string, string> 类型序列化结果，\n  其中属性为各子流域编码，值为该子流域采用的产汇流模型编码，共3种:\"nam\"、\"swmm5\"、\"xaj\"",
+              "line_num": 11,
+              "summary": "### 1. get_rfmodel\n\n**用途**: 获取方案的产汇流模型类型\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_rfmodel\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的产汇流模型类型字典, 为Dictionary<string, string> 类型序列化结果，\n  其中属性为各子流域编码，值为该子流域采用的产汇流模型编码，共3种:\"nam\"、\"swmm5\"、\"xaj\""
+            },
+            {
+              "title": "2. get_reach_break",
+              "node_id": "0005",
+              "text": "### 2. get_reach_break\n\n**用途**: 获取方案河堤溃口设置信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_reach_break\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的溃口设置信息，样例结果：\n  {\n      \"str_name\": \"GQ_KB\",         //溃口编码\n      \"name\": \"卫辉共渠右堤决口\",   //溃口名称\n      \"location\": [                //溃口经纬度位置\n          113.917822,\n          35.368627\n      ],\n      \"fh_width\": 200.0,               //溃口宽(米)\n      \"fh_minutes\": 30.0,              //溃堤时长(分钟)\n      \"break_condition\": \"max_level\",  //溃决时机描述 - \"max_level\"(河道水位达到最高水位) 或 \"set_level\"(指定河道水位)\n      \"break_level\": 70.60,            //溃决水位\n      \"fh_datumn\": 71.711,             //溃口底高程\n      \"fh_start_time\": \"2030/07/01 12:10:00\",  //开始溃口时间\n      \"fh_finish_time\": \"2030/07/01 12:40:00\"  //溃口完成时间\n  }",
+              "line_num": 23,
+              "summary": "This partial document provides the technical specification for the `get_reach_break` API interface, which is used to retrieve breach configuration details for a river embankment scenario. It specifies the GET request parameters, including the request type and scenario ID, and defines the structure of the JSON output, which contains metadata such as the breach name, geographical coordinates, physical dimensions, trigger conditions (e.g., specific or maximum water levels), elevation data, and the scheduled start and completion times for the breach."
+            },
+            {
+              "title": "3. get_faultgate_baseinfo",
+              "node_id": "0006",
+              "text": "### 3. get_faultgate_baseinfo\n\n**用途**: 获取故障水闸的闸门基本信息，根据业务编码获取，一个业务编码对应一个故障水闸\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_faultgate_baseinfo\"\n- request_pars: 业务编码字符串 (business_code)\n**输出结果**:\n- JSON格式的故障闸门基础信息，样例：\n  {\n      \"str_name\": \"GQ_YTZJZZ\",     //建筑物编码\n      \"cn_name\": \"盐土庄节制闸\",    //建筑物名称\n      \"gate_info\": [                //建筑物各闸门信息，包括编码、名称、闸底高程、闸门高度、闸门经纬度坐标\n          {\n              \"gate_code\": \"YTZ_JZZ1\",\n              \"gate_name\": \"1#闸门\",\n              \"gate_bottom\": 53.0,\n              \"gate_h\": 10.0,\n              \"gate_jd\": 114.478034973145,\n              \"gate_wd\": 35.7404365539551\n          },\n          {\n              \"gate_code\": \"YTZ_JZZ2\",\n              \"gate_name\": \"2#闸门\",\n              \"gate_bottom\": 53.0,\n              \"gate_h\": 10.0,\n              \"gate_jd\": 114.478164672852,\n              \"gate_wd\": 35.7403984069824\n          },\n          ...\n      ]\n  }",
+              "line_num": 49,
+              "summary": "This partial document provides the technical specifications for the `get_faultgate_baseinfo` interface, which is used to retrieve detailed information about a faulty sluice gate based on a unique business code. It outlines the GET request method, the required input parameters (`request_type` and `request_pars`), and the structured JSON output, which includes building identification codes and names, along with specific gate data such as bottom elevation, height, and geographic coordinates."
+            },
+            {
+              "title": "4. get_fault_gate",
+              "node_id": "0007",
+              "text": "### 4. get_fault_gate\n\n**用途**: 获取方案的故障闸门信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_fault_gate\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的故障闸门信息，样例：\n  {\n      \"gate_name\": \"盐土庄节制闸\",         //故障水闸名称\n      \"fault_type\": \"部分闸门无法开启\",    //故障描述\n      \"gate_h\": [                         //水闸各闸门最大开度和当前开度\n          [\"1#闸门\",10.0,10.0],\n          [\"2#闸门\",10.0,0.0],\n          ...\n      ],\n      \"fault_gate\": \"2#闸门、4#闸门、5#闸门\",   //各故障闸门名称\n      \"fault_gate_jwd\": {                      //各故障闸门经纬度\n          \"2#闸门\": [\n              114.478164672852,\n              35.7403984069824\n          ],\n          \"4#闸门\": [\n              114.47843170166,\n              35.7403373718262\n          ],\n          \"5#闸门\": [\n              114.478561401367,\n              35.7403106689453\n          ]\n      }\n  }",
+              "line_num": 83,
+              "summary": "This partial document provides the technical specifications for the \"get_fault_gate\" API interface, which is used to retrieve information regarding faulty water gates within a specific scheme. It outlines the GET request method, required input parameters (request type and scheme ID), and the structure of the JSON output, which includes details such as the sluice name, fault description, current and maximum gate openings, specific faulty gate names, and their geographic coordinates."
+            },
+            {
+              "title": "5. get_ddinfo",
+              "node_id": "0008",
+              "text": "### 5. get_ddinfo\n\n**用途**: 获取模型方案所有可控建筑物的调度信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_ddinfo\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的调度信息，样例：\n  [\n      [\n          \"XYC_FHY\",         //可控建筑物编码\n          \"1\",               //序号\n          \"西沿村分洪堰\",     //可控建筑物名称\n          \"分洪堰\",           //可控建筑物类型\n          \"西沿村溃口支流\",    //可控建筑物所在河道名称\n          \"[[\"\",\"全关\",\"0\",\"0\"]]\"   //可控建筑物闸门调度过程\n      ],\n      [\n          \"CHQ_FHY\",\n          \"2\",\n          \"长虹渠分洪堰\",\n          \"分洪堰\",\n          \"长虹渠溃口支流\",\n          \"[[\"\",\"全关\",\"0\",\"0\"]]\"\n      ],\n      ...\n  ]\n  可控建筑物闸门调度过程，格式为：[[\"时间1\"，\"操作类型1\"，\"闸孔数\",\"值\"],[\"时间2\"，\"操作类型2\"，\"闸孔数\",\"值\"],..]，当时间为空字符串时，表示全过程采用一组闸门操作，闸门状态不再随时间变化，操作类型分为\"全开\"、\"全关\"、\"半开\"、\"控泄\"、\"规则调度\"",
+              "line_num": 118,
+              "summary": "This document describes the `get_ddinfo` API interface, which is used to retrieve scheduling and dispatch information for all controllable hydraulic structures within a specific model scenario. It outlines the GET request parameters (request type and scenario ID) and details the JSON output format, which includes building metadata—such as code, name, type, and associated river—along with specific gate operation sequences that define actions like full opening, closing, or rule-based scheduling over time."
+            },
+            {
+              "title": "6. get_initial_waterlevel",
+              "node_id": "0009",
+              "text": "### 6. get_initial_waterlevel\n\n**用途**: 获取模型方案的初始水情信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_initial_waterlevel\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的初始水情信息，样例：\n  {\n      \"水库\": [             //各水库的初始水情\n          [\n              1,              //序号\n              \"陈家院水库\",    //水库名称\n              754.12,         //初始水位\n              \"人为指定\",      //初始水位来源\n              \"31005550\"      //水库stcd编码\n          ],\n          [\n              2,\n              \"三郊口水库\",\n              626.35,\n              \"人为指定\",\n              \"31005580\"\n          ],\n          ...\n      ],\n      \"河道\": [            //各河道站点的初始水情\n          [\n              1,            //序号\n              \"汲县\",       //河道水文站点名称\n              64.7,         //初始水位\n              \"人为指定\",    //初始水位来源\n              \"31003600\"    //水文站点stcd编码\n          ],\n          [\n              2,\n              \"淇门\",\n              58.87,\n              \"人为指定\",\n              \"31003700\"\n          ],\n          ...\n      ]\n  }",
+              "line_num": 149,
+              "summary": "This document describes the \"get_initial_waterlevel\" API function, which is used to retrieve initial water level information for a specific model scenario. It outlines the GET request method, required input parameters (request type and scenario ID), and the structured JSON output format, which provides detailed initial water level data for both reservoirs and river channels, including station names, water levels, data sources, and station codes."
+            },
+            {
+              "title": "7. get_bndinfo",
+              "node_id": "0010",
+              "text": "### 7. get_bndinfo\n\n**用途**: 获取模型方案的边界条件信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_bndinfo\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的边界条件信息，样例：\n  {\n      \"bnd_type\": \"降雨计算洪水\",     //边界条件类型描述\n      \"bnd_value\": {                 //边界条件值\n          \"cdpg_all\": {\n              \"2023/07/28 08:00:00\": 0.08,\n              \"2023/07/28 08:30:00\": 0.08,\n              ...\n          },\n          \"zqh_all\": {\n              \"2023/07/28 08:00:00\": 0.0,\n              \"2023/07/28 08:30:00\": 0.0,\n              ...\n          },\n        ...\n      }\n  }",
+              "line_num": 196,
+              "summary": "This partial document provides a technical specification for the \"get_bndinfo\" interface, which is used to retrieve boundary condition information for a specific model scheme. It outlines the GET request method, required input parameters (request type and scheme ID), and a sample JSON response containing boundary types and time-series data values."
+            },
+            {
+              "title": "8. get_dispatch_target",
+              "node_id": "0011",
+              "text": "### 8. get_dispatch_target\n\n**用途**: 获取方案的优化调度目标设置信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"get_dispatch_target\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的优化调度目标信息，样例：\n  [\n      \"model_20241007110000\",   //方案ID\n      {                         //调度目标\n          \"name\": \"元村\",\n          \"stcd\": \"31004300\",\n          \"max_discharge\": 2500\n      },\n      [                         //各水库的约束水位\n          {\n              \"name\": \"双泉水库\",\n              \"stcd\": \"31006950\",\n              \"level_name\": \"防洪高水位\",\n              \"level_value\": 142.3\n          },\n          ...\n      ],\n      {                       //闸门过流能力、河道过流能力、蓄滞洪区水位的约束\n          \"gate\": true,\n          \"reach\": true,\n          \"xzhq_level\": true\n      }\n  ]\n\n---",
+              "line_num": 223,
+              "summary": "This partial document specifies the `get_dispatch_target` API, which is used to retrieve the optimization dispatch target settings for a specific scheme. It outlines the GET request method, the required input parameters (scheme ID), and provides a detailed example of the JSON output, which includes the dispatch target's location and discharge limits, reservoir water level constraints, and boolean settings for gate, reach, and flood storage area constraints."
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "总结",
+          "node_id": "0012",
+          "text": "## 总结\n\n本文档共收录8个获取专业模型参数及边界条件信息的API接口，包括：\n1. get_rfmodel - 获取方案的产汇流模型类型\n2. get_reach_break - 获取方案河堤溃口设置信息\n3. get_faultgate_baseinfo - 获取故障水闸的闸门基本信息\n4. get_fault_gate - 获取方案的故障闸门信息\n5. get_ddinfo - 获取模型方案所有可控建筑物的调度信息\n6. get_initial_waterlevel - 获取模型方案的初始水情信息\n7. get_bndinfo - 获取模型方案的边界条件信息\n8. get_dispatch_target - 获取方案的优化调度目标设置信息",
+          "line_num": 258,
+          "summary": "## 总结\n\n本文档共收录8个获取专业模型参数及边界条件信息的API接口，包括：\n1. get_rfmodel - 获取方案的产汇流模型类型\n2. get_reach_break - 获取方案河堤溃口设置信息\n3. get_faultgate_baseinfo - 获取故障水闸的闸门基本信息\n4. get_fault_gate - 获取方案的故障闸门信息\n5. get_ddinfo - 获取模型方案所有可控建筑物的调度信息\n6. get_initial_waterlevel - 获取模型方案的初始水情信息\n7. get_bndinfo - 获取模型方案的边界条件信息\n8. get_dispatch_target - 获取方案的优化调度目标设置信息"
+        }
+      ],
+      "prefix_summary": "# 获取专业模型参数及边界条件相关接口"
+    }
+  ]
+}

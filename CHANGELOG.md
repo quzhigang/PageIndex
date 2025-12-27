@@ -1,16 +1,16 @@
-# Change Log
-All notable changes to this project will be documented in this file.
+# 更新日志
+本项目的所有重要更改都将记录在此文件中。
 
 ## Beta - 2025-04-23
 
-### Fixed
-- [x] Fixed a bug introduced on April 18 where `start_index` was incorrectly passed.
+### 修复
+- [x] 修复了 4 月 18 日引入的 `start_index` 传递错误的 bug。
 
 ## Beta - 2025-04-03
 
-### Added
-- [x] Add node_id, node summary
-- [x] Add document discription
+### 新增
+- [x] 添加 node_id、节点摘要
+- [x] 添加文档描述
 
-### Changed
-- [x] Change "child_nodes" -> "nodes" to simplify the structure
+### 变更
+- [x] 将 "child_nodes" 改为 "nodes" 以简化结构

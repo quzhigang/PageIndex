@@ -1,0 +1,149 @@
+{
+  "doc_name": "4、水利专业模型-方案新建计算及参数设置相关接口",
+  "structure": [
+    {
+      "title": "水利专业模型-方案新建计算及参数设置相关接口",
+      "node_id": "0001",
+      "text": "# 水利专业模型-方案新建计算及参数设置相关接口",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域中与模型方案新建、计算及参数设置相关的API接口，共16个接口。所有接口均基于ASP.NET项目构建，通过Model_Ser.ashx.cs处理。接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域中与模型方案新建、计算及参数设置相关的API接口，共16个接口。所有接口均基于ASP.NET项目构建，通过Model_Ser.ashx.cs处理。接口地址统一为：<http://172.16.16.253/wg_modelserver/hd_mike11server/Model_Ser.ashx>\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0003",
+          "text": "## 接口列表",
+          "line_num": 9,
+          "nodes": [
+            {
+              "title": "1. auto_forcast",
+              "node_id": "0004",
+              "text": "### 1. auto_forcast\n\n**用途**: 创建洪水自动预报模型方案并进行计算\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"auto_forcast\"\n- request_pars: 空字符串\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 11,
+              "summary": "### 1. auto_forcast\n\n**用途**: 创建洪水自动预报模型方案并进行计算\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"auto_forcast\"\n- request_pars: 空字符串\n**输出结果**:\n- JSON对象: {\"success\": true}"
+            },
+            {
+              "title": "2. create_model",
+              "node_id": "0005",
+              "text": "### 2. create_model\n\n**用途**: 手工创建模型方案，仅创建方案不设置边界条件，也不计算\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"create_model\"\n- request_pars: JSON数组格式: [\"model_20230513101926\",\"测试方案1111\", \"2021/07/20 00:00:00\", \"2021/07/21 00:00:00\",\"1日模拟\",20, base_plan_code]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 方案名称 (fangan_name)\n  - 参数3: 开始时间 (start_timestr)\n  - 参数4: 结束时间 (end_timestr)\n  - 参数5: 方案描述 (fangan_desc)\n  - 参数6: 结果保存步长(分钟) (step_saveminutes)\n  - 参数7: 基础方案ID (base_plan_code)，默认采用空字符串\n**输出结果**:\n- JSON对象: {\"expect_seconds\": 预计计算时间(秒)}",
+              "line_num": 22,
+              "summary": "This partial document provides technical documentation for the \"create_model\" API interface, which is used to manually create a model scheme without defining boundary conditions or performing calculations. It outlines the GET request method, provides a detailed breakdown of the required input parameters—including plan IDs, names, simulation timeframes, descriptions, and save intervals—and specifies that the output is a JSON object indicating the estimated calculation time."
+            },
+            {
+              "title": "3. change_model_baseinfo",
+              "node_id": "0006",
+              "text": "### 3. change_model_baseinfo\n\n**用途**: 修改模型方案名称、描述和保存时间步长\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"change_model_baseinfo\"\n- request_pars: JSON数组格式: [plan_code, fangan_name, model_desc, step_save_minutes]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 新的模型名称 (fangan_name)\n  - 参数3: 新的模型描述 (model_desc)\n  - 参数4: 保存时间步长(分钟) (step_save_minutes)\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 40,
+              "summary": "### 3. change_model_baseinfo\n\n**用途**: 修改模型方案名称、描述和保存时间步长\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"change_model_baseinfo\"\n- request_pars: JSON数组格式: [plan_code, fangan_name, model_desc, step_save_minutes]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 新的模型名称 (fangan_name)\n  - 参数3: 新的模型描述 (model_desc)\n  - 参数4: 保存时间步长(分钟) (step_save_minutes)\n**输出结果**:\n- JSON对象: {\"success\": true}"
+            },
+            {
+              "title": "4. del_model",
+              "node_id": "0007",
+              "text": "### 4. del_model\n\n**用途**: 删除模型方案,返回剩下的模型方案基础信息集合\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"del_model\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON格式的模型信息字典，格式:{\"方案编码1\":{\"属性1\":值1, \"属性2\":值2, ..}，\"方案编码2\":{\"属性1\":值1, \"属性2\":值2, ..},...}，\n  各方案属性相同，为固定的12个属性:\n    plan_name(方案名称,varchar)\n    plan_desc(方案描述,varchar)\n    business_code(业务模型编码,varchar)\n    business_name(业务模型名称,varchar)\n    start_time(开始时间,varchar)\n    end_time(结束时间,varchar)\n    state(方案状态,varchar)\n    step_save_minutes(模型结果保存时间步长(m),int4)\n    expect_seconds(预估计算时长(s),int4)\n    start_simulate_time(计算开始时间,varchar)\n    progress_info(进度信息,text)\n    view_point(相机位置,varchar)",
+              "line_num": 55,
+              "summary": "This document describes the \"del_model\" API interface, which is used to delete a specified model scheme and return a collection of basic information for the remaining schemes. It outlines the GET request method, required input parameters (request type and scheme ID), and a JSON output format containing twelve fixed attributes for each model, such as plan name, description, business code, status, and simulation-related timeframes."
+            },
+            {
+              "title": "5. run_model",
+              "node_id": "0008",
+              "text": "### 5. run_model\n\n**用途**: 计算模型,返回所需的计算时间(second)\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"run_model\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 计算所需的时间(秒)",
+              "line_num": 79,
+              "summary": "### 5. run_model\n\n**用途**: 计算模型,返回所需的计算时间(second)\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"run_model\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 计算所需的时间(秒)"
+            },
+            {
+              "title": "6. run_model_quick",
+              "node_id": "0009",
+              "text": "### 6. run_model_quick\n\n**用途**: 一维快速计算模型(不进行GIS结果后处理),返回所需的计算时间(second)\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"run_model_quick\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 计算所需的时间(秒)",
+              "line_num": 90,
+              "summary": "### 6. run_model_quick\n\n**用途**: 一维快速计算模型(不进行GIS结果后处理),返回所需的计算时间(second)\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"run_model_quick\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 计算所需的时间(秒)"
+            },
+            {
+              "title": "7. stop_model",
+              "node_id": "0010",
+              "text": "### 7. stop_model\n\n**用途**: 停止模型计算，返回成功信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"stop_model\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 101,
+              "summary": "### 7. stop_model\n\n**用途**: 停止模型计算，返回成功信息\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"stop_model\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- JSON对象: {\"success\": true}"
+            },
+            {
+              "title": "8. modify_initial",
+              "node_id": "0011",
+              "text": "### 8. modify_initial\n\n**用途**: 修改方案的水库河道初始水位条件\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"modify_initial\"\n- request_pars: JSON数组格式: [plan_code, \"monitor\" 或 水位字典]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: \"monitor\" (采用监测水位) 或 水位字典JSON\n    - 水位字典格式: {\"站点ID1\": 水位值1, \"站点ID2\": 水位值2, ...}\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 112,
+              "summary": "### 8. modify_initial\n\n**用途**: 修改方案的水库河道初始水位条件\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"modify_initial\"\n- request_pars: JSON数组格式: [plan_code, \"monitor\" 或 水位字典]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: \"monitor\" (采用监测水位) 或 水位字典JSON\n    - 水位字典格式: {\"站点ID1\": 水位值1, \"站点ID2\": 水位值2, ...}\n**输出结果**:\n- JSON对象: {\"success\": true}"
+            },
+            {
+              "title": "9. change_rfmodel",
+              "node_id": "0012",
+              "text": "### 9. change_rfmodel\n\n**用途**: 修改方案的各个子流域产汇流模型类型\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"change_rfmodel\"\n- request_pars: JSON数组格式: [plan_code, rf_model参数]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 产汇流模型参数 (可为空对象或空字符串)，参数json格式: {\"子流域编码1\": 产汇流模型编码1, \"子流域编码2\": 产汇流模型编码2, ...}，\n  产汇流模型编码，共3种:\"nam\"、\"swmm5\"、\"xaj\"\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 126,
+              "summary": "### 9. change_rfmodel\n\n**用途**: 修改方案的各个子流域产汇流模型类型\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"change_rfmodel\"\n- request_pars: JSON数组格式: [plan_code, rf_model参数]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 产汇流模型参数 (可为空对象或空字符串)，参数json格式: {\"子流域编码1\": 产汇流模型编码1, \"子流域编码2\": 产汇流模型编码2, ...}，\n  产汇流模型编码，共3种:\"nam\"、\"swmm5\"、\"xaj\"\n**输出结果**:\n- JSON对象: {\"success\": true}"
+            },
+            {
+              "title": "10. change_boundry",
+              "node_id": "0013",
+              "text": "### 10. change_boundry\n\n**用途**: 修改方案的洪水入流边界条件，可指定为利用降雨计算洪水，也可直接指定子流域洪水过程，以及指定河道洪水过程或无洪水入流。\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"change_boundry\"\n- request_pars: JSON数组格式: [plan_code, bnd_type]或[plan_code, bnd_type, bnd_value]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 边界类型: \"rf_model\"(降雨计算洪水), \"reach_inflow\"(指定河道洪水), \"no_inflow\"(无洪水入流), \"catchment_inflow\"(指定子流域洪水)\n  - 参数3: 边界值，当参数2边界类型为 \"reach_inflow\"或\"catchment_inflow\"时，需要输入该参数，否则不需要。\n          参数2为 \"reach_inflow\"时，该参数json对象格式: {\"边界条件编码1\": {\"时间1\",流量1,\"时间2\",流量2,...}, \"边界条件编码2\": {\"时间1\",流量1,\"时间2\",流量2,...},...}\n          参数2为 \"catchment_inflow\"时，该参数json对象格式: {\"子流域编码1\": {\"时间1\",流量1,\"时间2\",流量2,...}, \"子流域编码2\": {\"时间1\",流量1,\"时间2\",流量2,...},...}，也可传入位置信息，作为点源，指定河道在该位置的洪水入流过程，如{\"jd11409985_wd3544974\": {\"时间1\",流量1,\"时间2\",流量2,...}}，最好保留经纬度5位小数\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 140,
+              "summary": "This partial document provides the technical specifications for the \"change_boundry\" API endpoint, which is used to modify flood inflow boundary conditions within a simulation plan. It outlines the POST request method, the specific input parameters required—including the plan ID, various boundary types (such as rainfall-based, reach inflow, or catchment inflow), and time-series data formats—and details the successful JSON response format."
+            },
+            {
+              "title": "11. modify_gatestate",
+              "node_id": "0014",
+              "text": "### 11. modify_gatestate\n\n**用途**: 修改方案闸站调度设置\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"modify_gatestate\"\n- request_pars: JSON数组格式: [plan_code, \"monitor\" 或 \"gaterule\" 或 调度指令数组]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 调度方式，共3种值：\"monitor\"、\"gaterule\"、调度指令数组[]\n    - \"monitor\": 采用当前监测的闸站状态工情\n    - \"gaterule\": 所有闸门采用各闸站设计调度规则进行调度\n    - 调度指令数组: 指定各闸门调度方式数组，格式为：[[\"建筑物编码1\",[\"时间1\"，\"操作类型1\"，\"闸孔数\",\"值\"]],\n      [\"建筑物编码2\",[\"时间1\"，\"操作类型1\"，\"闸孔数\",\"值\"],[\"时间2\"，\"操作类型2\"，\"闸孔数\",\"值\"],..], ..]，当时间为空字符串时，表示全过程采用一组闸门操作，闸门状态不再随时间变化，操作类型分为\"全开\"、\"全关\"、\"半开\"、\"控泄\"、\"规则调度\"\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 156,
+              "summary": "This document provides the technical specifications for the `modify_gatestate` API, which is used to modify the scheduling settings of gate stations within a specified plan. It details the POST request parameters, specifically the plan ID (`plan_code`) and three distinct dispatching modes: real-time monitoring (\"monitor\"), predefined design rules (\"gaterule\"), or a custom array of specific scheduling instructions. The documentation further explains the structure of manual instruction arrays, including parameters for timing, operation types (such as fully open, closed, or discharge control), and gate counts, and defines the JSON success response."
+            },
+            {
+              "title": "12. change_reach_break",
+              "node_id": "0015",
+              "text": "### 12. change_reach_break\n\n**用途**: 修改方案河堤溃口设置\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"change_reach_break\"\n- request_pars: JSON数组格式: [plan_code, 溃口基本信息JSON]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 溃口基本信息JSON对象\n    - name: 溃口名称\n    - location: [经度, 纬度]\n    - fh_width: 溃口宽(米)\n    - fh_minutes: 溃堤时长(分钟)\n    - break_condition: 溃决时机描述 - \"max_level\"(河道水位达到最高水位) 或 \"set_level\"(指定河道水位)\n    - break_level: 溃决水位，当break_condition为max_level时，break_level用任意值比如0，否则用指定值\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 173,
+              "summary": "This partial document describes the \"change_reach_break\" API interface, which is used to modify levee breach settings within a specific hydraulic plan. It outlines the POST request requirements, including the plan ID and detailed breach parameters such as the breach name, geographic location, width, duration, and the specific water level conditions that trigger the breach."
+            },
+            {
+              "title": "13. set_dispatch_target",
+              "node_id": "0016",
+              "text": "### 13. set_dispatch_target\n\n**用途**: 设置方案的优化调度目标参数\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"set_dispatch_target\"\n- request_pars: JSON数组格式: [plan_code, dd_target, res_level_constraint, other_constraint]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 调度目标对象,默认值 {\"name\": \"元村\",\"stcd\": \"31004300\",\"max_discharge\": 2500 }; 3属性分别水文站名称、水文站id、最大允许洪峰流量\n  - 参数3: 水库调洪水位约束数组,格式为[{\"name\": \"双泉水库\", \"stcd\": \"31006950\", \"level_name\": \"防洪高水位\", \"level_value\": 142.3 },{\"name\": \"双泉水库\", \"stcd\": \"31006950\", \"level_name\": \"防洪高水位\", \"level_value\": 142.3 },..]\n  - 参数4: 其他约束对象，默认值{\"gate\": true,\"reach\": true,\"xzhq_level\": true }，3属性分别为闸门过流能力约束、河道过流能力约束、滞洪区滞洪水位约束\n**输出结果**:\n- JSON对象: {\"success\": true}",
+              "line_num": 192,
+              "summary": "This document describes the technical specifications for the `set_dispatch_target` interface, which is used to configure optimization dispatch parameters for a specific plan. It outlines the POST request method and details the required input parameters, including the plan ID, dispatch target objectives (hydrological station information and maximum discharge), reservoir water level constraints, and additional operational constraints such as gate and river reach capacities. The document also specifies the expected JSON response format indicating a successful operation."
+            },
+            {
+              "title": "14. iter_cal",
+              "node_id": "0017",
+              "text": "### 14. iter_cal\n\n**用途**: 开始方案的优化迭代计算\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"iter_cal\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 返回计算所需时间(s)",
+              "line_num": 207,
+              "summary": "### 14. iter_cal\n\n**用途**: 开始方案的优化迭代计算\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"iter_cal\"\n- request_pars: 方案ID字符串\n**输出结果**:\n- 字符串: 返回计算所需时间(s)"
+            },
+            {
+              "title": "15. backcal_resdd",
+              "node_id": "0018",
+              "text": "### 15. backcal_resdd\n\n**用途**: 反向推演水库的调度方案和该调度方案下的调蓄结果。需要设置水库允许达到的最高水位，并且只针对已经完成的预报预演方案\n**请求方式**: GET\n**输入参数**:\n\n- request_type: \"backcal_resdd\"\n- request_pars: JSON数组格式: [plan_code, res_name, max_level]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 水库名称 (res_name)\n  - 参数3: 允许最高水位 (max_level)\n**输出结果**:\n- JSON格式的水库调度方案结果信息，包含调度方案以及调度结果，样例：\n  {\n      \"res_name\": \"盘石头水库\",\n      \"reservoir_result\": {          //水库结果信息\n          \"Stcd\": \"31005650\",        //水库stcd\n          \"ResName\": \"盘石头水库\",    //水库名称\n          \"Max_Level\": 249.26,       //最高库水位\n          \"Max_Volumn\": 0.0,         //最大库容\n          \"MaxLevel_Time\": \"2025/12/10 17:20:53\",  //最高水位出现时间\n          \"Max_InQ\": 382.59,          //最大入库流量\n          \"Max_OutQ\": 4.7,           //最大出库流量\n          \"MaxInQ_Time\": \"2025/12/10 17:20:53\",  //最大入库流量出现时间\n          \"MaxOutQ_Time\": \"2025/12/10 17:20:53\",  //最大出库流量出现时间\n          \"Total_InVolumn\": 0.0,              //总入库量(万m³)\n          \"Total_OutVolumn\": 0.0,             //总出库量(万m³)\n          \"YHDTotal_OutVolumn\": 0.0,          //溢洪道总出库量(万m³)\n          \"XHDTotal_OutVolumn\": 0.0,          //泄洪洞总出库量\n          \"EndTime_Level\": 0.0,               //最终水位\n          \"EndTime_Volumn\": 0.0,              //最终库容\n          \"InQ_Dic\": {                        //入库流量过程\n              \"2025/07/15 11:00:00\": 16.07,\n              \"2025/07/15 11:10:00\": 16.12,\n              //...\n              \"2025/07/18 11:00:00\": 99.04\n          },\n          \"OutQ_Dic\": {                       //出库流量过程\n              \"2025/07/15 11:00:00\": 4.7,\n              \"2025/07/15 11:10:00\": 4.7,\n              //...\n              \"2025/07/18 11:00:00\": 4.7\n          },\n          \"YHDOutQ_Dic\": {},                  //溢洪道出库流量过程\n          \"XHDOutQ_Dic\": {},                  //泄洪洞出库流量过程\n          \"Level_Dic\": {                      //库水位过程\n              \"2025/07/15 11:00:00\": 241.31,\n              \"2025/07/15 11:10:00\": 241.31,\n              //...\n              \"2025/07/18 11:00:00\": 249.26\n          },\n          \"Volumn_Dic\": {}                   //库容过程\n      },\n      \"is_possible\": true,     //调度目标是否能达到\n      \"dd_desc\": \"盘石头水库1#泄洪洞自2025/7/16 6:20:00开始控泄流量4.7m³/s; 盘石头水库溢洪道全程关闭。\"  //调度方案信息\n  }",
+              "line_num": 218,
+              "summary": "This document provides a technical specification for the `backcal_resdd` API, which is used to back-calculate reservoir regulation schemes and their resulting storage outcomes based on a specified maximum water level constraint. It outlines the API's purpose, the GET request method, and the required input parameters, including the plan code, reservoir name, and maximum allowable water level. Additionally, the document details the JSON output structure, which provides comprehensive data such as hydrological statistics (peak levels, flow rates, and total volumes), time-series processes for inflow, outflow, and water levels, a feasibility indicator for the target, and a textual description of the generated operation strategy."
+            },
+            {
+              "title": "16. set_fault_gate",
+              "node_id": "0019",
+              "text": "### 16. set_fault_gate\n\n**用途**: 设置方案的故障闸门\n**请求方式**: POST\n**输入参数**:\n\n- request_type: \"set_fault_gate\"\n- request_pars: JSON数组格式: [plan_code, fault_dinfo]\n  - 参数1: 方案ID (plan_code)\n  - 参数2: 故障闸门信息数组，包括：故障水闸编码、故障信息描述、故障闸门编码数组、水闸各闸门开度数组，样例：\n          [\"QHNZ_XHKJZZ\", \"部分闸门无法完全关闭\", [\"XHK_JZZ2\", \"XHK_JZZ4\"],[0,0.5,0,0.2,0]]\n**输出结果**:\n- JSON对象: {\"success\": true}\n\n---",
+              "line_num": 275,
+              "summary": "This partial document provides the technical specifications for the `set_fault_gate` API interface, which is used to configure fault gate information for a specific plan. It details the POST request method, the required input parameters—including the plan ID and a structured array containing sluice codes, fault descriptions, specific gate IDs, and opening degrees—and defines the format of the successful JSON response."
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "总结",
+          "node_id": "0020",
+          "text": "## 总结\n\n本文档共收录16个API接口，涵盖了水利专业模型中与方案新建、计算及参数设置相关的所有功能，包括：\n- 模型方案的创建、删除和修改（auto_forcast、create_model、change_model_baseinfo、del_model）\n- 模型计算控制（run_model、run_model_quick、stop_model）\n- 初始条件和边界条件设置（modify_initial、change_rfmodel、change_boundry）\n- 闸站和溃口设置（modify_gatestate、change_reach_break、set_fault_gate）\n- 优化调度相关（set_dispatch_target、iter_cal、backcal_resdd）",
+          "line_num": 291,
+          "summary": "## 总结\n\n本文档共收录16个API接口，涵盖了水利专业模型中与方案新建、计算及参数设置相关的所有功能，包括：\n- 模型方案的创建、删除和修改（auto_forcast、create_model、change_model_baseinfo、del_model）\n- 模型计算控制（run_model、run_model_quick、stop_model）\n- 初始条件和边界条件设置（modify_initial、change_rfmodel、change_boundry）\n- 闸站和溃口设置（modify_gatestate、change_reach_break、set_fault_gate）\n- 优化调度相关（set_dispatch_target、iter_cal、backcal_resdd）"
+        }
+      ],
+      "prefix_summary": "# 水利专业模型-方案新建计算及参数设置相关接口"
+    }
+  ]
+}
