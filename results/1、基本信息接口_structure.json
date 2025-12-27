@@ -1,0 +1,314 @@
+{
+  "doc_name": "1、基本信息接口",
+  "structure": [
+    {
+      "title": "卫共流域基本信息获取接口文档",
+      "node_id": "0001",
+      "text": "# 卫共流域基本信息获取接口文档",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "概述",
+          "node_id": "0002",
+          "text": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的流域基本信息获取相关API接口，用于查询流域内测站基础信息、水库/水闸配置参数、蓄滞洪区信息、设备列表等**静态或配置类**信息。接口基础地址为：<http://10.20.2.153>",
+          "line_num": 3,
+          "summary": "## 概述\n\n本文档描述了卫共数字孪生流域防洪预报预演系统的流域基本信息获取相关API接口，用于查询流域内测站基础信息、水库/水闸配置参数、蓄滞洪区信息、设备列表等**静态或配置类**信息。接口基础地址为：<http://10.20.2.153>"
+        },
+        {
+          "title": "接口分类概览",
+          "node_id": "0003",
+          "text": "## 接口分类概览\n\n本文档共包含 **14个API接口**，按功能分类如下：",
+          "line_num": 7,
+          "nodes": [
+            {
+              "title": "一、地图数据源接口（2个）",
+              "node_id": "0004",
+              "text": "### 一、地图数据源接口（2个）\n\n1. 地图数据源查询接口\n2. 列表数据源查询接口",
+              "line_num": 11,
+              "summary": "### 一、地图数据源接口（2个）\n\n1. 地图数据源查询接口\n2. 列表数据源查询接口"
+            },
+            {
+              "title": "二、水库基础信息接口（3个）",
+              "node_id": "0005",
+              "text": "### 二、水库基础信息接口（3个）\n\n3. 水库基础信息查询接口\n4. 水库防洪特征值详情查询接口\n5. 水库防洪特征值列表查询接口",
+              "line_num": 16,
+              "summary": "### 二、水库基础信息接口（3个）\n\n3. 水库基础信息查询接口\n4. 水库防洪特征值详情查询接口\n5. 水库防洪特征值列表查询接口"
+            },
+            {
+              "title": "三、水闸堰基础信息接口（2个）",
+              "node_id": "0006",
+              "text": "### 三、水闸堰基础信息接口（2个）\n\n6. 水闸基础信息查询接口\n7. 分洪闸堰信息查询接口",
+              "line_num": 22,
+              "summary": "### 三、水闸堰基础信息接口（2个）\n\n6. 水闸基础信息查询接口\n7. 分洪闸堰信息查询接口"
+            },
+            {
+              "title": "四、蓄滞洪区接口（1个）",
+              "node_id": "0007",
+              "text": "### 四、蓄滞洪区接口（1个）\n\n8. 蓄滞洪区信息查询接口",
+              "line_num": 27,
+              "summary": "### 四、蓄滞洪区接口（1个）\n\n8. 蓄滞洪区信息查询接口"
+            },
+            {
+              "title": "五、河道基础信息接口（1个）",
+              "node_id": "0008",
+              "text": "### 五、河道基础信息接口（1个）\n\n9. 河道防洪特征值列表查询接口",
+              "line_num": 31,
+              "summary": "### 五、河道基础信息接口（1个）\n\n9. 河道防洪特征值列表查询接口"
+            },
+            {
+              "title": "六、测站基础信息接口（1个）",
+              "node_id": "0009",
+              "text": "### 六、测站基础信息接口（1个）\n\n10. 测站列表查询接口",
+              "line_num": 35,
+              "summary": "### 六、测站基础信息接口（1个）\n\n10. 测站列表查询接口"
+            },
+            {
+              "title": "七、视频监控基础信息接口（1个）",
+              "node_id": "0010",
+              "text": "### 七、视频监控基础信息接口（1个）\n\n11. 视频监控列表查询接口",
+              "line_num": 39,
+              "summary": "### 七、视频监控基础信息接口（1个）\n\n11. 视频监控列表查询接口"
+            },
+            {
+              "title": "八、无人机基础信息接口（2个）",
+              "node_id": "0011",
+              "text": "### 八、无人机基础信息接口（2个）\n\n12. 无人机项目列表查询接口\n13. 无人机项目设备列表查询接口",
+              "line_num": 43,
+              "summary": "### 八、无人机基础信息接口（2个）\n\n12. 无人机项目列表查询接口\n13. 无人机项目设备列表查询接口"
+            },
+            {
+              "title": "九、遥感任务接口（1个）",
+              "node_id": "0012",
+              "text": "### 九、遥感任务接口（1个）\n\n14. 遥感任务列表查询接口\n\n---",
+              "line_num": 48,
+              "summary": "### 九、遥感任务接口（1个）\n\n14. 遥感任务列表查询接口\n\n---"
+            }
+          ],
+          "prefix_summary": "## 接口分类概览\n\n本文档共包含 **14个API接口**，按功能分类如下："
+        },
+        {
+          "title": "统一响应格式",
+          "node_id": "0013",
+          "text": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---",
+          "line_num": 54,
+          "summary": "## 统一响应格式\n\n所有接口返回统一的JSON格式：\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {}\n}\n```\n\n错误时返回：\n\n```json\n{\n    \"success\": false,\n    \"code\": \"错误码\",\n    \"message\": \"错误信息\",\n    \"data\": null\n}\n```\n\n---"
+        },
+        {
+          "title": "接口列表",
+          "node_id": "0014",
+          "text": "## 接口列表",
+          "line_num": 80,
+          "nodes": [
+            {
+              "title": "一、地图数据源接口",
+              "node_id": "0015",
+              "text": "### 一、地图数据源接口",
+              "line_num": 82,
+              "summary": "### 一、地图数据源接口"
+            },
+            {
+              "title": "1. 地图数据源查询接口",
+              "node_id": "0016",
+              "text": "### 1. 地图数据源查询接口\n\n**用途**: 查询各类地理要素的地图数据（包含空间坐标shape字段），支持测站、水库、蓄滞洪区、分洪闸堰等多种类型的查询\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/map`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 数据表名，可选值见下方说明 |\n| where[0][filed] | String | 否 | 查询字段名 |\n| where[0][rela] | String | 否 | 关系运算符（=, in, like等） |\n| where[0][value] | String | 否 | 查询值 |\n\n**refTable可选值**:\n\n- `geo_st_base` - 测站基础信息\n- `geo_res_base` - 水库基础信息\n- `geo_fld_stor` - 蓄滞洪区基础信息\n- `geo_flo_dam` - 分洪闸堰基础信息\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"shape\": \"空间坐标（Point/Polygon等格式）\",\n            \"stcd\": \"编码\",   //水库是stcd  测站、蓄滞洪区、分洪闸堰是code\n            \"res_name\": \"名称\",  //水库是res_name  测站、蓄滞洪区、分洪闸堰是name\n            \"...\": \"其他业务字段\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 84,
+              "summary": "This partial document provides the technical specifications for a \"Map Data Source Query Interface\" API. It outlines the interface's purpose for retrieving geographic feature data—including spatial coordinates—for entities such as monitoring stations, reservoirs, flood storage areas, and floodgates. The document details the GET request method, the specific API endpoint, the required and optional input parameters (such as table names and query filters), and the structured JSON response format."
+            },
+            {
+              "title": "2. 列表数据源查询接口",
+              "node_id": "0017",
+              "text": "### 2. 列表数据源查询接口\n\n**用途**: 查询各类要素的列表数据（不含空间坐标），支持水库扩展信息、防洪责任人等查询\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/list`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 数据表名 |\n| where[0][filed] | String | 否 | 查询字段名 |\n| where[0][rela] | String | 否 | 关系运算符（=, in, like等） |\n| where[0][value] | String | 否 | 查询值 |\n\n**refTable可选值**:\n\n- `geo_res_flood_ext` - 水库防洪责任人扩展信息\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"res_name\": \"水库名称\",\n            \"res_code\": \"水库编码\",\n            \"admin_name\": \"行政责任人姓名\",\n            \"admin_org\": \"行政责任人单位\",\n            \"admin_post\": \"行政责任人职务\",\n            \"cd_name\": \"主管部门责任人姓名\",\n            \"cd_org\": \"主管部门单位\",\n            \"cd_post\": \"主管部门责任人职务\",\n            \"mu_name\": \"管理单位责任人姓名\",\n            \"mu_org\": \"管理单位\",\n            \"mu_post\": \"管理单位责任人职务\",\n            \"eng_grad\": \"工程等级\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 128,
+              "summary": "This document provides technical specifications for the \"List Data Source Query Interface,\" an API designed to retrieve non-spatial attribute data for various geographical and administrative elements. It details the GET request method, endpoint, and input parameters, including a table reference (`refTable`) and a flexible filtering mechanism (`where` clauses). The document specifically highlights the query for reservoir flood prevention extension information, outlining a JSON response structure that includes reservoir identification, engineering grades, and contact details for administrative, departmental, and management personnel."
+            },
+            {
+              "title": "二、水库基础信息接口",
+              "node_id": "0018",
+              "text": "### 二、水库基础信息接口",
+              "line_num": 177,
+              "summary": "### 二、水库基础信息接口"
+            },
+            {
+              "title": "3. 水库基础信息查询接口",
+              "node_id": "0019",
+              "text": "### 3. 水库基础信息查询接口\n\n**用途**: 查询水库的基础属性信息，包括位置、所属水系、工程等级、库容等静态配置\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/map`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 固定值：geo_res_base |\n| where[0][filed] | String | 否 | 查询字段名（如stcd） |\n| where[0][rela] | String | 否 | 关系运算符 |\n| where[0][value] | String | 否 | 查询值 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"county\": \"所属县区\",\n            \"dead_cap\": \"死库容\",\n            \"res_name\": \"水库名称\",\n            \"che_flo_sta\": \"校核洪水流量\",\n            \"che_flo_lev\": \"校核洪水位\",\n            \"main_dam_wav_wal_elev\": \"主坝波浪墙顶高程\",\n            \"main_dam_top_len\": \"主坝坝顶长度\",\n            \"wat_shed_area\": \"流域面积\",\n            \"id\": \"唯一标识\",\n            \"norm_pool_stag_cap\": \"正常蓄水位库容\",\n            \"longitude\": \"经度\",\n            \"tot_cap\": \"总库容\",\n            \"ben_res_cap\": \"兴利库容\",\n            \"stcd\": \"测站编码\",\n            \"eng_grad\": \"工程等级\",\n            \"shape\": \"空间坐标\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 179,
+              "summary": "This partial document provides the technical specifications for the \"Reservoir Basic Information Query Interface.\" It outlines the API's purpose for retrieving static attributes of reservoirs—such as location, capacity, and engineering grades—and details the GET request method, the specific endpoint URL, required and optional input parameters for filtering, and the structured JSON format of the output data."
+            },
+            {
+              "title": "4. 水库防洪特征值详情查询接口",
+              "node_id": "0020",
+              "text": "### 4. 水库防洪特征值详情查询接口\n\n**用途**: 根据测站编码查询单个水库的防洪特征值详情，包括校核洪水位、设计洪水位、正常蓄水位、死水位等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rsvr/fcch/detail`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STCD | String | 是 | 测站编码 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"stcd\": \"测站编码\",\n        \"damel\": \"坝顶高程(m)\",\n        \"ckflz\": \"校核洪水位(m)\",\n        \"dsflz\": \"设计洪水位(m)\",\n        \"normz\": \"正常蓄水位(m)\",\n        \"ddz\": \"死水位(m)\",\n        \"actz\": \"实际蓄水位(m)\",\n        \"ttcp\": \"总库容(亿m³)\",\n        \"actcp\": \"实际蓄水库容(亿m³)\",\n        \"ddcp\": \"死库容(亿m³)\",\n        \"fsrs\": \"防汛限制水位信息数组\"\n    }\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"stcd\": \"31005200\",\n        \"damel\": 308.4,\n        \"ckflz\": 308.0,\n        \"dsflz\": 305.7,\n        \"normz\": 305.2,\n        \"ddz\": 251.5,\n        \"actz\": 305.2,\n        \"ttcp\": 27.73,\n        \"actcp\": 24.19,\n        \"ddcp\": 0.67,\n        \"rsvrtp\": 3.0,\n        \"fsrs\": [\n            {\n                \"stcd\": \"31005200\",\n                \"bgmd\": \"0601\",\n                \"edmd\": \"0831\",\n                \"fsltdz\": 303.2,\n                \"fstp\": \"1\"\n            }\n        ]\n    }\n}\n```\n\n---",
+              "line_num": 228,
+              "summary": "This document provides technical specifications for an API titled \"Reservoir Flood Control Characteristic Value Detail Query Interface.\" It outlines the interface's purpose, which is to retrieve detailed flood control metrics for a specific reservoir using its station code (STCD). The documentation details the GET request method, the endpoint URL, the required input parameter, and the structured JSON output. Key data points returned by the interface include dam crest elevation, check flood level, design flood level, normal pool level, dead water level, total and actual storage capacities, and flood control limit water level information."
+            },
+            {
+              "title": "5. 水库防洪特征值列表查询接口",
+              "node_id": "0021",
+              "text": "### 5. 水库防洪特征值列表查询接口\n\n**用途**: 获取所有水库的防洪特征值信息列表，包括校核洪水位、设计洪水位、正常蓄水位、死水位等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/rsvr/fcch/list`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"damel\": \"坝顶高程(m)\",\n            \"ckflz\": \"校核洪水位(m)\",\n            \"dsflz\": \"设计洪水位(m)\",\n            \"normz\": \"正常蓄水位(m)\",\n            \"ddz\": \"死水位(m)\",\n            \"actz\": \"实际蓄水位(m)\",\n            \"ttcp\": \"总库容(亿m³)\",\n            \"actcp\": \"实际蓄水库容(亿m³)\",\n            \"ddcp\": \"死库容(亿m³)\",\n            \"fsrs\": \"防汛限制水位信息数组\",\n            \"rsvrtp\": \"水库类型\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31004600\",\n            \"damel\": 490.5,\n            \"ckflz\": 486.86,\n            \"dsflz\": 483.17,\n            \"normz\": 477.0,\n            \"ddz\": 425.0,\n            \"actz\": 477.0,\n            \"ttcp\": 17.43,\n            \"actcp\": 12.47,\n            \"ddcp\": 0.53,\n            \"hhrz\": 479.62,\n            \"hhrztm\": \"2021-01-01 00:00:00\",\n            \"rsvrtp\": 3.0,\n            \"fsrs\": [\n                {\n                    \"stcd\": \"31004600\",\n                    \"bgmd\": \"0515\",\n                    \"edmd\": \"0930\",\n                    \"fsltdz\": 477.0,\n                    \"fstp\": \"1\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 299,
+              "summary": "This partial document provides the technical specifications for an API interface designed to query a list of reservoir flood control characteristic values. It details the GET request method, the endpoint URL, and the structured JSON output format, which includes critical data fields such as station codes, dam elevations, various water levels (check, design, normal, and dead), reservoir capacities, and flood control limit information."
+            },
+            {
+              "title": "三、水闸堰基础信息接口",
+              "node_id": "0022",
+              "text": "### 三、水闸堰基础信息接口",
+              "line_num": 373,
+              "summary": "### 三、水闸堰基础信息接口"
+            },
+            {
+              "title": "6. 水闸基础信息查询接口",
+              "node_id": "0023",
+              "text": "### 6. 水闸基础信息查询接口\n\n**用途**: 查询水闸的基础属性信息，包括位置、所属水系、工程规模、设计流量等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/map`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 固定值：geo_sluice_base |\n| where[0][filed] | String | 否 | 查询字段名 |\n| where[0][rela] | String | 否 | 关系运算符 |\n| where[0][value] | String | 否 | 查询值 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"水闸名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"rvnm\": \"河流名称\",\n            \"waga_func\": \"水闸功能\",\n            \"eng_scal\": \"工程规模\",\n            \"des_flo\": \"设计流量\",\n            \"shape\": \"空间坐标\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 375,
+              "summary": "This partial document specifies the technical details for the \"Sluice Basic Information Query Interface\" (API). It defines the purpose of the interface as retrieving fundamental attributes of water sluices, such as location, river system, project scale, and design flow. The documentation outlines the HTTP GET request method, the specific endpoint URL, the required and optional input parameters (including filtering options), and the structure of the JSON response containing detailed sluice data."
+            },
+            {
+              "title": "7. 分洪闸堰信息查询接口",
+              "node_id": "0024",
+              "text": "### 7. 分洪闸堰信息查询接口\n\n**用途**: 查询分洪闸堰的基础信息，包括设计分洪流量、启用条件等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/map`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 固定值：geo_flo_dam |\n| where[0][filed] | String | 否 | 查询字段名 |\n| where[0][rela] | String | 否 | 关系运算符 |\n| where[0][value] | String | 否 | 查询值 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"id\": \"唯一标识\",\n            \"name\": \"分洪闸名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"des_flo_flow\": \"设计分洪流量\",\n            \"shape\": \"空间坐标\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 417,
+              "summary": "This document provides the technical specifications for an API interface designed to query basic information about flood diversion sluices and dams. It outlines the request method (GET), the specific endpoint, and the input parameters required to filter data from the `geo_flo_dam` table. Additionally, it defines the JSON output format, which includes key data points such as sluice names, geographic coordinates, and design flood discharge capacities."
+            },
+            {
+              "title": "四、蓄滞洪区接口",
+              "node_id": "0025",
+              "text": "### 四、蓄滞洪区接口",
+              "line_num": 456,
+              "summary": "### 四、蓄滞洪区接口"
+            },
+            {
+              "title": "8. 蓄滞洪区信息查询接口",
+              "node_id": "0026",
+              "text": "### 8. 蓄滞洪区信息查询接口\n\n**用途**: 查询蓄滞洪区的基础信息，包括面积、进洪设施、设计蓄洪水位等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/map/dataSource/table/map`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| refTable | String | 是 | 固定值：geo_fld_stor |\n| where[0][filed] | String | 否 | 查询字段名 |\n| where[0][rela] | String | 否 | 关系运算符 |\n| where[0][value] | String | 否 | 查询值 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"name\": \"蓄滞洪区名称\",\n            \"stcd\": \"编码\",\n            \"area\": \"面积(km²)\",\n            \"in_flo_faci\": \"进洪设施\",\n            \"des_stor_capa\": \"设计蓄洪库容\",\n            \"des_stor_lev\": \"设计蓄洪水位\",\n            \"shape\": \"空间坐标\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 458,
+              "summary": "This document provides the technical specifications for an API interface designed to query basic information about flood storage and detention areas. It details the interface's purpose, the GET request method, the specific endpoint URL, and the input parameters required for filtering data. Additionally, it defines the JSON output structure, which includes data fields such as the storage area name, code, area size, intake facilities, design storage capacity, design flood level, and spatial coordinates."
+            },
+            {
+              "title": "五、河道基础信息接口",
+              "node_id": "0027",
+              "text": "### 五、河道基础信息接口",
+              "line_num": 498,
+              "summary": "### 五、河道基础信息接口"
+            },
+            {
+              "title": "9. 河道防洪特征值列表查询接口",
+              "node_id": "0028",
+              "text": "### 9. 河道防洪特征值列表查询接口\n\n**用途**: 获取所有河道测站的防洪特征值信息列表，包括警戒水位、保证水位等\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/river/fcch/list`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"grz\": \"保证水位(m)\",\n            \"wrz\": \"警戒水位(m)\",\n            \"ldkel\": \"左堤高程(m)\",\n            \"rdkel\": \"右堤高程(m)\",\n            \"wrq\": \"警戒流量(m³/s)\",\n            \"grq\": \"保证流量(m³/s)\",\n            \"obhtz\": \"实测最高水位(m)\",\n            \"obhtztm\": \"实测最高水位时间\",\n            \"obmxq\": \"实测最大流量(m³/s)\",\n            \"obmxqtm\": \"实测最大流量时间\"\n        }\n    ]\n}\n```\n\n**输出结果样例**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"31006900\",\n            \"grz\": \"75.180\",\n            \"wrz\": \"73.180\",\n            \"ldkel\": \"76.070\",\n            \"rdkel\": \"76.880\",\n            \"grq\": \"1180.000\",\n            \"obhtz\": \"76.420\",\n            \"obhtztm\": \"1982-08-02 00:00:00\",\n            \"obmxq\": \"2060.000\",\n            \"obmxqtm\": \"1982-08-02 00:00:00\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 500,
+              "summary": "This document provides the technical specifications for an API interface titled \"River Flood Control Characteristic Value List Query Interface.\" It outlines the details for retrieving a comprehensive list of flood control data for river monitoring stations, including the GET request method and endpoint URL. The documentation specifies a JSON output format that contains critical hydrological parameters such as station codes, warning and guarantee water levels/flows, levee elevations, and historical records of maximum water levels and flow rates."
+            },
+            {
+              "title": "六、测站基础信息接口",
+              "node_id": "0029",
+              "text": "### 六、测站基础信息接口",
+              "line_num": 561,
+              "summary": "### 六、测站基础信息接口"
+            },
+            {
+              "title": "10. 测站列表查询接口",
+              "node_id": "0030",
+              "text": "### 10. 测站列表查询接口\n\n**用途**: 按测站类型查询测站的基础信息列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/rwdb/station/list`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| STTP | String | 是 | 测站类型（ZQ-水文站、PP-雨量站、RR-水库站、AI-智能监测站等） |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"stcd\": \"测站编码\",\n            \"stnm\": \"测站名称\",\n            \"lgtd\": \"经度\",\n            \"lttd\": \"纬度\",\n            \"sttp\": \"测站类型\",\n            \"stlc\": \"测站位置\",\n            \"rvnm\": \"河流名称\",\n            \"hnnm\": \"水系名称\",\n            \"bsnm\": \"流域名称\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 563,
+              "summary": "The partial document describes the \"Station List Query Interface\" (测站列表查询接口) API. Its main points include the interface's purpose of querying basic station information by type, the GET request method and endpoint URL, the requirement of a station type (STTP) as an input parameter, and the structure of the JSON output which provides station details such as code, name, coordinates, location, and associated river/basin information."
+            },
+            {
+              "title": "七、视频监控基础信息接口",
+              "node_id": "0031",
+              "text": "### 七、视频监控基础信息接口",
+              "line_num": 602,
+              "summary": "### 七、视频监控基础信息接口"
+            },
+            {
+              "title": "11. 视频监控列表查询接口",
+              "node_id": "0032",
+              "text": "### 11. 视频监控列表查询接口\n\n**用途**: 获取视频监控摄像头列表，可根据测站编码筛选\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/basin/camera/list`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| stcd | String | 否 | 测站编码，不传则查询所有摄像头 |\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"code\": \"摄像头编码\",\n            \"name\": \"摄像头名称\",\n            \"stcd\": \"关联测站编码\",\n            \"url\": \"视频流地址\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 604,
+              "summary": "This partial document provides the technical specifications for a \"Video Surveillance List Query Interface\" API. It outlines the interface's purpose for retrieving a list of cameras (with optional filtering by station code), specifies the GET request method and endpoint URL, defines the input parameters, and details the structured JSON response format, which includes camera identification, associated station codes, and video stream URLs."
+            },
+            {
+              "title": "八、无人机基础信息接口",
+              "node_id": "0033",
+              "text": "### 八、无人机基础信息接口",
+              "line_num": 638,
+              "summary": "### 八、无人机基础信息接口"
+            },
+            {
+              "title": "12. 无人机项目列表查询接口",
+              "node_id": "0034",
+              "text": "### 12. 无人机项目列表查询接口\n\n**用途**: 查询无人机项目列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/djiuav/openapi/v0.1/project`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"projectId\": \"项目ID\",\n            \"projectName\": \"项目名称\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 640,
+              "summary": "### 12. 无人机项目列表查询接口\n\n**用途**: 查询无人机项目列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/djiuav/openapi/v0.1/project`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"projectId\": \"项目ID\",\n            \"projectName\": \"项目名称\"\n        }\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "13. 无人机项目设备列表查询接口",
+              "node_id": "0035",
+              "text": "### 13. 无人机项目设备列表查询接口\n\n**用途**: 查询指定项目下的无人机设备列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/djiuav/openapi/v0.1/project/device`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"deviceSn\": \"设备序列号\",\n            \"deviceName\": \"设备名称\",\n            \"deviceType\": \"设备类型\",\n            \"status\": \"设备状态\"\n        }\n    ]\n}\n```\n\n---",
+              "line_num": 668,
+              "summary": "### 13. 无人机项目设备列表查询接口\n\n**用途**: 查询指定项目下的无人机设备列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/djiuav/openapi/v0.1/project/device`\n\n**输入参数**: 无\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": [\n        {\n            \"deviceSn\": \"设备序列号\",\n            \"deviceName\": \"设备名称\",\n            \"deviceType\": \"设备类型\",\n            \"status\": \"设备状态\"\n        }\n    ]\n}\n```\n\n---"
+            },
+            {
+              "title": "九、遥感任务接口",
+              "node_id": "0036",
+              "text": "### 九、遥感任务接口",
+              "line_num": 698,
+              "summary": "### 九、遥感任务接口"
+            },
+            {
+              "title": "14. 遥感任务列表查询接口",
+              "node_id": "0037",
+              "text": "### 14. 遥感任务列表查询接口\n\n**用途**: 查询各类遥感监测任务列表\n\n**请求方式**: GET\n\n**请求地址**: `http://10.20.2.153/api/rs/datamanager/task/getTaskList`\n\n**输入参数**:\n\n| 参数名 | 类型 | 必填 | 说明 |\n|--------|------|------|------|\n| taskname | String | 否 | 任务名称，模糊查询 |\n| tasktype | String | 是 | 任务类型（HHSL-洪涝水淹、HLJC-洪涝监测、SLGCBX-水利工程变形、XDMJC-小流域监测） |\n| page | Integer | 是 | 页码，从1开始 |\n| limit | Integer | 是 | 每页条数 |\n| userId | String | 是 | 用户ID |\n\n**任务类型说明**:\n\n- HHSL: 洪涝水淹\n- HLJC: 洪涝监测\n- SLGCBX: 水利工程变形监测\n- XDMJC: 小流域监测\n\n**输出结果格式**:\n\n```json\n{\n    \"success\": true,\n    \"code\": \"00000\",\n    \"message\": \"请求成功\",\n    \"data\": {\n        \"total\": \"总数\",\n        \"list\": [\n            {\n                \"taskId\": \"任务ID\",\n                \"taskname\": \"任务名称\",\n                \"tasktype\": \"任务类型\",\n                \"status\": \"任务状态\",\n                \"createTime\": \"创建时间\"\n            }\n        ]\n    }\n}\n```\n\n---",
+              "line_num": 700,
+              "summary": "This partial document provides the technical specifications for the \"Remote Sensing Task List Query Interface\" (API). It details the interface's purpose for retrieving various remote sensing monitoring tasks, the GET request method and endpoint, and the required input parameters, including task type, pagination, and user identification. Furthermore, it defines specific task categories—such as flood monitoring and water conservancy engineering deformation—and describes the structure of the JSON response, which includes task metadata like IDs, status, and creation times."
+            }
+          ],
+          "prefix_summary": "## 接口列表"
+        },
+        {
+          "title": "附录",
+          "node_id": "0038",
+          "text": "## 附录",
+          "line_num": 749,
+          "nodes": [
+            {
+              "title": "A. 日期格式说明",
+              "node_id": "0039",
+              "text": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2025-12-01 00:00:00`",
+              "line_num": 751,
+              "summary": "### A. 日期格式说明\n\n所有日期参数格式为: `yyyy-MM-dd HH:mm:ss`\n示例: `2025-12-01 00:00:00`"
+            },
+            {
+              "title": "B. 状态码说明",
+              "node_id": "0040",
+              "text": "### B. 状态码说明\n\n- 00000: 请求成功\n- 200: 请求成功（部分接口）\n- 其他: 错误码",
+              "line_num": 756,
+              "summary": "### B. 状态码说明\n\n- 00000: 请求成功\n- 200: 请求成功（部分接口）\n- 其他: 错误码"
+            },
+            {
+              "title": "C. 测站类型（sttp）说明",
+              "node_id": "0041",
+              "text": "### C. 测站类型（sttp）说明\n\n- ZQ: 水文站\n- ZZ: 水位站\n- RR: 水库站\n- PP: 雨量站\n- DD: 闸坝站\n- ZB: 水位遥测站\n- AI: AI智能监测站",
+              "line_num": 762,
+              "summary": "### C. 测站类型（sttp）说明\n\n- ZQ: 水文站\n- ZZ: 水位站\n- RR: 水库站\n- PP: 雨量站\n- DD: 闸坝站\n- ZB: 水位遥测站\n- AI: AI智能监测站"
+            },
+            {
+              "title": "D. 水库工程等级（eng_grad）说明",
+              "node_id": "0042",
+              "text": "### D. 水库工程等级（eng_grad）说明\n\n- 1: 大（一）型\n- 2: 大（二）型\n- 3: 中型\n- 4: 小（一）型\n- 5: 小（二）型",
+              "line_num": 772,
+              "summary": "### D. 水库工程等级（eng_grad）说明\n\n- 1: 大（一）型\n- 2: 大（二）型\n- 3: 中型\n- 4: 小（一）型\n- 5: 小（二）型"
+            },
+            {
+              "title": "E. 通用查询条件说明",
+              "node_id": "0043",
+              "text": "### E. 通用查询条件说明\n\n接口支持通用查询条件格式：\n\n- `where[0][filed]`: 查询字段名\n- `where[0][rela]`: 关系运算符（=, in, like, >, <等）\n- `where[0][value]`: 查询值\n\n支持多个条件组合：\n\n- `where[0][filed]=stcd&where[0][rela]==&where[0][value]='31005650'`\n- `where[1][filed]=sttp&where[1][rela]==&where[1][value]='RR'`",
+              "line_num": 780,
+              "summary": "### E. 通用查询条件说明\n\n接口支持通用查询条件格式：\n\n- `where[0][filed]`: 查询字段名\n- `where[0][rela]`: 关系运算符（=, in, like, >, <等）\n- `where[0][value]`: 查询值\n\n支持多个条件组合：\n\n- `where[0][filed]=stcd&where[0][rela]==&where[0][value]='31005650'`\n- `where[1][filed]=sttp&where[1][rela]==&where[1][value]='RR'`"
+            }
+          ],
+          "prefix_summary": "## 附录"
+        }
+      ],
+      "prefix_summary": "# 卫共流域基本信息获取接口文档"
+    }
+  ]
+}

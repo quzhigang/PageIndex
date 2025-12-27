@@ -10,6 +10,9 @@ except:
 async def get_node_summary(node, summary_token_threshold=200, model=None):
     node_text = node.get('text')
     num_tokens = count_tokens(node_text, model=model)
+    # 确保 summary_token_threshold 有默认值
+    if summary_token_threshold is None:
+        summary_token_threshold = 200
     if num_tokens < summary_token_threshold:
         return node_text
     else:
@@ -263,18 +266,18 @@ async def md_to_tree(md_path, if_thinning=False, min_token_threshold=None, if_ad
 
     print(f"Formatting tree structure...")
     
-    if if_add_node_summary == 'yes':
+    if if_add_node_summary == 'yes' or if_add_node_summary == True:
         # Always include text for summary generation
         tree_structure = format_structure(tree_structure, order = ['title', 'node_id', 'summary', 'prefix_summary', 'text', 'line_num', 'nodes'])
         
         print(f"Generating summaries for each node...")
         tree_structure = await generate_summaries_for_structure_md(tree_structure, summary_token_threshold=summary_token_threshold, model=model)
         
-        if if_add_node_text == 'no':
+        if not (if_add_node_text == 'yes' or if_add_node_text == True):
             # Remove text after summary generation if not requested
             tree_structure = format_structure(tree_structure, order = ['title', 'node_id', 'summary', 'prefix_summary', 'line_num', 'nodes'])
         
-        if if_add_doc_description == 'yes':
+        if if_add_doc_description == 'yes' or if_add_doc_description == True:
             print(f"Generating document description...")
             # Create a clean structure without unnecessary fields for description generation
             clean_structure = create_clean_structure_for_description(tree_structure)

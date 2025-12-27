@@ -1,0 +1,299 @@
+{
+  "doc_name": "卫共系统功能.pdf",
+  "structure": [
+    {
+      "title": "Preface",
+      "start_index": 1,
+      "end_index": 2,
+      "node_id": "0000",
+      "summary": "This partial document provides an overview of the \"Four-Pre\" (Forecasting, Warning, Rehearsal, and Plan) Capacity Enhancement Project for flood control in the Wei-Gong River Basin of Henan Province. The main points covered include:\n\n1.  **Project Objectives:** The project aims to modernize flood management through digital twin technology, focusing on refined management, scientific decision-making, and collaborative dispatching to support high-quality water conservancy development.\n2.  **Performance Targets:** It sets specific goals for improving flood control capabilities, such as extending flood forecasting coverage to rivers over 50km², increasing average forecasting accuracy to 75%, and extending warning lead times to 72 hours.\n3.  **Technical Framework:** The document details the construction of three core system components:\n    *   **Data Foundation:** Integration of geographic spatial data, monitoring data, and business management data into a unified data resource and engine.\n    *   **Model Library:** Development of a comprehensive suite of models, including water professional models (flood forecasting, 1D/2D hydrodynamics, reservoir dispatch, and breach risk analysis), intelligent models (remote sensing and video analysis), and visualization models for simulation.\n    *   **Knowledge Base:** Establishment of a repository for forecasting schemes, dispatching strategies, and warning/business rules to guide flood control operations."
+    },
+    {
+      "title": "系统概况",
+      "start_index": 2,
+      "end_index": 3,
+      "node_id": "0001",
+      "summary": "This partial document provides a general overview of the construction plan for the Wei-Gong River Basin Flood Control \"Four Pres\" (Predicting, Warning, Simulating, and Pre-planning) Capacity Improvement Project in Henan Province. The main points covered include:\n\n1.  **Project Objectives and Goals:** To enhance flood control management through digital twin technology, aiming for scientific decision-making and collaborative scheduling. It sets specific performance targets, such as extending flood forecast coverage to rivers over 50km², achieving a 75% forecast accuracy rate, and increasing the effective warning lead time to 72 hours.\n2.  **Data Base (Data Bottom Plate):** The integration of multi-source data—including L1/L2 basin data, geospatial information, monitoring data, and business management data—to create a unified data resource and engine.\n3.  **Model Library:** The construction of various digital models, including professional hydraulic models (for forecasting, scheduling, and risk analysis), intelligent models (RS and video analysis), and visualization models to simulate flood scenarios in a digital space.\n4.  **Knowledge Base:** The establishment of a repository for forecasting schemes, scheduling rules, expert experiences, and historical data, integrated with the provincial-level digital twin platform for resource sharing.\n5.  **Flood Control \"Four Pres\" System:** The development of a core business application featuring modules for monitoring, forecasting, risk warning, scenario simulation, emergency dispatch, and disaster assessment.\n6.  **Application Support and System Integration:** The creation of a stable technical environment and the integration of hardware (video stations, UAVs) and software (existing data systems) across different project segments to ensure a unified and scalable system."
+    },
+    {
+      "title": "系统主要功能",
+      "start_index": 4,
+      "end_index": 4,
+      "nodes": [
+        {
+          "title": "数据底板",
+          "start_index": 4,
+          "end_index": 4,
+          "nodes": [
+            {
+              "title": "数据资源",
+              "start_index": 4,
+              "end_index": 6,
+              "node_id": "0004",
+              "summary": "这份文档主要介绍了卫共流域防洪“四预”能力提升系统中“数据底板”的建设方案，其核心内容涵盖以下几个方面：\n\n1.  **数据底板构建目标**：通过整合L1、L2级流域共享数据与项目新采集的地理空间数据（DOM、DEM、三维实景、BIM及断面测量数据），融合前端监测感知和业务管理数据，构建支撑防洪调度模型需求的流域数据底板。\n2.  **数据资源体系分类**：详细界定了五大类数据资源，包括基础数据（行政、工程等）、监测数据（雨水情、视频、工情等）、业务管理数据（防洪、灾情等）、地理空间数据（L1-L3级影像及模型）以及跨行业共享数据（气象、社经数据）。\n3.  **数据获取与整合途径**：阐述了依托河南省水利“一张图”获取省级层面及已建站点数据，并结合人工整编、跨部门共享以及针对新建103个三合一视频监控站点的数据采集。\n4.  **数据汇聚与传输机制**：说明了如何通过河南省水利数据治理平台实现存量数据汇聚，并利用4G/5G通信技术实现新建站点视频、雨量和水位数据的实时回传与入库。\n5.  **技术标准与规范**：明确了地理空间数据采用CGCS2000国家大地坐标系和1985国家高程基准。"
+            },
+            {
+              "title": "数据汇聚",
+              "start_index": 6,
+              "end_index": 9,
+              "node_id": "0005",
+              "summary": "该文档主要介绍了河南省卫共流域防洪“四预”能力提升系统的数据架构与汇聚方案，其核心内容涵盖以下几个方面：\n\n1. **数据汇聚与共享**：详细阐述了监测感知数据（如雨量、水文、水位及视频监控）的接入方式，包括利用现有水利数据平台汇聚存量数据，以及通过4G/5G通信技术实现新建103个三合一监测站点的实时数据整编入库。\n2. **多维数字化场景构建**：通过汇聚业务数据、遥感影像、高精度DEM、三维实景及BIM模型，构建起卫共流域的多维数字化底板，为防洪“四预”提供基础支撑。\n3. **BIM模型轻量化技术**：针对BIM模型提出了包括图元合并、构件对象化、场景八叉树划分、LOD（多细节层次）及模型文件压缩在内的一系列轻量化处理方法，旨在减少内存占用并提升浏览器端的渲染与浏览效率。\n4. **L1/L2级底板数据接入服务**：介绍了通过服务或拷贝形式接入的基础底图数据，具体包括矢量地图服务、要素服务、影像地图服务、KML及全景数据服务等，并支持图层目录的分类展现与调用。\n5. **数据资源目录构建**：基于现有水利厅数据资源，建立了统一的数据资源目录，实现对异构数据资源的标准化组织、检索、访问与获取服务。"
+            },
+            {
+              "title": "数据资源目录",
+              "start_index": 9,
+              "end_index": 10,
+              "node_id": "0006",
+              "summary": "该文档片段主要阐述了卫共流域防洪“四预”能力提升系统在数据服务、资源管理、共享机制以及专业模型构建方面的核心内容，主要要点包括：\n\n1. **L1/L2级数据服务**：介绍了系统提供的多种服务形式，包括空间与非空间要素服务、影像地图与处理服务（支持WEB访问、查询、下载等）、图层目录服务（支持分类展示与定位）以及KML和全景等专题服务。\n2. **数据资源目录构建**：说明了如何基于统一标准和元数据规范，对卫共流域防汛相关的异构数据进行组织、排序和编码，以便于用户进行资源检索、定位与获取，并实现对数据服务的有效管理。\n3. **数据共享机制**：规定了在权限管理前提下的数据共享流程，包括需求匹配、途径选择、资源申请及共享日志监控；同时提供了标准接口、消息订阅、文件下载等多种灵活的共享手段。\n4. **洪水预报模型构建**：探讨了水利专业模型中的洪水预报工具，通过采用新安江、API等多种水文模型进行产汇流计算，旨在提高预报准确性，并将重点河道的洪水预见期提升至72小时，为防洪调度提供科学支撑。"
+            },
+            {
+              "title": "数据共享",
+              "start_index": 10,
+              "end_index": 10,
+              "node_id": "0007",
+              "summary": "This document fragment outlines key technical components of the Weigong River Basin flood control \"Four Pre\" (Forecasting, Warning, Rehearsal, and Contingency Planning) capability enhancement system. It covers three main areas:\n\n1.  **Data Resource Directory**: The establishment of a standardized indexing and metadata system for flood control information. It is designed to facilitate the efficient retrieval, positioning, and management of data resources and services to improve data sharing.\n2.  **Data Sharing Services**: The mechanisms for providing precise data access based on user permissions. It details the workflow for requesting and acquiring data via standardized API interfaces, message subscriptions, and file downloads, while emphasizing the use of log analysis to monitor and optimize sharing performance.\n3.  **Flood Forecasting Models**: The construction of professional hydraulic models specifically for the Weigong Basin. It highlights the use of various hydrological models (such as Xinanjiang and API) for runoff calculations to predict peak flows and water levels, aiming to extend the flood forecast period to 72 hours for critical river sections."
+            }
+          ],
+          "node_id": "0003",
+          "summary": "该文档片段详细阐述了卫共流域防洪“四预”能力提升系统中的“数据底板”建设方案，主要涵盖以下核心要点：\n\n1. **数据底板的构建与融合**：说明了如何通过整合L1、L2级流域数据，结合防洪调度模型需求，将地理空间数据、前端监测感知数据和业务管理数据进行深度融合，以构建卫共流域的数据底板。\n2. **地理空间数据采集规范**：详细列出了在项目中采集的DOM、DEM、三维实景、BIM模型及河道断面数据的覆盖规模、分辨率（如DOM 0.2m、DEM 2m）以及采用的坐标系（CGCS2000）与高程基准。\n3. **数据资源分类体系**：明确了数据资源的逻辑分类，包括基础数据（工程、行政区划）、监测数据（水文、雨情、视频、工情等）、业务管理数据（洪水、灾情、预案等）、地理空间数据以及跨行业共享数据。\n4. **数据建设与获取途径**：强调依托河南省水利“一张图”及现有部门数据库，通过数据交换、接口获取及流域级数据整编等手段，实现对现有监测站点和新建视频站数据的全面整合与完善。"
+        },
+        {
+          "title": "模型库",
+          "start_index": 10,
+          "end_index": 10,
+          "nodes": [
+            {
+              "title": "水利专业模型",
+              "start_index": 10,
+              "end_index": 10,
+              "nodes": [
+                {
+                  "title": "洪水预报模型",
+                  "start_index": 10,
+                  "end_index": 11,
+                  "node_id": "0010",
+                  "summary": "这份文档主要介绍了卫共流域防洪“四预”能力提升系统的核心组成部分，重点涵盖了数据资源管理与水利专业模型构建两个方面。主要内容包括：\n\n1.  **数据资源目录与共享**：阐述了防汛业务数据资源目录的定义与功能，旨在通过规范的元数据描述实现信息的有效检索、定位与共享。同时介绍了数据共享服务的实现方式，包括基于权限的资源申请、多格式文件下载、消息订阅及标准服务接口，并强调了通过日志分析提升共享性能。\n2.  **洪水预报模型**：详细说明了洪水预报模型的原理与应用，通过采用新安江、API等多种模型及细化子流域划分，预测重点断面的洪峰流量、水位及洪水过程，将预见期提升至72小时，覆盖了流域内主要水文站、拦河闸及大中型水库。\n3.  **水库调度模型**：描述了针对卫共流域内18座大中型水库构建的防洪调度模型，通过设定调度目标与约束条件，结合入库来水预测等边界条件进行计算，为流域防洪减灾及调度决策提供科学支撑。"
+                },
+                {
+                  "title": "水库调度模型",
+                  "start_index": 11,
+                  "end_index": 12,
+                  "node_id": "0011",
+                  "summary": "该文档主要介绍了卫共流域防洪调度体系中的三个核心模型及其功能：\n\n1. **洪水预报模型**：通过精细化划分产汇流子流域并利用一维水动力或马斯京根法，实现对流域内重要水文站、大中型水库、拦河闸及河道交叉断面等关键节点的水位、流量及水量预报。\n2. **水库调度模型**：针对流域内18座大中型水库构建调度模型，以入库/区间来水预报为边界条件，通过科学运用防洪库容，为流域防洪减灾及关键节点的安全防护提供决策支撑。\n3. **河道一维水动力模型**：涵盖流域内49条重要干支流，通过补充断面数据解决二维网格失真问题。该模型与洪水预报、水库调度及二维演进模型耦合，旨在精准模拟行洪过程，并为蓄滞洪区的运用提供准确的入流条件。"
+                },
+                {
+                  "title": "河道一维水动力模型",
+                  "start_index": 12,
+                  "end_index": 13,
+                  "node_id": "0012",
+                  "summary": "该文档片段主要介绍了卫共流域防洪模拟系统的核心组成部分及其技术要点，涵盖了水库调度模型、河道一维水动力模型以及二维洪水淹没演进模型的基本框架。主要内容包括：\n\n1. **水库调度模型**：说明了以入库预报、区间洪水及水位为边界条件，通过科学调度泄水建筑物，利用防洪库容来保障水库、河道及下游重点防洪节点的安全。\n2. **河道一维水动力模型**：重点阐述了构建涵盖卫河、共产主义渠、大沙河等49条干支流河网模型的必要性。该模型通过与预报和调度模型耦合，精准模拟洪水演进过程，并详细考虑了闸、坝、桥梁等河道工程要素，以弥补二维网格在河道模拟中的精度不足。\n3. **二维洪水淹没演进模型**：初步介绍了针对蓄滞洪区的二维建模工作，作为落实海河流域“上蓄、中疏、下排、适当地滞”防洪体系的重要环节。"
+                },
+                {
+                  "title": "二维洪水淹没演进模型",
+                  "start_index": 13,
+                  "end_index": 15,
+                  "node_id": "0013",
+                  "summary": "This partial document outlines the technical framework for constructing a comprehensive flood simulation and management system for the Weihe-Gongqu (Wei共) River Basin. The main points include:\n\n1.  **One-Dimensional River Network Modeling**: The construction of a 1D hydrodynamic model covering 3 main rivers (Weihe, Gongqu, and Dasha) and 46 key tributaries. This model integrates hydraulic structures such as reservoirs, gates, and pump stations to accurately simulate flood processes and joint operations.\n2.  **Two-Dimensional Flood Inundation Models**: The development of 2D models for nine major detention basins (e.g., Liangxiangpo, Baishipo) to obtain precise data on flood timing, volume, depth, and duration.\n3.  **South-to-North Water Diversion Safety**: Specific 2D modeling for four rivers that intersect with the South-to-North Water Diversion Project to ensure the safety and stability of this critical infrastructure during flood events.\n4.  **Model Coupling and Integration**: The integration of 1D river models, 2D inundation models, and reservoir scheduling models into a unified 1D-2D coupled system. This coupling uses standard and lateral connections to simulate the interaction between river channels and surrounding floodplains, facilitating more accurate flood forecasting and regional joint dispatching."
+                },
+                {
+                  "title": "水库河道蓄滞洪区耦合模型",
+                  "start_index": 15,
+                  "end_index": 16,
+                  "node_id": "0014",
+                  "summary": "This document excerpt focuses on the development and application of hydraulic and flood warning models for the Weihe-Gonghe (卫共) river basin. Key points include:\n\n1.  **Reservoir-River-Flood Detention Area Coupling Model**: It describes the integration of 1D river hydrodynamic models, 2D flood detention area inundation models, and reservoir dispatching models. This coupled system uses standard and lateral connections to simulate drainage capacity, ground runoff interactions, and risk analysis for levee breaches or overtopping.\n2.  **Flood Warning Model**: It outlines a system that monitors and warns against flood risks for reservoirs, rivers, and detention areas. The model utilizes both simulation data and real-time measurements to track critical metrics such as flood levels, peak flows, and water diversion status.\n3.  **Warning Indicators and Scope**: The document specifies the warning targets, including 18 reservoirs (based on limit, design, and check water levels), 49 rivers (based on warning and guarantee water levels), and 9 flood detention areas (based on activation status)."
+                },
+                {
+                  "title": "洪水预警模型",
+                  "start_index": 16,
+                  "end_index": 17,
+                  "node_id": "0015",
+                  "summary": "该文档片段主要介绍了防洪减灾相关的多种水力与风险分析模型，涵盖了以下核心内容：\n\n1.  **洪水预警模型**：阐述了通过耦合水库、河道、蓄滞洪区等多种预演模型（如一维/二维演进模型、调度模型等）与实测数据，实现对水利工程和河道的风险预警。明确了预警对象包括18座大中型水库、49条河流及9个蓄滞洪区，并设定了水位、流量、分洪启用等具体预警指标。\n2.  **水库溃坝洪水风险分析模型**：重点针对盘石头和小南海两座大型水库，通过模拟溃坝情景来分析下游风险。详细说明了该类模型的构建流程，包括基础数据收集、网格剖分、边界条件设置及参数率定等技术步骤。\n3.  **河道漫堤及溃堤洪水风险分析模型**：简要提及了用于预判河道漫堤风险及分析溃堤后果的相关风险分析模型。\n4.  **耦合模型应用**：提到了水库、河道与蓄滞洪区的耦合模型，作为整体预演体系的一部分，用于模拟复杂的洪水演进过程。"
+                },
+                {
+                  "title": "水库溃坝洪水风险分析模型",
+                  "start_index": 17,
+                  "end_index": 17,
+                  "node_id": "0016",
+                  "summary": "The partial document outlines technical models for flood risk assessment and warning. Its main points include: (1) the introduction of flood warning models; (2) a detailed overview of reservoir dam break flood risk analysis models, specifically for the Panshitou and Xiaonanhai reservoirs, including the significance of simulating dam failure scenarios and the technical workflow for model construction (such as data collection, grid division, and parameter setting); and (3) an introduction to flood risk analysis models for river overtopping and levee breaches."
+                },
+                {
+                  "title": "河道漫堤及溃堤洪水风险分析模型",
+                  "start_index": 17,
+                  "end_index": 18,
+                  "node_id": "0017",
+                  "summary": "该文档片段主要介绍了三类水利风险分析模型的构建与应用：\n\n1. **水库溃坝洪水风险分析模型**：重点针对盘石头和小南海两座大型水库，阐述了模型构建的技术流程（如数据收集、网格剖分、参数设置等），旨在通过模拟溃坝情景分析对下游造成的风险。\n2. **河道漫堤及溃堤洪水风险分析模型**：侧重于预判和分析堤防风险。文档详细说明了针对共产主义渠右堤（合河闸至黄土岗段）及卫河左堤（淇门至长虹渠段）构建二维模型的原因，包括两岸高填方堤防的安全性、历史险情（如“21.7”洪水）以及对新乡、卫辉等城市和居民点的潜在威胁。\n3. **闸门故障风险分析模型**：简要提及通过模拟拦河闸或分洪闸发生故障的情景，分析其对河道行洪及洪水淹没造成的影响。\n\n这些模型共同构成了洪水预演与防洪减灾工作的科学决策基础。"
+                },
+                {
+                  "title": "闸门故障风险分析模型",
+                  "start_index": 18,
+                  "end_index": 19,
+                  "node_id": "0018",
+                  "summary": "该文档片段主要介绍了针对防洪减灾构建的三种风险分析与评估模型：\n\n1. **河道漫堤及溃堤风险分析模型**：重点针对共产主义渠右堤（合河闸至黄土岗水文站段）和卫河左堤（淇门水文站至长虹渠退水闸段）构建二维模型。这些河段具有填方高、曾发生过险情且下游防护对象重要（如新乡、卫辉主城区及密集居民地）的特点，旨在预判溃堤风险并提供科学依据。\n2. **闸门故障风险分析模型**：通过模拟合河闸、大李庄闸等5座重要拦河闸在洪水期间无法开启或关闭的故障情景，分析其对河道行洪的影响，包括由此引发的漫堤、淹没及壅水风险。\n3. **洪灾损失评估模型**：阐述了通过确定洪水影响指标、损失率及叠加分析等步骤，对实际或模拟洪水淹没范围内的受灾损失进行定量评估的流程。"
+                },
+                {
+                  "title": "洪灾损失评估模型",
+                  "start_index": 19,
+                  "end_index": 20,
+                  "node_id": "0019",
+                  "summary": "该文档片段主要介绍了水利管理中的三类核心模型及其应用：\n\n1. **闸门故障风险分析模型**：针对合河闸、大李庄闸等五座重要拦河闸，模拟其在洪水过程中因无法开启或关闭导致的漫堤、淹没及壅水风险。\n2. **洪灾损失评估模型**：通过确定洪水影响指标和损失率，对实际及模拟洪水造成的损失进行展布与叠加分析，评估淹没范围内的灾害影响。\n3. **遥感智能分析模型**：依托省级数字孪生平台，利用人工智能技术对卫共流域的多源遥感影像进行智能解译，实现地物分类、变化检测与目标识别，为水利“四预”监测预警提供动态数据支撑。"
+                }
+              ],
+              "node_id": "0009",
+              "summary": "该文档片段主要介绍了卫共流域防洪“四预”能力提升系统中的数据资源管理与模型构建方案，核心内容包括：\n\n1. **防汛业务数据资源目录**：阐述了资源目录的定义与功能，即通过规范的元数据描述和分类编码，实现对防汛信息资源及数据服务的检索、定位、获取与有效管理，以提升共享效果。\n2. **数据共享服务**：明确了在权限管控前提下的数据共享流程，涵盖需求匹配、获取途径（如API接口、消息订阅、文件下载）、资源申请流程以及日志监控分析。\n3. **洪水预报模型**：介绍了模型库中水利专业模型的研究，重点说明了洪水预报模型在预测洪峰、流量及洪水过程中的作用。针对卫共流域，提出应用新安江、API等多种模型进行产汇流计算，旨在将重点河道洪水预见期提升至72小时，并指出准确划分子流域是构建模型的基础。"
+            },
+            {
+              "title": "智能识别模型",
+              "start_index": 20,
+              "end_index": 20,
+              "nodes": [
+                {
+                  "title": "遥感智能分析",
+                  "start_index": 20,
+                  "end_index": 21,
+                  "node_id": "0021",
+                  "summary": "该文档片段主要介绍了卫共流域数字孪生建设中的智能识别模型与模拟仿真引擎。核心内容包括：1. 遥感智能分析：利用多源遥感数据和AI技术实现地物分类、变化检测及水体信息提取，支撑“四预”监测预警；2. 视频智能分析：通过现有视频监控网实现对水域漂浮物、违规机械、堤岸损毁及水尺的自动化AI识别，优化人工巡查模式；3. 模拟仿真引擎：依托数据底板，通过多维时序数据驱动，实现流域物理实体与虚拟实体的实时交互、深度融合及动态展示。"
+                },
+                {
+                  "title": "视频智能分析",
+                  "start_index": 21,
+                  "end_index": 21,
+                  "node_id": "0022",
+                  "summary": "本部分文档主要介绍了水利数字孪生平台中视频智能分析与模拟仿真引擎的核心功能。在视频智能分析方面，通过接入AI识别模型，利用视频监控网络实现对水域漂浮物、工程车、堤岸损毁、采砂机械及水尺等目标的自动检测与定位，旨在优化传统人工巡查模式。在模拟仿真引擎方面，通过汇聚并处理多源多维监测数据，研究时序事件驱动的动态展示技术，以实现流域物理实体与虚拟实体的实时交互和深度融合。"
+                }
+              ],
+              "node_id": "0020",
+              "summary": "This partial document outlines technical models for flood damage assessment and intelligent recognition within a digital twin framework. It specifically details the integration of remote sensing intelligent analysis models to achieve automated interpretation and recognition in the Wei Gong Basin. Key points include the use of multi-source remote sensing data fusion and AI technologies for land cover classification, change detection, and the identification of water bodies and construction projects to support dynamic monitoring and early warning capabilities."
+            },
+            {
+              "title": "模拟仿真引擎",
+              "start_index": 21,
+              "end_index": 22,
+              "node_id": "0023",
+              "summary": "The provided document fragment details technical components of a digital twin platform for the Weigong River Basin, focusing on three main areas:\n\n1. **Video Intelligent Analysis**: Describes the integration of AI-driven recognition models to automate the detection of specific activities and conditions, such as floating debris, engineering vehicles, embankment damage, and water levels, aimed at replacing traditional manual inspections.\n2. **Simulation Engine**: Outlines the use of a provincial-level simulation engine to achieve real-time interaction between physical and virtual entities. It supports dynamic display, historical playback, and operational simulation by processing multi-source, multi-dimensional time-series data.\n3. **Model Management Platform**: Details the establishment of a centralized system for managing basin models. Its functions include classification, parameter modification, scheme control (calculation, pausing, and querying), and service interface management."
+            },
+            {
+              "title": "模型管理平台",
+              "start_index": 22,
+              "end_index": 24,
+              "node_id": "0024",
+              "summary": "This partial document outlines the technical components of a digital twin platform for the Wei-Gong River Basin, specifically focusing on simulation capabilities, model management, and knowledge base construction. Key points include:\n\n1. **Model Management Platform**: Utilizing a simulation engine for dynamic modeling and historical event playback. The platform provides comprehensive management functions such as model classification, parameter modification, scenario control (start/stop/query), and API management to support watershed maintenance.\n\n2. **Knowledge Base**: The establishment of a centralized repository to support decision-making, categorized into four main modules:\n   - **Business Rules Base**: Managing operational rules for reservoirs, flood storage areas, and water gates.\n   - **Historical Scenario Base**: Archiving data from major past water events and dispatching cases.\n   - **Expert Experience Base**: Storing research reports, key indicators, and technical expertise regarding hydrological forecasting and flood control.\n   - **Forecast and Dispatching Scheme Base**: Containing specific plans for flood forecasting and emergency water dispatching for reservoirs and river channels."
+            }
+          ],
+          "node_id": "0008",
+          "summary": "该文档片段主要介绍了卫共流域防洪“四预”能力提升系统中的数据管理与模型构建方案，其核心要点包括：\n\n1.  **防汛业务数据资源目录**：通过标准化的元数据描述和分类编码，建立防汛信息资源与数据服务的索引体系，以实现资源的精准检索、定位、获取及有效管理。\n2.  **数据共享服务**：阐述了在权限管控下的数据共享机制，包括共享流程（资源申请、日志记录、监控统计）以及多样化的共享手段（如定制化标准接口、消息订阅和文件下载）。\n3.  **洪水预报模型构建**：介绍了模型库中水利专业模型的作用，重点提及针对卫共流域特点，利用新安江、API等多种水文模型进行产汇流计算，旨在将重点河道的洪水预见期提升至72小时，并强调了子流域精确划分对模型构建的重要性。"
+        },
+        {
+          "title": "知识库",
+          "start_index": 24,
+          "end_index": 24,
+          "nodes": [
+            {
+              "title": "知识库管理",
+              "start_index": 24,
+              "end_index": 25,
+              "node_id": "0026",
+              "summary": "该文档片段详细介绍了水利知识库（2.1.3）的建设内容，主要涵盖知识库管理与知识应用两个核心方面：\n\n1. **知识库管理（2.1.3.1）**：定义了四大核心库的组成，包括**业务规则库**（如水库及蓄滞洪区规则）、**历史场景库**（历年重大水事件资料）、**专家经验库**（预报调度研究成果及指标）以及**预报调度方案库**（洪水及水量调度方案）。同时提及了实体关系、信息及管理界面的展示内容。\n\n2. **知识应用（2.1.3.2）**：重点描述了基于省级数字孪生平台构建的知识引擎。该引擎具备知识表示、抽取、融合、推理及存储功能，并面向流域防洪提供知识问答、智能搜索、解释溯源及精准推荐等智能化服务。"
+            },
+            {
+              "title": "知识应用",
+              "start_index": 25,
+              "end_index": 26,
+              "node_id": "0027",
+              "summary": "The partial document outlines the functional modules and technical capabilities of a digital twin-based flood control system, specifically focusing on the following areas:\n\n1. **Knowledge Application (Section 2.1.3.2):** It describes the construction of a water conservancy knowledge engine for the Weigong River Basin. By reusing provincial digital twin platform capabilities, the system performs knowledge representation, extraction, fusion, and reasoning. It provides intelligent flood control services, including smart search, knowledge traceability, and precise information recommendations.\n\n2. **Flood Control \"Four Pres\" System - Overview (Section 2.1.4.1):** It details a comprehensive overview module designed to support flood control operations through high-fidelity digital twin scene interactions and roaming. \n\n3. **Information Query and Management:** The system facilitates the display and querying of various data layers, including:\n   - **Basin Overview:** Key statistics such as basin area, river characteristics, and the distribution of major reservoirs and flood storage areas.\n   - **Geographic Information:** Queries for river systems, topography, and sub-basin divisions.\n   - **Water Conservancy Projects:** Detailed attribute lists and spatial locations for infrastructure such as large-to-small scale reservoirs, sluices, and flood outlets."
+            }
+          ],
+          "node_id": "0025",
+          "summary": "This partial document describes the \"Knowledge Base Management\" module (Section 2.1.3.1) of a water resource or flood control management system. It outlines four core components of the knowledge base: the Business Rule Library, which contains operational rules for reservoirs and flood zones; the Historical Scenario Library, storing records of major past water events; the Expert Experience Library, featuring research reports and key hydrological indicators; and the Forecast and Scheduling Scheme Library, which includes specific plans for flood forecasting and emergency water scheduling."
+        },
+        {
+          "title": "防洪“四预”系统",
+          "start_index": 26,
+          "end_index": 26,
+          "nodes": [
+            {
+              "title": "概况",
+              "start_index": 26,
+              "end_index": 29,
+              "node_id": "0029",
+              "summary": "该文档主要介绍了防洪“四预”系统中的“概况”与“告警”两大功能模块的具体内容：\n\n1. **概况功能模块（2.1.4.1）：** 该模块旨在为防洪业务提供基础信息支撑。主要功能包括通过高保真数字孪生场景进行三维交互式漫游，以及对流域概况、基础地理信息（水系、地形等）、水利工程信息（水库、闸站、堤防等）、行政区划及交通信息、以及各类监测站点（水位、雨量、视频等）的基础属性进行展示与联动查询。\n\n2. **告警功能模块（2.1.4.2）：** 该模块侧重于实时监测数据的集成与风险预警。主要内容涵盖了气象信息（卫星雷达云图）、雨情、水情、闸站工情、取水口流量、河道生态流量以及工程安全监测（位移、渗流等）的实时展示。当监测数据超过安全阈值时，系统能自动触发告警并推送至管理人员，同时配套视频监测系统进行实时监控与检索回放，辅助防洪决策。"
+            },
+            {
+              "title": "告警",
+              "start_index": 29,
+              "end_index": 32,
+              "node_id": "0030",
+              "summary": "This partial document details two primary functional modules of a basin-wide water conservancy and flood prevention system: **Alarm (2.1.4.2)** and **Forecast (2.1.4.3)**.\n\n1.  **Alarming Module:** This section focuses on real-time monitoring and early warning capabilities. It integrates multi-source data, including meteorology, rainfall, hydrology (river and reservoir levels), sluice gate status, water intake and ecological flow, engineering safety (e.g., displacement and seepage), video surveillance, remote sensing, and AI-driven detection. The system automatically triggers alarms and sends mobile notifications to management personnel when safety thresholds are exceeded, supporting rapid flood control decision-making.\n\n2.  **Forecasting Module:** This section focuses on predictive modeling and analysis. It covers short-to-medium-term grid rainfall predictions (up to 72 hours) and provides flood forecasting for reservoirs, river channels, flood storage areas, and small watersheds. Key features include real-time flood tracking based on hydrodynamic evolution and a dynamic correction mechanism that updates models every 0.5 to 6 hours to ensure high accuracy and minimize cumulative errors in flood predictions."
+            },
+            {
+              "title": "预报",
+              "start_index": 32,
+              "end_index": 34,
+              "node_id": "0031",
+              "summary": "该文档片段详细介绍了水利防汛系统中的“预报”与“预判”两大功能模块及其子功能：\n\n1. **预报模块（2.1.4.3）**：该模块构建了全方位的洪水预测体系，涵盖降雨预测、水库洪水预报、河道洪水预报、蓄滞洪区及小流域山洪预报。系统支持实时洪水追踪与动态校正（如通过最新监测数据修正边界条件以减少误差），并具备预报评估与成果管理功能，旨在为防洪调度提供高精度的过程线数据。\n\n2. **预判模块（2.1.4.4）**：该模块侧重于形势分析与支撑决策。通过纳雨能力分析、洪水来源及组成预判、重要河段潜在风险评估，分析工程实时的防洪能力。其中的“防洪形势分析”功能利用控制站点的拓扑关系，量化分析洪峰与洪量的来源构成，为联合会商和防洪研判提供科学的数据支持。"
+            },
+            {
+              "title": "预判",
+              "start_index": 34,
+              "end_index": 37,
+              "node_id": "0032",
+              "summary": "该文档节选主要介绍了水利管理系统中的“预判”与“预警”两大核心功能：\n\n1. **预判功能（2.1.4.4）**：该模块通过分析雨水情态势，对洪水来源、组成及防洪风险进行评估。具体包括：\n   - **防洪形势分析**：基于站点拓扑关系，分析重要防洪对象的洪水来源、洪峰及洪量组成。\n   - **工程预判**：分别针对水库、河道及蓄滞洪区，结合实时监测、库容曲线、特征水位及降雨预报，自动判断其纳雨能力及超警风险。\n\n2. **预警功能（2.1.4.5）**：该模块利用自动及人工干预的预报结果，与各防洪特征指标对比，实现分级预警。涵盖范围包括：\n   - **多对象预警**：包括水库洪水、河道洪水（分黄色/红色预警）、蓄滞洪区进洪预警以及典型小流域山洪灾害预警。\n   - **特定项目预警**：提及了南水北调风险预警及预警信息的推送功能。"
+            },
+            {
+              "title": "预警",
+              "start_index": 37,
+              "end_index": 39,
+              "node_id": "0033",
+              "summary": "该文档片段主要介绍了水利管理系统中的两个核心功能模块：预警（2.1.4.5）与预演（2.1.4.6）。\n\n1. **预警模块**：详细说明了针对不同场景的洪水预警机制，包括水库洪水、河道洪水（分黄色和红色预警）、蓄滞洪区进洪、典型小流域山洪以及南水北调风险预警。此外，还涵盖了预警信息的推送功能，通过系统平台向相关部门和人员发布并实时更新预警信息。\n\n2. **预演模块**：介绍了用于决策支持的模拟仿真功能。核心内容包括预演情景设置（如降雨强度和时段设定）、全流域洪水调度预演，以及针对水库溃坝、河堤溃决和闸门故障等极端险情的在线模拟，旨在通过模型耦合和参数定制（如溃口位置、宽度等）分析演进过程及潜在风险。"
+            },
+            {
+              "title": "预演",
+              "start_index": 39,
+              "end_index": 43,
+              "node_id": "0034",
+              "summary": "该文档主要介绍了防洪管理系统中的“预演”和“预案”两大核心功能模块。在“预演”模块中，详细阐述了降雨情景设置、洪水调度、水库溃坝、河堤溃决、闸门故障、蓄滞洪区进洪及河道洪水演进等多种场景的模拟功能，并涵盖了实时交互预演、风险分析、逆向推演及预演方案对比等决策支持工具。在“预案”模块中，重点介绍了根据预演方案自动生成洪水风险防范预案的功能，以及对各类防汛和调度预案的电子化管理与查询服务。整体旨在通过数字化模拟与自动化预案生成，为防洪调度和应急处置提供科学的决策依据。"
+            },
+            {
+              "title": "预案",
+              "start_index": 43,
+              "end_index": 44,
+              "node_id": "0035",
+              "summary": "The document describes two main functional modules of a water conservancy or flood control system:\n\n1. **Emergency Plans (2.1.4.7):** This module focuses on the automatic generation of flood risk prevention plans based on simulation scenarios, allowing for online preview and downloading. it also includes the management, electronic storage, and retrieval of associated existing flood prevention and dispatching plans.\n\n2. **Flood Prevention Management (2.1.4.8):** This module covers administrative and operational aspects, including the management of dispatching data and commands, coordination of personnel and emergency rescue teams, tracking of flood control material inventory, digital management of duty rosters and daily reports, and the administration of early warning response mechanisms and responsibilities."
+            },
+            {
+              "title": "防汛管理",
+              "start_index": 44,
+              "end_index": 45,
+              "node_id": "0036",
+              "summary": "This partial document outlines the functional modules for \"Flood Prevention Management\" and \"Flood Prevention Consultation\" within a technical or management system. The \"Flood Prevention Management\" section details five core sub-functions: dispatch plan management (handling data, simulations, and reservoir instructions), personnel management (organizing emergency teams), material management (tracking warehouse storage), duty management (handling rosters, logs, and incident reporting), and warning response management (coordinating roles and response mechanisms for flood scenarios). The \"Flood Prevention Consultation\" section covers disaster site live broadcasting and comprehensive consultation capabilities."
+            },
+            {
+              "title": "防汛会商",
+              "start_index": 45,
+              "end_index": 46,
+              "node_id": "0037",
+              "summary": "The partial document outlines several functional modules of a flood control and management system, specifically focusing on:\n1. **Flood Scheduling and Materials**: Management of scheduling plans and flood prevention resources.\n2. **Flood Control Consultation**: Tools for disaster site live broadcasting and comprehensive consultation meetings.\n3. **Relocation and Evacuation**: Features for managing evacuation plans, risk points, route planning, shelter management, and real-time tracking/simulation of the relocation process.\n4. **Disaster Assessment**: Capabilities for real-time and scenario-based flooding analysis, statistical evaluation of affected populations and land, impact analysis on key enterprises, and the generation of comprehensive loss assessment reports."
+            },
+            {
+              "title": "避险转移",
+              "start_index": 46,
+              "end_index": 46,
+              "node_id": "0038",
+              "summary": "该文档片段主要介绍了防汛管理系统中的三个核心功能模块：防汛会商、避险转移及灾情评估。其中，“避险转移”模块涵盖了预案管理、风险点监控、路线规划、安置区管理、过程追踪及动态模拟等功能；“灾情评估”模块则包括实时与方案淹没分析、受灾人口与土地统计、重点企业受灾分析、综合损失评估及灾情报表生成。"
+            },
+            {
+              "title": "灾情评估",
+              "start_index": 46,
+              "end_index": 47,
+              "node_id": "0039",
+              "summary": "This partial document outlines the functional modules of a disaster management system, specifically focusing on flood control and emergency response. The main points include:\n\n1. **Evacuation and Relocation (避险转移):** Details capabilities for managing evacuation plans, identifying risk points, planning routes, managing resettlement areas, tracking the evacuation process, and generating dynamic simulations.\n2. **Disaster Assessment (灾情评估):** Covers real-time and scenario-based submergence analysis, as well as statistical assessments of affected populations, flooded land, and key enterprises. It also includes comprehensive loss evaluation and report generation.\n3. **Flood Control Consultation (防汛会商):** Mentions the collaborative decision-making component of the flood management process."
+            }
+          ],
+          "node_id": "0028",
+          "summary": "该文档片段主要介绍了防洪“四预”系统中“概况”功能模块的设计与功能。该模块旨在通过高保真数字孪生场景和交互漫游技术，为防洪业务提供基础信息支撑。主要内容包括：流域概况的综合描述（如面积、河道特性、工程分布等）、基础地理信息查询（如水系、地形、子流域划分等）、以及各类水利工程信息（如大中小型水库、拦河闸、分洪口等）的地图交互与列表查询功能。"
+        }
+      ],
+      "node_id": "0002",
+      "summary": "该文档片段主要介绍了卫共流域防洪“四预”能力提升系统中的“数据底板”建设方案。其核心内容包括：\n\n1.  **数据底板的构建与整合**：通过整合共享的L1、L2级流域数据、新采集的高精度地理空间数据（如DOM、DEM、三维实景及BIM模型）、前端监测感知数据及业务管理数据，构建统一的数据底板，并明确了CGCS2000坐标系及1985高程基准等技术标准。\n2.  **数据资源分类**：详细说明了数据资源的五大逻辑分类，包括基础数据（行政与工程信息）、监测数据（水文、雨情及视频监控等）、业务管理数据（洪水与应急预案等）、地理空间数据（L1至L3级）以及跨行业共享数据（气象与社会经济）。\n3.  **建设路径与目标**：依托河南省水利“一张图”平台，通过对现有数据库和新建监测站（如103个视频监控站）数据的收集、整合与完善，建立先进、可靠的数据库体系，旨在为卫共流域防洪“四预”（预报、预警、预演、预案）功能的实现提供坚实的数据支撑。"
+    }
+  ]
+}
