@@ -6,6 +6,7 @@ from datetime import datetime
 from pageindex import page_index_main, config
 from pageindex.page_index_md import md_to_tree
 from pageindex.utils import ConfigLoader, ChatGPT_API, ChatGPT_API_async, get_text_of_pages, remove_fields
+from pageindex.vector_index import get_vector_index, search_documents, build_index_for_document
 import pandas as pd
 
 st.set_page_config(page_title="PageIndex 网页界面", page_icon="🌲", layout="wide")
@@ -90,68 +91,11 @@ def check_duplicate_files(uploaded_files, upload_dir):
                 duplicates.append(uploaded_file.name)
     return duplicates
 
-async def select_relevant_docs(query, docs_info, model):
-    """让 LLM 根据文档名称和描述选择与查询相关的文档。"""
-    prompt = f"""你是一个智能文档路由代理。你有一份包含文档名称和描述的列表。
-用户有一个问题。你的任务是选择可能包含答案的节点 ID（文档文件名）。
-
-问题: {query}
-
-文档列表:
-{json.dumps(docs_info, indent=2, ensure_ascii=False)}
-
-请仅以以下 JSON 格式回复:
-{{
-    "relevant_docs": ["filename1.json", "filename2.json"]
-}}
-如果没有相关文档，返回空列表。"""
-    response = await ChatGPT_API_async(model=model, prompt=prompt)
-    try:
-        content = response.strip()
-        if "```json" in content:
-            content = content.split("```json")[1].split("```")[0].strip()
-        elif "```" in content:
-            content = content.split("```")[1].split("```")[0].strip()
-        return json.loads(content).get("relevant_docs", [])
-    except Exception as e:
-        st.error(f"文档筛选解析失败: {e}")
-        return []
-
-async def tree_search(query, tree, model):
-    # 准备不包含完整文本的树结构用于检索
-    tree_for_search = remove_fields(tree, fields=['text'])
-    
-    search_prompt = f"""你是一个专业的文档检索专家。你将收到一个用户问题和一个文档的层级树结构。
-树中的每个节点都有 `node_id`、`title` 和 `summary`。
-
-你的目标是识别最相关的节点，这些节点包含回答问题所需的信息。
-- 优先选择叶子节点（层级底部的节点），因为它们包含实际的页面内容。
-- 如果信息分布在不同部分，可以选择多个节点。
-- 在 `thinking` 字段中提供你的推理过程。
-
-问题: {query}
-
-文档树结构:
-{json.dumps(tree_for_search, indent=2, ensure_ascii=False)}
-
-请仅以以下 JSON 格式回复:
-{{
-    "thinking": "<逐步推理为什么选择这些节点>",
-    "node_list": ["node_id_1", "node_id_2", ...]
-}}"""
-    response = await ChatGPT_API_async(model=model, prompt=search_prompt)
-    try:
-        content = response.strip()
-        if "```json" in content:
-            content = content.split("```json")[1].split("```")[0].strip()
-        elif "```" in content:
-            content = content.split("```")[1].split("```")[0].strip()
-        return json.loads(content)
-    except Exception as e:
-        return {"thinking": f"解析失败: {e}", "node_list": []}
 
 def get_node_mapping(structure, mapping=None):
-    if mapping is None: mapping = {}
+    """从树结构中构建 node_id 到节点的映射"""
+    if mapping is None: 
+        mapping = {}
     if isinstance(structure, list):
         for item in structure:
             get_node_mapping(item, mapping)
@@ -161,6 +105,23 @@ def get_node_mapping(structure, mapping=None):
         if 'nodes' in structure:
             get_node_mapping(structure['nodes'], mapping)
     return mapping
+
+
+def load_document_structure(doc_name: str, results_dir: str):
+    """加载文档的结构 JSON 文件"""
+    possible_names = [
+        f"{doc_name}_structure.json",
+        f"{doc_name.replace('.pdf', '')}_structure.json",
+        f"{doc_name.replace('.md', '')}_structure.json",
+    ]
+    
+    for name in possible_names:
+        path = os.path.join(results_dir, name)
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+    return None
+
 
 # 侧边栏配置
 st.sidebar.header("模型配置")
@@ -176,13 +137,16 @@ toc_check_pages = st.sidebar.number_input("目录检查页数", value=default_co
 max_pages_per_node = st.sidebar.number_input("每节点最大页数", value=default_config.max_page_num_each_node)
 max_tokens_per_node = st.sidebar.number_input("每节点最大令牌数", value=default_config.max_token_num_each_node)
 
+st.sidebar.header("向量检索配置")
+vector_top_k = st.sidebar.slider("检索结果数量 (Top-K)", min_value=1, max_value=50, value=10)
+
 # 默认设置
 if_add_doc_description = "no"
 if_add_node_text = "no"
 
 st.title("🌲 PageIndex 智能文档代理")
 
-tab1, tab2 = st.tabs(["📄 文档处理", "💬 智能对话"])
+tab1, tab2, tab3 = st.tabs(["📄 文档处理", "💬 智能对话", "📊 向量索引"])
 
 upload_dir = "uploads"
 results_dir = "results"
@@ -246,7 +210,8 @@ with tab1:
                                 if_add_node_id="yes",
                                 if_add_node_summary="yes",
                                 if_add_doc_description=if_add_doc_description,
-                                if_add_node_text=if_add_node_text
+                                if_add_node_text=if_add_node_text,
+                                if_build_vector_index="yes"  # 自动构建向量索引
                             )
                             result = page_index_main(file_path, opt)
                         elif file_extension in [".md", ".markdown"]:
@@ -259,7 +224,8 @@ with tab1:
                                 model=model_name,
                                 if_add_doc_description=(if_add_doc_description == "yes"),
                                 if_add_node_text=True,  # Markdown 文件强制保留完整文本以支持检索
-                                if_add_node_id=True
+                                if_add_node_id=True,
+                                if_build_vector_index=True  # 自动构建向量索引
                             ))
                         
                         # 阶段4: 生成摘要中 (70%)
@@ -313,6 +279,8 @@ with tab1:
         with col_btn:
             if st.button("🗑️ 删除选中", type="secondary"):
                 deleted_files = []
+                vector_index = get_vector_index()
+                
                 for filename, selected in st.session_state.selected_files.items():
                     if selected:
                         # 删除原始文件
@@ -325,6 +293,12 @@ with tab1:
                         json_path = os.path.join(results_dir, f"{file_base_name}_structure.json")
                         if os.path.exists(json_path):
                             os.remove(json_path)
+                        
+                        # 删除向量索引
+                        try:
+                            vector_index.delete_document(file_base_name)
+                        except Exception as e:
+                            st.warning(f"删除 {file_base_name} 的向量索引失败: {e}")
                         
                         deleted_files.append(filename)
                 
@@ -376,128 +350,115 @@ with tab1:
             st.empty()
         st.info("暂无已上传的文件。请上传文件进行处理。")
 
-# 选项卡 2: 智能对话 (RAG)
+# 选项卡 2: 智能对话 (RAG) - 使用向量检索
 with tab2:
     st.header("跨文档智能对话")
     
-    # 加载所有可用索引
-    available_indices = [f for f in os.listdir(results_dir) if f.endswith("_structure.json")]
+    # 检查向量索引状态
+    try:
+        vector_index = get_vector_index()
+        stats = vector_index.get_stats()
+        
+        if stats["total_nodes"] == 0:
+            st.warning("向量索引为空。请先在「文档处理」选项卡中处理文件，或在「向量索引」选项卡中重建索引。")
+        else:
+            st.success(f"✅ 向量索引就绪：{stats['total_documents']} 个文档，{stats['total_nodes']} 个节点")
+    except Exception as e:
+        st.error(f"向量索引初始化失败: {e}")
+        st.info("请检查 Embedding 模型配置是否正确。")
+
+    # 初始化聊天历史
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    # 创建聊天消息容器
+    chat_container = st.container()
     
-    if not available_indices:
-        st.warning("尚未处理任何文档。请先在「文档处理」选项卡中处理文件。")
-    else:
+    # 聊天输入放在容器外面（底部）
+    query = st.chat_input("向整个文档库提问...")
+    
+    # 在容器内显示聊天消息
+    with chat_container:
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
+                if "thinking" in message and message["thinking"]:
+                    with st.expander("推理检索过程"):
+                        st.markdown(message["thinking"])
+                if "nodes" in message and message["nodes"]:
+                    with st.expander("参考来源"):
+                        for node_info in message["nodes"]:
+                            st.write(node_info)
 
-        # 初始化聊天历史
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
+    # 处理用户输入
+    if query:
+        if not api_key:
+            st.error("请先在侧边栏配置 API 密钥")
+        else:
+            update_api_config(api_key, api_base)
+            st.session_state.messages.append({"role": "user", "content": query})
+            with st.chat_message("user"):
+                st.markdown(query)
 
-        # 创建聊天消息容器
-        chat_container = st.container()
-        
-        # 聊天输入放在容器外面（底部）
-        query = st.chat_input("向整个文档库提问...")
-        
-        # 在容器内显示聊天消息
-        with chat_container:
-            for message in st.session_state.messages:
-                with st.chat_message(message["role"]):
-                    st.markdown(message["content"])
-                    if "thinking" in message and message["thinking"]:
-                        with st.expander("推理检索过程"):
-                            st.markdown(message["thinking"])
-                    if "nodes" in message and message["nodes"]:
-                        with st.expander("参考来源"):
-                            for node_info in message["nodes"]:
-                                st.write(node_info)
-
-        # 处理用户输入
-        if query:
-            if not api_key:
-                st.error("请先在侧边栏配置 API 密钥")
-            else:
-                update_api_config(api_key, api_base)
-                st.session_state.messages.append({"role": "user", "content": query})
-                with st.chat_message("user"):
-                    st.markdown(query)
-
-                with st.chat_message("assistant"):
-                    with st.status("正在进行多文档智能检索...", expanded=True) as status:
-                        # 1. 筛选相关文档
-                        st.write("1. 筛选相关文档...")
-                        docs_info = []
-                        for idx_file in available_indices:
-                            with open(os.path.join(results_dir, idx_file), "r", encoding="utf-8") as f:
-                                data = json.load(f)
-                                docs_info.append({
-                                    "filename": idx_file,
-                                    "doc_name": data.get("doc_name", idx_file),
-                                    "description": data.get("description", "无描述")
-                                })
+            with st.chat_message("assistant"):
+                with st.status("正在进行向量检索...", expanded=True) as status:
+                    thinking_parts = []
+                    all_reference_nodes = []
+                    all_relevant_text = ""
+                    
+                    # 1. 向量检索（毫秒级）
+                    st.write("1. 向量相似度检索...")
+                    try:
+                        search_results = search_documents(query, top_k=vector_top_k)
+                        thinking_parts.append(f"向量检索返回 {len(search_results)} 个相关节点")
+                    except Exception as e:
+                        st.error(f"向量检索失败: {e}")
+                        search_results = []
+                    
+                    if search_results:
+                        # 按文档分组
+                        doc_results = {}
+                        for result in search_results:
+                            doc_name = result["doc_name"]
+                            if doc_name not in doc_results:
+                                doc_results[doc_name] = []
+                            doc_results[doc_name].append(result)
                         
-                        relevant_filenames = asyncio.run(select_relevant_docs(query, docs_info, model_name))
-                        st.write(f"已筛选出 {len(relevant_filenames)} 个相关文档: {relevant_filenames}")
+                        st.write(f"找到 {len(search_results)} 个相关节点，来自 {len(doc_results)} 个文档")
                         
-                        if not relevant_filenames:
-                            if len(available_indices) <= 3:
-                                relevant_filenames = available_indices
-                            else:
-                                st.warning("模型认为没有文档与此问题直接相关。")
-                                relevant_filenames = []
+                        # 2. 内容提取
+                        st.write("2. 提取相关内容...")
+                        for doc_name, results in doc_results.items():
+                            doc_data = load_document_structure(doc_name, results_dir)
+                            if not doc_data:
+                                thinking_parts.append(f"[{doc_name}] 未找到结构文件")
+                                continue
+                            
+                            node_map = get_node_mapping(doc_data.get("structure", []))
+                            
+                            for result in results:
+                                node_id = result["node_id"]
+                                title = result["title"]
+                                score = result.get("score", 0)
+                                
+                                all_reference_nodes.append(f"[{doc_name}] {title} (相似度: {score:.3f})")
+                                
+                                node = node_map.get(node_id)
+                                if node and node.get("text"):
+                                    all_relevant_text += f"\n--- 文档: {doc_name}, 章节: {title} ---\n{node['text']}\n"
+                                elif result.get("summary"):
+                                    all_relevant_text += f"\n--- 文档: {doc_name}, 章节: {title} (摘要) ---\n{result['summary']}\n"
                         
-                        # 2. 在每个相关文档中搜索
-                        all_relevant_text = ""
-                        all_reference_nodes = []
-                        total_thinking = ""
-                        
-                        for idx_file in relevant_filenames:
-                            idx_path = os.path.join(results_dir, idx_file)
-                            if not os.path.exists(idx_path): continue
-                            
-                            with open(idx_path, "r", encoding="utf-8") as f:
-                                index_data = json.load(f)
-                            
-                            doc_display_name = index_data.get('doc_name', idx_file)
-                            st.write(f"正在检索文档: {doc_display_name}...")
-                            
-                            # 对此文档进行树搜索
-                            search_res = asyncio.run(tree_search(query, index_data['structure'], model_name))
-                            if search_res.get('thinking'):
-                                total_thinking += f"**[{doc_display_name}]**: {search_res['thinking']}"
-                            
-                            node_map = get_node_mapping(index_data['structure'])
-                            
-                            pdf_name = index_data.get('doc_name', idx_file.replace("_structure.json", ""))
-                            pdf_path = os.path.join(upload_dir, pdf_name)
-                            if not os.path.exists(pdf_path):
-                                for ext in [".pdf", ".md", ".markdown"]:
-                                    if os.path.exists(pdf_path + ext):
-                                        pdf_path = pdf_path + ext
-                                        break
-
-                            for node_id in search_res.get('node_list', []):
-                                if node_id in node_map:
-                                    node = node_map[node_id]
-                                    title = node.get('title', '未知')
-                                    start_p = node.get('start_index', '?')
-                                    all_reference_nodes.append(f"[{doc_display_name}] {title} (第{start_p}页)")
-                                    
-                                    if node.get('text'):
-                                        all_relevant_text += f"--- 文档: {doc_display_name}, 章节: {title} ---{node['text']}"
-                                    elif os.path.exists(pdf_path) and pdf_path.lower().endswith(".pdf"):
-                                        try:
-                                            page_text = get_text_of_pages(pdf_path, node['start_index'], node['end_index'], tag=False)
-                                            all_relevant_text += f"--- 文档: {doc_display_name}, 章节: {title} ---{page_text}"
-                                        except Exception as e:
-                                            pass
-                        
-                        st.write("3. 整合知识生成回答...")
-                        status.update(label="多文档检索完成", state="complete", expanded=False)
-
-                    # 3. 最终答案生成
-                    if not all_relevant_text:
-                        full_answer = "抱歉，检索过程未能从相关文档中提取到足够的原文内容。请确保文档已正确处理且文件未被移动。"
+                        st.write("3. 生成回答...")
+                        status.update(label="向量检索完成", state="complete", expanded=False)
                     else:
-                        answer_prompt = f"""你是一个专业的研究助手。你有来自多个来源的文档片段。
+                        status.update(label="未找到相关内容", state="error", expanded=False)
+
+                # 3. 生成答案
+                if not all_relevant_text.strip():
+                    full_answer = "抱歉，未能从文档库中找到与您问题相关的内容。请尝试换一种方式提问，或确保相关文档已被处理。"
+                else:
+                    answer_prompt = f"""你是一个专业的研究助手。你有来自多个来源的文档片段。
 根据提供的上下文回答用户的问题。
 如果来源有冲突的信息，请提及。
 在回答中始终引用文档名称。
@@ -508,21 +469,130 @@ with tab2:
 {all_relevant_text[:15000]}
 
 助手:"""
+                    try:
                         full_answer = ChatGPT_API(model=model_name, prompt=answer_prompt)
+                    except Exception as e:
+                        full_answer = f"答案生成失败: {str(e)}"
+                
+                st.markdown(full_answer)
+                if all_reference_nodes:
+                    with st.expander("参考来源"):
+                        for node_info in all_reference_nodes:
+                            st.write(node_info)
+                
+                # 保存历史记录
+                st.session_state.messages.append({
+                    "role": "assistant", 
+                    "content": full_answer,
+                    "thinking": "\n".join(thinking_parts),
+                    "nodes": all_reference_nodes
+                })
+
+# 选项卡 3: 向量索引管理
+with tab3:
+    st.header("向量索引管理")
+    
+    # 显示索引统计
+    try:
+        vector_index = get_vector_index()
+        stats = vector_index.get_stats()
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("总节点数", stats["total_nodes"])
+        with col2:
+            st.metric("已索引文档数", stats["total_documents"])
+        with col3:
+            st.metric("索引状态", "正常" if stats["total_nodes"] > 0 else "空")
+        
+        if stats["documents"]:
+            st.subheader("已索引文档列表")
+            for doc in stats["documents"]:
+                node_count = vector_index.get_document_node_count(doc)
+                st.write(f"- **{doc}**: {node_count} 个节点")
+    except Exception as e:
+        st.error(f"获取索引统计失败: {e}")
+    
+    st.markdown("---")
+    
+    # 索引操作
+    col_rebuild, col_clear = st.columns(2)
+    
+    with col_rebuild:
+        if st.button("🔄 重建所有索引", type="primary"):
+            with st.spinner("正在重建索引..."):
+                try:
+                    vector_index = get_vector_index()
                     
-                    st.markdown(full_answer)
-                    if all_reference_nodes:
-                        with st.expander("参考来源"):
-                            for node_info in all_reference_nodes:
-                                st.write(node_info)
+                    structure_files = [f for f in os.listdir(results_dir) if f.endswith("_structure.json")]
                     
-                    # 保存历史记录
-                    st.session_state.messages.append({
-                        "role": "assistant", 
-                        "content": full_answer,
-                        "thinking": total_thinking,
-                        "nodes": all_reference_nodes
-                    })
+                    if not structure_files:
+                        st.warning("没有找到任何结构文件")
+                    else:
+                        progress = st.progress(0)
+                        rebuilt_count = 0
+                        
+                        for i, filename in enumerate(structure_files):
+                            try:
+                                filepath = os.path.join(results_dir, filename)
+                                with open(filepath, "r", encoding="utf-8") as f:
+                                    data = json.load(f)
+                                
+                                doc_name = data.get("doc_name", filename.replace("_structure.json", ""))
+                                doc_description = data.get("doc_description", "")
+                                structure = data.get("structure", [])
+                                
+                                node_count = vector_index.add_document(doc_name, structure, doc_description)
+                                rebuilt_count += 1
+                                
+                            except Exception as e:
+                                st.warning(f"重建 {filename} 失败: {e}")
+                            
+                            progress.progress((i + 1) / len(structure_files))
+                        
+                        st.success(f"✅ 索引重建完成！共处理 {rebuilt_count} 个文档")
+                        st.rerun()
+                        
+                except Exception as e:
+                    st.error(f"重建索引失败: {e}")
+    
+    with col_clear:
+        if st.button("🗑️ 清空所有索引", type="secondary"):
+            try:
+                vector_index = get_vector_index()
+                docs = vector_index.get_all_documents()
+                
+                for doc in docs:
+                    vector_index.delete_document(doc)
+                
+                st.success(f"✅ 已清空 {len(docs)} 个文档的索引")
+                st.rerun()
+            except Exception as e:
+                st.error(f"清空索引失败: {e}")
+    
+    # Embedding 模型配置信息
+    st.markdown("---")
+    st.subheader("Embedding 模型配置")
+    
+    embedding_model_name = os.getenv("EMBEDDING_MODEL_NAME", "bge-m3:latest")
+    embedding_api_url = os.getenv("EMBEDDING_MODEL_API_URL", "http://10.20.2.135:11434")
+    
+    st.code(f"""
+EMBEDDING_MODEL_NAME={embedding_model_name}
+EMBEDDING_MODEL_API_URL={embedding_api_url}
+EMBEDDING_MODEL_TYPE=ollama
+    """, language="bash")
+    
+    # 测试 Embedding 连接
+    if st.button("🔗 测试 Embedding 连接"):
+        with st.spinner("正在测试连接..."):
+            try:
+                from pageindex.vector_index import OllamaEmbedding
+                embedding_model = OllamaEmbedding()
+                test_embedding = embedding_model.embed("测试文本")
+                st.success(f"✅ 连接成功！Embedding 维度: {len(test_embedding)}")
+            except Exception as e:
+                st.error(f"❌ 连接失败: {e}")
 
 st.markdown("---")
-st.caption("由 PageIndex 框架驱动 - 无向量推理 RAG")
+st.caption("由 PageIndex 框架驱动 - 混合向量检索 RAG")

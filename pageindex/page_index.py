@@ -1083,25 +1083,41 @@ def page_index_main(doc, opt=None):
             await generate_summaries_for_structure(structure, model=opt.model)
             if opt.if_add_node_text == 'no':
                 remove_structure_text(structure)
-            if opt.if_add_doc_description == 'yes':
-                # Create a clean structure without unnecessary fields for description generation
-                clean_structure = create_clean_structure_for_description(structure)
-                doc_description = generate_doc_description(clean_structure, model=opt.model)
-                return {
-                    'doc_name': get_pdf_name(doc),
-                    'doc_description': doc_description,
-                    'structure': structure,
-                }
-        return {
-            'doc_name': get_pdf_name(doc),
+        
+        doc_name = get_pdf_name(doc)
+        doc_description = ""
+        
+        if opt.if_add_doc_description == 'yes':
+            # Create a clean structure without unnecessary fields for description generation
+            clean_structure = create_clean_structure_for_description(structure)
+            doc_description = generate_doc_description(clean_structure, model=opt.model)
+        
+        result = {
+            'doc_name': doc_name,
             'structure': structure,
         }
+        
+        if doc_description:
+            result['doc_description'] = doc_description
+        
+        # 构建向量索引（如果启用）
+        if getattr(opt, 'if_build_vector_index', 'yes') == 'yes':
+            try:
+                from .vector_index import build_index_for_document
+                print(f"正在为 {doc_name} 构建向量索引...")
+                node_count = build_index_for_document(doc_name, structure, doc_description)
+                print(f"向量索引构建完成，共 {node_count} 个节点")
+            except Exception as e:
+                print(f"向量索引构建失败: {e}")
+        
+        return result
 
     return asyncio.run(page_index_builder())
 
 
 def page_index(doc, model=None, toc_check_page_num=None, max_page_num_each_node=None, max_token_num_each_node=None,
-               if_add_node_id=None, if_add_node_summary=None, if_add_doc_description=None, if_add_node_text=None):
+               if_add_node_id=None, if_add_node_summary=None, if_add_doc_description=None, if_add_node_text=None,
+               if_build_vector_index=None):
     
     user_opt = {
         arg: value for arg, value in locals().items()

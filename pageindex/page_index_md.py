@@ -243,7 +243,7 @@ def clean_tree_for_output(tree_nodes):
     return cleaned_nodes
 
 
-async def md_to_tree(md_path, if_thinning=False, min_token_threshold=None, if_add_node_summary='no', summary_token_threshold=None, model=None, if_add_doc_description='no', if_add_node_text='no', if_add_node_id='yes'):
+async def md_to_tree(md_path, if_thinning=False, min_token_threshold=None, if_add_node_summary='no', summary_token_threshold=None, model=None, if_add_doc_description='no', if_add_node_text='no', if_add_node_id='yes', if_build_vector_index='yes'):
     with open(md_path, 'r', encoding='utf-8') as f:
         markdown_content = f.read()
     
@@ -294,10 +294,25 @@ async def md_to_tree(md_path, if_thinning=False, min_token_threshold=None, if_ad
         else:
             tree_structure = format_structure(tree_structure, order = ['title', 'node_id', 'summary', 'prefix_summary', 'line_num', 'nodes'])
     
-    return {
-        'doc_name': os.path.splitext(os.path.basename(md_path))[0],
+    doc_name = os.path.splitext(os.path.basename(md_path))[0]
+    doc_description = ""
+    
+    result = {
+        'doc_name': doc_name,
         'structure': tree_structure,
     }
+    
+    # 构建向量索引（如果启用）
+    if if_build_vector_index == 'yes' or if_build_vector_index == True:
+        try:
+            from .vector_index import build_index_for_document
+            print(f"正在为 {doc_name} 构建向量索引...")
+            node_count = build_index_for_document(doc_name, tree_structure, doc_description)
+            print(f"向量索引构建完成，共 {node_count} 个节点")
+        except Exception as e:
+            print(f"向量索引构建失败: {e}")
+    
+    return result
 
 
 if __name__ == "__main__":

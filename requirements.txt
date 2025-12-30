@@ -6,3 +6,9 @@ tiktoken==0.11.0
 pyyaml==6.0.2
 fastapi==0.109.0
 uvicorn==0.27.0
+streamlit>=1.28.0
+pandas>=2.0.0
+
+# 向量检索依赖
+chromadb>=0.4.0
+requests>=2.31.0
