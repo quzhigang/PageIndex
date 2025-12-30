@@ -1,0 +1,110 @@
+{
+  "doc_name": "蓄滞洪区基本信息",
+  "structure": [
+    {
+      "title": "柳围坡蓄滞洪区 (LWP_ZHQ)",
+      "node_id": "0001",
+      "text": "## 柳围坡蓄滞洪区 (LWP_ZHQ)\n\n位置：位于卫河右岸的新乡市的卫辉市、鹤壁市的浚县境内，是太行山洪积和黄河冲积平原过渡的封闭洼地，历史上为自然滞洪坡洼。\n\n滞洪量：0.95 亿m³\n\n滞洪水位：65.05 m\n\n进洪建筑物：宋村分洪堰\n\n退洪建筑物：南北长虹渠退水闸\n\n调度规则：良相坡良相村水位超过67.34米时，扒开宋村分洪堰上土堤，分洪进柳围坡蓄滞洪区。\n\n面积：78.97 k㎡\n\n人口：3.6 万人\n\n耕地：9.2 万亩\n\n口门形式：分洪堰（扒口）\n\n区内水位站：军营",
+      "line_num": 1,
+      "summary": "该文档片段介绍了柳围坡蓄滞洪区（LWP_ZHQ）的基本概况，涵盖了其地理位置、蓄洪规模（滞洪量、水位、面积）、进退洪工程设施、具体的调度规则（触发分洪的水位条件）以及区内的人口、耕地和社会经济指标等关键信息。"
+    },
+    {
+      "title": "良相坡蓄滞洪区（下片） (LXP_DOWN_ZHQ)",
+      "node_id": "0002",
+      "text": "## 良相坡蓄滞洪区（下片） (LXP_DOWN_ZHQ)\n\n位置：位于卫辉市和淇县境内，处于淇河、卫河、共渠的交汇处，为历史自然蓄滞洪区，进洪地点在共渠左岸豁口和淇河闫村分洪口。\n\n滞洪量：0.25 亿m³\n\n滞洪水位：67.34 m\n\n进洪建筑物：淇河右岸闫村分洪堰、共渠左岸无堤段、沧河、思德河\n\n退洪建筑物：自然退洪\n\n调度规则：\n\n当淇河水位超过闫村分洪堰堰顶高程67.75米时，洪水自然漫溢进入良相坡；\n\n当共渠黄土岗水位超过67.68米时，淇河口以上共渠左岸自然漫溢，洪水进入良相坡蓄滞洪区；\n\n当沧河京广铁路桥下洪水位超过76.20米时或思德河狐仙庙桥下水位超过65.50米时，启用良相坡滞洪区。",
+      "line_num": 26,
+      "summary": "This partial document provides a technical overview of the Liangxiangpo Detention Basin (Lower Section), detailing its geographical location at the confluence of the Qi, Wei, and Gong rivers, its storage capacity of 0.25 billion m³, and its characteristic detention water level. It identifies the specific inlet structures (such as the Yan Village weir and embankment-free sections) and the natural drainage method for flood exit. Additionally, it outlines the precise dispatching rules and water level thresholds for activating the detention area during flood events."
+    },
+    {
+      "title": "小滩坡蓄滞洪区 (XTP_ZHQ)",
+      "node_id": "0003",
+      "text": "## 小滩坡蓄滞洪区 (XTP_ZHQ)\n\n位置：位于鹤壁市的浚县、安阳市的内黄县境内卫河中游右岸。\n\n滞洪量：0.74 亿m³\n\n滞洪水位：58.0 m\n\n进洪建筑物：圈里分洪口\n\n退洪建筑物：浚内沟退水闸\n\n调度规则：当卫河五陵水文站流量超过2000立方米每秒时，扒开卫河右岸圈里口门，向小滩坡蓄滞洪区分洪。\n\n面积：93.19 k㎡\n\n人口：6.3 万人\n\n耕地：10.5 万亩\n\n口门形式：分洪堰（扒口）\n\n区内水位站：王庄",
+      "line_num": 47,
+      "summary": "该文档片段详细介绍了小滩坡蓄滞洪区（XTP_ZHQ）的基本概况，主要包括其地理位置（横跨鹤壁浚县与安阳内黄县）、技术指标（蓄滞洪量、水位、面积及耕地）、社会经济概况（人口数量）、进退洪工程设施、调度触发规则（基于卫河五陵水文站流量）以及区内监测站点等核心信息。"
+    },
+    {
+      "title": "共渠西蓄滞洪区（上片） (GQX_UP_ZHQ)",
+      "node_id": "0004",
+      "text": "## 共渠西蓄滞洪区（上片） (GQX_UP_ZHQ)\n\n位置：位于共产主义渠淇河口以下的西侧，由上下两片洼地组成，共渠西蓄滞洪区设计蓄滞洪水位上片。\n\n滞洪量：0.25 亿m³\n\n滞洪水位：63.5 m\n\n进洪建筑物：上片的进洪方式为扒口进洪，扒口地点在淇河左岸刘庄村西刘庄口门\n\n退洪建筑物：长丰沟退水闸\n\n调度规则：当共渠刘庄站水位达到保证水位65.42米（85基准高程，冻结高程为66.20米）（保证流量400立方米每秒）且继续上涨时，视上游来水情况相机扒开淇河左岸刘庄分洪堰上土堤，启用共渠西蓄滞洪区上片。",
+      "line_num": 72,
+      "summary": "This partial document provides a technical overview of the Upper Section of the Gongquxi Flood Storage and Detention Basin (GQX_UP_ZHQ). It covers key specifications including its geographic location, storage capacity (0.25 billion m³), and design water level (63.5 m). Additionally, it details the infrastructure for flood entry (Liuzhuang breach) and exit (Changfenggou drainage sluice), alongside the specific hydrological criteria and dispatch rules for its activation."
+    },
+    {
+      "title": "共渠西蓄滞洪区（下片） (GQX_DOWN_ZHQ)",
+      "node_id": "0005",
+      "text": "## 共渠西蓄滞洪区（下片） (GQX_DOWN_ZHQ)\n\n位置：位于共产主义渠淇河口以下的西侧，由上下两片洼地组成，共渠西蓄滞洪区设计蓄滞洪水位上片。\n\n滞洪量：0.35 亿m³\n\n滞洪水位：60.0 m\n\n进洪建筑物：下片自然漫溢进洪\n\n退洪建筑物：长丰沟退水闸\n\n调度规则：共渠西蓄滞洪区上片洪水通过长丰沟退入共渠西下片",
+      "line_num": 87,
+      "summary": "## 共渠西蓄滞洪区（下片） (GQX_DOWN_ZHQ)\n\n位置：位于共产主义渠淇河口以下的西侧，由上下两片洼地组成，共渠西蓄滞洪区设计蓄滞洪水位上片。\n\n滞洪量：0.35 亿m³\n\n滞洪水位：60.0 m\n\n进洪建筑物：下片自然漫溢进洪\n\n退洪建筑物：长丰沟退水闸\n\n调度规则：共渠西蓄滞洪区上片洪水通过长丰沟退入共渠西下片"
+    },
+    {
+      "title": "广润坡蓄滞洪区 (GRP_ZHQ)",
+      "node_id": "0006",
+      "text": "## 广润坡蓄滞洪区 (GRP_ZHQ)\n\n位置：位于汤河中下游，分一级和二级蓄滞洪区。\n\n滞洪量：2.48 亿m³\n\n滞洪水位：57/56 m\n\n进洪建筑物：双石桥溢流堰、洪河、茶店坡河、王贵庄溢流堰\n\n退洪建筑物：田大晁退水闸\n\n调度规则：\n\n当汤河双石桥水位超过61.40米洪水通过汤河左堤溢流堰自然漫溢进入广润坡一级蓄滞洪区；\n\n当汤河双石桥与洪河汪流屯、茶店河内黄至安阳快速通道桥3处河道来水量合计大于300立方米每秒，且...\n\n面积：152.79 k㎡\n\n人口：16.5 万人\n\n耕地：21.2 万亩\n\n口门形式：分洪堰（溢流）\n\n区内水位站：王贵庄",
+      "line_num": 102,
+      "summary": "该文档片段介绍了广润坡蓄滞洪区（GRP_ZHQ）的基本概况，涵盖了其地理位置、蓄滞洪能力（库容与设计水位）、关键进退洪工程设施、基于水位与流量的调度触发规则，以及该区域的面积、人口、耕地等社会经济数据和水位监测站信息。"
+    },
+    {
+      "title": "良相坡蓄滞洪区（上片） (LXP_UP_ZHQ)",
+      "node_id": "0007",
+      "text": "## 良相坡蓄滞洪区（上片） (LXP_UP_ZHQ)\n\n位置：位于卫辉市和淇县境内，处于淇河、卫河、共渠的交汇处，为历史自然蓄滞洪区，进洪地点在共渠左岸豁口和淇河闫村分洪口。\n\n滞洪量：0.67 亿m³\n\n滞洪水位：67.34 m\n\n进洪建筑物：淇河右岸闫村分洪堰、共渠左岸无堤段、沧河、思德河\n\n退洪建筑物：自然退洪\n\n调度规则：\n\n当淇河水位超过闫村分洪堰堰顶高程67.75米时，洪水自然漫溢进入良相坡；\n\n当共渠黄土岗水位超过67.68米时，淇河口以上共渠左岸自然漫溢，洪水进入良相坡蓄滞洪区；\n\n当沧河京广铁路桥下洪水位超过76.20米时或思德河狐仙庙桥下水位超过65.50米时，启用良相坡滞洪区。",
+      "line_num": 131,
+      "summary": "The provided text outlines the technical specifications and operational guidelines for the Liangxiangpo (Upper Part) Flood Storage and Detention Basin (LXP_UP_ZHQ). The main points covered include:\n\n*   **Geographical Location:** Situated in Weihui City and Qi County at the confluence of the Qi River, Wei River, and Gong Canal.\n*   **Technical Parameters:** Specifies a flood storage capacity of 0.67 billion m³ and a design storage water level of 67.34 m.\n*   **Infrastructure:** Identifies specific inlet structures (such as the Yan Village flood diversion weir and river sections) and notes that flood discharge occurs naturally.\n*   **Operational Rules:** Details the precise water level thresholds for the Qi River, Gong Canal, Cang River, and Side River that trigger the activation of the flood storage area."
+    },
+    {
+      "title": "良相坡蓄滞洪区 (LXP_ZHQ)",
+      "node_id": "0008",
+      "text": "## 良相坡蓄滞洪区 (LXP_ZHQ)\n\n位置：位于卫辉市和淇县境内，处于淇河、卫河、共渠的交汇处，为历史自然蓄滞洪区，进洪地点在共渠左岸豁口和淇河闫村分洪口。\n\n滞洪量：0.92 亿m³\n\n滞洪水位：67.34 m\n\n进洪建筑物：淇河右岸闫村分洪堰、共渠左岸无堤段、沧河、思德河\n\n退洪建筑物：自然退洪\n\n调度规则：\n\n当淇河水位超过闫村分洪堰堰顶高程67.75米时，洪水自然漫溢进入良相坡；\n\n当共渠黄土岗水位超过67.68米时，淇河口以上共渠左岸自然漫溢，洪水进入良相坡蓄滞洪区；\n\n当沧河京广铁路桥下洪水位超过76.20米时...\n\n面积：70.52 k㎡\n\n人口：4.5 万人\n\n耕地：10.8 万亩\n\n口门形式：分洪堰（溢流）+自然漫溢\n\n区内水位站：城关墙",
+      "line_num": 152,
+      "summary": "This document provides a technical overview of the Liangxiangpo Flood Storage and Detention Basin (LXP_ZHQ), detailing its geographical location at the confluence of the Qi River, Wei River, and Gong Canal. It outlines key specifications including flood storage capacity, area, population, and land use, while describing the inflow and outflow structures and the specific operational rules triggered by water level thresholds in the surrounding river systems."
+    },
+    {
+      "title": "共渠西蓄滞洪区 (GQX_ZHQ)",
+      "node_id": "0009",
+      "text": "## 共渠西蓄滞洪区 (GQX_ZHQ)\n\n位置：位于共产主义渠淇河口以下的西侧，由上下两片洼地组成。\n\n滞洪量：0.6 亿m³\n\n滞洪水位：63.5/60 m\n\n进洪建筑物：上片的进洪方式为扒口进洪，扒口地点在淇河左岸刘庄村西刘庄口门；下片自然漫溢进洪\n\n退洪建筑物：长丰沟退水闸\n\n调度规则：\n\n当共渠刘庄站水位达到保证水位65.42米且继续上涨时，视上游来水情况相机扒开淇河左岸刘庄分洪堰上土堤，启用共渠西蓄滞洪区上片；\n\n共渠西蓄滞洪区上片洪水通过长丰沟退入共渠西下片\n\n面积：65.47 k㎡\n\n人口：7.3 万人\n\n耕地：9.6 万亩\n\n口门形式：分洪堰（扒口）+自然漫溢\n\n区内水位站：李桥/白寺",
+      "line_num": 183,
+      "summary": "这份文档详细介绍了共渠西蓄滞洪区（GQX_ZHQ）的基本概况，主要内容包括：其地理位置（位于共产主义渠淇河口以下西侧，分上下两片）；关键技术指标（0.6亿m³滞洪量、滞洪水位及面积、人口、耕地等社会经济数据）；进退洪方式（扒口进洪、自然漫溢及长丰沟退水闸）；以及具体的调度规则（以共渠刘庄站水位为启用标准）和区内水位监测站信息。"
+    },
+    {
+      "title": "长虹渠蓄滞洪区 (CHQ_ZHQ)",
+      "node_id": "0010",
+      "text": "## 长虹渠蓄滞洪区 (CHQ_ZHQ)\n\n位置：位于卫河右岸的鹤壁市的浚县、安阳市的滑县境内，是太行山洪积和黄河冲积平原过渡的封闭洼地，历史上是自然滞洪蓄洪的坡洼。\n\n滞洪量：1.19 亿m³\n\n滞洪水位：62.49 m\n\n进洪建筑物：长虹渠分洪闸和分洪堰\n\n退洪建筑物：长虹渠退水闸\n\n调度规则：当上游来水较大，小河口节制闸控泄后，若卫河淇门站流量仍超过400立方米每秒，水位超过65.32米且继续上涨时，逐渐开启长虹渠分洪闸和分洪堰（先闸后堰），保证卫河淇门站水位不再上涨。\n\n面积：85.56 k㎡\n\n人口：3.9 万人\n\n耕地：11.0 万亩\n\n口门形式：分洪闸+分洪堰（扒口）\n\n区内水位站：牛寨",
+      "line_num": 212,
+      "summary": "This partial document provides a technical and socio-economic overview of the Changhongqu Detention Basin (CHQ_ZHQ). It details the basin's location between Xunxian and Huaxian, its physical capacities (storage volume, area, and water levels), and its socio-economic characteristics (population and farmland). Additionally, it describes the hydraulic infrastructure for flood inflow and outflow, the specific operational rules for flood dispatch based on Wei River water levels, and the designated internal monitoring station."
+    },
+    {
+      "title": "任固坡蓄滞洪区 (RGP_ZHQ)",
+      "node_id": "0011",
+      "text": "## 任固坡蓄滞洪区 (RGP_ZHQ)\n\n位置：位于卫河中游左岸汤阴、内黄县境内。\n\n滞洪量：1.91 亿m³\n\n滞洪水位：56.5 m\n\n进洪建筑物：汤阴县北五陵卫河左堤扒口分洪\n\n退洪建筑物：赵王沟退水闸、红卫沟退水闸、八里沟退水闸\n\n调度规则：当卫河浚内沟口过水流量超过2000立方米每秒（对应西元村保证水位55.50米）时，在汤阴北五陵东扒卫河左堤分洪入任固坡蓄滞洪区。\n\n面积：165.42 k㎡\n\n人口：10.2 万人\n\n耕地：20.2 万亩\n\n口门形式：分洪堰（扒口）\n\n区内水位站：任固",
+      "line_num": 237,
+      "summary": "This document provides a comprehensive profile of the Rengupo Flood Storage and Detention Area (RGP_ZHQ), detailing its geographical location in Tangyin and Neihuang counties, key hydrological parameters such as storage capacity and water levels, engineering structures for flood intake and discharge, operational dispatch rules based on Wei River flow thresholds, and socio-economic data including area, population, and cultivated land."
+    },
+    {
+      "title": "崔家桥蓄滞洪区 (CJQ_ZHQ)",
+      "node_id": "0012",
+      "text": "## 崔家桥蓄滞洪区 (CJQ_ZHQ)\n\n位置：位于安阳河左岸。\n\n滞洪量：0.61 亿m³\n\n滞洪水位：65.75 m\n\n进洪建筑物：曹马分洪堰、郭盆分洪堰\n\n退洪建筑物：梨园沟退水闸、王家口退水闸\n\n调度规则：自然漫溢\n\n面积：74.54 k㎡\n\n人口：8.7 万人\n\n耕地：8.0 万亩\n\n口门形式：分洪堰（溢流）\n\n区内水位站：崔家桥",
+      "line_num": 262,
+      "summary": "## 崔家桥蓄滞洪区 (CJQ_ZHQ)\n\n位置：位于安阳河左岸。\n\n滞洪量：0.61 亿m³\n\n滞洪水位：65.75 m\n\n进洪建筑物：曹马分洪堰、郭盆分洪堰\n\n退洪建筑物：梨园沟退水闸、王家口退水闸\n\n调度规则：自然漫溢\n\n面积：74.54 k㎡\n\n人口：8.7 万人\n\n耕地：8.0 万亩\n\n口门形式：分洪堰（溢流）\n\n区内水位站：崔家桥"
+    },
+    {
+      "title": "广润坡蓄滞洪区（二级） (GRP2_ZHQ)",
+      "node_id": "0013",
+      "text": "## 广润坡蓄滞洪区（二级） (GRP2_ZHQ)\n\n位置：位于汤河中下游。分一级和二级蓄滞洪区\n\n滞洪量：0.522 亿m³\n\n滞洪水位：55.14 m\n\n进洪建筑物：双石桥溢流堰、洪河、茶店坡河、王贵庄溢流堰\n\n退洪建筑物：田大晁退水闸\n\n调度规则：当广润坡一级蓄滞洪区蓄水位达到57.02米（85基准高程）时，在王贵庄溢洪堰漫流入广润坡二级蓄滞洪区。",
+      "line_num": 287,
+      "summary": "The document provides a technical overview of the Guangrunpo Level 2 Detention Basin (GRP2_ZHQ), including its location in the middle and lower reaches of the Tang River, its flood storage capacity of 0.522 billion m³, and a designated storage water level of 55.14 meters. It lists the specific inflow and outflow structures (such as overflow weirs and sluices) and outlines the operational scheduling rule, which triggers the use of the Level 2 basin when the Level 1 basin reaches a water level of 57.02 meters."
+    },
+    {
+      "title": "白寺坡蓄滞洪区 (BSP_ZHQ)",
+      "node_id": "0014",
+      "text": "## 白寺坡蓄滞洪区 (BSP_ZHQ)\n\n位置：位于卫河、共产主义渠与淇河汇合口下游，卫河与共产主义渠之间鹤壁市的浚县和安阳市的滑县境内。\n\n滞洪量：2.6 亿m³\n\n滞洪水位：61.4 m\n\n进洪建筑物：白寺坡分洪闸堰\n\n退洪建筑物：白寺坡退水闸\n\n调度规则：\n\n当共产主义渠白寺坡分洪闸闸上水位超过61.10米或盐土庄节制闸下泄流量超过1500立方米每秒时，逐渐开启白寺坡分洪闸分洪入白寺坡蓄滞洪区；\n\n当白寺坡分洪闸全部开启后，若闸上水位仍继续...\n\n面积：129.06 k㎡\n\n人口：5.5 万人\n\n耕地：10.1 万亩\n\n口门形式：分洪闸+分洪堰（扒口）\n\n区内水位站：中坡农场",
+      "line_num": 302,
+      "summary": "This document provides a technical overview of the Baishipo Flood Storage and Detention Basin (BSP_ZHQ), detailing its geographic location between the Wei River and Communist Canal, its total storage capacity of 260 million m³, and key dimensions such as area, population, and farmland. It also outlines the operational infrastructure, including inflow and outflow gates, and specifies the flood control dispatch rules based on water levels and discharge thresholds for activating the basin."
+    },
+    {
+      "title": "广润坡蓄滞洪区（一级） (GRP1_ZHQ)",
+      "node_id": "0015",
+      "text": "## 广润坡蓄滞洪区（一级） (GRP1_ZHQ)\n\n位置：位于汤河中下游。分一级和二级蓄滞洪区\n\n滞洪量：0.656 亿m³\n\n滞洪水位：57.02 m\n\n进洪建筑物：双石桥溢流堰、洪河、茶店坡河、王贵庄溢流堰\n\n退洪建筑物：田大晁退水闸\n\n调度规则：\n\n当汤河双石桥水位超过61.40米（85基准高程）洪水通过汤河左堤溢流堰自然漫溢进入广润坡一级蓄滞洪区；\n\n当汤河双石桥与洪河汪流屯、茶店河内黄至安阳快速通道桥3处河道来水量合计大于300立方米每秒，且洪河汪流屯洪水位发生漫溢或茶店河内黄至安阳快速通道桥洪水位发生漫溢时，启用广润坡一级蓄滞洪区。",
+      "line_num": 331,
+      "summary": "This document provides a technical overview of the Guangrunpo Level 1 Flood Storage and Detention Area (GRP1_ZHQ). The main points covered include its geographical location in the lower reaches of the Tang River, its storage capacity and detention water level, the specific engineering structures used for flood intake and discharge, and the detailed dispatch rules and hydrological criteria required for its activation."
+    }
+  ]
+}

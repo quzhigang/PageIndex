@@ -1,0 +1,261 @@
+{
+  "doc_name": "工程安全监测",
+  "structure": [
+    {
+      "title": "工程安全监测站点基础信息文档",
+      "node_id": "0001",
+      "text": "# 工程安全监测站点基础信息文档\n**数据条数:** 33\n---",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "字段说明",
+          "node_id": "0002",
+          "text": "## 字段说明\n\n| 字段名 | 描述 |\n|--------|------|\n| fields | 结果字段信息 |\n| id | 编号 |\n| lgtd | 经度 |\n| lttd | 纬度 |\n| num | 仪器编号 |\n| stcd | 测站编码 |\n| stnm | 站点名称 |\n| sttp | 类型编码 |\n| type | 类型名称 |\n| z | 高度 |",
+          "line_num": 5,
+          "summary": "## 字段说明\n\n| 字段名 | 描述 |\n|--------|------|\n| fields | 结果字段信息 |\n| id | 编号 |\n| lgtd | 经度 |\n| lttd | 纬度 |\n| num | 仪器编号 |\n| stcd | 测站编码 |\n| stnm | 站点名称 |\n| sttp | 类型编码 |\n| type | 类型名称 |\n| z | 高度 |"
+        },
+        {
+          "title": "数据详情",
+          "node_id": "0003",
+          "text": "## 数据详情",
+          "line_num": 20,
+          "nodes": [
+            {
+              "title": "东柏涧水库 (1)",
+              "node_id": "0004",
+              "text": "### 东柏涧水库 (1)\n\n- **id:** 4\n- **stnm:** 东柏涧水库\n- **stcd:** 310K0001\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.115891\n- **lttd:** 36.271529\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 22,
+              "summary": "### 东柏涧水库 (1)\n\n- **id:** 4\n- **stnm:** 东柏涧水库\n- **stcd:** 310K0001\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.115891\n- **lttd:** 36.271529\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "何坟水库 (2)",
+              "node_id": "0005",
+              "text": "### 何坟水库 (2)\n\n- **id:** 7\n- **stnm:** 何坟水库\n- **stcd:** 310K0002\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.114898\n- **lttd:** 36.21771\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 39,
+              "summary": "### 何坟水库 (2)\n\n- **id:** 7\n- **stnm:** 何坟水库\n- **stcd:** 310K0002\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.114898\n- **lttd:** 36.21771\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "五里涧水库 (3)",
+              "node_id": "0006",
+              "text": "### 五里涧水库 (3)\n\n- **id:** 14\n- **stnm:** 五里涧水库\n- **stcd:** 310K0003\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.099226\n- **lttd:** 36.212511\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 56,
+              "summary": "### 五里涧水库 (3)\n\n- **id:** 14\n- **stnm:** 五里涧水库\n- **stcd:** 310K0003\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.099226\n- **lttd:** 36.212511\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "小坟水库 (4)",
+              "node_id": "0007",
+              "text": "### 小坟水库 (4)\n\n- **id:** 5\n- **stnm:** 小坟水库\n- **stcd:** 310K0005\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.167577\n- **lttd:** 36.200821\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 73,
+              "summary": "### 小坟水库 (4)\n\n- **id:** 5\n- **stnm:** 小坟水库\n- **stcd:** 310K0005\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.167577\n- **lttd:** 36.200821\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "石门翁水库 (5)",
+              "node_id": "0008",
+              "text": "### 石门翁水库 (5)\n\n- **id:** 12\n- **stnm:** 石门翁水库\n- **stcd:** 310K0006\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.070047\n- **lttd:** 36.221056\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 90,
+              "summary": "### 石门翁水库 (5)\n\n- **id:** 12\n- **stnm:** 石门翁水库\n- **stcd:** 310K0006\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.070047\n- **lttd:** 36.221056\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "磊口水库 (6)",
+              "node_id": "0009",
+              "text": "### 磊口水库 (6)\n\n- **id:** 20\n- **stnm:** 磊口水库\n- **stcd:** 310K0007\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.981405\n- **lttd:** 36.152681\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 107,
+              "summary": "### 磊口水库 (6)\n\n- **id:** 20\n- **stnm:** 磊口水库\n- **stcd:** 310K0007\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.981405\n- **lttd:** 36.152681\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "众乐水库 (7)",
+              "node_id": "0010",
+              "text": "### 众乐水库 (7)\n\n- **id:** 17\n- **stnm:** 众乐水库\n- **stcd:** 310K0010\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.162942\n- **lttd:** 36.224067\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 124,
+              "summary": "### 众乐水库 (7)\n\n- **id:** 17\n- **stnm:** 众乐水库\n- **stcd:** 310K0010\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.162942\n- **lttd:** 36.224067\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "张北河水库 (8)",
+              "node_id": "0011",
+              "text": "### 张北河水库 (8)\n\n- **id:** 119\n- **stnm:** 张北河水库\n- **stcd:** 310K0013\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.21252\n- **lttd:** 36.037135\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 141,
+              "summary": "### 张北河水库 (8)\n\n- **id:** 119\n- **stnm:** 张北河水库\n- **stcd:** 310K0013\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.21252\n- **lttd:** 36.037135\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "龙泉水库 (9)",
+              "node_id": "0012",
+              "text": "### 龙泉水库 (9)\n\n- **id:** 110\n- **stnm:** 龙泉水库\n- **stcd:** 310K0014\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.17491\n- **lttd:** 36.058446\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 158,
+              "summary": "### 龙泉水库 (9)\n\n- **id:** 110\n- **stnm:** 龙泉水库\n- **stcd:** 310K0014\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.17491\n- **lttd:** 36.058446\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "西龙山水库 (10)",
+              "node_id": "0013",
+              "text": "### 西龙山水库 (10)\n\n- **id:** 122\n- **stnm:** 西龙山水库\n- **stcd:** 310K0016\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.091297\n- **lttd:** 36.09684\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 175,
+              "summary": "### 西龙山水库 (10)\n\n- **id:** 122\n- **stnm:** 西龙山水库\n- **stcd:** 310K0016\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.091297\n- **lttd:** 36.09684\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "四亩地水库 (11)",
+              "node_id": "0014",
+              "text": "### 四亩地水库 (11)\n\n- **id:** 74\n- **stnm:** 四亩地水库\n- **stcd:** 310K0017\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.669765\n- **lttd:** 35.716638\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 192,
+              "summary": "### 四亩地水库 (11)\n\n- **id:** 74\n- **stnm:** 四亩地水库\n- **stcd:** 310K0017\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.669765\n- **lttd:** 35.716638\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "温家沟水库 (12)",
+              "node_id": "0015",
+              "text": "### 温家沟水库 (12)\n\n- **id:** 105\n- **stnm:** 温家沟水库\n- **stcd:** 310K0023\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.224584\n- **lttd:** 35.926649\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 209,
+              "summary": "### 温家沟水库 (12)\n\n- **id:** 105\n- **stnm:** 温家沟水库\n- **stcd:** 310K0023\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.224584\n- **lttd:** 35.926649\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "马家山水库 (13)",
+              "node_id": "0016",
+              "text": "### 马家山水库 (13)\n\n- **id:** 48\n- **stnm:** 马家山水库\n- **stcd:** 310K0026\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.861938\n- **lttd:** 36.177727\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 226,
+              "summary": "### 马家山水库 (13)\n\n- **id:** 48\n- **stnm:** 马家山水库\n- **stcd:** 310K0026\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.861938\n- **lttd:** 36.177727\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "东张水库 (14)",
+              "node_id": "0017",
+              "text": "### 东张水库 (14)\n\n- **id:** 42\n- **stnm:** 东张水库\n- **stcd:** 310K0029\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.849655\n- **lttd:** 36.169209\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 243,
+              "summary": "### 东张水库 (14)\n\n- **id:** 42\n- **stnm:** 东张水库\n- **stcd:** 310K0029\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.849655\n- **lttd:** 36.169209\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "东岗南坡水库 (15)",
+              "node_id": "0018",
+              "text": "### 东岗南坡水库 (15)\n\n- **id:** 39\n- **stnm:** 东岗南坡水库\n- **stcd:** 310K0030\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.900148\n- **lttd:** 36.250685\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 260,
+              "summary": "### 东岗南坡水库 (15)\n\n- **id:** 39\n- **stnm:** 东岗南坡水库\n- **stcd:** 310K0030\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.900148\n- **lttd:** 36.250685\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "杨邑水库 (16)",
+              "node_id": "0019",
+              "text": "### 杨邑水库 (16)\n\n- **id:** 101\n- **stnm:** 杨邑水库\n- **stcd:** 310K0032\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.146241\n- **lttd:** 35.918833\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 277,
+              "summary": "### 杨邑水库 (16)\n\n- **id:** 101\n- **stnm:** 杨邑水库\n- **stcd:** 310K0032\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.146241\n- **lttd:** 35.918833\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "英雄水库 (17)",
+              "node_id": "0020",
+              "text": "### 英雄水库 (17)\n\n- **id:** 49\n- **stnm:** 英雄水库\n- **stcd:** 310K0033\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.740637\n- **lttd:** 35.897328\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 294,
+              "summary": "### 英雄水库 (17)\n\n- **id:** 49\n- **stnm:** 英雄水库\n- **stcd:** 310K0033\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.740637\n- **lttd:** 35.897328\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "军营水库 (18)",
+              "node_id": "0021",
+              "text": "### 军营水库 (18)\n\n- **id:** 45\n- **stnm:** 军营水库\n- **stcd:** 310K0036\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.845714\n- **lttd:** 36.165752\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 311,
+              "summary": "### 军营水库 (18)\n\n- **id:** 45\n- **stnm:** 军营水库\n- **stcd:** 310K0036\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.845714\n- **lttd:** 36.165752\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "横水南坡水库 (19)",
+              "node_id": "0022",
+              "text": "### 横水南坡水库 (19)\n\n- **id:** 32\n- **stnm:** 横水南坡水库\n- **stcd:** 310K0041\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 05\n- **lgtd:** 113.929493\n- **lttd:** 36.091979\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 328,
+              "summary": "### 横水南坡水库 (19)\n\n- **id:** 32\n- **stnm:** 横水南坡水库\n- **stcd:** 310K0041\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 05\n- **lgtd:** 113.929493\n- **lttd:** 36.091979\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "北采桑水库 (20)",
+              "node_id": "0023",
+              "text": "### 北采桑水库 (20)\n\n- **id:** 24\n- **stnm:** 北采桑水库\n- **stcd:** 310K0043\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.897087\n- **lttd:** 36.007733\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 345,
+              "summary": "### 北采桑水库 (20)\n\n- **id:** 24\n- **stnm:** 北采桑水库\n- **stcd:** 310K0043\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.897087\n- **lttd:** 36.007733\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "中张贾水库 (21)",
+              "node_id": "0024",
+              "text": "### 中张贾水库 (21)\n\n- **id:** 97\n- **stnm:** 中张贾水库\n- **stcd:** 310K0045\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.298296\n- **lttd:** 35.930263\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 362,
+              "summary": "### 中张贾水库 (21)\n\n- **id:** 97\n- **stnm:** 中张贾水库\n- **stcd:** 310K0045\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 114.298296\n- **lttd:** 35.930263\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "罗圈水库 (22)",
+              "node_id": "0025",
+              "text": "### 罗圈水库 (22)\n\n- **id:** 127\n- **stnm:** 罗圈水库\n- **stcd:** 310K0046\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.854707\n- **lttd:** 35.931909\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 379,
+              "summary": "### 罗圈水库 (22)\n\n- **id:** 127\n- **stnm:** 罗圈水库\n- **stcd:** 310K0046\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 01\n- **lgtd:** 113.854707\n- **lttd:** 35.931909\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "沙蒋水库 (23)",
+              "node_id": "0026",
+              "text": "### 沙蒋水库 (23)\n\n- **id:** 35\n- **stnm:** 沙蒋水库\n- **stcd:** 310K0049\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 113.885604\n- **lttd:** 36.1255\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 396,
+              "summary": "### 沙蒋水库 (23)\n\n- **id:** 35\n- **stnm:** 沙蒋水库\n- **stcd:** 310K0049\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 113.885604\n- **lttd:** 36.1255\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "楼罗掌水库 (24)",
+              "node_id": "0027",
+              "text": "### 楼罗掌水库 (24)\n\n- **id:** 73\n- **stnm:** 楼罗掌水库\n- **stcd:** 310K0059\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.657245\n- **lttd:** 35.697964\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 413,
+              "summary": "### 楼罗掌水库 (24)\n\n- **id:** 73\n- **stnm:** 楼罗掌水库\n- **stcd:** 310K0059\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.657245\n- **lttd:** 35.697964\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "冯窑水库 (25)",
+              "node_id": "0028",
+              "text": "### 冯窑水库 (25)\n\n- **id:** 70\n- **stnm:** 冯窑水库\n- **stcd:** 310K0060\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.877736\n- **lttd:** 35.484798\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 430,
+              "summary": "### 冯窑水库 (25)\n\n- **id:** 70\n- **stnm:** 冯窑水库\n- **stcd:** 310K0060\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 113.877736\n- **lttd:** 35.484798\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "拍石头水库 (26)",
+              "node_id": "0029",
+              "text": "### 拍石头水库 (26)\n\n- **id:** 94\n- **stnm:** 拍石头水库\n- **stcd:** 310K0061\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 07\n- **lgtd:** 113.796452\n- **lttd:** 35.6052\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 447,
+              "summary": "### 拍石头水库 (26)\n\n- **id:** 94\n- **stnm:** 拍石头水库\n- **stcd:** 310K0061\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 07\n- **lgtd:** 113.796452\n- **lttd:** 35.6052\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "石峪沟水库 (27)",
+              "node_id": "0030",
+              "text": "### 石峪沟水库 (27)\n\n- **id:** 81\n- **stnm:** 石峪沟水库\n- **stcd:** 310K0065\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 05\n- **lgtd:** 113.69694\n- **lttd:** 35.61859\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 464,
+              "summary": "### 石峪沟水库 (27)\n\n- **id:** 81\n- **stnm:** 石峪沟水库\n- **stcd:** 310K0065\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 05\n- **lgtd:** 113.69694\n- **lttd:** 35.61859\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "石桥水库 (28)",
+              "node_id": "0031",
+              "text": "### 石桥水库 (28)\n\n- **id:** 61\n- **stnm:** 石桥水库\n- **stcd:** 310K0075\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 08\n- **lgtd:** 111.903948\n- **lttd:** 33.217225\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 481,
+              "summary": "### 石桥水库 (28)\n\n- **id:** 61\n- **stnm:** 石桥水库\n- **stcd:** 310K0075\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 08\n- **lgtd:** 111.903948\n- **lttd:** 33.217225\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "夏庄水库 (29)",
+              "node_id": "0032",
+              "text": "### 夏庄水库 (29)\n\n- **id:** 63\n- **stnm:** 夏庄水库\n- **stcd:** 310K0076\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 111.903948\n- **lttd:** 33.217225\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 498,
+              "summary": "### 夏庄水库 (29)\n\n- **id:** 63\n- **stnm:** 夏庄水库\n- **stcd:** 310K0076\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 111.903948\n- **lttd:** 33.217225\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "白龙庙水库 (30)",
+              "node_id": "0033",
+              "text": "### 白龙庙水库 (30)\n\n- **id:** 124\n- **stnm:** 白龙庙水库\n- **stcd:** 310K0077\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.130421\n- **lttd:** 35.822394\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 515,
+              "summary": "### 白龙庙水库 (30)\n\n- **id:** 124\n- **stnm:** 白龙庙水库\n- **stcd:** 310K0077\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.130421\n- **lttd:** 35.822394\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "马村水库 (31)",
+              "node_id": "0034",
+              "text": "### 马村水库 (31)\n\n- **id:** 104\n- **stnm:** 马村水库\n- **stcd:** 310K0079\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.253688\n- **lttd:** 35.928941\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 532,
+              "summary": "### 马村水库 (31)\n\n- **id:** 104\n- **stnm:** 马村水库\n- **stcd:** 310K0079\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 03\n- **lgtd:** 114.253688\n- **lttd:** 35.928941\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "红卫水库 (32)",
+              "node_id": "0035",
+              "text": "### 红卫水库 (32)\n\n- **id:** 52\n- **stnm:** 红卫水库\n- **stcd:** 310K0081\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.130114\n- **lttd:** 35.666715\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---",
+              "line_num": 549,
+              "summary": "### 红卫水库 (32)\n\n- **id:** 52\n- **stnm:** 红卫水库\n- **stcd:** 310K0081\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.130114\n- **lttd:** 35.666715\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---"
+            },
+            {
+              "title": "柳林水库 (33)",
+              "node_id": "0036",
+              "text": "### 柳林水库 (33)\n\n- **id:** 89\n- **stnm:** 柳林水库\n- **stcd:** 310K0082\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.129823\n- **lttd:** 35.660994\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---\n\n\n*文档生成完成*",
+              "line_num": 566,
+              "summary": "### 柳林水库 (33)\n\n- **id:** 89\n- **stnm:** 柳林水库\n- **stcd:** 310K0082\n- **sttp:** RR\n- **type:** 渗压计\n- **num:** 02\n- **lgtd:** 114.129823\n- **lttd:** 35.660994\n- **z:** 0.0\n- **fields:** {\"value3\":\"水位(m)\"}\n\n\n\n---\n\n\n*文档生成完成*"
+            }
+          ],
+          "prefix_summary": "## 数据详情"
+        }
+      ],
+      "prefix_summary": "# 工程安全监测站点基础信息文档\n**数据条数:** 33\n---"
+    }
+  ]
+}

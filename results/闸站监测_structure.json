@@ -1,0 +1,338 @@
+{
+  "doc_name": "闸站监测",
+  "structure": [
+    {
+      "title": "闸站监测 数据文档",
+      "node_id": "0001",
+      "text": "# 闸站监测 数据文档\n\n**数据条数:** 44\n\n---",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "字段说明",
+          "node_id": "0002",
+          "text": "## 字段说明\n\n| 字段名 | 描述 |\n|--------|------|\n| atriver | 所在河道 |\n| code | 编码 |\n| datum | 闸底高程 |\n| discharge | 设计流量(m³/s) |\n| dwz | 下游水位（m） |\n| height | 闸门高度(m) |\n| latitude | 纬度 |\n| load1 | 闸门荷量1 |\n| load2 | 闸门荷量2 |\n| location | 位置 |\n| longitude | 经度 |\n| n | 孔数 |\n| name | 名称 |\n| openh | 闸门开度(m) |\n| q | 瞬时流量(m³/s) |\n| state | 建设情况 |\n| time | 监测时间 |\n| type | 闸门类型 |\n| upz | 上游水位（m） |\n| width | 单孔宽(m) |",
+          "line_num": 7,
+          "summary": "The partial document provides a data field specification table for water conservancy facilities, specifically focusing on sluice gates. It defines parameters including geographic location (longitude, latitude, river), structural dimensions (gate height, width, number of holes), hydraulic data (upstream/downstream water levels, design and instantaneous flow), and operational monitoring details such as gate opening and load."
+        },
+        {
+          "title": "数据详情",
+          "node_id": "0003",
+          "text": "## 数据详情",
+          "line_num": 32,
+          "nodes": [
+            {
+              "title": "记录 1",
+              "node_id": "0004",
+              "text": "### 记录 1\n\n- **code:** HP0074105220008064\n- **time:** 2024-07-01 10:00:00\n- **q:** 8.0\n- **upz:** 7.3\n- **dwz:** 8.5\n- **openh:** 1.0,2.0,1.0,0.0,0.0\n- **load1:** 0.0,0.0,0.0,0.0,0.0\n- **load2:** 0.0,0.0,0.0,0.0,0.0\n- **name:** 郭盆闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 8.00\n- **height:** 65.10\n- **discharge:** 600.00\n- **latitude:** 36.114436\n- **longitude:** 114.507011\n- **datum:** 57.10\n- **location:** 安阳市安阳县白璧镇\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 34,
+              "summary": "This partial document provides detailed technical specifications and real-time operational data for the Guopen Sluice (郭盆闸), a river dam located on the Anyang River in Baibi Town, Anyang County. Key points include its geographical coordinates, physical dimensions (such as gate count and design discharge), and construction status. Additionally, it records specific monitoring data from July 1, 2024, including upstream and downstream water levels, flow rates, and the opening status of its five gates."
+            },
+            {
+              "title": "记录 2",
+              "node_id": "0005",
+              "text": "### 记录 2\n\n- **code:** HP0074106220000027\n- **name:** 大李庄闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 70.54\n- **discharge:** 1387.00\n- **latitude:** 35.510357\n- **longitude:** 114.238612\n- **datum:** 58.90\n- **location:** 鹤壁市淇县西岗镇\n- **atriver:** 共渠\n- **state:** 已建\n\n---",
+              "line_num": 59,
+              "summary": "### 记录 2\n\n- **code:** HP0074106220000027\n- **name:** 大李庄闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 70.54\n- **discharge:** 1387.00\n- **latitude:** 35.510357\n- **longitude:** 114.238612\n- **datum:** 58.90\n- **location:** 鹤壁市淇县西岗镇\n- **atriver:** 共渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 3",
+              "node_id": "0006",
+              "text": "### 记录 3\n\n- **code:** HP0074106210000414\n- **name:** 胡庄闸\n- **type:** 拦河闸\n- **n:** 20\n- **width:** 3.00\n- **height:** 59.73\n- **discharge:** 1200.00\n- **latitude:** 35.643878\n- **longitude:** 114.419373\n- **datum:** 55.00\n- **location:** 鹤壁市浚县白寺乡\n- **atriver:** 共渠\n- **state:** 已建\n\n---",
+              "line_num": 77,
+              "summary": "### 记录 3\n\n- **code:** HP0074106210000414\n- **name:** 胡庄闸\n- **type:** 拦河闸\n- **n:** 20\n- **width:** 3.00\n- **height:** 59.73\n- **discharge:** 1200.00\n- **latitude:** 35.643878\n- **longitude:** 114.419373\n- **datum:** 55.00\n- **location:** 鹤壁市浚县白寺乡\n- **atriver:** 共渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 4",
+              "node_id": "0007",
+              "text": "### 记录 4\n\n- **code:** HP0074105270000389\n- **name:** 神标闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 6.00\n- **height:** 56.00\n- **discharge:** 340.00\n- **latitude:** 35.989746\n- **longitude:** 114.702254\n- **datum:** 50.00\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 汤永河\n- **state:** 已建\n\n---",
+              "line_num": 95,
+              "summary": "### 记录 4\n\n- **code:** HP0074105270000389\n- **name:** 神标闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 6.00\n- **height:** 56.00\n- **discharge:** 340.00\n- **latitude:** 35.989746\n- **longitude:** 114.702254\n- **datum:** 50.00\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 汤永河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 5",
+              "node_id": "0008",
+              "text": "### 记录 5\n\n- **code:** HP0074105270000298\n- **name:** 豆公南闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 5.00\n- **height:** 53.30\n- **discharge:** 250.00\n- **latitude:** 36.018299\n- **longitude:** 114.724461\n- **datum:** 48.30\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 113,
+              "summary": "### 记录 5\n\n- **code:** HP0074105270000298\n- **name:** 豆公南闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 5.00\n- **height:** 53.30\n- **discharge:** 250.00\n- **latitude:** 36.018299\n- **longitude:** 114.724461\n- **datum:** 48.30\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 6",
+              "node_id": "0009",
+              "text": "### 记录 6\n\n- **code:** HP0074107210000029\n- **name:** 合河闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 2.50\n- **height:** 73.60\n- **discharge:** 100.00\n- **latitude:** 35.346182\n- **longitude:** 113.751235\n- **datum:** 70.10\n- **location:** 新乡市新乡县合河乡\n- **atriver:** 卫河\n- **state:** 已建\n\n---",
+              "line_num": 131,
+              "summary": "### 记录 6\n\n- **code:** HP0074107210000029\n- **name:** 合河闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 2.50\n- **height:** 73.60\n- **discharge:** 100.00\n- **latitude:** 35.346182\n- **longitude:** 113.751235\n- **datum:** 70.10\n- **location:** 新乡市新乡县合河乡\n- **atriver:** 卫河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 7",
+              "node_id": "0010",
+              "text": "### 记录 7\n\n- **code:** HP007410724000022X\n- **name:** 马厂闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 5.00\n- **height:** 80.60\n- **discharge:** 958.00\n- **latitude:** 35.291084\n- **longitude:** 113.530374\n- **datum:** 76.40\n- **location:** 新乡市获嘉县黄堤镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 149,
+              "summary": "### 记录 7\n\n- **code:** HP007410724000022X\n- **name:** 马厂闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 5.00\n- **height:** 80.60\n- **discharge:** 958.00\n- **latitude:** 35.291084\n- **longitude:** 113.530374\n- **datum:** 76.40\n- **location:** 新乡市获嘉县黄堤镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 8",
+              "node_id": "0011",
+              "text": "### 记录 8\n\n- **code:** HP0074108210000054\n- **name:** 修武洼村闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 3.60\n- **height:** 86.10\n- **discharge:** 159.00\n- **latitude:** 35.208326\n- **longitude:** 113.377200\n- **datum:** 81.90\n- **location:** 焦作市修武县周庄乡\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 167,
+              "summary": "### 记录 8\n\n- **code:** HP0074108210000054\n- **name:** 修武洼村闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 3.60\n- **height:** 86.10\n- **discharge:** 159.00\n- **latitude:** 35.208326\n- **longitude:** 113.377200\n- **datum:** 81.90\n- **location:** 焦作市修武县周庄乡\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 9",
+              "node_id": "0012",
+              "text": "### 记录 9\n\n- **code:** SZ20\n- **name:** 位庄闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 5.00\n- **height:** 80.60\n- **discharge:** 958.00\n- **latitude:** 35.294441\n- **longitude:** 113.596524\n- **datum:** 76.20\n- **location:** 新乡市辉县市峪河镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 185,
+              "summary": "### 记录 9\n\n- **code:** SZ20\n- **name:** 位庄闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 5.00\n- **height:** 80.60\n- **discharge:** 958.00\n- **latitude:** 35.294441\n- **longitude:** 113.596524\n- **datum:** 76.20\n- **location:** 新乡市辉县市峪河镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 10",
+              "node_id": "0013",
+              "text": "### 记录 10\n\n- **code:** SZ23\n- **name:** 凤泉湖节制闸\n- **type:** 翻板闸\n- **n:** 5\n- **width:** 32.80\n- **height:** 68.30\n- **discharge:** 1650.00\n- **latitude:** 35.394260\n- **longitude:** 113.957368\n- **datum:** 65.00\n- **location:** 新乡市凤泉区潞王坟乡\n- **atriver:** 共渠\n- **state:** 已建\n\n---",
+              "line_num": 203,
+              "summary": "### 记录 10\n\n- **code:** SZ23\n- **name:** 凤泉湖节制闸\n- **type:** 翻板闸\n- **n:** 5\n- **width:** 32.80\n- **height:** 68.30\n- **discharge:** 1650.00\n- **latitude:** 35.394260\n- **longitude:** 113.957368\n- **datum:** 65.00\n- **location:** 新乡市凤泉区潞王坟乡\n- **atriver:** 共渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 11",
+              "node_id": "0014",
+              "text": "### 记录 11\n\n- **code:** SZ24\n- **name:** 小河口节制闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 10.00\n- **height:** 68.10\n- **discharge:** 700.00\n- **latitude:** 35.499692\n- **longitude:** 114.282921\n- **datum:** 58.00\n- **location:** 新乡市卫辉市上乐村镇\n- **atriver:** 淇河\n- **state:** 已建\n\n---",
+              "line_num": 221,
+              "summary": "### 记录 11\n\n- **code:** SZ24\n- **name:** 小河口节制闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 10.00\n- **height:** 68.10\n- **discharge:** 700.00\n- **latitude:** 35.499692\n- **longitude:** 114.282921\n- **datum:** 58.00\n- **location:** 新乡市卫辉市上乐村镇\n- **atriver:** 淇河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 12",
+              "node_id": "0015",
+              "text": "### 记录 12\n\n- **code:** SZ27\n- **name:** 盐土庄节制闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 11.00\n- **height:** 62.80\n- **discharge:** 1600.00\n- **latitude:** 35.740422\n- **longitude:** 114.478433\n- **datum:** 53.00\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 共渠\n- **state:** 已建\n\n---",
+              "line_num": 239,
+              "summary": "### 记录 12\n\n- **code:** SZ27\n- **name:** 盐土庄节制闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 11.00\n- **height:** 62.80\n- **discharge:** 1600.00\n- **latitude:** 35.740422\n- **longitude:** 114.478433\n- **datum:** 53.00\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 共渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 13",
+              "node_id": "0016",
+              "text": "### 记录 13\n\n- **code:** HP0074105270000283\n- **name:** 豆公北闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 5.00\n- **height:** 50.90\n- **discharge:** 250.00\n- **latitude:** 36.019448\n- **longitude:** 114.724875\n- **datum:** 45.90\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 257,
+              "summary": "### 记录 13\n\n- **code:** HP0074105270000283\n- **name:** 豆公北闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 5.00\n- **height:** 50.90\n- **discharge:** 250.00\n- **latitude:** 36.019448\n- **longitude:** 114.724875\n- **datum:** 45.90\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 14",
+              "node_id": "0017",
+              "text": "### 记录 14\n\n- **code:** SZ32\n- **name:** 硝河城关闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.00\n- **height:** 50.50\n- **discharge:** 162.00\n- **latitude:** 36.029450\n- **longitude:** 114.948459\n- **datum:** 46.50\n- **location:** 安阳市内黄县马上乡\n- **atriver:** 硝河\n- **state:** 已建\n\n---",
+              "line_num": 275,
+              "summary": "### 记录 14\n\n- **code:** SZ32\n- **name:** 硝河城关闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.00\n- **height:** 50.50\n- **discharge:** 162.00\n- **latitude:** 36.029450\n- **longitude:** 114.948459\n- **datum:** 46.50\n- **location:** 安阳市内黄县马上乡\n- **atriver:** 硝河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 15",
+              "node_id": "0018",
+              "text": "### 记录 15\n\n- **code:** SZ33\n- **name:** 四伏厂节制闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 7.00\n- **height:** 58.50\n- **discharge:** 362.00\n- **latitude:** 35.995859\n- **longitude:** 114.599375\n- **datum:** 52.50\n- **location:** 安阳市安阳县瓦店乡\n- **atriver:** 汤永河\n- **state:** 已建\n\n---",
+              "line_num": 293,
+              "summary": "### 记录 15\n\n- **code:** SZ33\n- **name:** 四伏厂节制闸\n- **type:** 拦河闸\n- **n:** 6\n- **width:** 7.00\n- **height:** 58.50\n- **discharge:** 362.00\n- **latitude:** 35.995859\n- **longitude:** 114.599375\n- **datum:** 52.50\n- **location:** 安阳市安阳县瓦店乡\n- **atriver:** 汤永河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 16",
+              "node_id": "0019",
+              "text": "### 记录 16\n\n- **code:** SZ36\n- **name:** 东湖闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 7.00\n- **height:** 68.00\n- **discharge:** 1100.00\n- **latitude:** 36.113505\n- **longitude:** 114.469826\n- **datum:** 61.00\n- **location:** 安阳市安阳县崔家桥镇\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 311,
+              "summary": "### 记录 16\n\n- **code:** SZ36\n- **name:** 东湖闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 7.00\n- **height:** 68.00\n- **discharge:** 1100.00\n- **latitude:** 36.113505\n- **longitude:** 114.469826\n- **datum:** 61.00\n- **location:** 安阳市安阳县崔家桥镇\n- **atriver:** 安阳河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 17",
+              "node_id": "0020",
+              "text": "### 记录 17\n\n- **code:** SZ37\n- **name:** 西湖闸\n- **type:** 拦河闸\n- **n:** 9\n- **width:** 10.00\n- **height:** 82.10\n- **discharge:** 3570.00\n- **latitude:** 36.133753\n- **longitude:** 114.256326\n- **datum:** 77.10\n- **location:** 安阳市殷都区西郊乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 329,
+              "summary": "### 记录 17\n\n- **code:** SZ37\n- **name:** 西湖闸\n- **type:** 拦河闸\n- **n:** 9\n- **width:** 10.00\n- **height:** 82.10\n- **discharge:** 3570.00\n- **latitude:** 36.133753\n- **longitude:** 114.256326\n- **datum:** 77.10\n- **location:** 安阳市殷都区西郊乡\n- **atriver:** 安阳河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 18",
+              "node_id": "0021",
+              "text": "### 记录 18\n\n- **code:** SZ39\n- **name:** 双石桥节制闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 6.00\n- **height:** 64.16\n- **discharge:** 300.00\n- **latitude:** 35.945560\n- **longitude:** 114.497585\n- **datum:** 54.94\n- **location:** 安阳市汤阴县菜园镇\n- **atriver:** 汤永河\n- **state:** 拟建\n\n---",
+              "line_num": 347,
+              "summary": "### 记录 18\n\n- **code:** SZ39\n- **name:** 双石桥节制闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 6.00\n- **height:** 64.16\n- **discharge:** 300.00\n- **latitude:** 35.945560\n- **longitude:** 114.497585\n- **datum:** 54.94\n- **location:** 安阳市汤阴县菜园镇\n- **atriver:** 汤永河\n- **state:** 拟建\n\n---"
+            },
+            {
+              "title": "记录 19",
+              "node_id": "0022",
+              "text": "### 记录 19\n\n- **code:** SZ41\n- **name:** 长丰沟节制闸\n- **type:** 拦河闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 55.20\n- **discharge:** 31.00\n- **latitude:** 35.740513\n- **longitude:** 114.472309\n- **datum:** 52.20\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 长丰沟\n- **state:** 已建\n\n---",
+              "line_num": 365,
+              "summary": "### 记录 19\n\n- **code:** SZ41\n- **name:** 长丰沟节制闸\n- **type:** 拦河闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 55.20\n- **discharge:** 31.00\n- **latitude:** 35.740513\n- **longitude:** 114.472309\n- **datum:** 52.20\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 长丰沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 20",
+              "node_id": "0023",
+              "text": "### 记录 20\n\n- **code:** SZ43\n- **name:** 长虹渠分洪闸\n- **type:** 分洪闸\n- **n:** 6\n- **width:** 10.00\n- **height:** 68.00\n- **discharge:** 200.00\n- **latitude:** 35.487222\n- **longitude:** 114.283927\n- **datum:** 62.20\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 长虹渠蓄滞洪区\n- **state:** 已建\n\n---",
+              "line_num": 383,
+              "summary": "### 记录 20\n\n- **code:** SZ43\n- **name:** 长虹渠分洪闸\n- **type:** 分洪闸\n- **n:** 6\n- **width:** 10.00\n- **height:** 68.00\n- **discharge:** 200.00\n- **latitude:** 35.487222\n- **longitude:** 114.283927\n- **datum:** 62.20\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 长虹渠蓄滞洪区\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 21",
+              "node_id": "0024",
+              "text": "### 记录 21\n\n- **code:** SZ44\n- **name:** 白寺坡分洪闸\n- **type:** 分洪闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 63.00\n- **discharge:** 900.00\n- **latitude:** 35.674475\n- **longitude:** 114.446358\n- **datum:** 57.00\n- **location:** 鹤壁市浚县白寺乡\n- **atriver:** 白寺坡蓄滞洪区\n- **state:** 已建\n\n---",
+              "line_num": 401,
+              "summary": "### 记录 21\n\n- **code:** SZ44\n- **name:** 白寺坡分洪闸\n- **type:** 分洪闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 63.00\n- **discharge:** 900.00\n- **latitude:** 35.674475\n- **longitude:** 114.446358\n- **datum:** 57.00\n- **location:** 鹤壁市浚县白寺乡\n- **atriver:** 白寺坡蓄滞洪区\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 22",
+              "node_id": "0025",
+              "text": "### 记录 22\n\n- **code:** HP0074108210000312\n- **name:** 城关闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 84.45\n- **discharge:** 958.00\n- **latitude:** 35.231546\n- **longitude:** 113.409989\n- **datum:** 80.95\n- **location:** 焦作市修武县城关镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 419,
+              "summary": "### 记录 22\n\n- **code:** HP0074108210000312\n- **name:** 城关闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 84.45\n- **discharge:** 958.00\n- **latitude:** 35.231546\n- **longitude:** 113.409989\n- **datum:** 80.95\n- **location:** 焦作市修武县城关镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 23",
+              "node_id": "0026",
+              "text": "### 记录 23\n\n- **code:** HP0074108210000069\n- **name:** 常桥闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 80.10\n- **discharge:** 958.00\n- **latitude:** 35.287167\n- **longitude:** 113.488394\n- **datum:** 76.60\n- **location:** 焦作市修武县郇封镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 437,
+              "summary": "### 记录 23\n\n- **code:** HP0074108210000069\n- **name:** 常桥闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 80.10\n- **discharge:** 958.00\n- **latitude:** 35.287167\n- **longitude:** 113.488394\n- **datum:** 76.60\n- **location:** 焦作市修武县郇封镇\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 24",
+              "node_id": "0027",
+              "text": "### 记录 24\n\n- **code:** HP0074108210000088\n- **name:** 朱营闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 81.30\n- **discharge:** 958.00\n- **latitude:** 35.270176\n- **longitude:** 113.450443\n- **datum:** 77.80\n- **location:** 焦作市修武县五里源乡\n- **atriver:** 大沙河\n- **state:** 已建\n\n---",
+              "line_num": 455,
+              "summary": "### 记录 24\n\n- **code:** HP0074108210000088\n- **name:** 朱营闸\n- **type:** 拦河闸\n- **n:** 5\n- **width:** 4.50\n- **height:** 81.30\n- **discharge:** 958.00\n- **latitude:** 35.270176\n- **longitude:** 113.450443\n- **datum:** 77.80\n- **location:** 焦作市修武县五里源乡\n- **atriver:** 大沙河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 25",
+              "node_id": "0028",
+              "text": "### 记录 25\n\n- **code:** HP0074105030000023\n- **name:** 于曹闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 66.84\n- **discharge:** 2300.00\n- **latitude:** 36.128065\n- **longitude:** 114.408305\n- **datum:** 61.84\n- **location:** 安阳市北关区彰东街道办事处\n- **atriver:** 安阳河\n- **state:** 已建\n\n---",
+              "line_num": 473,
+              "summary": "### 记录 25\n\n- **code:** HP0074105030000023\n- **name:** 于曹闸\n- **type:** 拦河闸\n- **n:** 7\n- **width:** 10.00\n- **height:** 66.84\n- **discharge:** 2300.00\n- **latitude:** 36.128065\n- **longitude:** 114.408305\n- **datum:** 61.84\n- **location:** 安阳市北关区彰东街道办事处\n- **atriver:** 安阳河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 26",
+              "node_id": "0029",
+              "text": "### 记录 26\n\n- **code:** HP0074105230000154\n- **name:** 赵王沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 56.10\n- **discharge:** 74.16\n- **latitude:** 35.924281\n- **longitude:** 114.652630\n- **datum:** 49.00\n- **location:** 安阳市汤阴县五陵镇\n- **atriver:** 赵王沟\n- **state:** 已建\n\n---",
+              "line_num": 491,
+              "summary": "### 记录 26\n\n- **code:** HP0074105230000154\n- **name:** 赵王沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 56.10\n- **discharge:** 74.16\n- **latitude:** 35.924281\n- **longitude:** 114.652630\n- **datum:** 49.00\n- **location:** 安阳市汤阴县五陵镇\n- **atriver:** 赵王沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 27",
+              "node_id": "0030",
+              "text": "### 记录 27\n\n- **code:** HP0074105260000666\n- **name:** 长虹渠退水闸\n- **type:** 退水闸\n- **n:** 5\n- **width:** 7.00\n- **height:** 64.20\n- **discharge:** 400.00\n- **latitude:** 35.577659\n- **longitude:** 114.493157\n- **datum:** 57.20\n- **location:** 安阳市滑县道口镇\n- **atriver:** 长虹渠\n- **state:** 已建\n\n---",
+              "line_num": 509,
+              "summary": "### 记录 27\n\n- **code:** HP0074105260000666\n- **name:** 长虹渠退水闸\n- **type:** 退水闸\n- **n:** 5\n- **width:** 7.00\n- **height:** 64.20\n- **discharge:** 400.00\n- **latitude:** 35.577659\n- **longitude:** 114.493157\n- **datum:** 57.20\n- **location:** 安阳市滑县道口镇\n- **atriver:** 长虹渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 28",
+              "node_id": "0031",
+              "text": "### 记录 28\n\n- **code:** HP0074105230000211\n- **name:** 八里沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 55.28\n- **discharge:** 69.12\n- **latitude:** 35.955494\n- **longitude:** 114.673552\n- **datum:** 49.00\n- **location:** 安阳市汤阴县任固镇\n- **atriver:** 八里沟\n- **state:** 已建\n\n---",
+              "line_num": 527,
+              "summary": "### 记录 28\n\n- **code:** HP0074105230000211\n- **name:** 八里沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 55.28\n- **discharge:** 69.12\n- **latitude:** 35.955494\n- **longitude:** 114.673552\n- **datum:** 49.00\n- **location:** 安阳市汤阴县任固镇\n- **atriver:** 八里沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 29",
+              "node_id": "0032",
+              "text": "### 记录 29\n\n- **code:** HP0074106210000050\n- **name:** 白寺坡退水闸\n- **type:** 退水闸\n- **n:** 6\n- **width:** 3.00\n- **height:** 56.22\n- **discharge:** 60.00\n- **latitude:** 35.737085\n- **longitude:** 114.482144\n- **datum:** 53.22\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---",
+              "line_num": 545,
+              "summary": "### 记录 29\n\n- **code:** HP0074106210000050\n- **name:** 白寺坡退水闸\n- **type:** 退水闸\n- **n:** 6\n- **width:** 3.00\n- **height:** 56.22\n- **discharge:** 60.00\n- **latitude:** 35.737085\n- **longitude:** 114.482144\n- **datum:** 53.22\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 30",
+              "node_id": "0033",
+              "text": "### 记录 30\n\n- **code:** HP0074106210000137\n- **name:** 民丰沟下口闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 59.70\n- **discharge:** 47.70\n- **latitude:** 35.758366\n- **longitude:** 114.489355\n- **datum:** 53.40\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---",
+              "line_num": 563,
+              "summary": "### 记录 30\n\n- **code:** HP0074106210000137\n- **name:** 民丰沟下口闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 59.70\n- **discharge:** 47.70\n- **latitude:** 35.758366\n- **longitude:** 114.489355\n- **datum:** 53.40\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 31",
+              "node_id": "0034",
+              "text": "### 记录 31\n\n- **code:** HP0074105270000412\n- **name:** 田大晁退水闸\n- **type:** 退水闸\n- **n:** 1\n- **width:** 3.00\n- **height:** 54.56\n- **discharge:** 150.00\n- **latitude:** 35.974103\n- **longitude:** 114.758891\n- **datum:** 48.00\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 广润坡蓄滞洪区\n- **state:** 已建\n\n---",
+              "line_num": 581,
+              "summary": "### 记录 31\n\n- **code:** HP0074105270000412\n- **name:** 田大晁退水闸\n- **type:** 退水闸\n- **n:** 1\n- **width:** 3.00\n- **height:** 54.56\n- **discharge:** 150.00\n- **latitude:** 35.974103\n- **longitude:** 114.758891\n- **datum:** 48.00\n- **location:** 安阳市内黄县豆公乡\n- **atriver:** 广润坡蓄滞洪区\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 32",
+              "node_id": "0035",
+              "text": "### 记录 32\n\n- **code:** HP0074109220000261\n- **name:** 硝河退水闸\n- **type:** 退水闸\n- **n:** 8\n- **width:** 2.00\n- **height:** 50.54\n- **discharge:** 130.00\n- **latitude:** 36.062695\n- **longitude:** 114.969841\n- **datum:** 43.80\n- **location:** 濮阳市清丰县阳邵乡\n- **atriver:** 硝河\n- **state:** 已建\n\n---",
+              "line_num": 599,
+              "summary": "### 记录 32\n\n- **code:** HP0074109220000261\n- **name:** 硝河退水闸\n- **type:** 退水闸\n- **n:** 8\n- **width:** 2.00\n- **height:** 50.54\n- **discharge:** 130.00\n- **latitude:** 36.062695\n- **longitude:** 114.969841\n- **datum:** 43.80\n- **location:** 濮阳市清丰县阳邵乡\n- **atriver:** 硝河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 33",
+              "node_id": "0036",
+              "text": "### 记录 33\n\n- **code:** SZ25\n- **name:** 北长虹渠退水闸\n- **type:** 退水闸\n- **n:** 2\n- **width:** 3.00\n- **height:** 61.50\n- **discharge:** 60.00\n- **latitude:** 35.465235\n- **longitude:** 114.306915\n- **datum:** 58.50\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 北长虹渠\n- **state:** 已建\n\n---",
+              "line_num": 617,
+              "summary": "### 记录 33\n\n- **code:** SZ25\n- **name:** 北长虹渠退水闸\n- **type:** 退水闸\n- **n:** 2\n- **width:** 3.00\n- **height:** 61.50\n- **discharge:** 60.00\n- **latitude:** 35.465235\n- **longitude:** 114.306915\n- **datum:** 58.50\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 北长虹渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 34",
+              "node_id": "0037",
+              "text": "### 记录 34\n\n- **code:** SZ26\n- **name:** 南长虹渠退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 61.50\n- **discharge:** 90.00\n- **latitude:** 35.460933\n- **longitude:** 114.311997\n- **datum:** 58.50\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 南长虹渠\n- **state:** 已建\n\n---",
+              "line_num": 635,
+              "summary": "### 记录 34\n\n- **code:** SZ26\n- **name:** 南长虹渠退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 61.50\n- **discharge:** 90.00\n- **latitude:** 35.460933\n- **longitude:** 114.311997\n- **datum:** 58.50\n- **location:** 鹤壁市浚县新镇镇\n- **atriver:** 南长虹渠\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 35",
+              "node_id": "0038",
+              "text": "### 记录 35\n\n- **code:** SZ28\n- **name:** 长丰沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 2.00\n- **height:** 55.60\n- **discharge:** 31.00\n- **latitude:** 35.751299\n- **longitude:** 114.482062\n- **datum:** 53.10\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 长丰沟\n- **state:** 已建\n\n---",
+              "line_num": 653,
+              "summary": "### 记录 35\n\n- **code:** SZ28\n- **name:** 长丰沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 2.00\n- **height:** 55.60\n- **discharge:** 31.00\n- **latitude:** 35.751299\n- **longitude:** 114.482062\n- **datum:** 53.10\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 长丰沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 36",
+              "node_id": "0039",
+              "text": "### 记录 36\n\n- **code:** SZ29\n- **name:** 民丰沟上口闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 59.70\n- **discharge:** 47.70\n- **latitude:** 35.753081\n- **longitude:** 114.485019\n- **datum:** 53.40\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---",
+              "line_num": 671,
+              "summary": "### 记录 36\n\n- **code:** SZ29\n- **name:** 民丰沟上口闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 59.70\n- **discharge:** 47.70\n- **latitude:** 35.753081\n- **longitude:** 114.485019\n- **datum:** 53.40\n- **location:** 鹤壁市浚县屯子镇\n- **atriver:** 民丰沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 37",
+              "node_id": "0040",
+              "text": "### 记录 37\n\n- **code:** SZ30\n- **name:** 浚内沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 54.30\n- **discharge:** 66.45\n- **latitude:** 35.859384\n- **longitude:** 114.633357\n- **datum:** 49.90\n- **location:** 安阳市内黄县二安乡\n- **atriver:** 浚内沟\n- **state:** 已建\n\n---",
+              "line_num": 689,
+              "summary": "### 记录 37\n\n- **code:** SZ30\n- **name:** 浚内沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 54.30\n- **discharge:** 66.45\n- **latitude:** 35.859384\n- **longitude:** 114.633357\n- **datum:** 49.90\n- **location:** 安阳市内黄县二安乡\n- **atriver:** 浚内沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 38",
+              "node_id": "0041",
+              "text": "### 记录 38\n\n- **code:** SZ34\n- **name:** 王家口退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.30\n- **height:** 63.95\n- **discharge:** 150.00\n- **latitude:** 36.120121\n- **longitude:** 114.568435\n- **datum:** 58.70\n- **location:** 安阳市安阳县永和乡\n- **atriver:** 崔家桥蓄滞洪区\n- **state:** 已建\n\n---",
+              "line_num": 707,
+              "summary": "### 记录 38\n\n- **code:** SZ34\n- **name:** 王家口退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.30\n- **height:** 63.95\n- **discharge:** 150.00\n- **latitude:** 36.120121\n- **longitude:** 114.568435\n- **datum:** 58.70\n- **location:** 安阳市安阳县永和乡\n- **atriver:** 崔家桥蓄滞洪区\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 39",
+              "node_id": "0042",
+              "text": "### 记录 39\n\n- **code:** SZ35\n- **name:** 梨园沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 64.89\n- **discharge:** 72.00\n- **latitude:** 36.115049\n- **longitude:** 114.507831\n- **datum:** 57.75\n- **location:** 安阳市安阳县白璧镇\n- **atriver:** 梨园沟\n- **state:** 已建\n\n---",
+              "line_num": 725,
+              "summary": "### 记录 39\n\n- **code:** SZ35\n- **name:** 梨园沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 3.00\n- **height:** 64.89\n- **discharge:** 72.00\n- **latitude:** 36.115049\n- **longitude:** 114.507831\n- **datum:** 57.75\n- **location:** 安阳市安阳县白璧镇\n- **atriver:** 梨园沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 40",
+              "node_id": "0043",
+              "text": "### 记录 40\n\n- **code:** SZ38\n- **name:** 故城沟退水闸\n- **type:** 退水闸\n- **n:** 2\n- **width:** 2.00\n- **height:** 55.16\n- **discharge:** 44.31\n- **latitude:** 35.970558\n- **longitude:** 114.680324\n- **datum:** 49.03\n- **location:** 安阳市汤阴县任固镇\n- **atriver:** 故城沟\n- **state:** 已建\n\n---",
+              "line_num": 743,
+              "summary": "### 记录 40\n\n- **code:** SZ38\n- **name:** 故城沟退水闸\n- **type:** 退水闸\n- **n:** 2\n- **width:** 2.00\n- **height:** 55.16\n- **discharge:** 44.31\n- **latitude:** 35.970558\n- **longitude:** 114.680324\n- **datum:** 49.03\n- **location:** 安阳市汤阴县任固镇\n- **atriver:** 故城沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 41",
+              "node_id": "0044",
+              "text": "### 记录 41\n\n- **code:** SZ40\n- **name:** 苏村沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 57.86\n- **discharge:** 25.40\n- **latitude:** 35.827789\n- **longitude:** 114.551680\n- **datum:** 52.30\n- **location:** 安阳市汤阴县王庄镇\n- **atriver:** 苏村沟\n- **state:** 已建\n\n---",
+              "line_num": 761,
+              "summary": "### 记录 41\n\n- **code:** SZ40\n- **name:** 苏村沟退水闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 57.86\n- **discharge:** 25.40\n- **latitude:** 35.827789\n- **longitude:** 114.551680\n- **datum:** 52.30\n- **location:** 安阳市汤阴县王庄镇\n- **atriver:** 苏村沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 42",
+              "node_id": "0045",
+              "text": "### 记录 42\n\n- **code:** SZ42\n- **name:** 红卫沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 2.00\n- **height:** 56.26\n- **discharge:** 80.49\n- **latitude:** 35.912810\n- **longitude:** 114.652697\n- **datum:** 50.22\n- **location:** 安阳市汤阴县五陵镇\n- **atriver:** 红卫沟\n- **state:** 已建\n\n---",
+              "line_num": 779,
+              "summary": "### 记录 42\n\n- **code:** SZ42\n- **name:** 红卫沟退水闸\n- **type:** 退水闸\n- **n:** 4\n- **width:** 2.00\n- **height:** 56.26\n- **discharge:** 80.49\n- **latitude:** 35.912810\n- **longitude:** 114.652697\n- **datum:** 50.22\n- **location:** 安阳市汤阴县五陵镇\n- **atriver:** 红卫沟\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 43",
+              "node_id": "0046",
+              "text": "### 记录 43\n\n- **code:** SZ22\n- **name:** 镜高涝河闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.50\n- **height:** 73.80\n- **discharge:** 77.40\n- **latitude:** 35.315193\n- **longitude:** 113.816846\n- **datum:** 68.30\n- **location:** 新乡市卫滨区平原乡\n- **atriver:** 镜高涝河\n- **state:** 已建\n\n---",
+              "line_num": 797,
+              "summary": "### 记录 43\n\n- **code:** SZ22\n- **name:** 镜高涝河闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.50\n- **height:** 73.80\n- **discharge:** 77.40\n- **latitude:** 35.315193\n- **longitude:** 113.816846\n- **datum:** 68.30\n- **location:** 新乡市卫滨区平原乡\n- **atriver:** 镜高涝河\n- **state:** 已建\n\n---"
+            },
+            {
+              "title": "记录 44",
+              "node_id": "0047",
+              "text": "### 记录 44\n\n- **code:** SZ21\n- **name:** 大狮涝河闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 79.40\n- **discharge:** 78.20\n- **latitude:** 35.292507\n- **longitude:** 113.593560\n- **datum:** 76.40\n- **location:** 新乡市辉县市峪河镇\n- **atriver:** 大狮涝河\n- **state:** 已建\n\n---\n\n\n*文档生成完成*",
+              "line_num": 815,
+              "summary": "### 记录 44\n\n- **code:** SZ21\n- **name:** 大狮涝河闸\n- **type:** 退水闸\n- **n:** 3\n- **width:** 3.00\n- **height:** 79.40\n- **discharge:** 78.20\n- **latitude:** 35.292507\n- **longitude:** 113.593560\n- **datum:** 76.40\n- **location:** 新乡市辉县市峪河镇\n- **atriver:** 大狮涝河\n- **state:** 已建\n\n---\n\n\n*文档生成完成*"
+            }
+          ],
+          "prefix_summary": "## 数据详情"
+        }
+      ],
+      "prefix_summary": "# 闸站监测 数据文档\n\n**数据条数:** 44\n\n---"
+    }
+  ]
+}

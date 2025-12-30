@@ -1,70 +1,68 @@
 {
-  "doc_name": "流域概况.pdf",
+  "doc_name": "流域概况",
   "structure": [
     {
-      "title": "流域概况",
-      "start_index": 1,
-      "end_index": 1,
-      "node_id": "0000",
-      "summary": "该片段主要介绍了卫河与共产主义渠的流域概况及其防洪体系。内容涵盖了卫河的地理发源、流经区域、流域面积及在国家层面的重要性；详细描述了共产主义渠的历史沿革、功能转变（从引黄灌溉转向排洪）及其在新乡市防洪中的作用；并阐述了由卫河、共产主义渠、众多支流、101座水库及9个蓄滞洪区共同构成的卫共流域综合防洪除涝体系。"
-    },
-    {
-      "title": "水文气象",
-      "start_index": 2,
-      "end_index": 2,
+      "title": "1 流域概况",
       "node_id": "0001",
-      "summary": "该文档节选主要介绍了卫河流域的水文气象特征与自然地理概况。在水文气象方面，详细阐述了流域内的气温、风速、无霜期及降雨分布规律，指出该地区属于偏干旱地带，降雨年际变化大且高度集中在夏季“七下八上”期间；同时，分析了该流域作为暴雨中心的成因，以及由此引发的洪水特性（如山丘区汇流快、平原区排泄慢、干支流洪水叠加等）对防汛工作的影响。在自然地理方面，简要描述了流域的地形地貌，包括最高点海拔及山地、丘陵、平原不同地带的海拔高度与地面坡降。"
+      "text": "# 1 流域概况  \n\n卫河是海河流域漳卫河水系的一级支流,发源于太行山南麓山西省陵川县夺火镇南岭,流经山西省陵川县和河南省焦作、新乡、鹤壁、安阳等地市的二十多个县(市),于河北省馆陶县徐万仓与漳河交汇,流域面积 $15142\\mathrm{km}^{2}$ ,全长 $394\\mathrm{km}$ ,其中河南省境内长 $286.5\\mathrm{km}$ ,控制流域面积 $12921\\mathrm{km}^{2}$ ,约占卫河流域面积的 $85\\%$ ,流经焦作、新乡、鹤壁、安阳、濮阳等5市。流域内是国家粮食生产核心区,区内有国家重要的交通、能源等基础设施。  \n\n共产主义渠是 1958 年由豫冀鲁协同开挖的大型引黄灌溉渠道,自武陟县秦厂起经获嘉县、新乡县、凤泉区、牧野区、卫辉市、淇县、浚县至浚县南老观嘴入卫河,全长 $155.8\\mathrm{km}$ ,流域面积 $7768\\mathrm{km}^{2}$ ,,共产主义渠渠首闸设计引水流量 $280\\mathrm{m}^{3}/\\mathrm{s}$ ,1960年曾引水至天津,1962年停止引黄后,共产主义渠主要用于排泄西部涝水及南太行洪水,合河镇以上的洪水不再经卫河进入新乡市区,由共产主义渠承泄。  \n\n卫河和共产主义渠共同承泄上游洪涝水及南太行山区洪水,有淇河、汤河、安阳河等十余条较大支流汇入。卫共流域总流域面积约1.3万km2,流域内已建水库 101 座(大型2座、中型16 座、小型83座)、蓄滞洪区9个(良相坡、共渠西、白寺坡、长虹渠、柳围坡、广润坡、崔家桥、小滩坡、任固坡),与河道堤防、水闸共同构成了卫共流域防洪除涝体系。",
+      "line_num": 1,
+      "summary": "该文档片段主要介绍了卫河流域及其共产主义渠的概况。内容涵盖了卫河的地理发源、流经区域、流域面积及在河南省内的重要地位；详细说明了共产主义渠的建设历史、河道特征及其从引黄灌溉转变为防洪排涝功能的演变过程；最后概述了由卫河、共产主义渠、主要支流以及密集的水库和蓄滞洪区共同组成的区域防洪除涝工程体系。"
     },
     {
-      "title": "自然地理",
-      "start_index": 2,
-      "end_index": 3,
+      "title": "2水文气象",
       "node_id": "0002",
-      "summary": "This document provides a comprehensive overview of the Weihe River Basin, focusing on its environmental, geographical, and socio-economic characteristics. It details the basin's **hydrometeorology**, highlighting its semi-arid climate, the influence of the Taihang Mountains as a major storm center, and the specific patterns of concentrated summer rainfall that lead to rapid flood convergence. The **physical geography** section describes the varied topography ranging from high mountains to alluvial plains, the distinct hydrological differences between left and right bank tributaries, and the history and function of the Communist Canal. Furthermore, the document outlines the **socio-economic** landscape, citing key cities, population statistics, and agricultural data as of 2020. Finally, it notes the high historical frequency of **flood disasters** in the region, establishing the context for flood prevention and management needs."
+      "text": "# 2水文气象  \n\n研究流域内年平均气温约14流,最大风速 $18\\mathrm{m/s}$ ,全年无霜期平均约 200 天,流域内年平均降雨量 $600{\\sim}800\\mathrm{mm}$ ,集中在 7、8月份,降水量年际变化较大,1963 年全流域降水量达 $1000\\mathrm{mm}$ 以上,1965年流域年降水量约 $400\\mathrm{mm}$ ,丰枯年比值达2.5倍以上。卫共流域属于偏干旱地区,多年平均水面蒸发量为 $1000\\mathrm{mm}$ ,干旱指数为 $1.6{\\sim}2.0$ 。  \n\n卫河流域山丘区地处太行山迎风坡,是河南省 3 大暴雨中心之一。每年的 7、8月份,在副高影响下,携带大量水汽的东南气流受到太行山的阻挡抬升,易产生暴雨,该中心多年平均最大 24 小时雨量 $140\\mathrm{mm}$ 左右。豫北卫河大暴雨往往集中在“七下八上\"20多天内,一般8月下旬后,副高压开始南撤,至9月底汛期结束。暴雨强度大,范围广。洪水主要来源于淇门以上淇河和共产主义渠的山丘区支流。由于卫河左岸支流多为山丘区河流,受地势影响,洪水汇集速度快,洪涝灾害频发,且由于各支流洪水为同一暴雨所导致,水流下泄速度慢、积水时间长。平原区地势平缓,洪水涨落较慢,洪峰小但是洪水过程长,加上同一暴雨导致的干支流洪水发生时间接近,干流水位较高,支流洪水无法顺利汇入干流,洪水历时长,且低洼处积水难以排出,共渠行洪能力对卫河防汛有着非常重要的影响。",
+      "line_num": 9,
+      "summary": "该部分文档主要介绍了卫河流域的水文气象特征，重点涵盖了以下要点：首先是流域的基础气候数据，包括年均气温、风速、降雨量分布及蒸发量，指出该地区具有干旱指数高、降水年际变化大等半干旱气候特征；其次阐述了该区域作为河南省暴雨中心之一的成因（受太行山地形抬升影响）及暴雨发生的季节性规律（集中在“七下八上”期间）；最后分析了洪水的来源与演进规律，详细对比了山丘区支流洪水汇集快与平原区洪水历时长、水位高、排水难的特点，并强调了共产主义渠对卫河防汛的关键作用。"
     },
     {
-      "title": "社会经济",
-      "start_index": 3,
-      "end_index": 3,
+      "title": "3自然地理",
       "node_id": "0003",
-      "summary": "这段文档主要涵盖了卫河流域及共产主义渠的以下核心内容：\n1. **地形地貌与水文特性**：详细描述了卫河流域的地面高程、坡降及面积构成（山丘区占85%，平原区占15%），并阐述了地形差异导致左右两岸支流在汇流速度和易涝性上的显著区别。\n2. **共产主义渠概况**：介绍了该渠的起止位置、全长（156.5 km）、引水能力及灌溉效益，并说明了合河水文站的历史沿革与监测功能。\n3. **社会经济状况**：列举了流域内的5座重要防洪城市，并提供了2020年的人口、GDP及耕地面积等关键数据。\n4. **洪涝灾害历史**：指出卫河流域洪涝灾害频繁，通过历史记录分析了其平均每3至4年发生一次大洪水的发生规律。"
+      "text": "# 3自然地理  \n\n卫河流域最高点位于辉县市凤凰岭,海拔高度为 $1655\\mathrm{m}$ ,而其它地区海拔高度一般为 $200{\\sim}1000\\mathrm{m}$ 。丘陵地带海拔高度为 $95{\\sim}200\\mathrm{m}$ ,地面坡降为 $1/400{\\sim}1/90$ 。山前平原海拔高程为 $75{\\sim}95\\mathrm{m}$ ,坡降  \n\n$1/4000{\\sim}1/1500$ 。黄河冲积平原地面高程为 $62.5{\\sim}90\\mathrm{m}$ ,地面坡降约1/3000。小河口村以上流域面积约 $5800\\mathrm{km}^{2}$ ,山丘区面积为 $4950\\mathrm{km}^{2}$ ,占流域面积的 $85\\%$ ;平原区面积 $850\\mathrm{km}^{2}$ ,约占流域面积的 $15\\%$ 。地形的影响使得卫河左右两岸支流差异巨大。左岸支流多发源于山区,如百泉河、峪河、沧河等,故每逢暴雨之时,受地势影响,汇流迅速而后汇入共产主义渠,至淇门处与淇、卫两河汇流,并最终于老观嘴处再入卫河。右岸支流则主要为平原河流,包括镜高涝河和东、西孟姜女河等,汇流、泄流也较慢,易发生大范围的涝水。共产主义渠,简称共渠,是卫河的重要支流之一。共产主义渠渠首位于武陟县东南方黄河大桥的黄河大堤前,由东南方流向西北方的经过新乡市,最终于浚县老观嘴处注入卫河。渠道总长 $156.5~\\mathrm{km}$ ,引水能力 $280\\mathrm{m}^{3}/\\mathrm{s}$ 。1958年11月建成,可灌溉面积66.7万 $\\mathrm{hm}^{2}$ 。合河(共)水文站位于$113^{\\circ}46^{\\prime}\\mathrm{~\\cal~E},35^{\\circ}21^{\\prime}\\mathrm{~\\cal~N},$ ,处于合河闸下游 $1.2\\mathrm{km}$ 处,于1955年6月设立。该水文站最初负责监测洼地分流的洪水,在共产主义渠开挖后,该水文站则改为监测共产主义渠的水位、流速等水文要素。",
+      "line_num": 15,
+      "summary": "The partial document describes the natural geography and hydrological characteristics of the Weihe River basin. It details the topography, including elevation ranges and slopes across different terrains such as mountains, hills, and alluvial plains. It highlights the distinct differences between the basin's left-bank tributaries (mountain-originating with rapid runoff) and right-bank tributaries (plain rivers prone to flooding). Additionally, it provides specific information regarding the Communist Canal, including its route, construction history, irrigation capacity, and the role of the Hehe Hydrological Station in monitoring its water flow."
     },
     {
-      "title": "洪涝灾害",
-      "start_index": 3,
-      "end_index": 4,
+      "title": "4社会经济",
       "node_id": "0004",
-      "summary": "This partial document provides a detailed overview of the Wei River (Weihe) basin, covering its geographical and topographical characteristics, hydrological features of its tributaries (notably the Communist Canal), and the socio-economic profile of the region's major cities. It also documents the basin's history of frequent flood disasters, with a specific focus on the catastrophic impact of the 2021 floods, and provides data on the basin's water management infrastructure, including a list of major reservoirs and recent river channel regulation standards."
+      "text": "# 4社会经济  \n\n卫河流域内重要的防洪城市为安阳市、鹤壁市、新乡市、焦作市、濮阳市 5座城市。截止到2020 年,流域内常住人口共有 1108.23 万人,地区生产总值5715亿元、耕地面积874.58万亩。",
+      "line_num": 21,
+      "summary": "# 4社会经济  \n\n卫河流域内重要的防洪城市为安阳市、鹤壁市、新乡市、焦作市、濮阳市 5座城市。截止到2020 年,流域内常住人口共有 1108.23 万人,地区生产总值5715亿元、耕地面积874.58万亩。"
     },
     {
-      "title": "流域特性",
-      "start_index": 4,
-      "end_index": 4,
-      "nodes": [
-        {
-          "title": "水库",
-          "start_index": 4,
-          "end_index": 4,
-          "node_id": "0006",
-          "summary": "该文档主要概述了卫河流域的历史洪涝灾害情况及流域水利工程特性。内容重点介绍了1953年至2023年间的多次大洪水，详述了2021年7月特大暴雨洪水对河南新乡、安阳、鹤壁等地造成的严重经济损失与社会影响。同时，文档详细统计了流域内的水库分布情况，列出了盘石头、小南海等大中型水库的调洪库容与泄洪能力等技术参数，并简述了当前主干河道的治理现状及防洪标准。"
-        },
-        {
-          "title": "河道",
-          "start_index": 4,
-          "end_index": 5,
-          "node_id": "0007",
-          "summary": "This document provides a comprehensive overview of the flood history and hydrological infrastructure within the Weihe River basin. Key points covered include:\n1. **Historical Flood Data:** A record of major floods since 1953, with a detailed analysis of the catastrophic July 2021 flood, including its impact on population, infrastructure, and the economy.\n2. **Reservoir Characteristics:** An inventory of the basin's 249 reservoirs (large, medium, and small), including specific data on flood storage capacities and discharge rates for major sites like the Panshitou and Xiaonanhai reservoirs.\n3. **River Channel Standards:** An assessment of flood control standards and maximum flow capacities for primary rivers, including the Weihe, Communist Canal (Gongchanzhuyi Qu), Dasha, Anyang, and Qi rivers.\n4. **Flood Detention Basins:** Technical specifications for nine major detention basins, detailing their design water levels, storage volumes, and specific inflow/diversion methods."
-        },
-        {
-          "title": "蓄滞洪区",
-          "start_index": 5,
-          "end_index": 6,
-          "node_id": "0008",
-          "summary": "This partial document outlines flood control standards and infrastructure details for several major rivers and flood detention areas. It provides specific data on the flood protection return periods (ranging from 20 to 100 years) and design flow capacities for various segments of the Wei River, Communist Channel, Dasha River, Anyang River, and Qi River. Additionally, it lists technical specifications for nine designated flood detention basins, including their design water levels, storage capacities, and methods for flood diversion."
-        }
-      ],
+      "title": "5 洪涝灾害",
       "node_id": "0005",
-      "summary": "This partial document outlines the historical flood events in the Wei River basin, focusing particularly on the catastrophic impact of the July 2021 floods in Henan Province, including data on inundated areas, population displacement, and economic losses. It also describes the basin's hydraulic infrastructure, specifically detailing the storage capacities and discharge specifications of its 2 large and 16 medium-sized reservoirs, and provides a brief overview of the current flood control standards for the region's river channels."
+      "text": "# 5 洪涝灾害  \n\n卫河流域历史上洪涝灾害频繁,从有较详细记录的1607 年至2021 年的 414 年间,卫河发生的大洪水平均3至4年一次。建国后  \n\n$1953\\sim1956$ 年、1963年、1982 年、1996年、2021年、2023 年先后发生大洪水。其中,2021 年 7月,卫河流域发生特大暴雨洪水,新乡、安阳、鹤壁发生大面积洪水。蓄滞洪区最大滞蓄水8.73亿 $\\mathrm{m}^{3}$ 淹没面积 $384\\mathrm{km}^{2}$ ,河南卫辉市等13个城镇受淹,大量基础设施损毁,农作物大面积受灾,受灾人口约 423 万人,转移人口约 82 万人,直接经济损失约551亿元。",
+      "line_num": 25,
+      "summary": "该文档部分概述了卫河流域洪涝灾害的历史频率及建国以来的主要洪水年份，并重点详细记录了2021年7月特大暴雨洪水的灾情数据，包括淹没范围、受灾人口数量、基础设施损毁情况以及直接经济损失。"
+    },
+    {
+      "title": "6 流域特性",
+      "node_id": "0006",
+      "text": "# 6 流域特性",
+      "line_num": 31,
+      "summary": "# 6 流域特性"
+    },
+    {
+      "title": "6.1水库",
+      "node_id": "0007",
+      "text": "# 6.1水库  \n\n流域范围内分布有小南海、盘石头2座大型水库,以及群英水库等16 座中型水库,以及 231座小型水库。  \n\n<html><body><table><tr><td>水库名称</td><td>类型</td><td>调洪库 容</td><td>最大泄洪 量</td></tr><tr><td>盘石头水库</td><td>大2型</td><td>36300</td><td>2374</td></tr><tr><td>小南海水库</td><td>大2型</td><td>5911</td><td>7235</td></tr><tr><td>彰武水库</td><td>中型</td><td>5415</td><td>4989</td></tr><tr><td>双泉水库</td><td>中型</td><td>1159</td><td>884</td></tr><tr><td>汤河水库</td><td>中型</td><td>3546</td><td>1977</td></tr><tr><td>琵琶寺水库</td><td>中型</td><td>949</td><td>191</td></tr><tr><td>夺丰水库</td><td>中型</td><td>412</td><td>1829</td></tr><tr><td>石门水库 (安阳)</td><td>中型</td><td>1050</td><td>1586</td></tr><tr><td>正面水库</td><td>中型</td><td>392</td><td>3288</td></tr><tr><td>狮豹头水库</td><td>中型</td><td>919</td><td>4006</td></tr><tr><td>塔岗水库</td><td>中型</td><td>808.55</td><td>4947</td></tr><tr><td>弓上水库</td><td>中型</td><td>/</td><td>7855</td></tr><tr><td>陈家院水库</td><td>中型</td><td>270</td><td>3000</td></tr><tr><td>三郊口水库</td><td>中型</td><td>1470</td><td>4036</td></tr><tr><td>石门水库 (辉县)</td><td>中型</td><td>202.76</td><td>3928</td></tr><tr><td>宝泉水库</td><td>中型</td><td>1550</td><td>6670</td></tr><tr><td>马鞍石水库</td><td>中型</td><td>433</td><td>2003</td></tr><tr><td>群英水库</td><td>中型</td><td>828</td><td>2480</td></tr></table></body></html>",
+      "line_num": 33,
+      "summary": "This document provides an overview of the reservoir distribution and specific technical parameters within a particular watershed. It lists the total number of reservoirs by scale, including 2 large-sized reservoirs (Panshitou and Xiaonanhai), 16 medium-sized reservoirs, and 231 small-sized reservoirs. Additionally, it features a detailed table for the 18 large and medium reservoirs, specifying their classification, flood control capacity, and maximum discharge volume."
+    },
+    {
+      "title": "6.2河道",
+      "node_id": "0008",
+      "text": "# 6.2河道  \n\n通过近几年的河道治理,流域范围内主干河道基本达到 20-50 年  \n\n一遇防洪标准,城区基本到达 50-100 年一遇防洪标准。  \n\n<html><body><table><tr><td>河名</td><td>河段</td><td>防洪标准</td><td>防洪流量</td></tr><tr><td>卫河</td><td>合河闸-淇门</td><td>50年一遇</td><td>100-400m² /s</td></tr><tr><td>卫河</td><td>淇门-老观嘴</td><td>50年一遇</td><td>400m² /s</td></tr><tr><td>卫河</td><td>老观嘴-安阳河口</td><td>50年一遇</td><td>2000m² /s</td></tr><tr><td>卫河</td><td>安阳河口-徐万仓</td><td>50年一遇</td><td>2500m² /s</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>共产主义渠</td><td>合河-G107</td><td>100年一遇</td><td>3130m? /s</td></tr><tr><td>共产主义渠</td><td>G107-黄土岗</td><td>100年一遇</td><td>3130m² /s</td></tr><tr><td>共产主义渠</td><td>黄土岗-淇门</td><td>50年一遇</td><td>2890m? /s</td></tr><tr><td>共产主义渠</td><td>淇门-老观嘴</td><td>50年一遇</td><td>1600m? /s</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>大沙河</td><td>出山口-焦桐高速</td><td>20年一遇</td><td>1526m? /s</td></tr><tr><td>大沙河</td><td>焦桐高速-东海大道</td><td>50年一遇</td><td>1526-2947m² /s</td></tr><tr><td>大沙河</td><td>东海大道-获嘉县界</td><td>20年一遇</td><td>1940-2440m? /s</td></tr><tr><td>大沙河</td><td>获嘉县界-合河</td><td>50年一遇</td><td>2520-1800m² /s</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>安阳河</td><td>彰武水库-南水北调</td><td>20年一遇</td><td>1180m? /s</td></tr><tr><td>安阳河</td><td>南水北调-郭盆闸</td><td>50年一遇</td><td>1180-2300m² /s</td></tr><tr><td>安阳河</td><td>郭盆闸-卫河</td><td>20年一遇</td><td>600m² /s</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>淇河</td><td>盘石头水库-南水北调</td><td>20年一遇</td><td>1440m² /s</td></tr><tr><td>淇河</td><td>南水北调-方寨村</td><td>100年一遇</td><td>2870m? /s</td></tr><tr><td>淇河</td><td>方寨村-阎村</td><td>20年一遇</td><td>2111-1950m? /s</td></tr><tr><td>淇河</td><td>阎村-淇门</td><td>20年一遇</td><td>800-1600m² /s</td></tr></table></body></html>",
+      "line_num": 39,
+      "summary": "This document describes the flood control status and technical specifications of major river channels within a specific basin following recent management efforts. It outlines the general flood protection standards for main river stems (20-50 year frequency) and urban areas (50-100 year frequency). Additionally, it provides a detailed table specifying the flood protection standards and discharge capacities for various sections of the Wei River, Communist Canal, Dasha River, Anyang River, and Qi River."
+    },
+    {
+      "title": "6.3蓄滞洪区",
+      "node_id": "0009",
+      "text": "# 6.3蓄滞洪区  \n\n流域范围内分布有良相坡、共渠西、白寺坡、长虹渠、柳围坡、小滩坡、任固坡、广润坡、崔家桥共9处蓄滞洪区。  \n\n<html><body><table><tr><td>蓄滞洪区</td><td>设计滞蓄水位(m)</td><td>容积(亿m²)</td><td>进洪方式</td></tr><tr><td>良相坡</td><td>67.34</td><td>0.92</td><td>闫村分洪堰、共渠自然漫溢</td></tr><tr><td>共渠西</td><td>63.5/60.0</td><td>0.6</td><td>刘庄分洪堰、共渠自然漫溢</td></tr><tr><td>白寺坡</td><td>61. 4</td><td>1.78</td><td>白寺坡分洪闸+堰</td></tr><tr><td>长虹渠</td><td>62.49</td><td>1. 19</td><td>长虹渠分洪闸+堰</td></tr><tr><td>柳围坡</td><td>65. 05</td><td>0.95</td><td>宋村分洪堰</td></tr><tr><td>小滩坡</td><td>58.00</td><td>0.74</td><td>圈里分洪堰</td></tr><tr><td>任固坡</td><td>56.5</td><td>1.91</td><td>北五陵分洪堰</td></tr><tr><td>广润坡</td><td>/</td><td>2.48</td><td>双石桥分洪堰、王贵庄分洪堰</td></tr><tr><td>崔家桥</td><td>65.75</td><td>0. 61</td><td>曹马分洪堰、郭盆分洪堰</td></tr></table></body></html>",
+      "line_num": 47,
+      "summary": "该文档片段主要介绍了流域内9处蓄滞洪区（良相坡、共渠西、白寺坡、长虹渠、柳围坡、小滩坡、任固坡、广润坡、崔家桥）的分布情况，并通过表格详细列出了各蓄滞洪区的设计滞蓄水位、蓄洪容积以及具体的进洪方式（如分洪堰、分洪闸及自然漫溢等）。"
     }
   ]
 }

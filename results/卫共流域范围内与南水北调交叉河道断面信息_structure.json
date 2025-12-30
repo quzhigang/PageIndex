@@ -1,0 +1,84 @@
+{
+  "doc_name": "卫共流域范围内与南水北调交叉河道断面信息",
+  "structure": [
+    {
+      "title": "卫共流域范围内与南水北调交叉河道断面信息",
+      "node_id": "0001",
+      "text": "# 卫共流域范围内与南水北调交叉河道断面信息",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "大沙河交叉断面",
+          "node_id": "0002",
+          "text": "## 大沙河交叉断面\n- **id**: 1\n- **stcd**: nsbd_dsh\n- **河道id**: DSH\n- **河道名称**: 大沙河\n- **桩号**: 34200\n- **5年一遇设计水位**: 111.21\n- **10年一遇设计水位**: 111.565\n- **20年一遇设计水位**: 111.92\n- **50年一遇设计水位**: 112.13\n- **100年一遇设计水位**: 112.49\n- **300年一遇设计水位**: 112.81\n- **设计洪峰流量**: 2010\n- **校核洪峰流量**: 2430\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 113.99\n- **护坡底高程**: 111.92\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 113.1678\n- **纬度**: 35.176402",
+          "line_num": 3,
+          "summary": "This document provides technical specifications and hydrological data for the Dasha River intersection cross-section. Key points include identifying information (ID, station number, and river name), geographic coordinates (longitude and latitude), and detailed design water levels for various return periods ranging from 5 to 300 years. It also specifies hydraulic parameters such as design and check peak flow rates, alongside structural details of the canal embankment, including its top elevation and slope protection base elevation."
+        },
+        {
+          "title": "山门河交叉断面",
+          "node_id": "0003",
+          "text": "## 山门河交叉断面\n- **id**: 2\n- **stcd**: nsbd_sanmh\n- **河道id**: SHANMH\n- **河道名称**: 山门河\n- **桩号**: 5700\n- **5年一遇设计水位**: 132.67\n- **10年一遇设计水位**: 133.52499999999998\n- **20年一遇设计水位**: 134.38\n- **50年一遇设计水位**: 135.43\n- **100年一遇设计水位**: 136.05\n- **300年一遇设计水位**: 136.97\n- **设计洪峰流量**: 2310\n- **校核洪峰流量**: 2960\n- **渠堤或防洪堤**: 防洪堤\n- **堤顶高程**: 137.2\n- **护坡底高程**: 134.38\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 113.318537\n- **纬度**: 35.273124",
+          "line_num": 25,
+          "summary": "This partial document provides technical specifications and hydrological data for the Shanmen River intersection section (ID: 2). Key information includes the river name and station number (5700), design flood peak discharge (2310), and check flood peak discharge (2960). It details design water levels for various return periods (ranging from 5 to 300 years) and structural elevation data for the flood embankment, such as crest and slope protection bottom elevations. Additionally, the document specifies the precise geographic coordinates (longitude and latitude) for the location."
+        },
+        {
+          "title": "峪河交叉断面",
+          "node_id": "0004",
+          "text": "## 峪河交叉断面\n- **id**: 3\n- **stcd**: nsbd_yh\n- **河道id**: YH\n- **河道名称**: 峪河\n- **桩号**: 16500\n- **5年一遇设计水位**: 108.07\n- **10年一遇设计水位**: 108.65\n- **20年一遇设计水位**: 109.23\n- **50年一遇设计水位**: 109.5\n- **100年一遇设计水位**: 109.77\n- **300年一遇设计水位**: 110.03\n- **设计洪峰流量**: 3620\n- **校核洪峰流量**: 4950\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 111.8\n- **护坡底高程**: 109.23\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 113.497623\n- **纬度**: 35.412264",
+          "line_num": 47,
+          "summary": "This document provides technical specifications and hydrological data for the Yu River cross-section (ID: 3). Key points include its geographic location (coordinates and chainage), design water levels for various return periods (5 to 300 years), peak flood discharge rates (design and check), and structural elevation details for the canal embankment and slope protection."
+        },
+        {
+          "title": "石门河交叉断面",
+          "node_id": "0005",
+          "text": "## 石门河交叉断面\n- **id**: 4\n- **stcd**: nsbd_smh\n- **河道id**: SMH\n- **河道名称**: 石门河\n- **桩号**: 15800\n- **5年一遇设计水位**: 97.91\n- **10年一遇设计水位**: 98.515\n- **20年一遇设计水位**: 99.12\n- **50年一遇设计水位**: 99.58500000000001\n- **100年一遇设计水位**: 100.05\n- **300年一遇设计水位**: 100.3\n- **设计洪峰流量**: 2940\n- **校核洪峰流量**: 3720\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 102.4\n- **护坡底高程**: 99.12\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 113.667144\n- **纬度**: 35.50528",
+          "line_num": 69,
+          "summary": "This document provides technical specifications and hydrological data for the Shimen River (SMH) intersection section. Key points include identification details (ID, station number, and geographic coordinates), design water levels for various flood return periods (5, 10, 20, 50, 100, and 300 years), design and check peak flow rates, and structural elevation data for the canal embankment and slope protection."
+        },
+        {
+          "title": "白泉河交叉断面",
+          "node_id": "0006",
+          "text": "## 白泉河交叉断面\n- **id**: 5\n- **stcd**: nsbd_bqh\n- **河道id**: BQH\n- **河道名称**: 百泉河\n- **桩号**: 3000\n- **5年一遇设计水位**: 108.72\n- **10年一遇设计水位**: 109.215\n- **20年一遇设计水位**: 109.71\n- **50年一遇设计水位**: 109.99\n- **100年一遇设计水位**: 110.27\n- **300年一遇设计水位**: 110.61\n- **设计洪峰流量**: 3510\n- **校核洪峰流量**: 4410\n- **渠堤或防洪堤**: 防洪堤\n- **堤顶高程**: 112.2\n- **护坡底高程**: 109.71\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 113.757922\n- **纬度**: 35.502048",
+          "line_num": 91,
+          "summary": "This partial document provides technical specifications and hydraulic data for the Baiquan River intersection section (ID: 5). It details the section's identification (station code and number), design water levels for various flood return periods (ranging from 5 to 300 years), and peak flow capacities (design and check). Additionally, it includes structural information for the flood embankment, such as crest and slope protection elevations, along with the precise geographical coordinates (longitude and latitude) of the section."
+        },
+        {
+          "title": "沧河交叉断面",
+          "node_id": "0007",
+          "text": "## 沧河交叉断面\n- **id**: 6\n- **stcd**: nsbd_ch\n- **河道id**: CH\n- **河道名称**: 沧河\n- **桩号**: 36200\n- **5年一遇设计水位**: 97.73\n- **10年一遇设计水位**: 98.285\n- **20年一遇设计水位**: 98.84\n- **50年一遇设计水位**: 99.38\n- **100年一遇设计水位**: 99.75\n- **300年一遇设计水位**: 100.19\n- **设计洪峰流量**: 2770\n- **校核洪峰流量**: 3520\n- **渠堤或防洪堤**: 防洪堤\n- **堤顶高程**: 101.25\n- **护坡底高程**: 98.84\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 114.101307\n- **纬度**: 35.554548",
+          "line_num": 113,
+          "summary": "This document provides technical specifications and hydrological data for the Cang River intersection section (沧河交叉断面). Key points include identification details (ID and station number), precise geographical coordinates, design water levels for various flood return periods (ranging from 5 to 300 years), design and check peak flow rates, and engineering elevations for flood control structures, such as the levee crest and slope protection."
+        },
+        {
+          "title": "淇河交叉断面",
+          "node_id": "0008",
+          "text": "## 淇河交叉断面\n- **id**: 7\n- **stcd**: nsbd_qh\n- **河道id**: QH\n- **河道名称**: 淇河\n- **桩号**: 111000\n- **5年一遇设计水位**: 90.77\n- **10年一遇设计水位**: 92.31\n- **20年一遇设计水位**: 93.85\n- **50年一遇设计水位**: 95.29499999999999\n- **100年一遇设计水位**: 96.74\n- **300年一遇设计水位**: 100.13\n- **设计洪峰流量**: 3880\n- **校核洪峰流量**: 7230\n- **渠堤或防洪堤**: 防洪堤\n- **堤顶高程**: 101.6\n- **护坡底高程**: 93.85\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 114.254279\n- **纬度**: 35.741751",
+          "line_num": 135,
+          "summary": "This partial document provides detailed technical and hydrological data for the Qi River cross-section (淇河交叉断面). Key information includes identification details (ID, station code, and chainage), geographical coordinates, design flood water levels for various return periods (5, 10, 20, 50, 100, and 300 years), design and check peak flow rates, and structural specifications for the flood embankment, such as the crest elevation and slope protection bottom elevation."
+        },
+        {
+          "title": "汤永河交叉断面",
+          "node_id": "0009",
+          "text": "## 汤永河交叉断面\n- **id**: 8\n- **stcd**: nsbd_tyh\n- **河道id**: TYH\n- **河道名称**: 汤永河\n- **桩号**: 6700\n- **5年一遇设计水位**: 94.6\n- **10年一遇设计水位**: 94.91\n- **20年一遇设计水位**: 95.22\n- **50年一遇设计水位**: 95.55\n- **100年一遇设计水位**: 95.79\n- **300年一遇设计水位**: 96.22\n- **设计洪峰流量**: 513\n- **校核洪峰流量**: 650\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 97.35\n- **护坡底高程**: 95.22\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 114.287606\n- **纬度**: 35.823057",
+          "line_num": 157,
+          "summary": "该文档详细记录了汤永河交叉断面的技术参数与水文设计指标。主要内容包括断面的基本标识信息（如桩号、河道名称及地理经纬度）、不同重现期（5年至300年一遇）的设计水位、设计与校核洪峰流量，以及堤防结构的相关高程数据（如堤顶高程和护坡底高程）。"
+        },
+        {
+          "title": "汤河交叉断面",
+          "node_id": "0010",
+          "text": "## 汤河交叉断面\n- **id**: 9\n- **stcd**: nsbd_th\n- **河道id**: TH\n- **河道名称**: 汤河\n- **桩号**: 13600\n- **5年一遇设计水位**: 84.57\n- **10年一遇设计水位**: 85.41999999999999\n- **20年一遇设计水位**: 86.27\n- **50年一遇设计水位**: 86.88\n- **100年一遇设计水位**: 87.25\n- **300年一遇设计水位**: 87.81\n- **设计洪峰流量**: 1830\n- **校核洪峰流量**: 2370\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 95.78\n- **护坡底高程**: 86.27\n- **其他水位名称**: 槽身底\n- **其他水位值**: 87.58\n- **经度**: 114.321344\n- **纬度**: 35.941136",
+          "line_num": 179,
+          "summary": "This partial document provides technical specifications for the Tanghe Cross Section (汤河交叉断面), including its identification data, geographical coordinates, design water levels for various return periods (5 to 300 years), peak flow capacities, and structural engineering elevations for the embankment and flume."
+        },
+        {
+          "title": "安阳河交叉断面",
+          "node_id": "0011",
+          "text": "## 安阳河交叉断面\n- **id**: 10\n- **stcd**: nsbd_ayh\n- **河道id**: AYH\n- **河道名称**: 安阳河\n- **桩号**: 71800\n- **5年一遇设计水位**: 81.42\n- **10年一遇设计水位**: 82.4\n- **20年一遇设计水位**: 83.38\n- **50年一遇设计水位**: 84.51\n- **100年一遇设计水位**: 86.05\n- **300年一遇设计水位**: 87.95\n- **设计洪峰流量**: 3751\n- **校核洪峰流量**: 5356\n- **渠堤或防洪堤**: 渠堤\n- **堤顶高程**: 94.8\n- **护坡底高程**: 83.38\n- **其他水位名称**: \n- **其他水位值**: \n- **经度**: 114.245677\n- **纬度**: 36.136475",
+          "line_num": 201,
+          "summary": "This document provides technical data and hydrological specifications for the Anyang River intersection cross-section. Key information includes geographic identification (station code, mileage, and coordinates), design water levels for various flood return periods (ranging from 5 to 300 years), peak discharge capacities (design and check), and structural parameters of the embankment such as its type, crest elevation, and slope protection elevation."
+        }
+      ],
+      "prefix_summary": "# 卫共流域范围内与南水北调交叉河道断面信息"
+    }
+  ]
+}

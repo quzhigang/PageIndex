@@ -1,0 +1,513 @@
+{
+  "doc_name": "取水监测",
+  "structure": [
+    {
+      "title": "取水监测 数据文档",
+      "node_id": "0001",
+      "text": "# 取水监测 数据文档\n\n**数据条数:** 69\n\n---",
+      "line_num": 1,
+      "nodes": [
+        {
+          "title": "字段说明",
+          "node_id": "0002",
+          "text": "## 字段说明\n\n| 字段名 | 描述 |\n|--------|------|\n| bas | 所在流域 |\n| code | 站点编码 |\n| latitude | 纬度 |\n| licDbsWater | 取水执行量 |\n| licWater | 年许可取水量(万m³) |\n| longitude | 经度 |\n| name | 站点名称 |",
+          "line_num": 7,
+          "summary": "## 字段说明\n\n| 字段名 | 描述 |\n|--------|------|\n| bas | 所在流域 |\n| code | 站点编码 |\n| latitude | 纬度 |\n| licDbsWater | 取水执行量 |\n| licWater | 年许可取水量(万m³) |\n| longitude | 经度 |\n| name | 站点名称 |"
+        },
+        {
+          "title": "数据详情",
+          "node_id": "0003",
+          "text": "## 数据详情",
+          "line_num": 19,
+          "nodes": [
+            {
+              "title": "记录 1",
+              "node_id": "0004",
+              "text": "### 记录 1\n\n- **code:** 91410522719138510J\n- **name:** 沙钢集团安阳永兴特钢有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1687\n- **latitude:** 36.1476\n- **licWater:** 550.0\n- **licDbsWater:** 550.0\n\n---",
+              "line_num": 21,
+              "summary": "### 记录 1\n\n- **code:** 91410522719138510J\n- **name:** 沙钢集团安阳永兴特钢有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1687\n- **latitude:** 36.1476\n- **licWater:** 550.0\n- **licDbsWater:** 550.0\n\n---"
+            },
+            {
+              "title": "记录 2",
+              "node_id": "0005",
+              "text": "### 记录 2\n\n- **code:** 914100007191734203\n- **name:** 安阳钢铁股份有限公司\n- **bas:**  \n- **longitude:** 114.2771\n- **latitude:** 36.1193\n- **licWater:** 3688.62\n- **licDbsWater:** 3688.62\n\n---",
+              "line_num": 33,
+              "summary": "### 记录 2\n\n- **code:** 914100007191734203\n- **name:** 安阳钢铁股份有限公司\n- **bas:**  \n- **longitude:** 114.2771\n- **latitude:** 36.1193\n- **licWater:** 3688.62\n- **licDbsWater:** 3688.62\n\n---"
+            },
+            {
+              "title": "记录 3",
+              "node_id": "0006",
+              "text": "### 记录 3\n\n- **code:** 91410500172195975Q\n- **name:** 大唐安阳电力有限责任公司（非常规水）\n- **bas:** 海河流域\n- **longitude:** 114.2565\n- **latitude:** 36.1186\n- **licWater:** 799.0\n- **licDbsWater:** 799.0\n\n---",
+              "line_num": 45,
+              "summary": "### 记录 3\n\n- **code:** 91410500172195975Q\n- **name:** 大唐安阳电力有限责任公司（非常规水）\n- **bas:** 海河流域\n- **longitude:** 114.2565\n- **latitude:** 36.1186\n- **licWater:** 799.0\n- **licDbsWater:** 799.0\n\n---"
+            },
+            {
+              "title": "记录 4",
+              "node_id": "0007",
+              "text": "### 记录 4\n\n- **code:** 91410523172513531R\n- **name:** 汤阴县自来水公司（城南水厂）\n- **bas:** 海河流域\n- **longitude:** 114.361\n- **latitude:** 35.93277\n- **licWater:** 979.0\n- **licDbsWater:** 979.0\n\n---",
+              "line_num": 57,
+              "summary": "### 记录 4\n\n- **code:** 91410523172513531R\n- **name:** 汤阴县自来水公司（城南水厂）\n- **bas:** 海河流域\n- **longitude:** 114.361\n- **latitude:** 35.93277\n- **licWater:** 979.0\n- **licDbsWater:** 979.0\n\n---"
+            },
+            {
+              "title": "记录 5",
+              "node_id": "0008",
+              "text": "### 记录 5\n\n- **code:** 12410527F76500721D\n- **name:** 内黄县自来水公司(第四水厂一期)\n- **bas:** 海河流域\n- **longitude:** 114.9128\n- **latitude:** 35.9517\n- **licWater:** 1284.0\n- **licDbsWater:** 1284.0\n\n---",
+              "line_num": 69,
+              "summary": "### 记录 5\n\n- **code:** 12410527F76500721D\n- **name:** 内黄县自来水公司(第四水厂一期)\n- **bas:** 海河流域\n- **longitude:** 114.9128\n- **latitude:** 35.9517\n- **licWater:** 1284.0\n- **licDbsWater:** 1284.0\n\n---"
+            },
+            {
+              "title": "记录 6",
+              "node_id": "0009",
+              "text": "### 记录 6\n\n- **code:** 914105816700588774\n- **name:** 大唐林州热电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 113.8591\n- **latitude:** 36.1109\n- **licWater:** 778.0\n- **licDbsWater:** 766.0\n\n---",
+              "line_num": 81,
+              "summary": "### 记录 6\n\n- **code:** 914105816700588774\n- **name:** 大唐林州热电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 113.8591\n- **latitude:** 36.1109\n- **licWater:** 778.0\n- **licDbsWater:** 766.0\n\n---"
+            },
+            {
+              "title": "记录 7",
+              "node_id": "0010",
+              "text": "### 记录 7\n\n- **code:** 9141058117243178XF\n- **name:** 林州市自来水公司（第四水厂）\n- **bas:** 海河流域\n- **longitude:** 113.7674\n- **latitude:** 36.1586\n- **licWater:** 1478.0\n- **licDbsWater:** 1478.0\n\n---",
+              "line_num": 93,
+              "summary": "### 记录 7\n\n- **code:** 9141058117243178XF\n- **name:** 林州市自来水公司（第四水厂）\n- **bas:** 海河流域\n- **longitude:** 113.7674\n- **latitude:** 36.1586\n- **licWater:** 1478.0\n- **licDbsWater:** 1478.0\n\n---"
+            },
+            {
+              "title": "记录 8",
+              "node_id": "0011",
+              "text": "### 记录 8\n\n- **code:** 91410581568643367E\n- **name:** 林州市丰源水电站\n- **bas:** 海河流域\n- **longitude:** 113.6767\n- **latitude:** 35.9447\n- **licWater:** 800.0\n- **licDbsWater:** 800.0\n\n---",
+              "line_num": 105,
+              "summary": "### 记录 8\n\n- **code:** 91410581568643367E\n- **name:** 林州市丰源水电站\n- **bas:** 海河流域\n- **longitude:** 113.6767\n- **latitude:** 35.9447\n- **licWater:** 800.0\n- **licDbsWater:** 800.0\n\n---"
+            },
+            {
+              "title": "记录 9",
+              "node_id": "0012",
+              "text": "### 记录 9\n\n- **code:** 91410600779447307R\n- **name:** 鹤壁市城市水务(集团)有限责任公司（姬家山水厂）\n- **bas:** 海河流域\n- **longitude:** 114.1481\n- **latitude:** 35.9207\n- **licWater:** 394.2\n- **licDbsWater:** 394.2\n\n---",
+              "line_num": 117,
+              "summary": "### 记录 9\n\n- **code:** 91410600779447307R\n- **name:** 鹤壁市城市水务(集团)有限责任公司（姬家山水厂）\n- **bas:** 海河流域\n- **longitude:** 114.1481\n- **latitude:** 35.9207\n- **licWater:** 394.2\n- **licDbsWater:** 394.2\n\n---"
+            },
+            {
+              "title": "记录 10",
+              "node_id": "0013",
+              "text": "### 记录 10\n\n- **code:** 914106220689067068\n- **name:** 鹤壁鹤淇发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.1663\n- **latitude:** 35.8607\n- **licWater:** 753.72\n- **licDbsWater:** 753.72\n\n---",
+              "line_num": 129,
+              "summary": "### 记录 10\n\n- **code:** 914106220689067068\n- **name:** 鹤壁鹤淇发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.1663\n- **latitude:** 35.8607\n- **licWater:** 753.72\n- **licDbsWater:** 753.72\n\n---"
+            },
+            {
+              "title": "记录 11",
+              "node_id": "0014",
+              "text": "### 记录 11\n\n- **code:** 91410600670085904M\n- **name:** 鹤壁宝发能源科技股份有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1791\n- **latitude:** 35.8671\n- **licWater:** 335.16\n- **licDbsWater:** 335.16\n\n---",
+              "line_num": 141,
+              "summary": "### 记录 11\n\n- **code:** 91410600670085904M\n- **name:** 鹤壁宝发能源科技股份有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1791\n- **latitude:** 35.8671\n- **licWater:** 335.16\n- **licDbsWater:** 335.16\n\n---"
+            },
+            {
+              "title": "记录 12",
+              "node_id": "0015",
+              "text": "### 记录 12\n\n- **code:** 914106005624773370\n- **name:** 鹤壁煤电股份有限公司热电厂\n- **bas:**  \n- **longitude:** 114.1873\n- **latitude:** 35.8341\n- **licWater:** 375.3\n- **licDbsWater:** 375.3\n\n---",
+              "line_num": 153,
+              "summary": "### 记录 12\n\n- **code:** 914106005624773370\n- **name:** 鹤壁煤电股份有限公司热电厂\n- **bas:**  \n- **longitude:** 114.1873\n- **latitude:** 35.8341\n- **licWater:** 375.3\n- **licDbsWater:** 375.3\n\n---"
+            },
+            {
+              "title": "记录 13",
+              "node_id": "0016",
+              "text": "### 记录 13\n\n- **code:** 91410600763144133G\n- **name:** 鹤壁丰鹤发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.1785\n- **latitude:** 35.8433\n- **licWater:** 1211.9\n- **licDbsWater:** 1211.9\n\n---",
+              "line_num": 165,
+              "summary": "### 记录 13\n\n- **code:** 91410600763144133G\n- **name:** 鹤壁丰鹤发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.1785\n- **latitude:** 35.8433\n- **licWater:** 1211.9\n- **licDbsWater:** 1211.9\n\n---"
+            },
+            {
+              "title": "记录 14",
+              "node_id": "0017",
+              "text": "### 记录 14\n\n- **code:** 91410600589729258E\n- **name:** 鹤壁市宝山水务有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1572\n- **latitude:** 35.8696\n- **licWater:** 1095.0\n- **licDbsWater:** 1095.0\n\n---",
+              "line_num": 177,
+              "summary": "### 记录 14\n\n- **code:** 91410600589729258E\n- **name:** 鹤壁市宝山水务有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1572\n- **latitude:** 35.8696\n- **licWater:** 1095.0\n- **licDbsWater:** 1095.0\n\n---"
+            },
+            {
+              "title": "记录 15",
+              "node_id": "0018",
+              "text": "### 记录 15\n\n- **code:** 91410622068925384U\n- **name:** 鹤壁市骏港水务有限公司（淇县铁西水厂）\n- **bas:** 海河流域\n- **longitude:** 114.1846\n- **latitude:** 35.6297\n- **licWater:** 1269.4\n- **licDbsWater:** 1269.4\n\n---",
+              "line_num": 189,
+              "summary": "### 记录 15\n\n- **code:** 91410622068925384U\n- **name:** 鹤壁市骏港水务有限公司（淇县铁西水厂）\n- **bas:** 海河流域\n- **longitude:** 114.1846\n- **latitude:** 35.6297\n- **licWater:** 1269.4\n- **licDbsWater:** 1269.4\n\n---"
+            },
+            {
+              "title": "记录 16",
+              "node_id": "0019",
+              "text": "### 记录 16\n\n- **code:** 91410700793219669D\n- **name:** 新乡首创水务有限责任公司（孟营水厂）\n- **bas:** 黄河流域\n- **longitude:** 113.8739\n- **latitude:** 35.2784\n- **licWater:** 4030.0\n- **licDbsWater:** 4030.0\n\n---",
+              "line_num": 201,
+              "summary": "### 记录 16\n\n- **code:** 91410700793219669D\n- **name:** 新乡首创水务有限责任公司（孟营水厂）\n- **bas:** 黄河流域\n- **longitude:** 113.8739\n- **latitude:** 35.2784\n- **licWater:** 4030.0\n- **licDbsWater:** 4030.0\n\n---"
+            },
+            {
+              "title": "记录 17",
+              "node_id": "0020",
+              "text": "### 记录 17\n\n- **code:** 914107047066088514\n- **name:** 新乡市金盛水务有限公司（地表水）\n- **bas:** 海河流域\n- **longitude:** 113.9021\n- **latitude:** 35.3975\n- **licWater:** 1683.0\n- **licDbsWater:** 1683.0\n\n---",
+              "line_num": 213,
+              "summary": "### 记录 17\n\n- **code:** 914107047066088514\n- **name:** 新乡市金盛水务有限公司（地表水）\n- **bas:** 海河流域\n- **longitude:** 113.9021\n- **latitude:** 35.3975\n- **licWater:** 1683.0\n- **licDbsWater:** 1683.0\n\n---"
+            },
+            {
+              "title": "记录 18",
+              "node_id": "0021",
+              "text": "### 记录 18\n\n- **code:** 9141072457924621X4\n- **name:** 获嘉县盛瑞水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.6278\n- **latitude:** 35.2517\n- **licWater:** 1085.0\n- **licDbsWater:** 1085.0\n\n---",
+              "line_num": 225,
+              "summary": "### 记录 18\n\n- **code:** 9141072457924621X4\n- **name:** 获嘉县盛瑞水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.6278\n- **latitude:** 35.2517\n- **licWater:** 1085.0\n- **licDbsWater:** 1085.0\n\n---"
+            },
+            {
+              "title": "记录 19",
+              "node_id": "0022",
+              "text": "### 记录 19\n\n- **code:** 914107247538615267\n- **name:** 新乡中新化工有限责任公司\n- **bas:**  \n- **longitude:** 113.6494\n- **latitude:** 35.2621\n- **licWater:** 275.0\n- **licDbsWater:** 275.0\n\n---",
+              "line_num": 237,
+              "summary": "### 记录 19\n\n- **code:** 914107247538615267\n- **name:** 新乡中新化工有限责任公司\n- **bas:**  \n- **longitude:** 113.6494\n- **latitude:** 35.2621\n- **licWater:** 275.0\n- **licDbsWater:** 275.0\n\n---"
+            },
+            {
+              "title": "记录 20",
+              "node_id": "0023",
+              "text": "### 记录 20\n\n- **code:** 91410781MA3XGF6Y7G\n- **name:** 卫辉中州水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.981\n- **latitude:** 35.43599\n- **licWater:** 2213.0\n- **licDbsWater:** 2213.0\n\n---",
+              "line_num": 249,
+              "summary": "### 记录 20\n\n- **code:** 91410781MA3XGF6Y7G\n- **name:** 卫辉中州水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.981\n- **latitude:** 35.43599\n- **licWater:** 2213.0\n- **licDbsWater:** 2213.0\n\n---"
+            },
+            {
+              "title": "记录 21",
+              "node_id": "0024",
+              "text": "### 记录 21\n\n- **code:** 91410800MA403RA24T\n- **name:** 焦作市水务有限责任公司（府城水厂一期）\n- **bas:** 海河流域\n- **longitude:** 113.112\n- **latitude:** 35.1231\n- **licWater:** 4434.0\n- **licDbsWater:** 4434.0\n\n---",
+              "line_num": 261,
+              "summary": "### 记录 21\n\n- **code:** 91410800MA403RA24T\n- **name:** 焦作市水务有限责任公司（府城水厂一期）\n- **bas:** 海河流域\n- **longitude:** 113.112\n- **latitude:** 35.1231\n- **licWater:** 4434.0\n- **licDbsWater:** 4434.0\n\n---"
+            },
+            {
+              "title": "记录 22",
+              "node_id": "0025",
+              "text": "### 记录 22\n\n- **code:** 91410800173472241R\n- **name:** 龙佰集团股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.1242\n- **latitude:** 35.2402\n- **licWater:** 491.15\n- **licDbsWater:** 291.15\n\n---",
+              "line_num": 273,
+              "summary": "### 记录 22\n\n- **code:** 91410800173472241R\n- **name:** 龙佰集团股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.1242\n- **latitude:** 35.2402\n- **licWater:** 491.15\n- **licDbsWater:** 291.15\n\n---"
+            },
+            {
+              "title": "记录 23",
+              "node_id": "0026",
+              "text": "### 记录 23\n\n- **code:** 91410000173525171F\n- **name:** 焦作万方铝业股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.32\n- **latitude:** 35.20768\n- **licWater:** 1100.0\n- **licDbsWater:** 744.2\n\n---",
+              "line_num": 285,
+              "summary": "### 记录 23\n\n- **code:** 91410000173525171F\n- **name:** 焦作万方铝业股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.32\n- **latitude:** 35.20768\n- **licWater:** 1100.0\n- **licDbsWater:** 744.2\n\n---"
+            },
+            {
+              "title": "记录 24",
+              "node_id": "0027",
+              "text": "### 记录 24\n\n- **code:** 91410821678085079J\n- **name:** 修武县水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.427\n- **latitude:** 35.264\n- **licWater:** 1200.0\n- **licDbsWater:** 1200.0\n\n---",
+              "line_num": 297,
+              "summary": "### 记录 24\n\n- **code:** 91410821678085079J\n- **name:** 修武县水务有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.427\n- **latitude:** 35.264\n- **licWater:** 1200.0\n- **licDbsWater:** 1200.0\n\n---"
+            },
+            {
+              "title": "记录 25",
+              "node_id": "0028",
+              "text": "### 记录 25\n\n- **code:** 91410800562463285Y\n- **name:** 华润电力焦作有限公司\n- **bas:** 海河流域\n- **longitude:** 113.108\n- **latitude:** 35.21735\n- **licWater:** 936.03\n- **licDbsWater:** 936.03\n\n---",
+              "line_num": 309,
+              "summary": "### 记录 25\n\n- **code:** 91410800562463285Y\n- **name:** 华润电力焦作有限公司\n- **bas:** 海河流域\n- **longitude:** 113.108\n- **latitude:** 35.21735\n- **licWater:** 936.03\n- **licDbsWater:** 936.03\n\n---"
+            },
+            {
+              "title": "记录 26",
+              "node_id": "0029",
+              "text": "### 记录 26\n\n- **code:** 9141082339512308XK\n- **name:** 武陟国源水务有限公司\n- **bas:** 海河流域\n- **longitude:** 113.4127\n- **latitude:** 35.0936\n- **licWater:** 1186.0\n- **licDbsWater:** 1000.0\n\n---",
+              "line_num": 321,
+              "summary": "### 记录 26\n\n- **code:** 9141082339512308XK\n- **name:** 武陟国源水务有限公司\n- **bas:** 海河流域\n- **longitude:** 113.4127\n- **latitude:** 35.0936\n- **licWater:** 1186.0\n- **licDbsWater:** 1000.0\n\n---"
+            },
+            {
+              "title": "记录 27",
+              "node_id": "0030",
+              "text": "### 记录 27\n\n- **code:** 91410781685697815A\n- **name:** 卫辉市沧河水利灌溉有限公司\n- **bas:** 海河流域\n- **longitude:** 114.045643\n- **latitude:** 35.600023\n- **licWater:** 1800.0\n- **licDbsWater:** 1800.0\n\n---",
+              "line_num": 333,
+              "summary": "### 记录 27\n\n- **code:** 91410781685697815A\n- **name:** 卫辉市沧河水利灌溉有限公司\n- **bas:** 海河流域\n- **longitude:** 114.045643\n- **latitude:** 35.600023\n- **licWater:** 1800.0\n- **licDbsWater:** 1800.0\n\n---"
+            },
+            {
+              "title": "记录 28",
+              "node_id": "0031",
+              "text": "### 记录 28\n\n- **code:** 91410782MA9FLHDA21\n- **name:** 辉县市豫辉博金建材有限公司\n- **bas:** 海河流域\n- **longitude:** 113.624158\n- **latitude:** 35.531081\n- **licWater:** 114.144\n- **licDbsWater:** 10.0\n\n---",
+              "line_num": 345,
+              "summary": "### 记录 28\n\n- **code:** 91410782MA9FLHDA21\n- **name:** 辉县市豫辉博金建材有限公司\n- **bas:** 海河流域\n- **longitude:** 113.624158\n- **latitude:** 35.531081\n- **licWater:** 114.144\n- **licDbsWater:** 10.0\n\n---"
+            },
+            {
+              "title": "记录 29",
+              "node_id": "0032",
+              "text": "### 记录 29\n\n- **code:** 91410721173169170F\n- **name:** 河南新乡鸿泰纸业有限公司\n- **bas:** 海河流域\n- **longitude:** 113.792823\n- **latitude:** 35.216593\n- **licWater:** 110.1\n- **licDbsWater:** 110.1\n\n---",
+              "line_num": 357,
+              "summary": "### 记录 29\n\n- **code:** 91410721173169170F\n- **name:** 河南新乡鸿泰纸业有限公司\n- **bas:** 海河流域\n- **longitude:** 113.792823\n- **latitude:** 35.216593\n- **licWater:** 110.1\n- **licDbsWater:** 110.1\n\n---"
+            },
+            {
+              "title": "记录 30",
+              "node_id": "0033",
+              "text": "### 记录 30\n\n- **code:** 91410721697307482M\n- **name:** 河南兴泰纸业有限公司\n- **bas:** 海河流域\n- **longitude:** 113.824334\n- **latitude:** 35.215677\n- **licWater:** 140.39\n- **licDbsWater:** 140.39\n\n---",
+              "line_num": 369,
+              "summary": "### 记录 30\n\n- **code:** 91410721697307482M\n- **name:** 河南兴泰纸业有限公司\n- **bas:** 海河流域\n- **longitude:** 113.824334\n- **latitude:** 35.215677\n- **licWater:** 140.39\n- **licDbsWater:** 140.39\n\n---"
+            },
+            {
+              "title": "记录 31",
+              "node_id": "0034",
+              "text": "### 记录 31\n\n- **code:** 91410721614935281C\n- **name:** 新乡台硝化工有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.810514\n- **latitude:** 35.234638\n- **licWater:** 78.99\n- **licDbsWater:** 78.99\n\n---",
+              "line_num": 381,
+              "summary": "### 记录 31\n\n- **code:** 91410721614935281C\n- **name:** 新乡台硝化工有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.810514\n- **latitude:** 35.234638\n- **licWater:** 78.99\n- **licDbsWater:** 78.99\n\n---"
+            },
+            {
+              "title": "记录 32",
+              "node_id": "0035",
+              "text": "### 记录 32\n\n- **code:** 91410600MA472EJX08\n- **name:** 城发环保能源（鹤壁）有限公司\n- **bas:** 海河流域\n- **longitude:** 114.236778\n- **latitude:** 35.81089\n- **licWater:** 73.58\n- **licDbsWater:** 73.58\n\n---",
+              "line_num": 393,
+              "summary": "### 记录 32\n\n- **code:** 91410600MA472EJX08\n- **name:** 城发环保能源（鹤壁）有限公司\n- **bas:** 海河流域\n- **longitude:** 114.236778\n- **latitude:** 35.81089\n- **licWater:** 73.58\n- **licDbsWater:** 73.58\n\n---"
+            },
+            {
+              "title": "记录 33",
+              "node_id": "0036",
+              "text": "### 记录 33\n\n- **code:** 12410581417476688M\n- **name:** 林州市城乡供水服务中心（引弓入城）\n- **bas:** 海河流域\n- **longitude:** 113.684727\n- **latitude:** 35.958851\n- **licWater:** 825.0\n- **licDbsWater:** 825.0\n\n---",
+              "line_num": 405,
+              "summary": "### 记录 33\n\n- **code:** 12410581417476688M\n- **name:** 林州市城乡供水服务中心（引弓入城）\n- **bas:** 海河流域\n- **longitude:** 113.684727\n- **latitude:** 35.958851\n- **licWater:** 825.0\n- **licDbsWater:** 825.0\n\n---"
+            },
+            {
+              "title": "记录 34",
+              "node_id": "0037",
+              "text": "### 记录 34\n\n- **code:** 91410621065278732G\n- **name:** 浚县骏港供水有限公司\n- **bas:** 海河流域\n- **longitude:** 114.592538\n- **latitude:** 35.799614\n- **licWater:** 266.2\n- **licDbsWater:** 266.2\n\n---",
+              "line_num": 417,
+              "summary": "### 记录 34\n\n- **code:** 91410621065278732G\n- **name:** 浚县骏港供水有限公司\n- **bas:** 海河流域\n- **longitude:** 114.592538\n- **latitude:** 35.799614\n- **licWater:** 266.2\n- **licDbsWater:** 266.2\n\n---"
+            },
+            {
+              "title": "记录 35",
+              "node_id": "0038",
+              "text": "### 记录 35\n\n- **code:** 12410622MB1K49592T\n- **name:** 淇县灌区服务中心（滞洪区灌区）\n- **bas:** 海河流域\n- **longitude:** 114.255665\n- **latitude:** 35.534544\n- **licWater:** 282.0\n- **licDbsWater:** 282.0\n\n---",
+              "line_num": 429,
+              "summary": "### 记录 35\n\n- **code:** 12410622MB1K49592T\n- **name:** 淇县灌区服务中心（滞洪区灌区）\n- **bas:** 海河流域\n- **longitude:** 114.255665\n- **latitude:** 35.534544\n- **licWater:** 282.0\n- **licDbsWater:** 282.0\n\n---"
+            },
+            {
+              "title": "记录 36",
+              "node_id": "0039",
+              "text": "### 记录 36\n\n- **code:** 91410600586013596M\n- **name:** 鹤壁煤电股份有限公司电石厂\n- **bas:** 海河流域\n- **longitude:** 114.116465\n- **latitude:** 35.881119\n- **licWater:** 80.0\n- **licDbsWater:** 80.0\n\n---",
+              "line_num": 441,
+              "summary": "### 记录 36\n\n- **code:** 91410600586013596M\n- **name:** 鹤壁煤电股份有限公司电石厂\n- **bas:** 海河流域\n- **longitude:** 114.116465\n- **latitude:** 35.881119\n- **licWater:** 80.0\n- **licDbsWater:** 80.0\n\n---"
+            },
+            {
+              "title": "记录 37",
+              "node_id": "0040",
+              "text": "### 记录 37\n\n- **code:** 9141060068815666XE\n- **name:** 鹤壁市金山供水有限公司\n- **bas:** 海河流域\n- **longitude:** 114.210359\n- **latitude:** 35.803726\n- **licWater:** 96.0\n- **licDbsWater:** 96.0\n\n---",
+              "line_num": 453,
+              "summary": "### 记录 37\n\n- **code:** 9141060068815666XE\n- **name:** 鹤壁市金山供水有限公司\n- **bas:** 海河流域\n- **longitude:** 114.210359\n- **latitude:** 35.803726\n- **licWater:** 96.0\n- **licDbsWater:** 96.0\n\n---"
+            },
+            {
+              "title": "记录 38",
+              "node_id": "0041",
+              "text": "### 记录 38\n\n- **code:** 114106006959930870\n- **name:** 鹤壁市宝山循环经济产业集聚区管理委员会\n- **bas:** 海河流域\n- **longitude:** 114.340091\n- **latitude:** 35.827344\n- **licWater:** 23.0\n- **licDbsWater:** 23.0\n\n---",
+              "line_num": 465,
+              "summary": "### 记录 38\n\n- **code:** 114106006959930870\n- **name:** 鹤壁市宝山循环经济产业集聚区管理委员会\n- **bas:** 海河流域\n- **longitude:** 114.340091\n- **latitude:** 35.827344\n- **licWater:** 23.0\n- **licDbsWater:** 23.0\n\n---"
+            },
+            {
+              "title": "记录 39",
+              "node_id": "0042",
+              "text": "### 记录 39\n\n- **code:** 91410500F75690906Y\n- **name:** 大唐安阳发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.283877\n- **latitude:** 36.128689\n- **licWater:** 1147.0\n- **licDbsWater:** 1147.0\n\n---",
+              "line_num": 477,
+              "summary": "### 记录 39\n\n- **code:** 91410500F75690906Y\n- **name:** 大唐安阳发电有限责任公司\n- **bas:** 海河流域\n- **longitude:** 114.283877\n- **latitude:** 36.128689\n- **licWater:** 1147.0\n- **licDbsWater:** 1147.0\n\n---"
+            },
+            {
+              "title": "记录 40",
+              "node_id": "0043",
+              "text": "### 记录 40\n\n- **code:** 91410721795701766Y\n- **name:** 新乡县本源自来水有限公司\n- **bas:** 海河流域\n- **longitude:** 113.77978\n- **latitude:** 35.170949\n- **licWater:** 1062.0\n- **licDbsWater:** 1062.0\n\n---",
+              "line_num": 489,
+              "summary": "### 记录 40\n\n- **code:** 91410721795701766Y\n- **name:** 新乡县本源自来水有限公司\n- **bas:** 海河流域\n- **longitude:** 113.77978\n- **latitude:** 35.170949\n- **licWater:** 1062.0\n- **licDbsWater:** 1062.0\n\n---"
+            },
+            {
+              "title": "记录 41",
+              "node_id": "0044",
+              "text": "### 记录 41\n\n- **code:** 91410782317414412U\n- **name:** 辉县市华丰水利供水有限公司\n- **bas:** 海河流域\n- **longitude:** 113.47319\n- **latitude:** 35.47566\n- **licWater:** 700.0\n- **licDbsWater:** 700.0\n\n---",
+              "line_num": 501,
+              "summary": "### 记录 41\n\n- **code:** 91410782317414412U\n- **name:** 辉县市华丰水利供水有限公司\n- **bas:** 海河流域\n- **longitude:** 113.47319\n- **latitude:** 35.47566\n- **licWater:** 700.0\n- **licDbsWater:** 700.0\n\n---"
+            },
+            {
+              "title": "记录 42",
+              "node_id": "0045",
+              "text": "### 记录 42\n\n- **code:** 914105004173452741\n- **name:** 安阳市万金渠管理处\n- **bas:** 海河流域\n- **longitude:** 114.146\n- **latitude:** 36.102\n- **licWater:** 6351.0\n- **licDbsWater:** 6351.0\n\n---",
+              "line_num": 513,
+              "summary": "### 记录 42\n\n- **code:** 914105004173452741\n- **name:** 安阳市万金渠管理处\n- **bas:** 海河流域\n- **longitude:** 114.146\n- **latitude:** 36.102\n- **licWater:** 6351.0\n- **licDbsWater:** 6351.0\n\n---"
+            },
+            {
+              "title": "记录 43",
+              "node_id": "0046",
+              "text": "### 记录 43\n\n- **code:** 12410522731312091K\n- **name:** 安阳县洹南渠管理所\n- **bas:** 海河流域\n- **longitude:** 114.5714\n- **latitude:** 36.0944\n- **licWater:** 5000.0\n- **licDbsWater:** 5000.0\n\n---",
+              "line_num": 525,
+              "summary": "### 记录 43\n\n- **code:** 12410522731312091K\n- **name:** 安阳县洹南渠管理所\n- **bas:** 海河流域\n- **longitude:** 114.5714\n- **latitude:** 36.0944\n- **licWater:** 5000.0\n- **licDbsWater:** 5000.0\n\n---"
+            },
+            {
+              "title": "记录 44",
+              "node_id": "0047",
+              "text": "### 记录 44\n\n- **code:** 91410500417345282U\n- **name:** 安阳市幸福渠管理处\n- **bas:**  \n- **longitude:** 114.3222\n- **latitude:** 36.1738\n- **licWater:** 8180.0\n- **licDbsWater:** 0.0\n\n---",
+              "line_num": 537,
+              "summary": "### 记录 44\n\n- **code:** 91410500417345282U\n- **name:** 安阳市幸福渠管理处\n- **bas:**  \n- **longitude:** 114.3222\n- **latitude:** 36.1738\n- **licWater:** 8180.0\n- **licDbsWater:** 0.0\n\n---"
+            },
+            {
+              "title": "记录 45",
+              "node_id": "0048",
+              "text": "### 记录 45\n\n- **code:** 12410522417456556Q\n- **name:** 安阳市殷都区跃进渠灌区服务中心\n- **bas:**  \n- **longitude:** 113.9462\n- **latitude:** 36.3348\n- **licWater:** 9796.0\n- **licDbsWater:** 0.0\n\n---",
+              "line_num": 549,
+              "summary": "### 记录 45\n\n- **code:** 12410522417456556Q\n- **name:** 安阳市殷都区跃进渠灌区服务中心\n- **bas:**  \n- **longitude:** 113.9462\n- **latitude:** 36.3348\n- **licWater:** 9796.0\n- **licDbsWater:** 0.0\n\n---"
+            },
+            {
+              "title": "记录 46",
+              "node_id": "0049",
+              "text": "### 记录 46\n\n- **code:** 12410523F76410662A\n- **name:** 汤阴县汤河库渠服务所\n- **bas:** 海河流域\n- **longitude:** 114.362\n- **latitude:** 35.9209\n- **licWater:** 1800.0\n- **licDbsWater:** 1800.0\n\n---",
+              "line_num": 561,
+              "summary": "### 记录 46\n\n- **code:** 12410523F76410662A\n- **name:** 汤阴县汤河库渠服务所\n- **bas:** 海河流域\n- **longitude:** 114.362\n- **latitude:** 35.9209\n- **licWater:** 1800.0\n- **licDbsWater:** 1800.0\n\n---"
+            },
+            {
+              "title": "记录 47",
+              "node_id": "0050",
+              "text": "### 记录 47\n\n- **code:** 12410527F765006922\n- **name:** 内黄县豆公（洹东）灌区服务站\n- **bas:** 海河流域\n- **longitude:** 114.7288\n- **latitude:** 36.0111\n- **licWater:** 4500.0\n- **licDbsWater:** 4500.0\n\n---",
+              "line_num": 573,
+              "summary": "### 记录 47\n\n- **code:** 12410527F765006922\n- **name:** 内黄县豆公（洹东）灌区服务站\n- **bas:** 海河流域\n- **longitude:** 114.7288\n- **latitude:** 36.0111\n- **licWater:** 4500.0\n- **licDbsWater:** 4500.0\n\n---"
+            },
+            {
+              "title": "记录 48",
+              "node_id": "0051",
+              "text": "### 记录 48\n\n- **code:** 12410581417475175P\n- **name:** 林州市红旗渠灌区管理处\n- **bas:** 海河流域\n- **longitude:** 113.7431\n- **latitude:** 35.9522\n- **licWater:** 19592.0\n- **licDbsWater:** 0.0\n\n---",
+              "line_num": 585,
+              "summary": "### 记录 48\n\n- **code:** 12410581417475175P\n- **name:** 林州市红旗渠灌区管理处\n- **bas:** 海河流域\n- **longitude:** 113.7431\n- **latitude:** 35.9522\n- **licWater:** 19592.0\n- **licDbsWater:** 0.0\n\n---"
+            },
+            {
+              "title": "记录 49",
+              "node_id": "0052",
+              "text": "### 记录 49\n\n- **code:** 12410600417905139H\n- **name:** 鹤壁市工农渠灌区运行保障中心\n- **bas:** 海河流域\n- **longitude:** 114.064\n- **latitude:** 35.8453\n- **licWater:** 8550.0\n- **licDbsWater:** 8550.0\n\n---",
+              "line_num": 597,
+              "summary": "### 记录 49\n\n- **code:** 12410600417905139H\n- **name:** 鹤壁市工农渠灌区运行保障中心\n- **bas:** 海河流域\n- **longitude:** 114.064\n- **latitude:** 35.8453\n- **licWater:** 8550.0\n- **licDbsWater:** 8550.0\n\n---"
+            },
+            {
+              "title": "记录 50",
+              "node_id": "0053",
+              "text": "### 记录 50\n\n- **code:** 12410822417765295G\n- **name:** 博爱县丹东灌区管理局\n- **bas:** 黄河流域\n- **longitude:** 113.0101\n- **latitude:** 35.2056\n- **licWater:** 6230.0\n- **licDbsWater:** 6230.0\n\n---",
+              "line_num": 609,
+              "summary": "### 记录 50\n\n- **code:** 12410822417765295G\n- **name:** 博爱县丹东灌区管理局\n- **bas:** 黄河流域\n- **longitude:** 113.0101\n- **latitude:** 35.2056\n- **licWater:** 6230.0\n- **licDbsWater:** 6230.0\n\n---"
+            },
+            {
+              "title": "记录 51",
+              "node_id": "0054",
+              "text": "### 记录 51\n\n- **code:** 12100000MB03258174\n- **name:** 焦作黄河河务局经济发展管理局\n- **bas:**  \n- **longitude:** 113.5144\n- **latitude:** 34.994\n- **licWater:** 6000.0\n- **licDbsWater:** 0.0\n\n---",
+              "line_num": 621,
+              "summary": "### 记录 51\n\n- **code:** 12100000MB03258174\n- **name:** 焦作黄河河务局经济发展管理局\n- **bas:**  \n- **longitude:** 113.5144\n- **latitude:** 34.994\n- **licWater:** 6000.0\n- **licDbsWater:** 0.0\n\n---"
+            },
+            {
+              "title": "记录 52",
+              "node_id": "0055",
+              "text": "### 记录 52\n\n- **code:** 124105234175091360\n- **name:** 汤阴县琵琶寺水库库渠服务所\n- **bas:** 海河流域\n- **longitude:** 114.2817\n- **latitude:** 35.92\n- **licWater:** 800.0\n- **licDbsWater:** 800.0\n\n---",
+              "line_num": 633,
+              "summary": "### 记录 52\n\n- **code:** 124105234175091360\n- **name:** 汤阴县琵琶寺水库库渠服务所\n- **bas:** 海河流域\n- **longitude:** 114.2817\n- **latitude:** 35.92\n- **licWater:** 800.0\n- **licDbsWater:** 800.0\n\n---"
+            },
+            {
+              "title": "记录 53",
+              "node_id": "0056",
+              "text": "### 记录 53\n\n- **code:** 12410527MB0W46884F\n- **name:** 内黄县大功灌区服务站\n- **bas:** 海河流域\n- **longitude:** 114.791908\n- **latitude:** 35.980962\n- **licWater:** 549.74\n- **licDbsWater:** 0.0\n\n---",
+              "line_num": 645,
+              "summary": "### 记录 53\n\n- **code:** 12410527MB0W46884F\n- **name:** 内黄县大功灌区服务站\n- **bas:** 海河流域\n- **longitude:** 114.791908\n- **latitude:** 35.980962\n- **licWater:** 549.74\n- **licDbsWater:** 0.0\n\n---"
+            },
+            {
+              "title": "记录 54",
+              "node_id": "0057",
+              "text": "### 记录 54\n\n- **code:** 12410522F76142899X\n- **name:** 安阳县水务局珠泉渠管理所\n- **bas:** 黄河流域\n- **longitude:** 114.121386\n- **latitude:** 36.147178\n- **licWater:** 1000.0\n- **licDbsWater:** 1000.0\n\n---",
+              "line_num": 657,
+              "summary": "### 记录 54\n\n- **code:** 12410522F76142899X\n- **name:** 安阳县水务局珠泉渠管理所\n- **bas:** 黄河流域\n- **longitude:** 114.121386\n- **latitude:** 36.147178\n- **licWater:** 1000.0\n- **licDbsWater:** 1000.0\n\n---"
+            },
+            {
+              "title": "记录 55",
+              "node_id": "0058",
+              "text": "### 记录 55\n\n- **code:** 91410506MA471WBB36\n- **name:** 城发环保能源(安阳)有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1436\n- **latitude:** 36.1069\n- **licWater:** 243.5\n- **licDbsWater:** 243.5\n\n---",
+              "line_num": 669,
+              "summary": "### 记录 55\n\n- **code:** 91410506MA471WBB36\n- **name:** 城发环保能源(安阳)有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1436\n- **latitude:** 36.1069\n- **licWater:** 243.5\n- **licDbsWater:** 243.5\n\n---"
+            },
+            {
+              "title": "记录 56",
+              "node_id": "0059",
+              "text": "### 记录 56\n\n- **code:** 91410500692160979N\n- **name:** 安阳城乡水务集团有限公司\n- **bas:**  \n- **longitude:** 114.3419\n- **latitude:** 36.1411\n- **licWater:** 2100.0\n- **licDbsWater:** 2100.0\n\n---",
+              "line_num": 681,
+              "summary": "### 记录 56\n\n- **code:** 91410500692160979N\n- **name:** 安阳城乡水务集团有限公司\n- **bas:**  \n- **longitude:** 114.3419\n- **latitude:** 36.1411\n- **licWater:** 2100.0\n- **licDbsWater:** 2100.0\n\n---"
+            },
+            {
+              "title": "记录 57",
+              "node_id": "0060",
+              "text": "### 记录 57\n\n- **code:** 914105227678438470\n- **name:** 安阳汇鑫特钢有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1601\n- **latitude:** 36.153\n- **licWater:** 108.0\n- **licDbsWater:** 50.0\n\n---",
+              "line_num": 693,
+              "summary": "### 记录 57\n\n- **code:** 914105227678438470\n- **name:** 安阳汇鑫特钢有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1601\n- **latitude:** 36.153\n- **licWater:** 108.0\n- **licDbsWater:** 50.0\n\n---"
+            },
+            {
+              "title": "记录 58",
+              "node_id": "0061",
+              "text": "### 记录 58\n\n- **code:** 91410522172471415D\n- **name:** 安阳县水冶供水有限公司\n- **bas:**  \n- **longitude:** 114.0985\n- **latitude:** 36.1358\n- **licWater:** 430.53\n- **licDbsWater:** 430.53\n\n---",
+              "line_num": 705,
+              "summary": "### 记录 58\n\n- **code:** 91410522172471415D\n- **name:** 安阳县水冶供水有限公司\n- **bas:**  \n- **longitude:** 114.0985\n- **latitude:** 36.1358\n- **licWater:** 430.53\n- **licDbsWater:** 430.53\n\n---"
+            },
+            {
+              "title": "记录 59",
+              "node_id": "0062",
+              "text": "### 记录 59\n\n- **code:** 914105227425122249\n- **name:** 安阳鑫源铸业有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1183\n- **latitude:** 36.15\n- **licWater:** 64.06\n- **licDbsWater:** 40.0\n\n---",
+              "line_num": 717,
+              "summary": "### 记录 59\n\n- **code:** 914105227425122249\n- **name:** 安阳鑫源铸业有限公司\n- **bas:** 海河流域\n- **longitude:** 114.1183\n- **latitude:** 36.15\n- **licWater:** 64.06\n- **licDbsWater:** 40.0\n\n---"
+            },
+            {
+              "title": "记录 60",
+              "node_id": "0063",
+              "text": "### 记录 60\n\n- **code:** 91410500172191923G\n- **name:** 安阳化学工业集团有限责任公司\n- **bas:**  \n- **longitude:** 114.1116\n- **latitude:** 36.0971\n- **licWater:** 672.0\n- **licDbsWater:** 672.0\n\n---",
+              "line_num": 729,
+              "summary": "### 记录 60\n\n- **code:** 91410500172191923G\n- **name:** 安阳化学工业集团有限责任公司\n- **bas:**  \n- **longitude:** 114.1116\n- **latitude:** 36.0971\n- **licWater:** 672.0\n- **licDbsWater:** 672.0\n\n---"
+            },
+            {
+              "title": "记录 61",
+              "node_id": "0064",
+              "text": "### 记录 61\n\n- **code:** 91410821083482155D\n- **name:** 国家能源集团焦作电厂有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.507488\n- **latitude:** 35.25295\n- **licWater:** 1379.0\n- **licDbsWater:** 1373.52\n\n---",
+              "line_num": 741,
+              "summary": "### 记录 61\n\n- **code:** 91410821083482155D\n- **name:** 国家能源集团焦作电厂有限公司\n- **bas:** 黄河流域\n- **longitude:** 113.507488\n- **latitude:** 35.25295\n- **licWater:** 1379.0\n- **licDbsWater:** 1373.52\n\n---"
+            },
+            {
+              "title": "记录 62",
+              "node_id": "0065",
+              "text": "### 记录 62\n\n- **code:** 91411330MA452FF144\n- **name:** 桐柏县城发桑德环保有限公司\n- **bas:** 淮河流域\n- **longitude:** 114.347508\n- **latitude:** 35.940006\n- **licWater:** 55.29\n- **licDbsWater:** 55.29\n\n---",
+              "line_num": 753,
+              "summary": "### 记录 62\n\n- **code:** 91411330MA452FF144\n- **name:** 桐柏县城发桑德环保有限公司\n- **bas:** 淮河流域\n- **longitude:** 114.347508\n- **latitude:** 35.940006\n- **licWater:** 55.29\n- **licDbsWater:** 55.29\n\n---"
+            },
+            {
+              "title": "记录 63",
+              "node_id": "0066",
+              "text": "### 记录 63\n\n- **code:** 91410700791902544H\n- **name:** 河南心连心化学工业集团股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.862584\n- **latitude:** 35.217846\n- **licWater:** 2492.5\n- **licDbsWater:** 2492.5\n\n---",
+              "line_num": 765,
+              "summary": "### 记录 63\n\n- **code:** 91410700791902544H\n- **name:** 河南心连心化学工业集团股份有限公司\n- **bas:** 海河流域\n- **longitude:** 113.862584\n- **latitude:** 35.217846\n- **licWater:** 2492.5\n- **licDbsWater:** 2492.5\n\n---"
+            },
+            {
+              "title": "记录 64",
+              "node_id": "0067",
+              "text": "### 记录 64\n\n- **code:** 91410821MA44T93MXA\n- **name:** 修武县大河坡水务有限公司\n- **bas:** 海河流域\n- **longitude:** 113.282722\n- **latitude:** 35.3232\n- **licWater:** 700.0\n- **licDbsWater:** 700.0\n\n---",
+              "line_num": 777,
+              "summary": "### 记录 64\n\n- **code:** 91410821MA44T93MXA\n- **name:** 修武县大河坡水务有限公司\n- **bas:** 海河流域\n- **longitude:** 113.282722\n- **latitude:** 35.3232\n- **licWater:** 700.0\n- **licDbsWater:** 700.0\n\n---"
+            },
+            {
+              "title": "记录 65",
+              "node_id": "0068",
+              "text": "### 记录 65\n\n- **code:** 91410622MA9FCRQB17\n- **name:** 淇县涌泉自来水厂\n- **bas:** 海河流域\n- **longitude:** 114.174254\n- **latitude:** 35.71914\n- **licWater:** 297.63\n- **licDbsWater:** 297.63\n\n---",
+              "line_num": 789,
+              "summary": "### 记录 65\n\n- **code:** 91410622MA9FCRQB17\n- **name:** 淇县涌泉自来水厂\n- **bas:** 海河流域\n- **longitude:** 114.174254\n- **latitude:** 35.71914\n- **licWater:** 297.63\n- **licDbsWater:** 297.63\n\n---"
+            },
+            {
+              "title": "记录 66",
+              "node_id": "0069",
+              "text": "### 记录 66\n\n- **code:** 9141058174575945XW\n- **name:** 林州市合涧高峰供水服务站\n- **bas:** 海河流域\n- **longitude:** 113.775615\n- **latitude:** 36.076923\n- **licWater:** 154.42\n- **licDbsWater:** 154.42\n\n---",
+              "line_num": 801,
+              "summary": "### 记录 66\n\n- **code:** 9141058174575945XW\n- **name:** 林州市合涧高峰供水服务站\n- **bas:** 海河流域\n- **longitude:** 113.775615\n- **latitude:** 36.076923\n- **licWater:** 154.42\n- **licDbsWater:** 154.42\n\n---"
+            },
+            {
+              "title": "记录 67",
+              "node_id": "0070",
+              "text": "### 记录 67\n\n- **code:** 91410500775147913T\n- **name:** 安阳市新普钢铁有限公司\n- **bas:** 海河流域\n- **longitude:** 114.31034\n- **latitude:** 36.168161\n- **licWater:** 495.0\n- **licDbsWater:** 495.0\n\n---",
+              "line_num": 813,
+              "summary": "### 记录 67\n\n- **code:** 91410500775147913T\n- **name:** 安阳市新普钢铁有限公司\n- **bas:** 海河流域\n- **longitude:** 114.31034\n- **latitude:** 36.168161\n- **licWater:** 495.0\n- **licDbsWater:** 495.0\n\n---"
+            },
+            {
+              "title": "记录 68",
+              "node_id": "0071",
+              "text": "### 记录 68\n\n- **code:** 12410523172513531Y\n- **name:** 汤阴县公共供水服务中心\n- **bas:** 海河流域\n- **longitude:** 114.353177\n- **latitude:** 35.934569\n- **licWater:** 720.0\n- **licDbsWater:** 720.0\n\n---",
+              "line_num": 825,
+              "summary": "### 记录 68\n\n- **code:** 12410523172513531Y\n- **name:** 汤阴县公共供水服务中心\n- **bas:** 海河流域\n- **longitude:** 114.353177\n- **latitude:** 35.934569\n- **licWater:** 720.0\n- **licDbsWater:** 720.0\n\n---"
+            },
+            {
+              "title": "记录 69",
+              "node_id": "0072",
+              "text": "### 记录 69\n\n- **code:** 12410782417219171D\n- **name:** 辉县市群库灌区服务中心\n- **bas:** 海河流域\n- **longitude:** 113.486\n- **latitude:** 35.4479\n- **licWater:** 5989.94\n- **licDbsWater:** 5989.94\n\n---\n\n\n*文档生成完成*",
+              "line_num": 837,
+              "summary": "### 记录 69\n\n- **code:** 12410782417219171D\n- **name:** 辉县市群库灌区服务中心\n- **bas:** 海河流域\n- **longitude:** 113.486\n- **latitude:** 35.4479\n- **licWater:** 5989.94\n- **licDbsWater:** 5989.94\n\n---\n\n\n*文档生成完成*"
+            }
+          ],
+          "prefix_summary": "## 数据详情"
+        }
+      ],
+      "prefix_summary": "# 取水监测 数据文档\n\n**数据条数:** 69\n\n---"
+    }
+  ]
+}

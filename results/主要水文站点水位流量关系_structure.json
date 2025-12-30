@@ -1,0 +1,82 @@
+{
+  "doc_name": "主要水文站点水位流量关系",
+  "structure": [
+    {
+      "title": "修武站水位流量关系",
+      "node_id": "0001",
+      "text": "## 修武站水位流量关系\n\n  水位（m）           流量（m³/s）\n  ------------------- --------------\n  78.0                0.0\n  78.2                3.0\n  78.4                5.0\n  78.61   8.1\n  78.81   12.5\n  79.01   17.7\n  79.22   23.0\n  79.42   29.2\n  79.62   36.0\n  79.83   47.3\n  80.03   57.0\n  80.23   66.2\n  80.43   75.4\n  80.64   84.1\n  80.84   92.3\n  81.04   100.5\n  81.25   108.8\n  81.45   114.4\n  81.65   119.5\n  81.85   132.3\n  82.06   157.3\n  82.26   244.0\n  82.46   354.4\n  82.67   491.5\n  82.87   657.4\n  83.07   837.2\n  83.27   1042.0\n  83.48   1248.5\n  83.68   1460.7\n  83.88   1690.9\n  84.09   1919.5",
+      "line_num": 1,
+      "summary": "This partial document presents a stage-discharge relationship table for Xiuwu Station, detailing the correlation between water levels (measured in meters) and their corresponding flow rates (measured in cubic meters per second) ranging from a water level of 78.0 m to 84.09 m."
+    },
+    {
+      "title": "合河站水位流量关系",
+      "node_id": "0002",
+      "text": "## 合河站水位流量关系\n\n  水位（m）           流量（m³/s）\n  ------------------- --------------\n  69.4                0.0\n  69.61   1.2\n  69.81   4.0\n  70.01   10.6\n  70.22   20.5\n  70.42   34.8\n  70.62   52.0\n  70.83   69.9\n  71.03   89.6\n  71.23   110.0\n  71.43   131.0\n  71.64   151.0\n  71.84   173.0\n  72.04   192.3\n  72.25   202.0\n  72.45   215.0\n  72.65   223.1\n  72.85   221.1\n  73.06   254.4\n  73.26   280.2\n  73.46   318.6\n  73.67   358.9\n  73.87   404.8\n  74.07   461.4\n  74.27   525.8\n  74.48   601.8\n  74.68   712.6\n  74.88   867.8\n  75.09   1075.2\n  75.29   1316.6\n  75.49   1545.7\n  75.61    1800.4\n  75.81    2080.6\n  76.1    2386.4\n  76.21    2717.7\n  76.41    3081.0\n  76.611   3463.5\n  76.811   3865.1\n  77.11   4298.6",
+      "line_num": 37,
+      "summary": "This partial document presents a data table showing the relationship between water levels (in meters) and corresponding discharge rates (in cubic meters per second) at the Hehe Station. It lists specific measurements ranging from a water level of 69.4 meters with zero flow up to a level of 77.11 meters with a flow rate of 4298.6 m³/s, illustrating how the volume of water flow increases as the water level rises."
+    },
+    {
+      "title": "黄土岗站水位流量关系",
+      "node_id": "0003",
+      "text": "## 黄土岗站水位流量关系\n\n  水位（m）            流量（m³/s）\n  -------------------- --------------\n  63.5                 0.0\n  63.7                 0.8\n  63.906   2.6\n  64.11    5.6\n  64.31    10.5\n  64.51    14.9\n  64.72    19.3\n  64.92    24.3\n  65.12    36.2\n  65.33    50.0\n  65.53    64.5\n  65.73    82.4\n  65.93    93.0\n  66.14    104.7\n  66.34    119.7\n  66.54    132.5\n  66.75    145.0\n  66.95    165.0\n  67.15    190.3\n  67.35    230.6\n  67.56    305.5\n  67.76    395.5\n  67.96    515.3\n  68.17    656.7\n  68.37    815.5\n  68.57    991.1\n  68.77    1188.6\n  68.98    1424.0\n  69.0                 1550.0",
+      "line_num": 81,
+      "summary": "The partial document provides a stage-discharge relationship table for the Huangtugang Station, detailing the correlation between water levels (measured in meters) and their corresponding flow rates (measured in cubic meters per second). The data ranges from a minimum water level of 63.5 m with zero flow to a maximum recorded level of 69.0 m with a flow rate of 1550.0 m³/s."
+    },
+    {
+      "title": "刘庄站水位流量关系",
+      "node_id": "0004",
+      "text": "## 刘庄站水位流量关系\n\n  水位（m）   流量（m³/s）         \n  ----------- -------------------- --\n  59.5        0.0                  \n  59.9125     1.0                  \n  60.3169     2.1                  \n  60.7199     11.0                 \n  61.123      21.4                 \n  61.5266     35.5                 \n  61.9341     59.4                 \n  62.343      80.0                 \n  62.7523     110.0                \n  63.1619     138.0                \n  63.5719     174.0                \n  63.9826     210.0                \n  64.3941     279.2\n  64.8063     338.1\n  65.2198     402.9\n  65.6339     473.7  \n  66.0483     550.3  \n  66.4633     632.8   \n  66.8791     721.4    \n  67.2953     815.9  \n  67.7114     916.2  \n  68.1273     1022.4  \n  68.5429     1134.4\n  68.9584     1252.2\n  69.3738     1375.8\n  69.789      1505.2 \n  70.2042     1640.4  \n  70.6192     1781.4\n  71.0342     1928.2   \n  71.4491     2080.9",
+      "line_num": 115,
+      "summary": "The partial document presents a stage-discharge relationship table for Liuzhuang Station, detailing specific water levels (in meters) and their corresponding flow rates (in cubic meters per second) to illustrate the hydrological correlation at this location."
+    },
+    {
+      "title": "汲县站水位流量关系",
+      "node_id": "0005",
+      "text": "## 汲县站水位流量关系\n\n  水位（m）           流量（m³/s）   \n  ------------------- -------------- --\n  64.0                0.0            \n  64.2                0.8            \n  64.4                3.3            \n  64.61   7.9            \n  64.81   12.1           \n  65.01   17.3           \n  65.22   25.0           \n  65.42   37.4           \n  65.62   41.0           \n  65.83   45.4           \n  66.03   51.8           \n  66.23   58.2           \n  66.43   69.1           \n  66.64   76.2           \n  66.84   82.6           \n  67.04   88.1           \n  67.25   95.5           \n  67.45   101.5          \n  67.65   107.8          \n  67.85   114.5          \n  68.06   120.7          \n  68.26   127.7          \n  68.46   137.3          \n  68.67   150.7          \n  68.87   168.0          \n  69.07   190.0          \n  69.27   214.0          \n  69.48   238.0          \n  69.68   264.0          \n  69.88   292.0          \n  70.09   320.0",
+      "line_num": 150,
+      "summary": "This document presents a stage-discharge relationship table for the Jixian hydrological station, correlating specific water levels (in meters) with their corresponding flow rates (in cubic meters per second). The data illustrates a progressive increase in water flow as the stage rises, ranging from a flow of 0.0 m³/s at a water level of 64.0 m to a maximum of 320.0 m³/s at 70.09 m."
+    },
+    {
+      "title": "淇门站水位流量关系",
+      "node_id": "0006",
+      "text": "## 淇门站水位流量关系\n\n  水位（m）            流量（m³/s）\n  -------------------- --------------\n  57.5                 0.0\n  57.7                 0.8\n  57.906   1.6\n  58.11    2.9\n  58.31    5.2\n  58.514   8.0\n  58.72    11.2\n  58.92    14.5\n  59.12    18.6\n  59.326   22.8\n  59.53    27.3\n  59.73    32.0\n  59.934   37.0\n  60.14    42.2\n  60.34    47.5\n  60.54    53.2\n  60.745   58.1\n  60.95    64.6\n  61.15    73.1\n  61.354   80.8\n  61.56    88.5\n  61.76    96.8\n  61.96    104.9\n  62.165   112.6\n  62.37    122.0\n  62.57    129.9\n  62.774   137.3\n  62.98    145.0\n  63.18    155.3\n  63.38    167.3\n  63.585   179.0\n  63.79    191.6\n  63.99    204.7\n  64.11     216.0\n  64.31     232.7\n  64.51     248.8\n  64.71     265.7\n  64.91     283.3\n  65.111    301.7\n  65.311    320.8\n  65.511    340.6\n  65.712    361.3\n  65.912    382.8\n  66.112    405.1\n  66.313    428.2\n  66.513    452.2\n  66.713    477.0\n  66.913    502.8\n  67.114    529.4\n  67.314    556.9\n  67.514    585.3",
+      "line_num": 186,
+      "summary": "This document presents a stage-discharge relationship table for the Qimen Station (淇门站). It details the correspondence between water levels (measured in meters) and their respective flow rates (measured in cubic meters per second), providing data points ranging from a water level of 57.5 m (0.0 m³/s) to 67.514 m (585.3 m³/s)."
+    },
+    {
+      "title": "五陵站水位流量关系",
+      "node_id": "0007",
+      "text": "## 五陵站水位流量关系\n\n  采用                 \n  -------------------- --------------\n  水位（m）            流量（m³/s）\n  46.7                 0.0\n  46.9                 2.2\n  47.11    4.3\n  47.31    6.8\n  47.514   9.6\n  47.72    12.9\n  47.92    17.0\n  48.12    21.5\n  48.326   26.0\n  48.53    31.5\n  48.73    38.0\n  48.934   45.0\n  49.14    51.9\n  49.34    58.2\n  49.54    66.0\n  49.745   74.5\n  49.95    84.4\n  50.15    93.5\n  50.354   104.8\n  50.56    116.5\n  50.76    126.1\n  50.96    134.7\n  51.165   145.2\n  51.37    156.2\n  51.57    166.5\n  51.774   181.6\n  51.98    206.1\n  52.18    231.1\n  52.38    253.4\n  52.585   281.0\n  52.79    295.0\n  52.99    313.3\n  53.194   334.0\n  53.31     354.0\n  53.51     373.0\n  53.71     400.4\n  53.9105   414.5\n  54.111    428.0\n  54.311    454.4\n  54.5114   497.0\n  54.712    526.0\n  54.912    546.2\n  55.112    566.4\n  55.3125   586.6\n  55.513    612.8\n  55.713    661.2\n  55.9134   680.0\n  56.1136   708.4\n  56.314    752.5\n  56.514    801.1\n  56.7145   868.9\n  56.915    957.4\n  57.115    1006.1\n  57.315    1092.4\n  57.5156   1195.2\n  57.716    1309.1\n  57.916    1443.8\n  58.1165   1579.2\n  58.317    1714.1\n  58.517    1854.1\n  58.717    2001.8\n  58.8     2085.8\n  58.88     2172.9\n  58.96     2259.1\n  59.05     2346.4\n  59.13     2434.8\n  59.21     2521.9\n  59.39     2600.6\n  59.48     2680.0",
+      "line_num": 242,
+      "summary": "This partial document presents the stage-discharge relationship for Wuling Station (五陵站). It consists of a detailed data table that lists specific water levels (in meters) and their corresponding flow rates (in cubic meters per second), ranging from a water level of 46.7m (zero flow) to 59.48m (2680.0 m³/s)."
+    },
+    {
+      "title": "元村水位流量关系",
+      "node_id": "0008",
+      "text": "## 元村水位流量关系\n\n  水位（m）            流量（m³/s）\n  -------------------- --------------\n  38.05                0.0\n  38.2                 3.8\n  38.406   8.2\n  38.61    11.3\n  38.81    18.6\n  39.014   24.7\n  39.22    33.1\n  39.42    40.7\n  39.62    50.9\n  39.826   57.8\n  40.03    66.9\n  40.23    75.6\n  40.434   86.6\n  40.64    98.0\n  40.84    109.6\n  41.04    118.0\n  41.245   133.7\n  41.45    141.5\n  41.65    154.0\n  41.854   170.0\n  42.06    189.1\n  42.26    205.6\n  42.46    219.5\n  42.665   230.0\n  42.87    244.5\n  43.07    260.6\n  43.274   277.7\n  43.48    302.5\n  43.68    323.7\n  43.88    343.0\n  44.085   362.9\n  44.29    381.9\n  44.49    401.0\n  44.694   420.3\n  44.81     439.0\n  45.1     458.0\n  45.21     483.6\n  45.4105   514.8\n  45.611    546.9\n  45.811    575.3\n  46.114   604.5\n  46.212    631.0\n  46.412    658.0\n  46.612    730.0\n  46.8125   833.7\n  47.13    904.7\n  47.213    977.5\n  47.4134   1053.2\n  47.6136   1139.4\n  47.814    1233.1\n  48.14    1331.8\n  48.2145   1403.9\n  48.415    1522.0\n  48.615    1669.5\n  48.815    1797.5\n  49.156   1931.4\n  49.216    2070.1\n  49.416    2214.2\n  49.6165   2368.0\n  49.817    2532.0\n  50.17    2698.0",
+      "line_num": 317,
+      "summary": "This partial document presents a stage-discharge relationship table for Yuancun (元村), detailing the correlation between water levels (in meters) and their corresponding flow rates (in cubic meters per second). It provides a comprehensive list of data points ranging from a base water level of 38.05 m with zero flow to a high level of 50.17 m with a flow rate of 2698.0 m³/s."
+    },
+    {
+      "title": "新村站水位流量关系",
+      "node_id": "0009",
+      "text": "## 新村站水位流量关系\n\n  水位（m）            流量（m³/s）\n  -------------------- --------------\n  97.0                 0.0\n  97.2                 1.3\n  97.4                 3.3\n  97.61    4.0\n  97.81    11.0\n  98.01    17.4\n  98.22    20.4\n  98.42    35.7\n  98.62    81.1\n  98.83    131.0\n  99.03    183.2\n  99.23    255.7\n  99.43    340.3\n  99.64    431.5\n  99.84    530.0\n  100.04   635.9\n  100.25   751.4\n  100.45   875.7\n  100.65   981.1\n  100.85   1127.9\n  101.06   1284.6\n  101.26   1451.2\n  101.46   1627.7\n  101.67   1814.1\n  101.87   2010.3\n  102.07   2216.5\n  102.27   2432.5\n  102.48   2658.5\n  102.68   2894.3\n  102.88   3140.0\n  103.09   3395.6",
+      "line_num": 383,
+      "summary": "The partial document presents a stage-discharge relationship table for Xincun Station, detailing the correlation between water levels (measured in meters) and their corresponding flow rates (measured in cubic meters per second) for a range of elevations from 97.0m to 103.09m."
+    },
+    {
+      "title": "横水站水位流量关系",
+      "node_id": "0010",
+      "text": "## 横水站水位流量关系\n\n  水位（m）            流量（m³/s）\n  -------------------- --------------\n  240.2                0.0\n  240.398   1.2\n  240.597   2.5\n  240.795   4.3\n  240.994   6.6\n  241.193   9.3\n  241.392   12.4\n  241.59    15.9\n  241.79    20.1\n  241.99    26.3\n  242.187   41.0\n  242.386   54.4\n  242.585   69.2\n  242.784   95.0\n  242.983   131.6\n  243.182   169.0\n  243.38    200.6\n  243.58    238.0\n  243.778   280.9\n  243.977   339.8\n  244.176   393.7\n  244.375   433.8\n  244.574   482.4\n  244.773   543.4\n  244.972   605.5\n  245.17    703.9\n  245.37    772.6\n  245.568   844.6\n  245.767   920.0\n  245.966   998.8\n  246.165   1080.9\n  246.364   1166.3\n  246.562   1255.1\n  246.76    1347.2\n  246.96    1442.7\n  247.16    1541.6\n  247.358   1643.8\n  247.557   1749.3\n  247.756   1858.2\n  247.955   1970.4",
+      "line_num": 419,
+      "summary": "This partial document provides a tabular representation of the stage-discharge relationship at the Hengshui Station. It details a specific correlation between water levels (measured in meters) and their corresponding flow rates (measured in cubic meters per second), showing a range of data points from a water level of 240.2m (zero flow) up to 247.955m (1970.4 m³/s)."
+    },
+    {
+      "title": "安阳站水位流量关系",
+      "node_id": "0011",
+      "text": "## 安阳站水位流量关系\n\n  水位（m）           流量（m³/s）   \n  ------------------- -------------- --\n  65.5                0.0            \n  65.7                3.5            \n  65.9                6.5            \n  66.11   11.8           \n  66.31   23.5           \n  66.51   41.3           \n  66.72   65.9           \n  66.92   86.6           \n  67.12   109.9          \n  67.33   133.2          \n  67.53   169.8          \n  67.73   206.6          \n  67.93   244.5          \n  68.14   277.5          \n  68.34   329.8          \n  68.54   371.2          \n  68.75   414.9          \n  68.95   458.6          \n  69.15   505.0          \n  69.35   526.8          \n  69.56   559.0          \n  69.76   593.9          \n  69.96   632.5          \n  70.17   672.6          \n  70.37   710.3          \n  70.57   749.0          \n  70.77   786.3          \n  70.98   829.4          \n  71.18   871.2          \n  71.38   913.0          \n  71.59   955.8          \n  71.79   1007.4         \n  71.99   1068.3         \n  72.11    1129.5         \n  72.31    1194.3         \n  72.51    1280.8         \n  72.71    1369.4         \n  72.91    1466.1         \n  73.111   1575.8         \n  73.311   1692.5         \n  73.511   1812.0         \n  73.712   1962.5         \n  73.912   2125.0         \n  74.112   2300.0         \n  74.313   2490.0         \n  74.513   2665.0         \n  74.713   2850.0         \n  74.913   3040.0         \n  75.0     3130.0",
+      "line_num": 464,
+      "summary": "This document presents a data table detailing the stage-discharge relationship (the correlation between water level and flow rate) at Anyang Station. It lists specific water levels in meters, ranging from 65.5 m to 75.0 m, and their corresponding discharge values in cubic meters per second (m³/s), which increase from 0.0 m³/s to 3130.0 m³/s."
+    }
+  ]
+}
