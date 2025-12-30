@@ -19,6 +19,25 @@ cd PageIndex
 pip install -r requirements.txt
 ```
 
+### 环境配置
+
+复制 `.env.example` 为 `.env` 并配置以下环境变量：
+
+```bash
+# 大模型 API 配置
+CHATGPT_API_KEY=your-api-key
+CHATGPT_API_BASE=https://api.openai.com/v1
+CHATGPT_MODEL=gpt-4o  # 大模型名称
+
+# Embedding 模型配置 (用于向量检索)
+EMBEDDING_MODEL_NAME=bge-m3:latest
+EMBEDDING_MODEL_API_URL=http://localhost:11434
+EMBEDDING_MODEL_TYPE=ollama
+
+# ChromaDB 向量数据库存储路径
+CHROMA_PERSIST_DIR=./chroma_db
+```
+
 ## 🖥️ 网页界面 (UI) 与 API
 
 PageIndex 提供了直观的 Streamlit 网页界面以及 REST API，方便进行文档处理和自动化集成。
@@ -46,24 +65,30 @@ python api.py
 
 ### REST API 使用说明
 
-启动 `api.py` 后，可以通过以下接口进行文档检索：
+启动 `api.py` 后，API 服务运行在 **8502** 端口，可以通过以下接口进行文档检索：
 
+#### 1. 智能问答接口（带大模型生成答案）
 - **Endpoint**: `POST /query`
-- **Body**: `{"q": "用户的问题"}`
+- **Body**: `{"q": "用户的问题", "top_k": 10}`
 - **示例**:
   ```bash
-  curl -X POST "http://localhost:8000/query" -H "Content-Type: application/json" -d '{"q": "什么是PageIndex？"}'
+  curl -X POST "http://localhost:8502/query" -H "Content-Type: application/json" -d '{"q": "什么是PageIndex？"}'
   ```
 - **返回**: 包含 AI 回答、参考来源以及推理过程的 JSON 对象。
 
-## 🧪 示例库 (Cookbooks)
+#### 2. 原始检索结果接口（不调用大模型）
+- **Endpoint**: `POST /query/raw`
+- **Body**: `{"q": "用户的问题", "top_k": 10}`
+- **示例**:
+  ```bash
+  curl -X POST "http://localhost:8502/query/raw" -H "Content-Type: application/json" -d '{"q": "什么是PageIndex？"}'
+  ```
+- **返回**: 只返回向量检索的原始结果，包含文档名、节点ID、标题、相似度分数、摘要和原文内容，不调用大模型生成答案。
 
-我们在 `cookbook` 目录下提供了多个实用示例，帮助您快速上手：
-
-- [**基础 RAG 快速入门**](./cookbook/pageIndex_chat_quickstart.ipynb)：展示如何结合 PageIndex 进行简单的问答。
-- [**Vectorless RAG**](./cookbook/pageindex_RAG_simple.ipynb)：深入了解无需向量化的推理原生 RAG 流程。
-- [**Vision-based RAG**](./cookbook/vision_RAG_pageindex.ipynb)：直接基于页面图像进行推理，规避 OCR 误差。
-- [**Agentic Retrieval**](./cookbook/agentic_retrieval.ipynb)：构建基于代理的智能检索系统。
+#### 3. 其他接口
+- `GET /index/stats` - 获取向量索引统计信息
+- `POST /index/rebuild` - 重建所有文档的向量索引
+- `DELETE /index/{doc_name}` - 删除指定文档的向量索引
 
 ## 📂 项目结构
 

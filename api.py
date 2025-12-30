@@ -11,7 +11,7 @@ app = FastAPI(title="PageIndex Retrieval API")
 
 class QueryRequest(BaseModel):
     q: str
-    top_k: int = 10  # 向量检索返回的最大结果数
+    top_k: int = 5  # 向量检索返回的最大结果数
 
 # 获取配置
 config_loader = ConfigLoader()
