@@ -38,21 +38,21 @@ EMBEDDING_MODEL_TYPE=ollama
 CHROMA_PERSIST_DIR=./chroma_db
 ```
 
-## 🖥️ 网页界面 (UI) 与 API
-
+## 网页界面 (UI) 与 API
 PageIndex 提供了直观的 Streamlit 网页界面以及 REST API，方便进行文档处理和自动化集成。
 
-### 启动方式
+### cmd命令启动方式（如果电脑没安装依赖，先进入目录执行pip install -r requirements.txt）--带窗体
+cd C:\PageIndex
+**网页界面启动**: streamlit run app.py   
+**REST API服务启动**: python api.py    
 
-**网页界面 (UI)**: http://localhost:8501/
-```bash
-streamlit run app.py
-```
+### docker容器服务启动方式
+cd C:\PageIndex
+docker compose up --build -d
 
-**REST API**:
-```bash
-python api.py
-```
+### 前端页面和api地址
+页面地址：http://localhost:8501/
+接口地址：http://localhost:8502/query(合成结果接口) 、http://localhost:8502/query/raw(原始结果接口) 
 
 ### 主要功能
 
